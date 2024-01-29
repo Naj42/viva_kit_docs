@@ -1,0 +1,68 @@
+import { Callout } from "nextra/components";
+
+# Customization
+
+A comprehensive guide on configuring and customizing the default options and styles of Vivakits alongside Tailwind CSS. But beforehand ensure the successful installation of Vivakits as a Tailwind CSS plugin. If you haven't done this yet, follow our <a href="/#quick-setup" className="text-blue-600 font-medium mx-0.5">quick setup guide</a> to get started.
+
+Vivakits provides a base style for all the components.
+
+```css copy
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fff;
+    --foreground: #090909;
+    --primary: #3366ff;
+    --primary-foreground: #fafaf9;
+    --primary-light: #ebf0ff;
+    --secondary: #9b59b6;
+    --secondary-foreground: #fafaf9;
+    --secondary-light: #f5eef8;
+    --accent: #f97316;
+    --accent-foreground: #fafaf9;
+    --accent-light: #fef1e8;
+    --success: #45d483;
+    --success-foreground: #fafaf9;
+    --success-light: #ecfbf3;
+    --warning: #fab005;
+    --warning-foreground: #fafaf9;
+    --warning-light: #fff7e6;
+    --danger: #fa5252;
+    --danger-foreground: #fafaf9;
+    --danger-light: #ffeeee;
+    --neutral: #e4e4e7;
+    --muted: #f4f4f5;
+    --placeholder: #00000066;
+    --black: #262626;
+    --ring: #3366ff;
+    --divider: #00000066;
+    --disabled: #f2f2f2;
+    --radius: 0.5rem;
+  }
+}
+```
+
+You can easily update the colors to match with your design system.
+
+```css {8} copy
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+    ...
+    --primary: <your_primary_color>
+    ...
+    }
+}
+
+```
+
+<Callout type="warning">
+  Don't forget to add the **vivakitPreset** in your tailwind.config.js file for
+  the base style to work
+</Callout>
