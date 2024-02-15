@@ -1,0 +1,172 @@
+import { Checkbox } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Checkbox
+
+### Sizes
+
+The Checkbox component comes with 3 different sizes that you can change it using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const CheckboxSizeGroup = () => {
+  return (
+    <div className="flex items-end gap-3">
+        <Checkbox size="sm">Small</Checkbox>
+        <Checkbox size="md">Medium</Checkbox>
+        <Checkbox size="lg">Large</Checkbox>
+    </div>
+  );
+};
+
+<CheckboxSizeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-end gap-3">
+    <Checkbox size="sm">Small</Checkbox>
+    <Checkbox size="md">Medium</Checkbox>
+    <Checkbox size="lg">Large</Checkbox>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Colors
+
+The Checkbox component comes with 7 different colors that you can change it using the `color` prop. It has both solid and outline variant
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const CheckboxColorGroup = () => {
+  return (
+    <div className="flex items-end gap-3 flex-wrap">
+        <Checkbox color="primary">Primary</Checkbox>
+        <Checkbox color="secondary">Secondary</Checkbox>
+        <Checkbox color="success">Success</Checkbox>
+        <Checkbox color="warning">Warning</Checkbox>
+        <Checkbox color="danger">Danger</Checkbox>
+        <Checkbox color="dark">Dark</Checkbox>
+        <Checkbox color="accent">Accent</Checkbox>
+    </div>
+  );
+};
+
+<CheckboxColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-end gap-3">
+  <Checkbox color="primary">Primary</Checkbox>
+  <Checkbox color="secondary">Secondary</Checkbox>
+  <Checkbox color="success">Success</Checkbox>
+  <Checkbox color="warning">Warning</Checkbox>
+  <Checkbox color="danger">Danger</Checkbox>
+  <Checkbox color="dark">Dark</Checkbox>
+  <Checkbox color="accent">Accent</Checkbox>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Rounded
+
+The shape of the Checkbox component can be updated using `rounded` prop
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const CheckboxRoundedGroup = () => {
+  return (
+    <div className="flex items-end gap-3">
+        <Checkbox rounded="none">None</Checkbox>
+        <Checkbox rounded="default">Default</Checkbox>
+        <Checkbox rounded="sm">Small</Checkbox>
+        <Checkbox rounded="md">Medium</Checkbox>
+        <Checkbox rounded="lg">Large</Checkbox>
+        <Checkbox rounded="full">Full</Checkbox>
+    </div>
+  );
+};
+
+<CheckboxRoundedGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+  ```jsx copy
+  <div className="flex items-end gap-3">
+    <Checkbox rounded="none">None</Checkbox>
+    <Checkbox rounded="default">Default</Checkbox>
+    <Checkbox rounded="sm">Small</Checkbox>
+    <Checkbox rounded="md">Medium</Checkbox>
+    <Checkbox rounded="lg">Large</Checkbox>
+    <Checkbox rounded="full">Full</Checkbox>
+  </div>
+  ```
+</Tabs.Tab>
+
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>ReactNode</td>
+      <td>Displays checkbox content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">accent</span>  
+        <span className="badge">success</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">danger</span>  
+      </td>
+      <td>Changes checkbox color</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>rounded</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>  
+        <span className="badge">none</span>   
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span>  
+        <span className="badge">lg</span>
+        <span className="badge">fulll</span>
+      </td>
+      <td>Changes checkbox the border radius</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+     <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">sm</span>  
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span> 
+      </td>
+      <td>Changes checkbox size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+  </tbody>
+</table>}
