@@ -1,0 +1,152 @@
+import { RadioButton, RadioGroup } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Radio Button
+
+### Sizes
+
+The RadioButton component comes with 3 different sizes that you can change it using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const RadioButtonSizeGroup = () => {
+  return (
+    <div className="flex items-end gap-3">
+      <RadioButton size="sm">Small</RadioButton>
+      <RadioButton size="md">Medium</RadioButton>
+      <RadioButton size="lg">Large</RadioButton>
+    </div>
+  );
+};
+
+<RadioButtonSizeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-end gap-3">
+    <RadioButton size="sm">Small</RadioButton>
+    <RadioButton size="md">Medium</RadioButton>
+    <RadioButton size="lg">Large</RadioButton>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Colors
+
+The RadioButton component comes with 7 different colors that you can change it using the `color` prop. It has both solid and outline variant
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const RadioButtonColorGroup = () => {
+  return (
+    <div className="flex items-end gap-3 flex-wrap">
+      <RadioButton color="primary">Primary</RadioButton>
+      <RadioButton color="secondary">Secondary</RadioButton>
+      <RadioButton color="success">Success</RadioButton>
+      <RadioButton color="warning">Warning</RadioButton>
+      <RadioButton color="danger">Danger</RadioButton>
+      <RadioButton color="dark">Dark</RadioButton>
+      <RadioButton color="accent">Accent</RadioButton>
+    </div>
+  );
+};
+
+<RadioButtonColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-end gap-3">
+  <RadioButton color="primary">Primary</RadioButton>
+  <RadioButton color="secondary">Secondary</RadioButton>
+  <RadioButton color="success">Success</RadioButton>
+  <RadioButton color="warning">Warning</RadioButton>
+  <RadioButton color="danger">Danger</RadioButton>
+  <RadioButton color="dark">Dark</RadioButton>
+  <RadioButton color="accent">Accent</RadioButton>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Radio Group
+
+[Err: type_definitions]
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const RadioButtonGroup = () => {
+  return (
+    <div className="flex items-end gap-3 flex-wrap">
+      <RadioButton></RadioButton>
+    </div>
+  );
+};
+
+<RadioButtonGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-end gap-3">
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>ReactNode</td>
+      <td>Displays RadioButton content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">accent</span>  
+        <span className="badge">success</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">danger</span>  
+      </td>
+      <td>Changes RadioButton color</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>Group</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+      </td>
+      <td>[]</td>
+      <td><span className="badge">[]</span></td>
+    </tr>
+     <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">sm</span>  
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span> 
+      </td>
+      <td>Changes RadioButton size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+  </tbody>
+</table>}
