@@ -1,0 +1,330 @@
+import { VKBadge } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Badge
+
+### Variants
+
+The Badge component comes with 2 different variants that can be changed using the `variant` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeVariantGroup = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+    <VKBadge variant={"circular"}  >Contact</VKBadge>
+    <br />
+    <VKBadge variant={"square"} >Contact</VKBadge>
+    </div>
+
+);
+};
+
+<BadgeVariantGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+    <VKBadge variant={"circular"}  >Contact</VKBadge>
+    <br />
+    <VKBadge variant={"square"} >Contact</VKBadge>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Size
+
+The Badge component comes with 4 different sizes that can be changed using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeSizeGroup = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+    <VKBadge size={"xs"} >Contact</VKBadge>
+    <br />
+    <VKBadge size={"sm"} >Contact</VKBadge>
+    <br />
+    <VKBadge size={"md"} >Contact</VKBadge>
+     <br />
+    <VKBadge size={"lg"} >Contact</VKBadge>
+    </div>
+
+);
+};
+
+<BadgeSizeGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+   <div className="flex items-center gap-3">
+    <VKBadge size={"xs"} >Contact</VKBadge>
+    <br />
+    <VKBadge size={"sm"} >Contact</VKBadge>
+    <br />
+    <VKBadge size={"md"} >Contact</VKBadge>
+     <br />
+    <VKBadge size={"lg"} >Contact</VKBadge>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Color
+
+The Badge component has 7 different colours that can be changed using the `color` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeColorGroup = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+    <VKBadge color={"primary"} >Contact</VKBadge>
+    <br />
+  <VKBadge color={"secondary"} >Contact</VKBadge>
+    <br />
+   <VKBadge color={"success"} >Contact</VKBadge>
+     <br />
+    <VKBadge color={"danger"} >Contact</VKBadge>
+      <br />
+    <VKBadge color={"warning"} >Contact</VKBadge>
+      <br />
+    <VKBadge color={"dark"} >Contact</VKBadge>
+      <br />
+    <VKBadge color={"light"} >Contact</VKBadge>
+    </div>
+
+);
+};
+
+<BadgeColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+   <div className="flex items-center gap-3">
+    <VKBadge color={"primary"} >Contact</VKBadge>
+    <br />
+  <VKBadge color={"secondary"} >Contact</VKBadge>
+    <br />
+   <VKBadge color={"success"} >Contact</VKBadge>
+     <br />
+    <VKBadge color={"danger"} >Contact</VKBadge>
+      <br />
+    <VKBadge color={"warning"} >Contact</VKBadge>
+      <br />
+    <VKBadge color={"dark"} >Contact</VKBadge>
+      <br />
+    <VKBadge color={"light"} >Contact</VKBadge>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Bordercolor
+
+The Badge component has 7 different bordercolours that can be changed using the `borderColor` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeBorderColorGroup = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+    <VKBadge borderColor={"primary"} withBorder={true}>Contact</VKBadge>
+    <br />
+    <VKBadge borderColor={"secondary"} withBorder={true}>Contact</VKBadge>
+    <br />
+    <VKBadge borderColor={"success"} withBorder={true}>Contact</VKBadge>
+     <br />
+    <VKBadge borderColor={"danger"} withBorder={true}>Contact</VKBadge>
+      <br />
+    <VKBadge borderColor={"warning"} withBorder={true}>Contact</VKBadge>
+      <br />
+    <VKBadge borderColor={"dark"} withBorder={true}>Contact</VKBadge>
+      <br />
+    <VKBadge borderColor={"light"} withBorder={true}>Contact</VKBadge>
+    </div>
+
+);
+};
+
+<BadgeBorderColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+    <VKBadge borderColor={"primary"} withBorder={true}>Contact</VKBadge>
+    <br />
+    <VKBadge borderColor={"secondary"} withBorder={true}>Contact</VKBadge>
+    <br />
+    <VKBadge borderColor={"success"} withBorder={true}>Contact</VKBadge>
+     <br />
+    <VKBadge borderColor={"danger"} withBorder={true}>Contact</VKBadge>
+      <br />
+    <VKBadge borderColor={"warning"} withBorder={true}>Contact</VKBadge>
+      <br />
+    <VKBadge borderColor={"dark"} withBorder={true}>Contact</VKBadge>
+      <br />
+    <VKBadge borderColor={"light"} withBorder={true}>Contact</VKBadge>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Bordercolor
+
+The Badge component can be placed to 4 different positions using the `placement` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgePlacementGroup = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+    <VKBadge placement={"topRight"} >Contact</VKBadge>
+    <br />
+    <VKBadge placement={"bottomRight"} >Contact</VKBadge>
+    <br />
+    <VKBadge placement={"topLeft"} >Contact</VKBadge>
+    <br />
+    <VKBadge placement={"bottomLeft"} >Contact</VKBadge>
+    </div>
+
+);
+};
+
+<BadgePlacementGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+    <VKBadge placement={"topRight"} >Contact</VKBadge>
+    <br />
+    <VKBadge placement={"bottomRight"} >Contact</VKBadge>
+    <br />
+    <VKBadge placement={"topLeft"} >Contact</VKBadge>
+    <br />
+    <VKBadge placement={"bottomLeft"} >Contact</VKBadge>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>ReactNode</td>
+      <td>Displays badge content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>vairant</td>
+      <td>
+        <span className="badge">circular</span>  
+        <span className="badge">square</span> 
+        
+      </td>
+      <td>Changes badge appreance</td>
+      <td><span className="badge">square</span></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">success</span>  
+        <span className="badge">danger</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">dark</span>
+         <span className="badge">light</span>    
+      </td>
+      <td>Changes badge color</td>
+      <td><span className="badge">success</span></td>
+    </tr>
+
+{" "}
+
+<tr>
+  <td>borderColor</td>
+  <td className="flex flex-wrap gap-y-2 border-none">
+    <span className="badge">primary</span>
+    <span className="badge">secondary</span>
+    <span className="badge">success</span>
+    <span className="badge">danger</span>
+    <span className="badge">warning</span>
+    <span className="badge">dark</span>
+    <span className="badge">light</span>
+  </td>
+  <td>Changes badge bordercolor</td>
+  <td>
+    <span className="badge">default</span>
+  </td>
+</tr>
+
+    <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">sm</span>
+        <span className="badge">md</span>
+        <span className="badge">lg</span>
+        <span className="badge">xl</span>
+      </td>
+      <td>Changes button size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+    <tr>
+      <td>loading</td>
+      <td>boolean</td>
+      <td>Whether the button is loading</td>
+      <td> false </td>
+    </tr>
+
+     <tr>
+      <td>onClick</td>
+      <td>function</td>
+      <td>Defines functionality on clicking the badge</td>
+      <td> </td>
+    </tr>
+
+    <tr>
+      <td>invisible</td>
+      <td>boolean</td>
+      <td>Changes visibility of the badge</td>
+      <td> false </td>
+    </tr>
+
+    <tr>
+      <td>withBorder</td>
+      <td>boolean</td>
+      <td>Changes visibility of border of badge</td>
+      <td> false </td>
+    </tr>
+
+  </tbody>
+</table>}
