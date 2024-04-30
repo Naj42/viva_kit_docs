@@ -1,4 +1,4 @@
-import { VKBadge } from "@vivakits/react-components";
+import { VKBadge, VKAvatar } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
 # Badge
@@ -14,9 +14,10 @@ export const BadgeVariantGroup = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge variant={"circular"}  >Contact</VKBadge>
+    <VKBadge variant={"circular"}>
+      <VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge variant={"square"} >Contact</VKBadge>
+    <VKBadge variant={"square"} ><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     </div>
 
 );
@@ -28,9 +29,9 @@ export const BadgeVariantGroup = () => {
   <Tabs.Tab>
 ```jsx copy
     <div className="flex items-center gap-3">
-    <VKBadge variant={"circular"}  >Contact</VKBadge>
+    <VKBadge variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge variant={"square"} >Contact</VKBadge>
+    <VKBadge variant={"square"}><RoundIcon /></VKBadge>
     </div>
 ```
   </Tabs.Tab>
@@ -47,13 +48,13 @@ export const BadgeSizeGroup = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge size={"xs"} >Contact</VKBadge>
+    <VKBadge size={"xs"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge size={"sm"} >Contact</VKBadge>
+    <VKBadge size={"sm"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge size={"md"} >Contact</VKBadge>
+    <VKBadge size={"md"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
      <br />
-    <VKBadge size={"lg"} >Contact</VKBadge>
+    <VKBadge size={"lg"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     </div>
 
 );
@@ -65,13 +66,13 @@ export const BadgeSizeGroup = () => {
   <Tabs.Tab>
 ```jsx copy
    <div className="flex items-center gap-3">
-    <VKBadge size={"xs"} >Contact</VKBadge>
+    <VKBadge size={"xs"} variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge size={"sm"} >Contact</VKBadge>
+    <VKBadge size={"sm"} variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge size={"md"} >Contact</VKBadge>
+    <VKBadge size={"md"} variant={"circular"}><RoundIcon /></VKBadge>
      <br />
-    <VKBadge size={"lg"} >Contact</VKBadge>
+    <VKBadge size={"lg"} variant={"circular"}><RoundIcon /></VKBadge>
     </div>
 ```
   </Tabs.Tab>
@@ -88,19 +89,19 @@ export const BadgeColorGroup = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge color={"primary"} >Contact</VKBadge>
+    <VKBadge color={"primary"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-  <VKBadge color={"secondary"} >Contact</VKBadge>
+  <VKBadge color={"secondary"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-   <VKBadge color={"success"} >Contact</VKBadge>
+   <VKBadge color={"success"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
      <br />
-    <VKBadge color={"danger"} >Contact</VKBadge>
+    <VKBadge color={"danger"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
       <br />
-    <VKBadge color={"warning"} >Contact</VKBadge>
+    <VKBadge color={"warning"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
       <br />
-    <VKBadge color={"dark"} >Contact</VKBadge>
+    <VKBadge color={"dark"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
       <br />
-    <VKBadge color={"light"} >Contact</VKBadge>
+    <VKBadge color={"light"} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     </div>
 
 );
@@ -112,19 +113,19 @@ export const BadgeColorGroup = () => {
   <Tabs.Tab>
 ```jsx copy
    <div className="flex items-center gap-3">
-    <VKBadge color={"primary"} >Contact</VKBadge>
+    <VKBadge color={"primary"} variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-  <VKBadge color={"secondary"} >Contact</VKBadge>
+  <VKBadge color={"secondary"} variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-   <VKBadge color={"success"} >Contact</VKBadge>
+   <VKBadge color={"success"} variant={"circular"}><RoundIcon /></VKBadge>
      <br />
-    <VKBadge color={"danger"} >Contact</VKBadge>
+    <VKBadge color={"danger"} variant={"circular"}><RoundIcon /></VKBadge>
       <br />
-    <VKBadge color={"warning"} >Contact</VKBadge>
+    <VKBadge color={"warning"} variant={"circular"}><RoundIcon /></VKBadge>
       <br />
-    <VKBadge color={"dark"} >Contact</VKBadge>
+    <VKBadge color={"dark"} variant={"circular"}><RoundIcon /></VKBadge>
       <br />
-    <VKBadge color={"light"} >Contact</VKBadge>
+    <VKBadge color={"light"} variant={"circular"}><RoundIcon /></VKBadge>
     </div>
 ```
   </Tabs.Tab>
@@ -141,19 +142,19 @@ export const BadgeBorderColorGroup = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge borderColor={"primary"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"primary"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge borderColor={"secondary"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"secondary"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge borderColor={"success"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"success"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
      <br />
-    <VKBadge borderColor={"danger"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"danger"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
       <br />
-    <VKBadge borderColor={"warning"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"warning"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
       <br />
-    <VKBadge borderColor={"dark"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"dark"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
       <br />
-    <VKBadge borderColor={"light"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"light"} withBorder={true} variant={"circular"}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     </div>
 
 );
@@ -165,60 +166,54 @@ export const BadgeBorderColorGroup = () => {
   <Tabs.Tab>
 ```jsx copy
     <div className="flex items-center gap-3">
-    <VKBadge borderColor={"primary"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"primary"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge borderColor={"secondary"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"secondary"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge borderColor={"success"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"success"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
      <br />
-    <VKBadge borderColor={"danger"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"danger"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
       <br />
-    <VKBadge borderColor={"warning"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"warning"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
       <br />
-    <VKBadge borderColor={"dark"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"dark"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
       <br />
-    <VKBadge borderColor={"light"} withBorder={true}>Contact</VKBadge>
+    <VKBadge borderColor={"light"} withBorder={true} variant={"circular"}><RoundIcon /></VKBadge>
     </div>
 ```
   </Tabs.Tab>
 </Tabs>
 
-### Bordercolor
+### Example
 
-The Badge component can be placed to 4 different positions using the `placement` prop.
+Here are some examples of how Badge component can be used with the different props.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
-export const BadgePlacementGroup = () => {
+export const BadgeExample = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge placement={"topRight"} >Contact</VKBadge>
+    <VKBadge placement={"topRight"} variant={"circular"} content={9}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge placement={"bottomRight"} >Contact</VKBadge>
-    <br />
-    <VKBadge placement={"topLeft"} >Contact</VKBadge>
-    <br />
-    <VKBadge placement={"bottomLeft"} >Contact</VKBadge>
+    <VKBadge placement={"topRight"} variant={"circular"} content={100}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
+   
     </div>
 
 );
 };
 
-<BadgePlacementGroup />
+<BadgeExample />
   </Tabs.Tab>
 
   <Tabs.Tab>
 ```jsx copy
     <div className="flex items-center gap-3">
-    <VKBadge placement={"topRight"} >Contact</VKBadge>
+    <VKBadge placement={"topRight"} variant={"circular"} content={9}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge placement={"bottomRight"} >Contact</VKBadge>
-    <br />
-    <VKBadge placement={"topLeft"} >Contact</VKBadge>
-    <br />
-    <VKBadge placement={"bottomLeft"} >Contact</VKBadge>
+    <VKBadge placement={"bottomRight"} variant={"circular"} content={100}><RoundIcon /></VKBadge>
+   
     </div>
 ```
   </Tabs.Tab>
