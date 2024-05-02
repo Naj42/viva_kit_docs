@@ -1,5 +1,6 @@
 import { VKBadge, VKAvatar } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
+import CameraIcon from "./icons/cameraIcon";
 
 # Badge
 
@@ -14,10 +15,10 @@ export const BadgeVariantGroup = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge variant={"circular"}>
-      <VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
+    <VKBadge variant={"circular"}> 
+      <img className="h-16 w-16" src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
-    <VKBadge variant={"square"} ><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
+    <VKBadge variant={"square"} ><img className="h-16 w-16" src="https://freesvg.org/img/1475409574.png"/></VKBadge>
     </div>
 
 );
@@ -191,14 +192,18 @@ Here are some examples of how Badge component can be used with the different pro
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
+  
 export const BadgeExample = () => {
+  
   return (
     
     <div className="flex items-center gap-3">
     <VKBadge placement={"topRight"} variant={"circular"} content={9}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
     <br />
     <VKBadge placement={"topRight"} variant={"circular"} content={100}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
-   
+    <br />
+    <VKBadge placement={"bottomRight"} variant={"circular"} content={<CameraIcon />}><VKAvatar variant={"image"} src="https://pic.onlinewebfonts.com/thumbnails/icons_390874.svg"/></VKBadge>
+
     </div>
 
 );
@@ -319,6 +324,20 @@ export const BadgeExample = () => {
       <td>boolean</td>
       <td>Changes visibility of border of badge</td>
       <td> false </td>
+    </tr>
+
+     <tr>
+      <td>containerRef</td>
+      <td>RefObject | null</td>
+      <td>Used to pass a reference to the container element that the badge component should be appended to</td>
+      <td> - </td>
+    </tr>
+
+      <tr>
+      <td>containerProp</td>
+      <td>Object</td>
+      <td>Used to specify additional properties to be applied to the container element of the badge component</td>
+      <td> - </td>
     </tr>
 
   </tbody>
