@@ -217,9 +217,12 @@ export const BadgeExample = () => {
     <div className="flex items-center gap-3">
     <VKBadge placement={"topRight"} variant={"circular"} content={9}><RoundIcon /></VKBadge>
     <br />
-    <VKBadge placement={"bottomRight"} variant={"circular"} content={100}><RoundIcon /></VKBadge>
-   
+    <VKBadge placement={"topRight"} variant={"circular"} content={100}><RoundIcon /></VKBadge>
+    <br />
+    <VKBadge placement={"bottomRight"} variant={"circular"} content={<CameraIcon />}><RoundIcon /></VKBadge>
+
     </div>
+
 ```
   </Tabs.Tab>
 </Tabs>
@@ -246,9 +249,9 @@ export const BadgeExample = () => {
     <tr>
       <td>vairant</td>
       <td>
-        <span className="badge">circular</span>  
-        <span className="badge">square</span> 
-        
+        <span className="badge">circular</span>
+        <span className="badge">square</span>
+
       </td>
       <td>Changes badge appreance</td>
       <td><span className="badge">square</span></td>
@@ -256,13 +259,13 @@ export const BadgeExample = () => {
     <tr>
       <td>color</td>
       <td className="flex flex-wrap gap-y-2 border-none">
-        <span className="badge">primary</span>   
-        <span className="badge">secondary</span>  
-        <span className="badge">success</span>  
-        <span className="badge">danger</span>  
-        <span className="badge">warning</span>  
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
         <span className="badge">dark</span>
-         <span className="badge">light</span>    
+         <span className="badge">light</span>
       </td>
       <td>Changes badge color</td>
       <td><span className="badge">success</span></td>
@@ -342,3 +345,4 @@ export const BadgeExample = () => {
 
   </tbody>
 </table>}
+```
