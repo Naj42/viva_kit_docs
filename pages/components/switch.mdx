@@ -38,8 +38,9 @@ The Switch component can be set to a checked state using the `isChecked` prop.
 
 <Tabs.Tab>
 export const SwitchIsCheckedGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
   return (
-  <VKSwitch onToggle={(isChecked) => console.log(isChecked)} />
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
   );
 };
 
@@ -61,8 +62,9 @@ The Switch component can handle toggle events using the `onToggle` prop.
 
 <Tabs.Tab>
 export const SwitchOnToggleGroup = () => {
-return (
-  <VKSwitch onToggle={(isChecked) => console.log(isChecked)} />
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
   );
 };
 
@@ -306,16 +308,10 @@ The Switch component can display a label when it is on using the `onInnerLabel` 
 
 <Tabs.Tab>
 export const SwitchInnerLabelGroup = () => {
-  const [vaar, isVaar] = useState(false)
-  const [vaar2, isVaar2] = useState(false)
    return (
     <div className="flex items-center gap-8 flex-wrap">
-    <VKSwitch offInnerLabel="Light"
-          onInnerLabel="Dark" isChecked={vaar}
-          onToggle={() => isVaar(!vaar)} />
+    <VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
     <VKSwitch
-          isChecked={vaar2}
-          onToggle={() => isVaar2(!vaar2)}
           offInnerLabel={
             <img
               width="20"
@@ -342,7 +338,7 @@ export const SwitchInnerLabelGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch onInnerLabel="On" offInnerLabel="Off" />
+<VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
 ```
 
 </Tabs.Tab>
