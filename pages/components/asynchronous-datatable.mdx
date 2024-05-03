@@ -6,6 +6,7 @@ import {
 import { Tabs } from "nextra/components";
 import { rawDataTableData } from "../../libs/data.ts";
 import { useState } from "react";
+import { DropdownIcon } from "../../components/assets/icons.tsx";
 
 # Asynchronous Datatable
 
@@ -680,6 +681,241 @@ export const AsyncDataTableSelectedRows = () => {
 </Tabs>
 
 &nbsp;
+### Examples
+
+Example 1
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const AsyncDataTableEx1 = () => {
+  const dataTableColumns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      align: "start",
+      width: "20%",
+      isSortable: true,
+    },
+    {
+      title: "Position",
+      dataIndex: "position",
+      align: "center",
+    },
+    {
+      title: "Office",
+      dataIndex: "office",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+      align: "end",
+      render: (value) => {
+        return (
+        <div>{value} years</div>
+      )}
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+      align: "center",
+      render: (value) => {
+        return (
+          <div
+            className={value === "Active" ? "text-[#027A48]" : "text-[#B42318]"}
+          >
+            {value}
+          </div>
+      )}
+    },
+    {
+      title: "Start Date",
+      dataIndex: "start_date",
+    },
+    {
+      title: "Salary",
+      dataIndex: "salary",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+      align: "center",
+      render: (value) => {
+        return (
+          <div
+            className="flex items-center justify-center"
+            
+          >
+            <DropdownIcon />
+          </div>
+        )
+      }
+    }
+  ];
+
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
+
+  const [selectedRows, setSelectedRows] = useState([])
+
+  return (
+    <AsyncDatatable
+      columnDefinitions={dataTableColumns}
+      dataSource={dataTableDataSource}
+      isSelectableMulti
+      selectedRows={selectedRows}
+      handleOnSelectChange={(selectedItems) => setSelectedRows(selectedItems)}
+      totalPages={7}
+      currentPage={1}
+      noOfEntries={10}
+      totalRecord={250}
+      horizontalBorder
+      scroll={{x: 1500}}
+      stripped
+      stripeColor="#FCFCFD"
+      headerWrapperClassName="!bg-gray-50"
+      headItemClassName="text-xs border-t-0 px-6 py-3"
+      rowItemClassName="text-sm px-6 py-5"
+      entriesHeaderClassName="text-gray-900"
+      selectEntriesWrapperClassName="rounded-[0.5rem] !border-gray-200 min-w-[2.5rem] bg-white text-gray-900 cursor-pointer"
+      handlePageChange={(page) => {
+        console.debug(page);
+      }}
+      paginationNoOfEntriesWrapperClassName={"text-xs text-gray-700"}
+      paginationWrapperClassName="text-gray-700"
+      paginationButtonClassName="font-semibold text-gray-500 hover:bg-gray-50 hover:text-gray-800"
+      paginationButtonSelectedClassName="!bg-gray-50 !text-gray-800"
+      paginationPrevBtnClassName=""
+      paginationNextBtnClassName=""
+      entriesWrapperClassName=""
+      entriesHeader={"Items per page"}
+      dynamicPreviousText={"Previous"}
+      dynamicNextText={"Next"}
+      handleNoOfEntriesChange={(pageSize) => {
+        console.debug(pageSize);
+      }}
+    />
+  ); };
+
+<AsyncDataTableEx1 />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+const dataTableColumns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      align: "start",
+      width: "20%",
+      isSortable: true,
+    },
+    {
+      title: "Position",
+      dataIndex: "position",
+      align: "center",
+    },
+    {
+      title: "Office",
+      dataIndex: "office",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+      align: "end",
+      render: (value) => {
+        return (
+        <div>{value} years</div>
+      )}
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+      align: "center",
+      render: (value) => {
+        return (
+          <div
+            className={value === "Active" ? "text-[#027A48]" : "text-[#B42318]"}
+          >
+            {value}
+          </div>
+      )}
+    },
+    {
+      title: "Start Date",
+      dataIndex: "start_date",
+    },
+    {
+      title: "Salary",
+      dataIndex: "salary",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+      align: "center",
+      render: (value) => {
+        return (
+          <div
+            className="flex items-center justify-center"
+            
+          >
+            <DropdownIcon />
+          </div>
+        )
+      }
+    }
+  ];
+
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
+
+  const [selectedRows, setSelectedRows] = useState([])
+
+return (
+  <AsyncDatatable
+    columnDefinitions={dataTableColumns}
+    dataSource={dataTableDataSource}
+    isSelectableMulti
+    selectedRows={selectedRows}
+    handleOnSelectChange={(selectedItems) => setSelectedRows(selectedItems)}
+    totalPages={7}
+    currentPage={1}
+    noOfEntries={10}
+    totalRecord={250}
+    horizontalBorder
+    scroll={{x: 1500}}
+    stripped
+    stripeColor="#FCFCFD"
+    headerWrapperClassName="!bg-gray-50"
+    headItemClassName="text-xs border-t-0 px-6 py-3"
+    rowItemClassName="text-sm px-6 py-5"
+    entriesHeaderClassName="text-gray-900"
+    selectEntriesWrapperClassName="rounded-[0.5rem] !border-gray-200 min-w-[2.5rem] bg-white text-gray-900 cursor-pointer"
+    handlePageChange={(page) => {
+      console.debug(page);
+    }}
+    paginationNoOfEntriesWrapperClassName={"text-xs text-gray-700"}
+    paginationWrapperClassName="text-gray-700"
+    paginationButtonClassName="font-semibold text-gray-500 hover:bg-gray-50 hover:text-gray-800"
+    paginationButtonSelectedClassName="!bg-gray-50 !text-gray-800"
+    paginationPrevBtnClassName=""
+    paginationNextBtnClassName=""
+    entriesWrapperClassName=""
+    entriesHeader={"Items per page"}
+    dynamicPreviousText={"Previous"}
+    dynamicNextText={"Next"}
+    handleNoOfEntriesChange={(pageSize) => {
+      console.debug(pageSize);
+    }}
+  />
+); };
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+{/* &nbsp;
 ### API Reference
 
 {<table>
@@ -731,4 +967,4 @@ export const AsyncDataTableSelectedRows = () => {
       <td><span className="badge">md</span></td>
     </tr>
   </tbody>
-</table>}
+</table>} */}
