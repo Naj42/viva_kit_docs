@@ -1,7 +1,8 @@
 import {
-  RadioButton,
-  RadioGroup,
   AsyncDatatable,
+  VKTimeRangePicker,
+  Select,
+  Input
 } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { rawDataTableData } from "../../libs/data.ts";
@@ -759,10 +760,47 @@ export const AsyncDataTableEx1 = () => {
 
   const [selectedRows, setSelectedRows] = useState([])
 
+  const headerComponent = (
+    <div className="w-full flex gap-4 items-end justify-between">
+      <div>
+        <Input placeholder="Search by Name" size={"md"} rounded={"lg"} />
+      </div>
+
+      <div className="flex gap-4 items-end">
+        <VKTimeRangePicker
+          callback={(time) => {
+            console.log(time);
+          }}
+          size="sm"
+          rounded="lg"
+          color="light"
+          fromPlaceholder="In Time"
+          containerClassName="h-10 w-[200px]"
+          inputClassName="text-md"
+          onReset={(params) => console.log(params)}
+        />
+
+        <VKTimeRangePicker
+          callback={(time) => {
+            console.log(time);
+          }}
+          size="sm"
+          rounded="lg"
+          color="light"
+          fromPlaceholder="Out Time"
+          containerClassName="h-10 w-[200px]"
+          inputClassName="text-md"
+          onReset={(params) => console.log(params)}
+        />
+      </div>
+    </div>
+  );
+
   return (
     <AsyncDatatable
       columnDefinitions={dataTableColumns}
       dataSource={dataTableDataSource}
+      headerComponents={headerComponent}
       isSelectableMulti
       selectedRows={selectedRows}
       handleOnSelectChange={(selectedItems) => setSelectedRows(selectedItems)}
@@ -804,79 +842,116 @@ export const AsyncDataTableEx1 = () => {
   <Tabs.Tab>
 ```jsx copy
 const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-      align: "start",
-      width: "20%",
-      isSortable: true,
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Office",
-      dataIndex: "office",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      align: "end",
-      render: (value) => {
-        return (
-        <div>{value} years</div>
-      )}
-    },
-    {
-      title: "Status",
-      dataIndex: "status",
-      align: "center",
-      render: (value) => {
-        return (
-          <div
-            className={value === "Active" ? "text-[#027A48]" : "text-[#B42318]"}
-          >
-            {value}
-          </div>
-      )}
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    },
-    {
-      title: "Action",
-      dataIndex: "action",
-      align: "center",
-      render: (value) => {
-        return (
-          <div
-            className="flex items-center justify-center"
-            
-          >
-            <DropdownIcon />
-          </div>
-        )
-      }
+  {
+    title: "Name",
+    dataIndex: "name",
+    align: "start",
+    width: "20%",
+    isSortable: true,
+  },
+  {
+    title: "Position",
+    dataIndex: "position",
+    align: "center",
+  },
+  {
+    title: "Office",
+    dataIndex: "office",
+  },
+  {
+    title: "Age",
+    dataIndex: "age",
+    align: "end",
+    render: (value) => {
+      return (
+      <div>{value} years</div>
+    )}
+  },
+  {
+    title: "Status",
+    dataIndex: "status",
+    align: "center",
+    render: (value) => {
+      return (
+        <div
+          className={value === "Active" ? "text-[#027A48]" : "text-[#B42318]"}
+        >
+          {value}
+        </div>
+    )}
+  },
+  {
+    title: "Start Date",
+    dataIndex: "start_date",
+  },
+  {
+    title: "Salary",
+    dataIndex: "salary",
+  },
+  {
+    title: "Action",
+    dataIndex: "action",
+    align: "center",
+    render: (value) => {
+      return (
+        <div
+          className="flex items-center justify-center"
+          
+        >
+          <DropdownIcon />
+        </div>
+      )
     }
-  ];
+  }
+];
 
-  const [dataTableDataSource, setDataTableDataSource] = useState([
-  ...rawDataTableData,
-  ]);
+const [dataTableDataSource, setDataTableDataSource] = useState([
+...rawDataTableData,
+]);
 
-  const [selectedRows, setSelectedRows] = useState([])
+const [selectedRows, setSelectedRows] = useState([])
+
+const headerComponent = (
+  <div className="w-full flex gap-4 items-end justify-between">
+    <div>
+      <Input placeholder="Search by Name" size={"md"} rounded={"lg"} />
+    </div>
+
+    <div className="flex gap-4 items-end">
+      <VKTimeRangePicker
+        callback={(time) => {
+          console.log(time);
+        }}
+        size="sm"
+        rounded="lg"
+        color="light"
+        fromPlaceholder="In Time"
+        containerClassName="h-10 w-[200px]"
+        inputClassName="text-md"
+        onReset={(params) => console.log(params)}
+      />
+
+      <VKTimeRangePicker
+        callback={(time) => {
+          console.log(time);
+        }}
+        size="sm"
+        rounded="lg"
+        color="light"
+        fromPlaceholder="Out Time"
+        containerClassName="h-10 w-[200px]"
+        inputClassName="text-md"
+        onReset={(params) => console.log(params)}
+      />
+    </div>
+  </div>
+);
 
 return (
   <AsyncDatatable
     columnDefinitions={dataTableColumns}
     dataSource={dataTableDataSource}
+    headerComponents={headerComponent}
     isSelectableMulti
     selectedRows={selectedRows}
     handleOnSelectChange={(selectedItems) => setSelectedRows(selectedItems)}
