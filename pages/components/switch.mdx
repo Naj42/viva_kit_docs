@@ -1,0 +1,559 @@
+import { VKSwitch } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import { useState } from "react";
+
+# Switch
+
+The Switch component can be used to toggle between two states, on and off.
+
+### Default Checked
+
+The Switch component can be set to a default checked state using the `defaultChecked` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchDefaultCheckedGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch defaultChecked onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+  );
+};
+
+<SwitchDefaultCheckedGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch defaultChecked />
+```
+</Tabs.Tab>
+</Tabs>
+
+### Is Checked
+
+The Switch component can be set to a checked state using the `isChecked` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchIsCheckedGroup = () => {
+  const [isSwitchhChecked, setSwitchhChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchhChecked} onToggle={() => setSwitchhChecked(!isSwitchhChecked)}/>
+  );
+};
+
+<SwitchIsCheckedGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch isChecked />
+```
+</Tabs.Tab>
+</Tabs>
+
+### On Toggle
+
+The Switch component can handle toggle events using the `onToggle` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchOnToggleGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+  );
+};
+
+<SwitchOnToggleGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch onToggle={(isChecked) => console.log(isChecked)} />
+```
+</Tabs.Tab>
+</Tabs>
+
+
+### Disabled
+
+The Switch component can be disabled using the `disabled` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchDisabledGroup = () => {
+  return (
+  <VKSwitch disabled />
+  );
+};
+
+<SwitchDisabledGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch disabled />
+```
+</Tabs.Tab>
+</Tabs>
+
+### Is Vertical
+
+The Switch component can be set to a vertical orientation using the `isVertical` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchIsVerticalGroup = () => {
+  return (
+  <VKSwitch isVertical />
+  );
+};
+
+<SwitchIsVerticalGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch isVertical />
+```
+</Tabs.Tab>
+</Tabs>
+
+### Reversible
+
+The Switch component can be made reversible using the `reversible` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchReversibleGroup = () => {
+  return (
+  <VKSwitch reversible />
+  );
+};
+
+<SwitchReversibleGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch reversible />
+```
+</Tabs.Tab>
+</Tabs>
+
+
+### Variant
+
+The Switch component can be styled in different ways using the `variant` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchVariantGroup = () => {
+  return (
+  <div className="flex items-center gap-16 flex-wrap">
+    <VKSwitch variant="default" />
+    <VKSwitch variant="android" />
+    <VKSwitch variant="iOS" />
+  </div>
+  );
+};
+
+<SwitchVariantGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch variant="android" />
+<VKSwitch variant="iOS" />
+<VKSwitch variant="default" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+### Size
+
+The Switch component comes with 3 different sizes that you can change it using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchSizeGroup = () => {
+  return (
+  <div className="flex items-center gap-16 flex-wrap">
+    <VKSwitch size="sm" />
+    <VKSwitch size="md" />
+    <VKSwitch size="lg" />
+  </div>
+  );
+};
+
+<SwitchSizeGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch size="sm" />
+<VKSwitch size="md" />
+<VKSwitch size="lg" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+### Body ClassName
+
+The Switch component can be styled using the `bodyClassName` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchBodyClassNameGroup = () => {
+  return (
+    <VKSwitch bodyClassName="bg-blue-300" />
+  );
+};
+
+<SwitchBodyClassNameGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch bodyClassName="bg-blue-300" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+### Handle ClassName
+
+The Switch component can be styled using the `handleClassName` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchHandleClassNameGroup = () => {
+  return (
+    <VKSwitch handleClassName="bg-blue-300" />
+  );
+};
+
+<SwitchHandleClassNameGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch handleClassName="bg-blue-300" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+### On/Off Icon
+
+The Switch component can display an icon when it is on using the `onIcon` prop and when it is off using the `offIcon`.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchIconGroup = () => {
+  return(
+    <VKSwitch
+          offIcon={
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/sun--v1.png"
+              alt="sun--v1"
+            />
+          }
+          onIcon={
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/moon-symbol.png"
+              alt="moon-symbol"
+            />
+          }
+        />
+  );
+};
+
+<SwitchIconGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch onIcon={<Icon />} offIcon={<Icon />}  />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+### On/Off Inner Label
+
+The Switch component can display a label when it is on using the `onInnerLabel` prop and when it is off using the `offInnerLabel` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchInnerLabelGroup = () => {
+   return (
+    <div className="flex items-center gap-8 flex-wrap">
+    <VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
+    <VKSwitch
+          offInnerLabel={
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/sun--v1.png"
+              alt="sun--v1"
+            />
+          }
+          onInnerLabel={
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios/50/moon-symbol.png"
+              alt="moon-symbol"
+            />
+          }
+        />
+        </div>
+  );
+};
+
+<SwitchInnerLabelGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+### Label
+
+The Switch component can display a label using the `label` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchLabelGroup = () => {
+  return (
+     <VKSwitch label="Switch" />
+  );
+};
+
+<SwitchLabelGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch label="Switch" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+### Label Placement
+
+The Switch component can place the label in different positions using the `labelPlacement` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchLabelPlacementGroup = () => {
+    return (
+    <div className="flex items-center gap-16 flex-wrap">
+      <VKSwitch label="Switch" labelPlacement="left" />
+      <VKSwitch label="Switch" labelPlacement="right" />
+      <VKSwitch label="Switch" labelPlacement="top" />
+      <VKSwitch label="Switch" labelPlacement="bottom" />
+    </div>
+  );
+};
+
+<SwitchLabelPlacementGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch label="Switch" labelPlacement="left" />
+<VKSwitch label="Switch" labelPlacement="right" />
+<VKSwitch label="Switch" labelPlacement="top" />
+<VKSwitch label="Switch" labelPlacement="bottom" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+### Label ClassName
+
+The Switch component can be styled using the `labelClassName` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchLabelClassNameGroup = () => {
+  return (
+    <VKSwitch label="Switch" labelClassName="text-blue-600" />
+  );
+};
+
+<SwitchLabelClassNameGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKSwitch label="Switch" labelClassName="text-blue-600" />
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>defaultChecked</td>
+      <td>boolean</td>
+      <td>Whether the switch is checked by default</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>isChecked</td>
+      <td>boolean</td>
+      <td>Whether the switch is checked</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>onToggle</td>
+      <td>function</td>
+      <td>Function to call when the switch is toggled</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>boolean</td>
+      <td>Whether the switch is disabled</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>isVertical</td>
+      <td>boolean</td>
+      <td>Whether the switch is vertical</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>reversible</td>
+      <td>boolean</td>
+      <td>Whether the switch is reversible</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>variant</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+      <span className="badge">android</span>  
+      <span className="badge">iOS</span> 
+      <span className="badge">default</span> 
+      </td>
+      <td>Variant of the switch</td>
+      <td>default</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+      <span className="badge">sm</span>  
+      <span className="badge">md</span> 
+      <span className="badge">lg</span> 
+      </td>
+      <td>Size of the switch</td>
+      <td>md</td>
+    </tr>
+    <tr>
+      <td>bodyClassName</td>
+      <td>string</td>
+      <td>Classname for the switch body</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>handleClassName</td>
+      <td>string</td>
+      <td>Classname for the switch handle</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>onIcon</td>
+      <td>ReactNode</td>
+      <td>Icon for the on state</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>offIcon</td>
+      <td>ReactNode</td>
+      <td>Icon for the off state</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>onInnerLabel</td>
+      <td>ReactNode | string</td>
+      <td>Inner label for the on state</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>offInnerLabel</td>
+      <td>ReactNode | string</td>
+      <td>Inner label for the off state</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>string</td>
+      <td>Label for the switch</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>labelPlacement</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+      <span className="badge">left</span>  
+      <span className="badge">right</span> 
+      <span className="badge">top</span> 
+      <span className="badge">bottom</span> 
+      </td>
+      <td>Placement of the label</td>
+      <td>right</td>
+    </tr>
+    <tr>
+      <td>labelClassName</td>
+      <td>string</td>
+      <td>Classname for the label</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
