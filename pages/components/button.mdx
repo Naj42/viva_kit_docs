@@ -13,9 +13,9 @@ The Button component comes with 3 different variants that you can change it usin
 export const ButtonVariantGroup = () => {
   return (
     <div className="flex items-center gap-3">
-        <Button variant="solid" className="!bg-primary !text-primary-foreground" >Solid</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="light" className="!bg-primary-light !text-primary">Light</Button>
+        <Button size="md" variant="solid" className="!bg-primary !text-primary-foreground" >Solid</Button>
+        <Button size="md" variant="outline">Outline</Button>
+        <Button size="md" variant="light" className="!bg-primary-light !text-primary">Light</Button>
     </div>
   );
 };
@@ -77,16 +77,16 @@ The Button component comes with 5 different colors that you can change it using 
 export const ButtonColorGroup = () => {
   return (
     <div className="flex items-end gap-3 flex-wrap">
-        <Button className="!bg-primary !text-primary-foreground">Primary Solid</Button>
-        <Button variant="outline" color="primary">Primary Outline</Button>
-        <Button className="!bg-secondary !text-secondary-foreground">Secondary Solid</Button>
-        <Button variant="outline" color="secondary">Secondary Outline</Button>
-        <Button className="!bg-success !text-success-foreground">Success Solid</Button>
-        <Button variant="outline" color="success">Success Outline</Button>
-        <Button className="!bg-warning !text-warning-foreground">Warning Solid</Button>
-        <Button variant="outline" color="warning">Warning Outline</Button>
-        <Button className="!bg-danger !text-danger-foreground">Danger Solid</Button>
-        <Button variant="outline" color="danger">Danger Outline</Button>
+        <Button size="md" rounded="md" className="!bg-primary !text-primary-foreground">Primary Solid</Button>
+        <Button size="md" rounded="md" variant="outline" color="primary">Primary Outline</Button>
+        <Button size="md" rounded="md" className="!bg-secondary !text-secondary-foreground">Secondary Solid</Button>
+        <Button size="md" rounded="md" variant="outline" color="secondary">Secondary Outline</Button>
+        <Button size="md" rounded="md" className="!bg-success !text-success-foreground">Success Solid</Button>
+        <Button size="md" rounded="md" variant="outline" color="success">Success Outline</Button>
+        <Button size="md" rounded="md" className="!bg-warning !text-warning-foreground">Warning Solid</Button>
+        <Button size="md" rounded="md" variant="outline" color="warning">Warning Outline</Button>
+        <Button size="md" rounded="md" className="!bg-danger !text-danger-foreground">Danger Solid</Button>
+        <Button size="md" rounded="md" variant="outline" color="danger">Danger Outline</Button>
         
     </div>
   );
@@ -123,12 +123,12 @@ The shape of the Button component can be updated using `rounded` prop
 export const ButtonRoundedGroup = () => {
   return (
     <div className="flex items-end gap-3">
-        <Button rounded="none" className="btn">None</Button>
-        <Button rounded="default" className="btn">Default</Button>
-        <Button rounded="sm" className="btn">Small</Button>
-        <Button rounded="md" className="btn">Medium</Button>
-        <Button rounded="lg" className="btn">Large</Button>
-        <Button rounded="full" className="btn">Full</Button>
+        <Button size="md" rounded="none" className="btn">None</Button>
+        <Button size="md" rounded="default" className="btn">Default</Button>
+        <Button size="md" rounded="sm" className="btn">Small</Button>
+        <Button size="md" rounded="md" className="btn">Medium</Button>
+        <Button size="md" rounded="lg" className="btn">Large</Button>
+        <Button size="md" rounded="full" className="btn">Full</Button>
     </div>
   );
 };
@@ -158,12 +158,12 @@ The Social Button component comes with svg icon.
 <Tabs items={['Preview', 'Code']}>
 
 <Tabs.Tab>
-export const SocalButtonGroup = () => {
+export const SocalButtons = () => {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-            <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
@@ -172,7 +172,7 @@ export const SocalButtonGroup = () => {
                 </svg>
                 Sign in with Google 1.0
             </Button>
-            <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
@@ -180,7 +180,7 @@ export const SocalButtonGroup = () => {
                   <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
                 </svg>
             </Button>
-            <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#b1b9c6"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#b1b9c6"/>
@@ -189,7 +189,7 @@ export const SocalButtonGroup = () => {
                 </svg>
                 Sign in with Google 1.1
             </Button>
-            <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#b1b9c6"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#b1b9c6"/>
@@ -199,7 +199,7 @@ export const SocalButtonGroup = () => {
             </Button>
         </div>
         <div className="flex items-center justify-between gap-3"> 
-            <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
@@ -208,7 +208,7 @@ export const SocalButtonGroup = () => {
                 </svg>
                 Sign in with Google 2.0
             </Button>
-            <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
@@ -216,7 +216,7 @@ export const SocalButtonGroup = () => {
                   <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
                 </svg>
             </Button>
-            <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#b1b9c6"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#b1b9c6"/>
@@ -225,7 +225,7 @@ export const SocalButtonGroup = () => {
                 </svg>
                 Sign in with Google 2.1
             </Button>
-            <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+            <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#b1b9c6"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#b1b9c6"/>
@@ -235,7 +235,7 @@ export const SocalButtonGroup = () => {
             </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-            <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">      
+            <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">      
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
@@ -244,7 +244,7 @@ export const SocalButtonGroup = () => {
                 </svg>
                 Sign in with Google 3.0
             </Button>
-            <Button className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
@@ -252,7 +252,7 @@ export const SocalButtonGroup = () => {
                   <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
                 </svg>
             </Button>
-            <Button variant="light" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#b1b9c6"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#b1b9c6"/>
@@ -261,7 +261,7 @@ export const SocalButtonGroup = () => {
                 </svg>
                 Sign in with Google 3.1
             </Button>
-            <Button variant="light" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+            <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
                   <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#b1b9c6"/>
                   <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#b1b9c6"/>
@@ -273,77 +273,77 @@ export const SocalButtonGroup = () => {
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#1877f2] !text-white flex gap-2">
+          <Button size="md" rounded="md" className="!bg-[#1877f2] !text-white flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
             Sign in with Facebook 1.0
           </Button>
-          <Button className="!bg-[#1877f2]">
+          <Button size="md" rounded="md" className="!bg-[#1877f2]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98A2B3" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
             Sign in with Facebook 1.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98A2B3" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#0c63d4] !text-white flex gap-2">
+          <Button size="md" rounded="md" className="!bg-[#0c63d4] !text-white flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
             Sign in with Facebook 2.0
           </Button>
-          <Button className="!bg-[#0c63d4]">
+          <Button size="md" rounded="md" className="!bg-[#0c63d4]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
           </Button>
-          <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98A2B3" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
             Sign in with Facebook 2.1
           </Button>
-          <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98A2B3" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#1877f2] !text-white flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#1877f2] !text-white flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
             Sign in with Facebook 3.0
           </Button>
-          <Button className="!bg-[#1877f2] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#1877f2] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98A2B3" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
             Sign in with Facebook 3.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98A2B3" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
           </Button>
         </div>
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-black !text-white  flex gap-2">
+          <Button size="md" rounded="md" className="!bg-black !text-white  flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
           </svg>
             Sign in with Apple 1.0
           </Button>
-          <Button className="!bg-black">
+          <Button size="md" rounded="md" className="!bg-black">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
           </svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="#98A2B3"/>
           </svg>
             Sign in with Apple 1.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="#98A2B3"/>
@@ -351,27 +351,27 @@ export const SocalButtonGroup = () => {
           </Button>
         </div>        
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-black !text-white  flex gap-2">
+          <Button size="md" rounded="md" className="!bg-black !text-white  flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
           </svg>
             Sign in with Apple 2.0
           </Button>
-          <Button className="!bg-black">
+          <Button size="md" rounded="md" className="!bg-black">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
           </svg>
           </Button>
-          <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="#98A2B3"/>
           </svg>
             Sign in with Apple 2.1
           </Button>
-          <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="#98A2B3"/>
@@ -379,27 +379,27 @@ export const SocalButtonGroup = () => {
           </Button>
         </div>        
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-black !text-white  flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-black !text-white  flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
           </svg>
             Sign in with Apple 3.0
           </Button>
-          <Button className="!bg-black shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-black shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
           </svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="#98A2B3"/>
           </svg>
             Sign in with Apple 3.1
           </Button>
-          <Button className="!bg-[#ffffff] !text-black border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
             <rect width="24" height="24" fill="none"/>
             <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="#98A2B3"/>
@@ -409,57 +409,57 @@ export const SocalButtonGroup = () => {
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#1DA1F2] !text-white  flex gap-2">
+          <Button size="md" rounded="md" className="!bg-[#1DA1F2] !text-white  flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="white" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
             Sign in with Twitter 1.0
           </Button>
-          <Button className="!bg-[#1DA1F2]">
+          <Button size="md" rounded="md" className="!bg-[#1DA1F2]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="white" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98a2b3" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
             Sign in with Twitter 1.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98a2b3" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#0c8bd9] !text-white  flex gap-2">
+          <Button size="md" rounded="md" className="!bg-[#0c8bd9] !text-white  flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="white" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
             Sign in with Twitter 2.0
           </Button>
-          <Button className="!bg-[#0c8bd9]">
+          <Button size="md" rounded="md" className="!bg-[#0c8bd9]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="white" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
           </Button>
-          <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98a2b3" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
             Sign in with Twitter 2.1
           </Button>
-          <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98a2b3" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#1DA1F2] !text-white  flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#1DA1F2] !text-white  flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="white" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
             Sign in with Twitter 3.0
           </Button>
-          <Button className="!bg-[#1DA1F2] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#1DA1F2] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="white" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98a2b3" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
             Sign in with Twitter 3.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#98a2b3" d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/></svg>
           </Button>
         </div>
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-black !text-white flex gap-2">
+          <Button size="md" rounded="md" className="!bg-black !text-white flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#1ABCFE"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#0ACF83"/>
@@ -469,7 +469,7 @@ export const SocalButtonGroup = () => {
             </svg>
             Sign in with Figma 1.0
           </Button>
-          <Button className="!bg-black">
+          <Button size="md" rounded="md" className="!bg-black">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#1ABCFE"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#0ACF83"/>
@@ -478,7 +478,7 @@ export const SocalButtonGroup = () => {
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C8 18.2091 9.79086 20 12 20H16V12H12C9.79086 12 8 13.7909 8 16Z" fill="#A259FF"/>
             </svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#98a2b3"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#98a2b3"/>
@@ -488,7 +488,7 @@ export const SocalButtonGroup = () => {
             </svg>
             Sign in with Figma 1.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#98a2b3"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#98a2b3"/>
@@ -499,7 +499,7 @@ export const SocalButtonGroup = () => {
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-black !text-white  flex gap-2">
+          <Button size="md" rounded="md" className="!bg-black !text-white  flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#1ABCFE"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#0ACF83"/>
@@ -509,7 +509,7 @@ export const SocalButtonGroup = () => {
             </svg>
             Sign in with Figma 2.0
           </Button>
-          <Button className="!bg-black">
+          <Button size="md" rounded="md" className="!bg-black">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#1ABCFE"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#0ACF83"/>
@@ -518,7 +518,7 @@ export const SocalButtonGroup = () => {
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C8 18.2091 9.79086 20 12 20H16V12H12C9.79086 12 8 13.7909 8 16Z" fill="#A259FF"/>
             </svg>
           </Button>
-          <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#98a2b3"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#98a2b3"/>
@@ -528,7 +528,7 @@ export const SocalButtonGroup = () => {
             </svg>
             Sign in with Figma 2.1
           </Button>
-          <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#98a2b3"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#98a2b3"/>
@@ -539,7 +539,7 @@ export const SocalButtonGroup = () => {
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-black !text-white flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-black !text-white flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#1ABCFE"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#0ACF83"/>
@@ -549,7 +549,7 @@ export const SocalButtonGroup = () => {
             </svg>
             Sign in with Figma 3.0
           </Button>
-          <Button className="!bg-black shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-black shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#1ABCFE"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#0ACF83"/>
@@ -558,7 +558,7 @@ export const SocalButtonGroup = () => {
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C8 18.2091 9.79086 20 12 20H16V12H12C9.79086 12 8 13.7909 8 16Z" fill="#A259FF"/>
             </svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#98a2b3"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#98a2b3"/>
@@ -568,7 +568,7 @@ export const SocalButtonGroup = () => {
             </svg>
             Sign in with Figma 3.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z" fill="#98a2b3"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z" fill="#98a2b3"/>
@@ -581,27 +581,27 @@ export const SocalButtonGroup = () => {
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#ea4c89] !text-white flex gap-2">
+          <Button size="md" rounded="md" className="!bg-[#ea4c89] !text-white flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
             Sign in with Dribble 1.0
           </Button>
-          <Button className="!bg-[#ea4c89]">
+          <Button size="md" rounded="md" className="!bg-[#ea4c89]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#98a2b3" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
             Sign in with Dribble 1.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#98a2b3" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
@@ -609,27 +609,27 @@ export const SocalButtonGroup = () => {
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#e62872] !text-white flex gap-2">
+          <Button size="md" rounded="md" className="!bg-[#e62872] !text-white flex gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
             Sign in with Dribble 2.0
           </Button>
-          <Button className="!bg-[#e62872]">
+          <Button size="md" rounded="md" className="!bg-[#e62872]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
           </Button>
-          <Button className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] !text-black flex gap-2 border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#98a2b3" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
             Sign in with Dribble 2.1
           </Button>
-          <Button className="!bg-[#f9fafb] border border-[#d0d5dd]">
+          <Button size="md" rounded="md" className="!bg-[#f9fafb] border border-[#d0d5dd]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#98a2b3" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
@@ -637,27 +637,27 @@ export const SocalButtonGroup = () => {
           </Button>
         </div>
         <div className="flex items-center justify-between gap-3">
-          <Button className="!bg-[#ea4c89] !text-white flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ea4c89] !text-white flex gap-2 shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
             Sign in with Dribble 3.0
           </Button>
-          <Button className="!bg-[#ea4c89] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ea4c89] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
           </Button>
-          <Button className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#98a2b3" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
             </svg>
             Sign in with Dribble 3.1
           </Button>
-          <Button className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] border border-[#d0d5dd] shadow-[0px_0px_0px_4px_rgba(242,244,247,1)]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#98a2b3" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
             <title>dribble</title>
             <path d="M25.916 7.921c-1.881 2.234-4.289 3.965-7.035 5.009l-0.118 0.039c0.3 0.612 0.587 1.231 0.85 1.857 0.1 0.225 0.187 0.45 0.275 0.662 0.927-0.102 2.003-0.16 3.092-0.16 2.063 0 4.077 0.208 6.023 0.605l-0.193-0.033c-0.020-3.040-1.107-5.821-2.904-7.994l0.017 0.021zM13.001 3.569c1.595 2.15 3.176 4.6 4.598 7.151l0.178 0.347c2.712-0.908 4.989-2.511 6.694-4.6l0.021-0.026c-2.247-2.006-5.228-3.232-8.494-3.232-1.063 0-2.096 0.13-3.084 0.375l0.088-0.018zM3.46 13.395c4.219-0.022 8.295-0.59 12.176-1.636l-0.333 0.076c-1.652-2.899-3.222-5.318-4.912-7.644l0.163 0.236c-3.596 1.721-6.227 4.966-7.077 8.875l-0.015 0.085zM6.484 24.585c2.42-3.882 6.010-6.839 10.271-8.408l0.141-0.045c0.169-0.056 0.337-0.105 0.506-0.15-0.325-0.731-0.675-1.458-1.040-2.174-3.888 1.154-8.355 1.819-12.977 1.819-0.066 0-0.131-0-0.196-0l0.010 0-0.005 0.39c0 0.003 0 0.006 0 0.009 0 3.297 1.25 6.302 3.301 8.568l-0.010-0.011zM21.005 27.809c-0.682-3.699-1.63-6.957-2.863-10.070l0.126 0.361-0.082 0.025c-4.314 1.346-7.826 4.192-10.002 7.915l-0.045 0.083c2.145 1.688 4.885 2.707 7.863 2.707 1.805 0 3.522-0.374 5.078-1.049l-0.083 0.032zM28.646 18.052c-1.571-0.474-3.376-0.747-5.245-0.747-0.964 0-1.911 0.073-2.836 0.213l0.104-0.013c0.98 2.564 1.842 5.629 2.436 8.789l0.054 0.344c2.874-1.96 4.893-4.993 5.482-8.51l0.010-0.075zM16 30.996c0 0 0 0-0 0-8.282 0-14.996-6.714-14.996-14.996s6.714-14.996 14.996-14.996c8.282 0 14.996 6.714 14.996 14.996 0 0 0 0 0 0v0c-0.011 8.277-6.718 14.984-14.995 14.996h-0.001z"/>
@@ -669,7 +669,7 @@ export const SocalButtonGroup = () => {
   );
 };
 
-<SocalButtonGroup />
+<SocalButtons />
 </Tabs.Tab>
 
 <Tabs.Tab>
@@ -1178,6 +1178,114 @@ export const SocalButtonGroup = () => {
           </svg>
         </Button>
       </div>
+    </div>
+  </div>
+  ```
+</Tabs.Tab>
+
+</Tabs>
+
+### Social Button Groups
+
+The Social Button component groups comes with different social icon variants
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SocalButtonGroup = () => {
+  return (
+    <div className="flex gap-3">
+      <div className="flex flex-col gap-2 w-1/2">
+          <Button size="md" rounded="md" className="!bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
+                <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+                <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+                <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+                <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+              </svg>
+              Sign in with Google
+          </Button>
+          <Button size="md" rounded="md" className="!bg-[#1877f2] !text-white flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
+            Sign in with Facebook
+          </Button>
+          <Button size="md" rounded="md" className="!bg-black !text-white  flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+            <rect width="24" height="24" fill="none"/>
+            <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
+          </svg>
+            Sign in with Apple
+          </Button>
+      </div>
+      <div className="flex justify-around gap-2 w-1/2">
+          <Button size="md" rounded="md" className="w-28 !bg-[#ffffff] border border-[#d0d5dd]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
+                <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+                <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+                <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+                <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+              </svg>
+          </Button>
+          <Button size="md" rounded="md" className="w-28 !bg-[#1877f2]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
+          </Button>
+          <Button size="md" rounded="md" className="w-28 !bg-black">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+            <rect width="24" height="24" fill="none"/>
+            <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
+          </svg>
+          </Button>
+      </div>
+    </div>
+  );
+};
+
+<SocalButtonGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+  ```jsx copy
+  <div className="flex gap-3">
+    <div className="flex flex-col gap-2 w-1/2">
+        <Button size="md" rounded="md" variant="outline" className="!bg-[#ffffff] !text-black flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
+              <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+              <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+              <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+              <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+            </svg>
+            Sign in with Google
+        </Button>
+        <Button size="md" rounded="md" className="!bg-[#1877f2] !text-white flex gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
+          Sign in with Facebook
+        </Button>
+        <Button size="md" rounded="md" className="!bg-black !text-white  flex gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+          <rect width="24" height="24" fill="none"/>
+          <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
+        </svg>
+          Sign in with Apple
+        </Button>
+    </div>
+    <div className="flex justify-around gap-2 w-1/2">
+        <Button variant="outline" size="xl" rounded="md" className="w-28 !bg-[#ffffff] flex justify-center items-center" aria-label="Sign in with Google">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
+              <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+              <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+              <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+              <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+            </svg>
+        </Button>
+        <Button variant="outline" size="xl" rounded="md" className="w-28 !bg-[#1877f2] flex justify-center items-center" aria-label="Sign in with Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
+        </Button>
+        <Button variant="outline" size="xl" rounded="md" className="w-28 !bg-black flex justify-center items-center" aria-label="Sign in with Apple">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+          <rect width="24" height="24" fill="none"/>
+          <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
+        </svg>
+        </Button>
     </div>
   </div>
   ```
