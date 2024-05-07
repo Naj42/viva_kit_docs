@@ -1,0 +1,336 @@
+import { Tooltip } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Tooltip
+
+### Positions
+
+The Tooltip component can be positioned in various ways using the `position` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipPositionGroup = () => {
+  return (
+    <div className="flex items-center gap-8 flex-wrap">
+      <Tooltip position="top" content="Top Tooltip">Top</Tooltip>
+      <Tooltip position="topLeft" content="Top Left Tooltip">Top Left</Tooltip> 
+      <Tooltip position="topRight" content="Top Right Tooltip">Top Right</Tooltip>
+      <Tooltip position="left" content="Left Tooltip">Left</Tooltip>
+      <Tooltip position="bottom" content="Bottom Tooltip">Bottom</Tooltip>
+      <Tooltip position="bottomLeft" content="Bottom Left Tooltip">Bottom Left</Tooltip>
+      <Tooltip position="bottomRight" content="Bottom Right Tooltip">Bottom Right</Tooltip>
+      <Tooltip position="right" content="Right Tooltip">Right</Tooltip>
+    </div>
+  );
+};
+
+<TooltipPositionGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-8 flex-wrap">
+      <Tooltip position="top" content="Top Tooltip">Top</Tooltip>
+      <Tooltip position="topLeft" content="Top Left Tooltip">Top Left</Tooltip> 
+      <Tooltip position="topRight" content="Top Right Tooltip">Top Right</Tooltip>
+      <Tooltip position="left" content="Left Tooltip">Left</Tooltip>
+      <Tooltip position="bottom" content="Bottom Tooltip">Bottom</Tooltip>
+      <Tooltip position="bottomLeft" content="Bottom Left Tooltip">Bottom Left</Tooltip>
+      <Tooltip position="bottomRight" content="Bottom Right Tooltip">Bottom Right</Tooltip>
+      <Tooltip position="right" content="Right Tooltip">Right</Tooltip>
+    </div>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Content
+
+The Tooltip component can display any content passed to it using the `content` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipContentGroup = () => {
+  return (
+    <Tooltip content="This is a tooltip">Hover me</Tooltip>
+  );
+};
+
+<TooltipContentGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<Tooltip content="This is a tooltip">Hover me</Tooltip>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Caret
+
+The Tooltip component can display a caret pointing towards the content using the `caret` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipCaretGroup = () => {
+  return (
+    <div className="flex items-center gap-8 flex-wrap">
+      <Tooltip caret={true} content="This is a tooltip with caret">Hover me</Tooltip>
+      <Tooltip caret={false} content="This is a tooltip without caret">Hover me</Tooltip>
+    </div>
+  );
+};
+
+<TooltipCaretGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-8 flex-wrap">
+      <Tooltip caret={true} content="This is a tooltip with caret">Hover me</Tooltip>
+      <Tooltip caret={false} content="This is a tooltip without caret">Hover me</Tooltip>
+    </div>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Close Button
+
+The Tooltip component can display a close button using the `showCloseButton` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipCloseButtonGroup = () => {
+  return (
+    <Tooltip showCloseButton content="This is a tooltip">Hover me</Tooltip>
+  );
+};
+
+<TooltipCloseButtonGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<Tooltip showCloseButton content="This is a tooltip">Hover me</Tooltip>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Responsive
+
+The Tooltip component can be made responsive using the `responsive` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipResponsiveGroup = () => {
+  return (
+    <Tooltip responsive content="This is a tooltip">Hover me</Tooltip>
+  );
+};
+
+<TooltipResponsiveGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<Tooltip responsive content="This is a tooltip">Hover me</Tooltip>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Max width
+
+The Tooltip component can have a maximum width using the `maxWidth` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipMaxWidthGroup = () => {
+  return (
+    <Tooltip maxWidth="250px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+  );
+};
+
+<TooltipMaxWidthGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<Tooltip maxWidth="250px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Sizes
+
+The Tooltip component comes with 2 different sizes that you can change it using the `size` prop. The primary and secondary buttons can be used only in large tooltips. The width of small tooltips change according to the text length.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipSizeGroup = () => {
+  return (
+    <div className="flex items-end gap-3">
+        <Tooltip size="sm" content="Small Tooltip">Small</Tooltip>
+        <Tooltip size="lg" content="Large Tooltip">Large</Tooltip>
+    </div>
+  );
+};
+
+<TooltipSizeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-end gap-3">
+    <Tooltip size="sm" content="Small Tooltip">Small</Tooltip>
+    <Tooltip size="lg" content="Large Tooltip">Large</Tooltip>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Primary Button
+
+The Tooltip component can display a primary button inside it using the `primaryButton` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipPrimaryButtonGroup = () => {
+  return (
+    <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">Hover me</Tooltip>
+  );
+};
+
+<TooltipPrimaryButtonGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">Hover me</Tooltip>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Secondary Button
+
+The Tooltip component can display a secondary button inside it using the `secondaryButton` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const TooltipSecondaryButtonGroup = () => {
+  return (
+    <Tooltip size="lg" secondaryButton={<button>Button</button>} content="This is a tooltip">Hover me</Tooltip>
+  );
+};
+
+<TooltipSecondaryButtonGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<Tooltip size="lg" secondaryButton={<button>Learn more</button>} content="This is a tooltip">Hover me</Tooltip>
+```
+</Tabs.Tab>
+</Tabs>
+
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td></td>
+      <td>Displays tooltip triggering text</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>string</td>
+      <td>Content of the tooltip</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>responsive</td>
+      <td>boolean</td>
+      <td>Whether the tooltip is responsive</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>position</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+      <span className="badge">top</span>  
+      <span className="badge">topLeft</span> 
+      <span className="badge">topRight</span> 
+      <span className="badge">left</span>  
+      <span className="badge">bottom</span>  
+      <span className="badge">bottomLeft</span>  
+      <span className="badge">bottom</span>  
+      <span className="badge">bottomRight</span>  
+      </td>
+      <td>Position of the tooltip</td>
+      <td>top</td>
+    </tr>
+    <tr>
+      <td>caret</td>
+      <td>boolean</td>
+      <td>Whether to show the caret</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>showCloseButton</td>
+      <td>boolean</td>
+      <td>Whether to show the close button</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>primaryButton</td>
+      <td></td>
+      <td>Primary button inside the tooltip</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>secondaryButton</td>
+      <td></td>
+      <td>Secondary button inside the tooltip</td>
+      <td> - </td>
+    </tr> 
+    <tr>
+      <td>size</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+      <span className="badge">sm</span>  
+      <span className="badge">lg</span> 
+      </td>
+      <td>Size of the tooltip</td>
+      <td>sm</td>
+    </tr>  
+    <tr>
+      <td>maxWidth</td>
+      <td>string</td>
+      <td>Maximum width of the tooltip</td>
+      <td> 250px</td>
+    </tr>
+    <tr>
+      <td>className</td>
+      <td>string</td>
+      <td>Classname for the tooltip</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
