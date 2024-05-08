@@ -16,6 +16,7 @@ export const RadioButtonSizeGroup = () => {
       <RadioButton size="sm">Small</RadioButton>
       <RadioButton size="md">Medium</RadioButton>
       <RadioButton size="lg">Large</RadioButton>
+      <RadioButton size="xl">Extra Large</RadioButton>
     </div>
   );
 };
@@ -29,6 +30,7 @@ export const RadioButtonSizeGroup = () => {
     <RadioButton size="sm">Small</RadioButton>
     <RadioButton size="md">Medium</RadioButton>
     <RadioButton size="lg">Large</RadioButton>
+    <RadioButton size="xl">Extra Large</RadioButton>
 </div>
   ```
   </Tabs.Tab>
@@ -50,7 +52,7 @@ export const RadioButtonColorGroup = () => {
       <RadioButton color="warning">Warning</RadioButton>
       <RadioButton color="danger">Danger</RadioButton>
       <RadioButton color="dark">Dark</RadioButton>
-      <RadioButton color="accent">Accent</RadioButton>
+      {/*<RadioButton color="light">Light</RadioButton>*/}
     </div>
   );
 };
@@ -67,9 +69,38 @@ export const RadioButtonColorGroup = () => {
   <RadioButton color="warning">Warning</RadioButton>
   <RadioButton color="danger">Danger</RadioButton>
   <RadioButton color="dark">Dark</RadioButton>
-  <RadioButton color="accent">Accent</RadioButton>
+  <RadioButton color="light">Light</RadioButton>
 </div>
   ```
+  </Tabs.Tab>
+</Tabs>
+
+### Shapes
+
+The RadioButton component comes with 2 different shapes that you can change it using the `shape` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const RadioButtonShapeGroup = () => {
+  return (
+    <div className="flex items-end gap-3">
+      <RadioButton shape="circle">Circle</RadioButton>
+      <RadioButton shape="square">Square</RadioButton>
+    </div>
+  );
+};
+
+<RadioButtonShapeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+  <div className="flex items-end gap-3">
+      <RadioButton shape="circle">Circle</RadioButton>
+      <RadioButton shape="square">Square</RadioButton>
+  </div>
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -122,20 +153,14 @@ export const RadioButtonGroup = () => {
       <td className="flex flex-wrap gap-y-2 border-none">
         <span className="badge">primary</span>   
         <span className="badge">secondary</span>  
-        <span className="badge">accent</span>  
         <span className="badge">success</span>  
         <span className="badge">warning</span>  
         <span className="badge">danger</span>  
+        <span className="badge">dark</span>  
+        <span className="badge">light</span>  
       </td>
-      <td>Changes RadioButton color</td>
+      <td>Changes the color of radio button</td>
       <td><span className="badge">primary</span></td>
-    </tr>
-    <tr>
-      <td>Group</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
-      </td>
-      <td>[]</td>
-      <td><span className="badge">[]</span></td>
     </tr>
      <tr>
       <td>size</td>
@@ -145,8 +170,43 @@ export const RadioButtonGroup = () => {
         <span className="badge">lg</span> 
         <span className="badge">xl</span> 
       </td>
-      <td>Changes RadioButton size</td>
-      <td><span className="badge">md</span></td>
+      <td>Changes the size of radio button</td>
+      <td><span className="badge">sm</span></td>
+    </tr>
+    <tr>
+      <td>shape</td>
+      <td>
+        <span className="badge">circle</span>  
+        <span className="badge">square</span> 
+      </td>
+      <td>Changes Changes the shape of radio button</td>
+      <td><span className="badge">circle</span></td>
+    </tr>
+     <tr>
+      <td>value</td>
+      <td>
+        <span className="badge">string</span>  
+        <span className="badge">number</span>  
+      </td>
+      <td>Sets inner value when radio button is checked</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>selectedValue</td>
+      <td>
+        <span className="badge">string</span>  
+        <span className="badge">number</span>  
+      </td>
+      <td>If this value matches with selectedValue the radio button is checked</td>
+      <td> - </td>
+    </tr>
+     <tr>
+      <td>wrapperClassName</td>
+      <td>
+        <span className="badge">string</span>  
+      </td>
+      <td>Sets className for the wrapper around radio button and children</td>
+      <td> - </td>
     </tr>
   </tbody>
 </table>}
