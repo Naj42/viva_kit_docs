@@ -5,7 +5,7 @@ import {
   Input
 } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
-import { rawDataTableData } from "../../libs/data.ts";
+import { rawDataTableData, dataTableColumnSample } from "../../libs/data.ts";
 import { useState } from "react";
 import { DropdownIcon } from "../../components/assets/icons.tsx";
 
@@ -21,33 +21,11 @@ The asynchronous datatable has some required props that must be passed to genera
 
 <Tabs.Tab>
 export const AsyncDataTableBasic = () => {
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
-const [dataTableDataSource, setDataTableDataSource] = useState([
-...rawDataTableData,
-]);
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
 
 return (
   <AsyncDatatable
@@ -184,33 +162,11 @@ Async Datatable has border support. It has two seperate props for handling horiz
 
 <Tabs.Tab>
 export const AsyncDataTableBordered = () => {
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
-const [dataTableDataSource, setDataTableDataSource] = useState([
-...rawDataTableData,
-]);
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
 
 return (
   <AsyncDatatable
@@ -226,112 +182,7 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-const dataTableColumns = [
-  {
-    title: "Name",
-    dataIndex: "name",
-  },
-  {
-    title: "Position",
-    dataIndex: "position",
-    align: "center",
-  },
-  {
-    title: "Age",
-    dataIndex: "age",
-  },
-  {
-    title: "Start Date",
-    dataIndex: "start_date",
-  },
-  {
-    title: "Salary",
-    dataIndex: "salary",
-  }
-];
-
-const dataTableDataSource = [
-  {
-    name: "Humfrey Scain",
-    position: "Construction Foreman",
-    office: "Micheng",
-    age: 40,
-    start_date: "08/10/2023",
-    salary: "150,000",
-  },
-  {
-    name: "Jeane Sherland",
-    position: "Electrician",
-    office: "Donskoye",
-    age: 38,
-    start_date: "12/12/2023",
-    salary: "140,000",
-  },
-  {
-    name: "Merrie Van Son",
-    position: "Construction Worker",
-    office: "Yanqul",
-    age: 37,
-    start_date: "30/06/2023",
-    salary: "110,000",
-  },
-  {
-    name: "Myrtia Fitchell",
-    position: "Project Manager",
-    office: "Mabuttal East",
-    age: 35,
-    start_date: "09/04/2024",
-    salary: "110,000",
-  },
-  {
-    name: "Betty Giannotti",
-    position: "Construction Worker",
-    office: "Hetang",
-    age: 30,
-    start_date: "10/02/2024",
-    salary: "140,000",
-  },
-  {
-    name: "Alfy Kirimaa",
-    position: "Estimator",
-    office: "Esquipulas",
-    age: 27,
-    start_date: "05/08/2023",
-    salary: "95,000",
-  },
-  {
-    name: "Arte Gledhall",
-    position: "Construction Manager",
-    office: "Yabrūd",
-    age: 28,
-    start_date: "23/04/2023",
-    salary: "90,000",
-  },
-  {
-    name: "Ardene Beckensall",
-    position: "Supervisor",
-    office: "Thị Trấn Thanh Lưu",
-    age: 26,
-    start_date: "07/08/2023",
-    salary: "100,000",
-  },
-  {
-    name: "Allsun Johnstone",
-    position: "Project Manager",
-    office: "Liujiage",
-    age: 29,
-    start_date: "15/07/2023",
-    salary: "80,000",
-  },
-  {
-    name: "Leigha Tattersill",
-    position: "Estimator",
-    office: "Libao",
-    age: 29,
-    start_date: "02/06/2023",
-    salary: "80,000",
-  },
-];
+import { dataTableDataSource, dataTableColumns } from "@/libs/data.ts";
 
 <AsyncDatatable
   columnDefinitions={dataTableColumns}
@@ -351,33 +202,11 @@ The `stripped` feature of our Async DataTable component allows you to enhance th
 
 <Tabs.Tab>
 export const AsyncDataTableStripped = () => {
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
-const [dataTableDataSource, setDataTableDataSource] = useState([
-...rawDataTableData,
-]);
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
 
 return (
   <AsyncDatatable
@@ -395,6 +224,8 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
+import { dataTableDataSource, dataTableColumns } from "@/libs/data.ts";
+
 <AsyncDatatable
   columnDefinitions={dataTableColumns}
   dataSource={dataTableDataSource}
@@ -416,33 +247,11 @@ The Entries component within the Async Datatable provides users with how many ro
 
 <Tabs.Tab>
 export const AsyncDataTableEntries = () => {
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
-const [dataTableDataSource, setDataTableDataSource] = useState([
-...rawDataTableData,
-]);
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
 
 return (
   <AsyncDatatable
@@ -459,6 +268,8 @@ return (
 
 <Tabs.Tab>
 ```jsx copy
+import { dataTableDataSource, dataTableColumns } from "@/libs/data.ts";
+
 <AsyncDatatable
   columnDefinitions={dataTableColumns}
   dataSource={dataTableDataSource}
@@ -482,29 +293,7 @@ Additionally, if you want to show the info of how many data are showing currentl
 
 <Tabs.Tab>
 export const AsyncDataTablePagination = () => {
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
   const [dataTableDataSource, setDataTableDataSource] = useState([
   ...rawDataTableData,
@@ -530,6 +319,8 @@ export const AsyncDataTablePagination = () => {
 
 <Tabs.Tab>
 ```jsx copy
+import { dataTableDataSource, dataTableColumns } from "@/libs/data.ts";
+
 <AsyncDatatable
   columnDefinitions={dataTableColumns}
   dataSource={dataTableDataSource}
@@ -553,29 +344,7 @@ The Async Datatable component supports customizable overflow scroll behavior, al
 
 <Tabs.Tab>
 export const AsyncDataTableScroll = () => {
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
   const [dataTableDataSource, setDataTableDataSource] = useState([
   ...rawDataTableData,
@@ -597,6 +366,8 @@ export const AsyncDataTableScroll = () => {
 
 <Tabs.Tab>
 ```jsx copy
+import { dataTableDataSource, dataTableColumns } from "@/libs/data.ts";
+
 <AsyncDatatable
   columnDefinitions={dataTableColumns}
   dataSource={dataTableDataSource}
@@ -618,37 +389,11 @@ Async Datatable component supports multiple selection of rows for doing any sort
 export const AsyncDataTableSelectedRows = () => {
   const [selectedRows, setSelectedRows] = useState([]);
 
-  const dataTableColumns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-    },
-    {
-      title: "Position",
-      dataIndex: "position",
-      align: "center",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-    },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-    },
-    {
-      title: "Salary",
-      dataIndex: "salary",
-    }
-  ];
+  const dataTableColumns = [...dataTableColumnSample ]
 
   const [dataTableDataSource, setDataTableDataSource] = useState([
   ...rawDataTableData,
   ]);
-
-  const handleOnSelectChange = (selectedRows) => {
-    setSelectedRows(selectedRows);
-  };
 
   return (
     <AsyncDatatable
@@ -668,6 +413,8 @@ export const AsyncDataTableSelectedRows = () => {
 
 <Tabs.Tab>
 ```jsx copy
+import { dataTableDataSource, dataTableColumns } from "@/libs/data.ts";
+
 <AsyncDatatable
   columnDefinitions={dataTableColumns}
   dataSource={dataTableDataSource}
@@ -993,8 +740,9 @@ return (
 &nbsp;
 ### API Reference
 
-{<table>
+##### AsyncDatatable
 
+{<table>
   <thead>
     <tr>
       <th className="w-[10%]" align="left">Attribute</th>
@@ -1006,71 +754,429 @@ return (
   <tbody>
     <tr>
       <td>columnDefinitions</td>
-      <td>[]</td>
-      <td>Columns of table</td>
+      <td>[] </td>
+      <td>Columns of table.</td>
       <td> - </td>
     </tr>
     <tr>
       <td>dataSource</td>
       <td>[]</td>
-      <td>Array of objects. each object represents a table row</td>
+      <td>Array of objects. each object represents a table row.</td>
       <td> - </td>
     </tr>
     <tr>
       <td>horizontalBorder</td>
       <td>boolean
       </td>
-      <td>If true then adds horizontal border in each row</td>
+      <td>If true then adds horizontal border in each row.</td>
       <td><span className="badge">true</span></td>
     </tr>
     <tr>
       <td>verticalBorder</td>
       <td>boolean</td>
-      <td>If true then adds vertical border in each column</td>
+      <td>If true then adds vertical border in each column.</td>
       <td><span className="badge">true</span></td>
     </tr>
     <tr>
       <td>stripped</td>
       <td>boolean</td>
-      <td>Creates stripped effect in table rows</td>
+      <td>Creates stripped effect in table rows.</td>
       <td><span className="badge">true</span></td>
     </tr>
     <tr>
       <td>stripeColor</td>
       <td>string</td>
-      <td>To change the default stripe color</td>
+      <td>To change the default stripe color.</td>
       <td><span className="badge">#f3f4f6</span></td>
     </tr>
     <tr>
+      <td>scroll</td>
+      <td>object</td>
+      <td>Whether the table can be scrollable.</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>fixedHeader</td>
+      <td>boolean</td>
+      <td>Set fixed header.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>headerComponents</td>
+      <td>ReactNode</td>
+      <td>To render custom filter header components.</td>
+      <td> - </td>
+    </tr>
+    
+    <tr>
       <td>entriesHeader</td>
       <td>string</td>
-      <td>To customize default entries lable</td>
+      <td>To customize default entries lable.</td>
       <td>"Items per page"</td>
     </tr>
     <tr>
       <td>defaultEntries</td>
       <td>number</td>
-      <td>to select default entry option</td>
+      <td>To select default entry option.</td>
       <td>5</td>
     </tr>
     <tr>
       <td>entriesArray</td>
       <td>[]</td>
-      <td>to customize no of entries options</td>
+      <td>To customize no of entries options.</td>
       <td>[5, 10, 20, 50, 100]</td>
     </tr>
+    <tr>
+      <td>entriesDropdownPosition</td>
+      <td className="flex item-center flex-wrap gap-2 border-none">
+        <span className="badge">top</span>
+        <span className="badge">bottom</span>
+      </td>
+      <td>after clicking the dropdown, items will render in given location.</td>
+      <td><span className="badge">bottom</span></td>
+    </tr>
+    
     <tr>
       <td>handleNoOfEntriesChange</td>
       <td>function(value: number)</td>
       <td>Triggered when a option is selected from entries dropdown.</td>
       <td> - </td>
     </tr>
-    {/*
-      totalPages={8}
-      currentPage={1}
-      noOfEntries={10}
-      totalRecord={200}
-      handlePageChange={(value) => console.log(value)}
-    */}
+    
+    <tr>
+      <td>totalPages</td>
+      <td>number</td>
+      <td>to pass total page number.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>currentPage</td>
+      <td>number</td>
+      <td>to pass the current page value in pagination component.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>noOfEntries</td>
+      <td>number</td>
+      <td>to define how many entries to show in per page.</td>
+      <td><span className="badge">5</span></td>
+    </tr>
+
+    <tr>
+      <td>totalRecord</td>
+      <td>number</td>
+      <td>to defines total number of data in a table.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>entriesShowingSpaceText</td>
+      <td>string</td>
+      <td>to customize the string between how many data are showing in the table and total record.</td>
+      <td><span className="badge">"of"</span></td>
+    </tr>
+
+    <tr>
+      <td>handlePageChange</td>
+      <td>function(value: number)</td>
+      <td>Triggered when a option is selected from pagination page items.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>dynamicPreviousText</td>
+      <td>string</td>
+      <td>For customizing previous btn label of pagination.</td>
+      <td>
+        <span className="badge">Previous</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>dynamicNextText</td>
+      <td>string</td>
+      <td>For customizing next btn label of pagination.</td>
+      <td>
+        <span className="badge">Next</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>previousIcon</td>
+      <td>ReactNode</td>
+      <td>For customizing previous btn icon.</td>
+      <td> </td>
+    </tr>
+
+    <tr>
+      <td>nextIcon</td>
+      <td>ReactNode</td>
+      <td>For customizing next btn icon.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>rtl</td>
+      <td>boolean</td>
+      <td>For rtl support in table.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+
+    <tr>
+      <td>isLoading</td>
+      <td>boolean</td>
+      <td>For showing a spinner when data is loading.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+
+    <tr>
+      <td>customLoadingComponent</td>
+      <td>ReactNode</td>
+      <td>For customizing loader when data is fetching.</td>
+      <td> </td>
+    </tr>
+
+    <tr>
+      <td>customEmptyDataComponent</td>
+      <td>ReactNode</td>
+      <td>For customizing design when there is no data in table.</td>
+      <td> </td>
+    </tr>
+
+    <tr>
+      <td>handleOnSort</td>
+      <td>function(headerName: string, sortOrder: "asc" | "desc")</td>
+      <td>Callback function for sorting in server side. Also need to pass isSortable props in column definition.</td>
+      <td> - </td>
+    </tr>
+    
+    <tr>
+      <td>isSelectableMulti</td>
+      <td>boolean</td>
+      <td>Renders checkbox for selection before every row.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+
+    <tr>
+      <td>handleOnSelectChange</td>
+      <td>function(selectedRows: [])</td>
+      <td>Callback function that passes selected rows when select checkbox is clicked.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>selectedRows</td>
+      <td>[]</td>
+      <td>To pass selected rows that are being passed by the callback function</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>styles</td>
+      <td>object</td>
+      <td>For customizing table styling.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>}
+
+##### columnDefinitions [#columnType]
+{<table>
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>title</td>
+      <td>string</td>
+      <td>Title of this column.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>dataIndex</td>
+      <td>string</td>
+      <td>Key name of the data record.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>align</td>
+      <td>
+        <span className="badge">start</span>
+        <span className="badge">center</span>
+        <span className="badge">end</span>
+      </td>
+      <td>To specify which way that column is aligned.</td>
+      <td><span className="badge">start</span></td>
+    </tr>
+
+    <tr>
+      <td>width</td>
+      <td>string</td>
+      <td>Width of this column. Takes both px or percentage value.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>isSortable</td>
+      <td>boolean</td>
+      <td>For rendering the sortable icon.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>render</td>
+      <td>function(value: unknown, record: unknown)</td>
+      <td>Renderer of the table cell. The return value should be a ReactNode.</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
+
+
+##### styles
+{<table>
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>datatableFooterWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable footer that contains entries and pagination.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>paginationWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of pagination wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>paginationNoOfEntriesWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of pagination no of entries wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>paginationPrevBtnClassName</td>
+      <td>string</td>
+      <td>For customizing styles of pagination previous wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>paginationNextBtnClassName</td>
+      <td>string</td>
+      <td>For customizing styles of pagination next wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>paginationButtonClassName</td>
+      <td>string</td>
+      <td>For customizing styles of pagination all number buttons.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>paginationButtonSelectedClassName</td>
+      <td>string</td>
+      <td>For customizing styles of pagination selected button.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>headerWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable table header wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>headItemClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable table head item.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>headItemLabelClass</td>
+      <td>string</td>
+      <td>For customizing styles of datatable table head label.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>tableBodyWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable table body wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>rowWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable row wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>rowItemClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable single row.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>rowItemLabelClassName</td>
+      <td>string</td>
+      <td>For customizing styles of datatable table body row label.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>entriesWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of entries wrapper.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>entriesHeaderClassName</td>
+      <td>string</td>
+      <td>For customizing styles of entries header.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>selectEntriesWrapperClassName</td>
+      <td>string</td>
+      <td>For customizing styles of entries select dropdown input.</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>selectEntryItemClassName</td>
+      <td>string</td>
+      <td>For customizing styles of entries dropdown each item.</td>
+      <td> - </td>
+    </tr>
   </tbody>
 </table>}
