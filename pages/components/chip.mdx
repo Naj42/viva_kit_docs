@@ -1,12 +1,20 @@
 import { VKChip, VKAvatar } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
-import { NameIcon, CloseIcon, ArrowRightIcon, UpArrowIcon } from "./icons";
+import {
+  NameIcon,
+  CloseIcon,
+  ArrowRightIcon,
+  UpArrowIcon,
+  SearchIcon,
+  SortUpIcon,
+  SortDownIcon,
+} from "./icons";
 
 # Chip
 
 ### Variants
 
-Vairant prop specifies visual styling of the chip component. The Chip component comes with 2 different variants that can be changed using the `variant` prop.
+`variant` prop specifies visual styling of the chip component. The Chip component comes with 2 different variants that can be changed using the `variant` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -20,7 +28,6 @@ export const ChipVariant = () => {
           open={true}
           variant={"outlined"}
         />
-    <br />
       <VKChip
           label="Filled"
           open={true}
@@ -42,7 +49,6 @@ export const ChipVariant = () => {
           open={true}
           variant={"outlined"}
         />
-      <br />
       <VKChip
           label="Filled"
           open={true}
@@ -69,10 +75,13 @@ export const ChipOpen = () => {
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           label="Hidden"
           open={false}
+          variant={"filled"}
+        />
+      <VKChip
+          label="NoOpen"
           variant={"filled"}
         />
     </div>
@@ -91,14 +100,17 @@ export const ChipOpen = () => {
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           label="Hidden"
           open={true}
           variant={"filled"}
         />
-      
-    </div>
+      <VKChip
+          label="NoOpen"
+          variant={"filled"}
+        />
+
+  </div>
 ```
   </Tabs.Tab>
 </Tabs>
@@ -112,27 +124,28 @@ The `size` prop allows for consistent sizing across different parts of your user
   <Tabs.Tab>
 export const ChipSize = () => {
   return (
-    
+
     <div className="flex items-center gap-3">
       <VKChip
           size={"sm"}
           label="Small"
           open={true}
           variant={"filled"}
+          color={"secondary"}
         />
-      <br />
       <VKChip
           size={"md"}
           label="Medium"
           open={true}
           variant={"filled"}
+          color={"secondary"}
         />
-      <br />
       <VKChip
           size={"lg"}
           label="Large"
           open={true}
           variant={"filled"}
+          color={"secondary"}
         />
     </div>
 
@@ -150,23 +163,25 @@ export const ChipSize = () => {
           label="Small"
           open={true}
           variant={"filled"}
+          color={"secondary"}
         />
-      <br />
       <VKChip
           size={"md"}
           label="Medium"
           open={true}
           variant={"filled"}
+          color={"secondary"}
         />
-      <br />
       <VKChip
           size={"lg"}
           label="Large"
           open={true}
           variant={"filled"}
+          color={"secondary"}
         />
-    </div>
+  </div>
 ```
+
   </Tabs.Tab>
 </Tabs>
 
@@ -186,20 +201,21 @@ export const ChipFontsize = () => {
           label="Small"
           open={true}
           variant={"filled"}
+          color={"warning"}
         />
-      <br />
       <VKChip
           fontSize={"md"}
           label="Medium"
           open={true}
           variant={"filled"}
+          color={"warning"}
         />
-      <br />
       <VKChip
           fontSize={"lg"}
           label="Large"
           open={true}
           variant={"filled"}
+          color={"warning"}
         />
     </div>
 
@@ -217,20 +233,21 @@ export const ChipFontsize = () => {
           label="Small"
           open={true}
           variant={"filled"}
+          color={"warning"}
         />
-      <br />
       <VKChip
           fontSize={"md"}
           label="Medium"
           open={true}
           variant={"filled"}
+          color={"warning"}
         />
-      <br />
       <VKChip
           fontSize={"lg"}
           label="Large"
           open={true}
           variant={"filled"}
+          color={"warning"}
         />
     </div>
 ```
@@ -254,28 +271,24 @@ export const ChipColor = () => {
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"secondary"}
           label="Secondary"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"success"}
           label="Success"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"danger"}
           label="Danger"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"warning"}
           label="Warning"
@@ -291,7 +304,6 @@ export const ChipColor = () => {
           open={true}
           variant={"filled"}
         />
-       <br />
        <VKChip
           color={"light"}
           label="Light"
@@ -316,42 +328,36 @@ export const ChipColor = () => {
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"secondary"}
           label="Secondary"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"success"}
           label="Success"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"danger"}
           label="Danger"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"warning"}
           label="Warning"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           color={"dark"}
           label="Dark"
           open={true}
           variant={"filled"}
         />
-       <br />
        <VKChip
           color={"light"}
           label="Light"
@@ -372,29 +378,17 @@ The `state` prop allows to set the current state or status of the chip. There ar
   <Tabs.Tab>
 export const ChipState = () => {
   return (
-    
-    <div className="flex items-center gap-3">
-      <VKChip
-          state={"selected"}
-          label="Selected"
-          open={true}
-          variant={"filled"}
-        />
-      <br />
-      <VKChip
-          state={"unselected"}
-          label="Unselected"
-          open={true}
-          variant={"filled"}
-        />
-      <br />
-      <VKChip
-          state={"disabled"}
-          label="Disabled"
-          open={true}
-          variant={"filled"}
-        />
-    </div>
+
+<div className="flex items-center gap-3">
+  <VKChip state={"selected"} label="Selected" open={true} variant={"filled"} />
+  <VKChip
+    state={"unselected"}
+    label="Unselected"
+    open={true}
+    variant={"filled"}
+  />
+  <VKChip state={"disabled"} label="Disabled" open={true} variant={"filled"} />
+</div>
 
 );
 };
@@ -404,29 +398,28 @@ export const ChipState = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+  <div className="flex items-center gap-3">
       <VKChip
           state={"selected"}
           label="Selected"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           state={"unselected"}
           label="Unselected"
           open={true}
           variant={"filled"}
         />
-      <br />
       <VKChip
           state={"disabled"}
           label="Disabled"
           open={true}
           variant={"filled"}
         />
-    </div>
+  </div>
 ```
+
   </Tabs.Tab>
 </Tabs>
 
@@ -440,9 +433,20 @@ export const ChipRounded = () => {
 return (
 
 <div className="flex items-center gap-3">
-  <VKChip rounded={true} label="Rounded" open={true} variant={"filled"} />
-  <br />
-  <VKChip rounded={false} label="Square" open={true} variant={"filled"} />
+  <VKChip
+    rounded={true}
+    label="Rounded"
+    open={true}
+    variant={"filled"}
+    color={"dark"}
+  />
+  <VKChip
+    rounded={false}
+    label="Square"
+    open={true}
+    variant={"filled"}
+    color={"dark"}
+  />
 </div>
 
 )}
@@ -454,7 +458,6 @@ return (
   ```jsx copy
   <div className="flex items-center gap-3">
     <VKChip rounded={true} label="Rounded" open={true} variant={"filled"} />
-    <br />
     <VKChip rounded={false} label="Square" open={true} variant={"filled"} />
   </div>
   ```
@@ -477,7 +480,6 @@ return (
     open={true}
     variant={"filled"}
   />
-  <br />
   <VKChip
     rightIcon={<CloseIcon />}
     label="Right icon"
@@ -493,21 +495,20 @@ return (
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex items-center gap-3">
-    <VKChip
-    leftIcon={<NameIcon />}
-    label="Left icon"
-    open={true}
-    variant={"filled"}
-  />
-  <br />
-  <VKChip
-    rightIcon={<CloseIcon />}
-    label="Right icon"
-    open={true}
-    variant={"filled"}
-  />
-  </div>
+    <div className="flex items-center gap-3">
+        <VKChip
+          leftIcon={<NameIcon />}
+          label="Left icon"
+          open={true}
+          variant={"filled"}
+        />
+        <VKChip
+          rightIcon={<CloseIcon />}
+          label="Right icon"
+          open={true}
+          variant={"filled"}
+        />
+    </div>
   ```
 </Tabs.Tab>
 </Tabs>
@@ -520,226 +521,116 @@ Here are some examples of how Badge component can be used with the different pro
   <Tabs.Tab>
 export const ChipExample = () => {
 return (
-
 <div className="flex flex-col gap-2">
-<div className="flex items-center gap-3">
-  <VKChip
-  rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
+  <div className="flex items-center gap-3">
+    <VKChip
+      rounded={true}
+      label="Basic"
+      open={true}
+      variant={"outlined"}
+      color={"dark"}
+      fontSize={"sm"}
+    />
+    <VKChip
+      rounded={true}
+      label="User"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      leftIcon={<NameIcon />}
+    />
+      <VKChip
+      rounded={true}
+      label="Close"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      rightIcon={<CloseIcon />}
+    />
+    <VKChip
+      rounded={true}
+      label="Avatar"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      leftIcon={
+        <VKAvatar
+          variant="image"
+          color="secondary"
+          src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          alt="person with camera"
+          withBorder
+          className="h-6 w-6"
+        />
+      }
+    />
+    <VKChip
+      rounded={true}
+      label="Right Arrow"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      rightIcon={<ArrowRightIcon />}
   />
-  <br />
-  <VKChip
-  rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-  />
-  <br />
-  <VKChip
-  rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-  />
-</div>
+  </div>
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    leftIcon={<NameIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    leftIcon={<NameIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    leftIcon={<NameIcon />}
-  />
-</div>
+  <div className="flex items-center gap-3">
+    <VKChip
+      rounded={true}
+      label="Up arrow"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      rightIcon={<UpArrowIcon />}
+    />
+    <VKChip
+      rounded={true}
+      label="Search"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      size={"md"}
+      rightIcon={<SearchIcon />}
+    />
+    <VKChip
+      rounded={true}
+      label="Clickable"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"md"}
+      onClick={() => alert("Clickable chip")}
+    />
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    leftIcon={
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className="h-6 w-6"
-      />
-    }
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    leftIcon={
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className="h-6 w-6"
-      />
-    }
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    leftIcon={
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className="h-6 w-6"
-      />
-    }
-  />
-</div>
+    <VKChip
+      rounded={true}
+      label="Increase"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"md"}
+      leftIcon={<SortUpIcon />}
+      onLeftIconClick={() => alert("Increasing")}
+    />
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    rightIcon={<CloseIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    rightIcon={<CloseIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    rightIcon={<CloseIcon />}
-  />
-</div>
-
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    rightIcon={<ArrowRightIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    rightIcon={<ArrowRightIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    rightIcon={<ArrowRightIcon />}
-  />
-</div>
-
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    rightIcon={<UpArrowIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    rightIcon={<UpArrowIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    rightIcon={<UpArrowIcon />}
-  />
-</div>
+    <VKChip
+      rounded={true}
+      label="Decrease"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"md"}
+      rightIcon={<SortDownIcon />}
+      onRightIconClick={() => alert("Decreasing")}
+    />
+    </div>
 
 </div>
-
 )}
 
   <ChipExample/>
@@ -748,221 +639,113 @@ return (
 <Tabs.Tab>
   ```jsx copy
   <div className="flex flex-col gap-2">
-<div className="flex items-center gap-3">
-  <VKChip
-  rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-  />
-  <br />
-  <VKChip
-  rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-  />
-  <br />
-  <VKChip
-  rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-  />
-</div>
+  <div className="flex items-center gap-3">
+    <VKChip
+      rounded={true}
+      label="Basic"
+      open={true}
+      variant={"outlined"}
+      color={"dark"}
+      fontSize={"sm"}
+    />
+    <VKChip
+      rounded={true}
+      label="User"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      leftIcon={<NameIcon />}
+    />
+      <VKChip
+      rounded={true}
+      label="Close"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      rightIcon={<CloseIcon />}
+    />
+    <VKChip
+      rounded={true}
+      label="Avatar"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      leftIcon={
+        <VKAvatar
+          variant="image"
+          color="secondary"
+          src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          alt="person with camera"
+          withBorder
+          className="h-6 w-6"
+        />
+      }
+    />
+    <VKChip
+      rounded={true}
+      label="Right Arrow"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      rightIcon={<ArrowRightIcon />}
+    />
+  </div>
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    leftIcon={<NameIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    leftIcon={<NameIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    leftIcon={<NameIcon />}
-  />
-</div>
+  <div className="flex items-center gap-3">
+    <VKChip
+      rounded={true}
+      label="Up arrow"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"sm"}
+      rightIcon={<UpArrowIcon />}
+    />
+    <VKChip
+      rounded={true}
+      label="Search"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      size={"md"}
+      rightIcon={<SearchIcon />}
+    />
+    <VKChip
+      rounded={true}
+      label="Clickable"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"md"}
+      onClick={() => alert("Clickable chip")}
+    />
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    leftIcon={
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className="h-6 w-6"
-      />
-    }
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    leftIcon={
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className="h-6 w-6"
-      />
-    }
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    leftIcon={
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className="h-6 w-6"
-      />
-    }
-  />
-</div>
+    <VKChip
+      rounded={true}
+      label="Increase"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"md"}
+      leftIcon={<SortUpIcon />}
+      onLeftIconClick={() => alert("Increasing")}
+    />
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    rightIcon={<CloseIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    rightIcon={<CloseIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    rightIcon={<CloseIcon />}
-  />
-</div>
-
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    rightIcon={<ArrowRightIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    rightIcon={<ArrowRightIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    rightIcon={<ArrowRightIcon />}
-  />
-</div>
-
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"sm"}
-    rightIcon={<UpArrowIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"md"}
-    rightIcon={<UpArrowIcon />}
-  />
-  <br />
-  <VKChip
-    rounded={true}
-    label="Label"
-    open={true}
-    variant={"filled"}
-    color={"light"}
-    size={"lg"}
-    rightIcon={<UpArrowIcon />}
-  />
-</div>
+    <VKChip
+      rounded={true}
+      label="Decrease"
+      open={true}
+      variant={"filled"}
+      color={"light"}
+      fontSize={"md"}
+      rightIcon={<SortDownIcon />}
+      onRightIconClick={() => alert("Decreasing")}
+    />
+    </div>
 
 </div>
   ```
@@ -989,7 +772,7 @@ return (
       <td> - </td>
     </tr>
     <tr>
-      <td>vairant</td>
+      <td>variant</td>
       <td>
         <span className="badge">filled</span>
         <span className="badge">outlined</span>

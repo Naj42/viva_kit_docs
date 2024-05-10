@@ -50,7 +50,7 @@ function SearchIcon(props: React.SVGAttributes<SVGElement>) {
       height={40}
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="w-full h-full"
+      className="w-5 h-5"
       {...props}
     >
       <path
