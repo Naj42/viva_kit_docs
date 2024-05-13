@@ -1,0 +1,1274 @@
+import {  VKGroup, Button, VKTitle, VKRadioButton, Checkbox, VKAvatar} from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import { useState } from 'react'
+
+# Group
+
+### Import
+
+```jsx copy
+import { VKGroup } from "@vivakits/react-components";
+```
+
+### Orientations
+
+The Group component comes with 2 different orientations that you can change it using the `orientation` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupOrientationGroup = () => {
+  return (
+    <div className="flex flex-col items-start gap-6">
+      <VKGroup
+        orientation="horizontal"
+        childrenProps={
+          {
+            variant: "outline",
+            className: "border-0",
+          } 
+        }
+        size="md"
+        rounded="sm"
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+      </VKGroup>
+      <VKGroup
+        orientation="vertical"
+        childrenProps={
+          {
+            variant: "outline",
+            className: "border-0",
+          } 
+        }
+        size="md"
+        rounded="sm"
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+    <GroupOrientationGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+
+```jsx copy
+// Horizontal Group
+
+<div className="flex items-end gap-3">
+    <VKGroup
+        orientation="horizontal"
+        childrenProps={
+          {
+            variant: "outline",
+            className: "border-0",
+          } 
+        }
+        size="md"
+        rounded="sm"
+    >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+      <Button>Button 4</Button>
+    </VKGroup>
+</div>
+```
+
+```jsx copy
+// Vertical Group
+
+<div className="flex items-end gap-3">
+    <VKGroup
+      orientation="vertical"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } as ButtonProps
+      }
+      size="md"
+      rounded="sm"
+    >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+      <Button>Button 4</Button>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Separator Colors 
+
+The Group component comes with 7 different separator colors that you can change it using the `separatorColor` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupSeparatorColorGroup = () => {
+  const separatorColors = ["primary", "secondary", "success", "warning", "danger", "dark" , "light"]
+  return (
+    <div className="flex flex-wrap items-start gap-2">
+    {
+        separatorColors.map((separatorColor, index) => (
+          <VKGroup
+            separatorColor={separatorColor}
+            key={index}
+            childrenProps={
+              {
+                variant: "outline",
+                className: "border-0",
+              } 
+            }
+            size="md"
+            rounded="sm"
+          >
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+          </VKGroup>
+        ))
+    }
+    </div>
+  );
+};
+
+    <GroupSeparatorColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+
+```jsx copy
+<div className="flex flex-wrap gap-3">
+
+    {/* primary */}
+    <VKGroup
+      separatorColor="primary"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* secondary */}
+     <VKGroup
+      separatorColor="secondary"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* success */}
+     <VKGroup
+      separatorColor="success"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+        
+     {/* warning */}
+     <VKGroup
+      separatorColor="warning"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* danger */}
+     <VKGroup
+      separatorColor="danger"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* dark */}
+     <VKGroup
+      separatorColor="dark"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* light */}
+     <VKGroup
+      separatorColor="light"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Colors 
+
+The Group component comes with 8 different colors that you can change it using the `color` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupColorGroup = () => {
+  const colors = [
+                {color: "primary", fontColor: "light"}, 
+                {color: "secondary", fontColor: "light"},
+                {color: "success", fontColor: "light"},
+                {color: "warning", fontColor: "light"},
+                {color: "danger", fontColor: "light"},
+                {color: "dark", fontColor: "light"},
+                {color: "light", fontColor: "dark"},
+                {color: "none", fontColor: "dark"},
+                ]
+  return (
+    <div className="flex flex-wrap items-start gap-2">
+    {
+        colors.map(({color, fontColor}, index) => (
+          <VKGroup
+            color={color}
+            key={index}
+            childrenProps={
+              {
+                className: "p-3",
+              } 
+            }
+            rounded="sm"
+          >
+            <VKTitle color={fontColor}>Text 1</VKTitle>
+            <VKTitle color={fontColor}>Text 2</VKTitle>
+            <VKTitle color={fontColor}>Text 3</VKTitle>
+          </VKGroup>
+        ))
+    }
+    </div>
+  );
+};
+
+    <GroupColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKTitle } from "@vivakits/react-components";
+```
+
+```jsx copy
+<div className="flex items-end gap-3">
+
+    {/* primary */}
+    <VKGroup
+      color="primary"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="light">Text 1</VKTitle>
+      <VKTitle color="light">Text 2</VKTitle>
+      <VKTitle color="light">Text 3</VKTitle>
+    </VKGroup>
+    
+     {/* secondary */}
+     <VKGroup
+      color="secondary"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="light">Text 1</VKTitle>
+      <VKTitle color="light">Text 2</VKTitle>
+      <VKTitle color="light">Text 3</VKTitle>
+    </VKGroup>
+    
+     {/* success */}
+     <VKGroup
+      color="success"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="light">Text 1</VKTitle>
+      <VKTitle color="light">Text 2</VKTitle>
+      <VKTitle color="light">Text 3</VKTitle>
+    </VKGroup>
+        
+     {/* warning */}
+     <VKGroup
+      color="warning"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="light">Text 1</VKTitle>
+      <VKTitle color="light">Text 2</VKTitle>
+      <VKTitle color="light">Text 3</VKTitle>
+    </VKGroup>
+    
+     {/* danger */}
+     <VKGroup
+      color="danger"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="light">Text 1</VKTitle>
+      <VKTitle color="light">Text 2</VKTitle>
+      <VKTitle color="light">Text 3</VKTitle>
+    </VKGroup>
+    
+    {/* dark */}
+     <VKGroup
+      color="dark"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="dark">Text 1</VKTitle>
+      <VKTitle color="dark">Text 2</VKTitle>
+      <VKTitle color="dark">Text 3</VKTitle>
+    </VKGroup>
+    
+    {/* light */}
+     <VKGroup
+      color="light"
+      childrenProps={
+        {
+          className: "p-3",
+        } 
+      }
+      rounded="sm"
+      >
+      <VKTitle color="dark">Text 1</VKTitle>
+      <VKTitle color="dark">Text 2</VKTitle>
+      <VKTitle color="dark">Text 3</VKTitle>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Border
+
+The Group component comes with 7 different border widths that you can change it using the `border` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupBorderGroup = () => {
+  const borders = ["none", "xs", "sm", "md", "lg", "xl" , "2xl"]
+  return (
+    <div className="flex flex-wrap items-start gap-2">
+    {
+        borders.map((border, index) => (
+          <VKGroup
+            border={border}
+            key={index}
+            childrenProps={
+              {
+                variant: "outline",
+                className: "border-0",
+              } 
+            }
+            size="md"
+            rounded="sm"
+          >
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+          </VKGroup>
+        ))
+    }
+    </div>
+  );
+};
+
+    <GroupBorderGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+
+```jsx copy
+<div className="flex items-end gap-3">
+
+    {/* none */}
+    <VKGroup
+      border="none"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* xs */}
+     <VKGroup
+      border="xs"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* sm */}
+     <VKGroup
+      border="sm"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+        
+     {/* md */}
+     <VKGroup
+      border="md"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* lg */}
+     <VKGroup
+      border="lg"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* xl */}
+     <VKGroup
+      border="xl"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* 2xl */}
+     <VKGroup
+      border="2xl"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Border Color
+
+The Group component comes with 8 different border colors that you can change it using the `borderColor` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupBorderColorGroup = () => {
+  const borderColors = ["default", "primary", "secondary", "success", "danger", "warning" , "dark", "light"]
+  return (
+    <div className="flex flex-wrap items-start gap-2">
+    {
+        borderColors.map((borderColor, index) => (
+          <VKGroup
+            borderColor={borderColor}
+            key={index}
+            childrenProps={
+              {
+                variant: "outline",
+                className: "border-0",
+              } 
+            }
+            size="md"
+            rounded="sm"
+          >
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+          </VKGroup>
+        ))
+    }
+    </div>
+  );
+};
+
+    <GroupBorderColorGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+
+```jsx copy
+<div className="flex flex-wrap gap-3">
+    {/* default */}
+    <VKGroup
+      borderColor="default"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+
+    {/* primary */}
+    <VKGroup
+      borderColor="primary"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* secondary */}
+     <VKGroup
+      borderColor="secondary"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* success */}
+     <VKGroup
+      borderColor="success"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+        
+     {/* warning */}
+     <VKGroup
+      borderColor="warning"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* danger */}
+     <VKGroup
+      borderColor="danger"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* dark */}
+     <VKGroup
+      borderColor="dark"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* light */}
+     <VKGroup
+      borderColor="light"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      size="md"
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Sizes
+
+The Group component comes with 7 different border widths that you can change it using the `border` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupSizeGroup = () => {
+  const sizes = ["default", "xs", "sm", "md", "lg", "xl" , "2xl"]
+  return (
+    <div className="flex flex-wrap items-start gap-2">
+    {
+        sizes.map((size, index) => (
+          <VKGroup
+            size={size}
+            key={index}
+            childrenProps={
+              {
+                variant: "outline",
+                className: "border-0",
+              } 
+            }
+            rounded="sm"
+          >
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+          </VKGroup>
+        ))
+    }
+    </div>
+  );
+};
+
+    <GroupSizeGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+
+```jsx copy
+<div className="flex items-end gap-3">
+
+    {/* default */}
+    <VKGroup
+      size="default"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* xs */}
+     <VKGroup
+      size="xs"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* sm */}
+     <VKGroup
+      size="sm"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+        
+     {/* md */}
+     <VKGroup
+      size="md"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* lg */}
+     <VKGroup
+      size="lg"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* xl */}
+     <VKGroup
+      size="xl"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* 2xl */}
+     <VKGroup
+      size="2xl"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      rounded="sm"
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Border Radius
+
+The Group component comes with 7 different border radius that you can change it using the `rounded` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const GroupRoundedSizeGroup = () => {
+  const roundedSizes = ["none", "xs", "sm", "md", "lg" ,"xl", "2xl", "full"]
+  return (
+    <div className="flex flex-wrap items-start gap-2">
+    {
+        roundedSizes.map((roundedSize, index) => (
+          <VKGroup
+            rounded={roundedSize}
+            key={index}
+            childrenProps={
+              {
+                variant: "outline",
+                className: "border-0",
+              } 
+            }
+            size="md"
+          >
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+          </VKGroup>
+        ))
+    }
+    </div>
+  );
+};
+
+    <GroupRoundedSizeGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+
+```jsx copy
+<div className="flex items-end gap-3">
+
+    {/* none */}
+    <VKGroup
+      size="md"
+      rounded="none"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* xs */}
+     <VKGroup
+      size="md"
+      rounded="xs"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* sm */}
+     <VKGroup
+      size="md"
+      rounded="sm"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+        
+     {/* md */}
+     <VKGroup
+      size="md"
+      rounded="md"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+     {/* lg */}
+     <VKGroup
+      size="md"
+      rounded="lg"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* xl */}
+     <VKGroup
+      size="md"
+      rounded="xl"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+    
+    {/* 2xl */}
+     <VKGroup
+      size="md"
+      rounded="2xl"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+
+    {/* full */}
+     <VKGroup
+      size="md"
+      rounded="full"
+      childrenProps={
+        {
+          variant: "outline",
+          className: "border-0",
+        } 
+      }
+      >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </VKGroup>
+</div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+-----------------------------------------------
+### Examples
+
+The Group component comes with 2 different orientations that you can change it using the `orientation` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+
+export const GroupExamples = () => {
+  const [selectedHorizontal, setSelectedHorizontal] = useState("");
+  const onChangeHorizontalHandler = (event) => {
+    setSelectedHorizontal(event.target.value);
+  }
+
+  return (
+    <div className="flex flex-col items-start gap-6">
+        <div>
+        <VKTitle variant="h5" className="mb-2">Radio Group</VKTitle>
+        <VKGroup color="none" border="none" orientation="horizontal" childrenProps={{wrapperClassName: "mr-2"}} noSeparator>
+          <VKRadioButton
+            value={"accounting"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Accounting
+          </VKRadioButton>
+          <VKRadioButton
+            value={"marketing"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Marketing
+          </VKRadioButton>
+          <VKRadioButton
+            value={"production"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Production
+          </VKRadioButton>
+          <VKRadioButton
+            value={"research"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Research
+          </VKRadioButton>
+        </VKGroup>
+        </div>
+        <div>
+        <VKTitle variant="h5" className="mb-2">Button Group</VKTitle>
+        <VKGroup
+        orientation="horizontal"
+        childrenProps={
+          {
+            variant: "outline",
+            className: "border-0",
+          } 
+        }
+        size="md"
+        rounded="sm"
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+      </VKGroup>
+    </div>
+    <div>
+        <VKTitle variant="h5" className="mb-2">Checkbox Group</VKTitle>
+        <VKGroup
+        color="none"
+        border="none"
+        noSeparator
+        childrenProps={
+            {
+            className: "m-2",
+            } 
+        }
+        rounded="sm"
+        >
+        <Checkbox rounded="full">1</Checkbox>
+        <Checkbox rounded="full">2</Checkbox>
+        <Checkbox rounded="full">3</Checkbox>
+        </VKGroup>
+    </div>
+    <div>
+        <VKTitle variant="h5" className="mb-2">Avatar Group</VKTitle>
+        <VKGroup
+        color="none"
+        border="none"
+        shouldOverlapChildren
+        noSeparator
+        maxCount={2}
+        truncatedElement={
+            <VKAvatar variant="text" color="light" size="md" />
+        }
+        childrenProps={{ className: "" }}
+        >
+        <VKAvatar
+            variant="image"
+            color="secondary"
+            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+            alt="person with camera"
+        />
+        <VKAvatar
+            variant="image"
+            color="secondary"
+            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+            alt="person with camera"
+        />
+        <VKAvatar
+            variant="image"
+            color="secondary"
+            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+            alt="person with camera"
+        />
+        </VKGroup>
+    </div>
+    </div>
+  );
+};
+
+    <GroupExamples />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { Button } from "@vivakits/react-components";
+```
+  </Tabs.Tab>
+</Tabs>
