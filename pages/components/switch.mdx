@@ -1,3 +1,4 @@
+
 import { VKSwitch } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { useState } from "react";
@@ -6,9 +7,249 @@ import { useState } from "react";
 
 The Switch component can be used to toggle between two states, on and off.
 
+### Import 
+
+To use the Switch component, import it from `@vivakits/react-components`.
+  
+  ```jsx
+  import { VKSwitch } from "@vivakits/react-components";
+  ```
+
+
+
+### Basic Usage
+There are some required props to use the Switch component. The `onToggle` and `isChecked` props are required to handle the toggle event. The `isChecked` prop is used to set the initial state of the switch. The `onToggle` prop is used to handle the toggle event.
+
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SwitchBasicGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+
+<SwitchBasicGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchBasicGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+``` 
+</Tabs.Tab>
+</Tabs>
+
+### Variants
+
+The Switch component can be styled in different ways using the `variant` prop. The Switch component comes with 3 different variants: `default`, `android`, and `iOS`.The variant will be `default` if the `variant` prop is not provided.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchVariantGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="Default" />
+      <VKSwitch variant="iOS" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="iOS" />
+      <VKSwitch variant="android" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="Android" />
+    </div>
+  );
+};
+
+<SwitchVariantGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchVariantGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}  label="Default"  />
+      <VKSwitch  variant="iOS" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="iOS" />
+      <VKSwitch variant="android" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="Android" />
+    </div>
+  );
+};
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+### Sizes
+
+The Switch component comes with 5 different sizes: `xs`, `sm`, `md`, `lg`, and `xl`. The default size is `md`.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+
+export const SwitchSizeGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch size="sm" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="sm" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="md" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="lg" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="lg" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+    </div>
+  );
+};
+
+<SwitchSizeGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchSizeGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch size="sm" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="sm" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="md" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="lg" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch size="lg" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+    </div>
+  );
+};
+```
+
+</Tabs.Tab>
+</Tabs>
+
+### Label 
+
+The Switch component can display a label using the `label` prop. The label will be placed on the `bottom` of the switch by default.
+
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SwitchLabelGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="Switch" />
+  );
+};
+
+<SwitchLabelGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchLabelGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label="Switch" />
+  );
+};
+```
+</Tabs.Tab>
+</Tabs>
+
+### Label Placement
+
+The Switch component can place the label in different positions using the `labelPlacement` prop. The label can be placed on the `left`, `right`, `top`, `bottom`, `topStart`,`topEnd`, `bottomStart` and `bottomEnd` of the switch.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SwitchLabelPlacementGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch label="Left" labelPlacement="left" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Right" labelPlacement="right" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Top" labelPlacement="top" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Bottom" labelPlacement="bottom" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Top Start" labelPlacement="left" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Top End" labelPlacement="right" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Bottom Start" labelPlacement="top" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Bottom End" labelPlacement="bottom" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+
+    </div>
+  );
+};
+
+<SwitchLabelPlacementGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchLabelPlacementGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch label="Left" labelPlacement="left"  isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch label="Right" labelPlacement="right" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch label="Top" labelPlacement="top" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch label="Bottom" labelPlacement="bottom" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch label="Top Start" labelPlacement="left" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch label="Top End" labelPlacement="right" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch label="Bottom Start" labelPlacement="top" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch label="Bottom End" labelPlacement="bottom" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+    </div>
+  );
+};
+```
+
+</Tabs.Tab>
+</Tabs>
+
+### Label ClassName
+
+The Switch component's `label` can be styled using the `labelClassName` prop.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SwitchLabelClassNameGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch label="Switch" labelClassName="text-red-500 text-sm text-bold" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+
+<SwitchLabelClassNameGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchLabelClassNameGroup = () => {
+  return (
+    <VKSwitch label="Switch" labelClassName="text-red-500 text-sm text-bold" />
+  );
+};
+
+```
+</Tabs.Tab>
+</Tabs>
+
+
+
+
 ### Default Checked
 
-The Switch component can be set to a default checked state using the `defaultChecked` prop.
+The Switch component can be set to a default checked state using the `defaultChecked` prop. Otherwise, the switch will be unchecked by default.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -16,7 +257,7 @@ The Switch component can be set to a default checked state using the `defaultChe
 export const SwitchDefaultCheckedGroup = () => {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   return (
-    <VKSwitch defaultChecked onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+    <VKSwitch defaultChecked isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} label={"Default Checked True"} />
   );
 };
 
@@ -25,55 +266,13 @@ export const SwitchDefaultCheckedGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch defaultChecked />
-```
-</Tabs.Tab>
-</Tabs>
-
-### Is Checked
-
-The Switch component can be set to a checked state using the `isChecked` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchIsCheckedGroup = () => {
-  const [isSwitchhChecked, setSwitchhChecked] = useState(false);
-  return (
-    <VKSwitch isChecked={isSwitchhChecked} onToggle={() => setSwitchhChecked(!isSwitchhChecked)}/>
-  );
-};
-
-<SwitchIsCheckedGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch isChecked />
-```
-</Tabs.Tab>
-</Tabs>
-
-### On Toggle
-
-The Switch component can handle toggle events using the `onToggle` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchOnToggleGroup = () => {
+export const SwitchDefaultCheckedGroup = () => {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   return (
-    <VKSwitch isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+    <VKSwitch defaultChecked isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}  label={"Default Checked True"}/>
   );
 };
 
-<SwitchOnToggleGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch onToggle={(isChecked) => console.log(isChecked)} />
 ```
 </Tabs.Tab>
 </Tabs>
@@ -84,11 +283,16 @@ export const SwitchOnToggleGroup = () => {
 The Switch component can be disabled using the `disabled` prop.
 
 <Tabs items={['Preview', 'Code']}>
-
 <Tabs.Tab>
 export const SwitchDisabledGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
   return (
-  <VKSwitch disabled />
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch disabled isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+      <VKSwitch disabled defaultChecked isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+    </div>
   );
 };
 
@@ -97,10 +301,55 @@ export const SwitchDisabledGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch disabled />
+
+export const SwitchDisabledGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch disabled isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+
 ```
 </Tabs.Tab>
 </Tabs>
+
+### Required
+
+The Switch component can be set to a required state using the `required` prop.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SwitchRequiredGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch required isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+
+<SwitchRequiredGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+
+export const SwitchRequiredGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch required  label="Required" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+
+```
+</Tabs.Tab>
+</Tabs>
+
+
 
 ### Is Vertical
 
@@ -110,8 +359,11 @@ The Switch component can be set to a vertical orientation using the `isVertical`
 
 <Tabs.Tab>
 export const SwitchIsVerticalGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
   return (
-  <VKSwitch isVertical />
+    <VKSwitch isVertical isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
   );
 };
 
@@ -120,7 +372,14 @@ export const SwitchIsVerticalGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch isVertical />
+export const SwitchIsVerticalGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+     <VKSwitch isVertical isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
 ```
 </Tabs.Tab>
 </Tabs>
@@ -133,8 +392,11 @@ The Switch component can be made reversible using the `reversible` prop.
 
 <Tabs.Tab>
 export const SwitchReversibleGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
   return (
-  <VKSwitch reversible />
+    <VKSwitch reversible isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
   );
 };
 
@@ -143,121 +405,17 @@ export const SwitchReversibleGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch reversible />
-```
-</Tabs.Tab>
-</Tabs>
+export const SwitchReversibleGroup = () => {
 
-
-### Variant
-
-The Switch component can be styled in different ways using the `variant` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchVariantGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  
   return (
-  <div className="flex items-center gap-16 flex-wrap">
-    <VKSwitch variant="default" />
-    <VKSwitch variant="android" />
-    <VKSwitch variant="iOS" />
-  </div>
+    <VKSwitch reversible isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
   );
 };
-
-<SwitchVariantGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch variant="android" />
-<VKSwitch variant="iOS" />
-<VKSwitch variant="default" />
 ```
-
 </Tabs.Tab>
 </Tabs>
-
-### Size
-
-The Switch component comes with 3 different sizes that you can change it using the `size` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchSizeGroup = () => {
-  return (
-  <div className="flex items-center gap-16 flex-wrap">
-    <VKSwitch size="sm" />
-    <VKSwitch size="md" />
-    <VKSwitch size="lg" />
-  </div>
-  );
-};
-
-<SwitchSizeGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch size="sm" />
-<VKSwitch size="md" />
-<VKSwitch size="lg" />
-```
-
-</Tabs.Tab>
-</Tabs>
-
-### Body ClassName
-
-The Switch component can be styled using the `bodyClassName` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchBodyClassNameGroup = () => {
-  return (
-    <VKSwitch bodyClassName="bg-blue-300" />
-  );
-};
-
-<SwitchBodyClassNameGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch bodyClassName="bg-blue-300" />
-```
-
-</Tabs.Tab>
-</Tabs>
-
-
-### Handle ClassName
-
-The Switch component can be styled using the `handleClassName` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchHandleClassNameGroup = () => {
-  return (
-    <VKSwitch handleClassName="bg-blue-300" />
-  );
-};
-
-<SwitchHandleClassNameGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch handleClassName="bg-blue-300" />
-```
-
-</Tabs.Tab>
-</Tabs>
-
 
 ### On/Off Icon
 
@@ -267,25 +425,28 @@ The Switch component can display an icon when it is on using the `onIcon` prop a
 
 <Tabs.Tab>
 export const SwitchIconGroup = () => {
-  return(
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
     <VKSwitch
-          offIcon={
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/ios/50/sun--v1.png"
-              alt="sun--v1"
-            />
-          }
-          onIcon={
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/ios/50/moon-symbol.png"
-              alt="moon-symbol"
-            />
-          }
+      offIcon={
+        <img
+          width="20"
+          height="20"
+          src="https://img.icons8.com/ios/50/sun--v1.png"
+          alt="sun--v1"
         />
+      }
+      onIcon={
+        <img
+          width="20"
+          height="20"
+          src="https://img.icons8.com/ios/50/moon-symbol.png"
+          alt="moon-symbol"
+        />
+      }
+      isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}
+    />
   );
 };
 
@@ -294,7 +455,31 @@ export const SwitchIconGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch onIcon={<Icon />} offIcon={<Icon />}  />
+export const SwitchIconGroup = () => {
+
+const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <VKSwitch
+      offIcon={
+        <img
+          width="20"
+          height="20"
+          src="https://img.icons8.com/ios/50/sun--v1.png"
+          alt="sun--v1"
+        />
+      }
+      onIcon={
+        <img
+          width="20"
+          height="20"
+          src="https://img.icons8.com/ios/50/moon-symbol.png"
+          alt="moon-symbol"
+        />
+      }
+        isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}
+    />
+  );
+};
 ```
 
 </Tabs.Tab>
@@ -302,34 +487,36 @@ export const SwitchIconGroup = () => {
 
 ### On/Off Inner Label
 
-The Switch component can display a label when it is on using the `onInnerLabel` prop and when it is off using the `offInnerLabel` prop.
+The Switch component can display inner label when it is on using the `onInnerLabel` prop and when it is off using the `offInnerLabel` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
 <Tabs.Tab>
 export const SwitchInnerLabelGroup = () => {
-   return (
-    <div className="flex items-center gap-8 flex-wrap">
-    <VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
-    <VKSwitch
-          offInnerLabel={
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/ios/50/sun--v1.png"
-              alt="sun--v1"
-            />
-          }
-          onInnerLabel={
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/ios/50/moon-symbol.png"
-              alt="moon-symbol"
-            />
-          }
-        />
-        </div>
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
+      <VKSwitch
+        offInnerLabel={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/sun--v1.png"
+            alt="sun--v1"
+          />
+        }
+        onInnerLabel={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/moon-symbol.png"
+            alt="moon-symbol"
+          />
+        }
+        isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}
+      />
+    </div>
   );
 };
 
@@ -338,222 +525,254 @@ export const SwitchInnerLabelGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
-```
-
-</Tabs.Tab>
-</Tabs>
-
-
-### Label
-
-The Switch component can display a label using the `label` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchLabelGroup = () => {
+export const SwitchInnerLabelGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
   return (
-     <VKSwitch label="Switch" />
-  );
-};
-
-<SwitchLabelGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch label="Switch" />
-```
-
-</Tabs.Tab>
-</Tabs>
-
-### Label Placement
-
-The Switch component can place the label in different positions using the `labelPlacement` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const SwitchLabelPlacementGroup = () => {
-    return (
-    <div className="flex items-center gap-16 flex-wrap">
-      <VKSwitch label="Switch" labelPlacement="left" />
-      <VKSwitch label="Switch" labelPlacement="right" />
-      <VKSwitch label="Switch" labelPlacement="top" />
-      <VKSwitch label="Switch" labelPlacement="bottom" />
+    <div className="flex items-center gap-8 flex-wrap">
+      <VKSwitch offInnerLabel="Light" onInnerLabel="Dark" />
+      <VKSwitch
+        offInnerLabel={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/sun--v1.png"
+            alt="sun--v1"
+          />
+        }
+        onInnerLabel={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/moon-symbol.png"
+            alt="moon-symbol"
+          />
+        }
+        isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}
+      />
     </div>
   );
 };
-
-<SwitchLabelPlacementGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-<VKSwitch label="Switch" labelPlacement="left" />
-<VKSwitch label="Switch" labelPlacement="right" />
-<VKSwitch label="Switch" labelPlacement="top" />
-<VKSwitch label="Switch" labelPlacement="bottom" />
 ```
 
 </Tabs.Tab>
 </Tabs>
 
+### Body ClassName
 
-### Label ClassName
-
-The Switch component can be styled using the `labelClassName` prop.
+The `bodyClassName` prop is used to specify the class name for the switch body.  
 
 <Tabs items={['Preview', 'Code']}>
 
 <Tabs.Tab>
-export const SwitchLabelClassNameGroup = () => {
+export const SwitchBodyClassNameGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
   return (
-    <VKSwitch label="Switch" labelClassName="text-blue-600" />
+    <VKSwitch bodyClassName="bg-purple-800" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}
+    />
   );
 };
 
-<SwitchLabelClassNameGroup />
+<SwitchBodyClassNameGroup />
 </Tabs.Tab>
 
 <Tabs.Tab>
 ```jsx copy
-<VKSwitch label="Switch" labelClassName="text-blue-600" />
+export const SwitchBodyClassNameGroup = () => {
+
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch bodyClassName="bg-purple-800" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}
+/>
+  );
+};
 ```
 
 </Tabs.Tab>
 </Tabs>
+
+
+### Handle ClassName
+
+The `handleClassName` prop is used to specify the class name for the switch handle.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SwitchHandleClassNameGroup = () => {
+  const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch handleClassName="bg-purple-800" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
+  );
+};
+
+<SwitchHandleClassNameGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const SwitchHandleClassNameGroup = () => {
+   const [isSwitchChecked, setSwitchChecked] = useState(false);
+
+  return (
+    <VKSwitch handleClassName="bg-purple-800" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+    );
+};
+```
+
+</Tabs.Tab>
+</Tabs>
+
+
+
+
+
+
+
 
 
 ### API Reference
 
 {<table>
 
-  <thead>
-    <tr>
-      <th className="w-[10%]" align="left">Attribute</th>
-      <th className="w-[50%]" align="left">Type</th>
-      <th className="w-[30%]" align="left">Description</th>
-      <th className="w-[10%]" align="left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>defaultChecked</td>
-      <td>boolean</td>
-      <td>Whether the switch is checked by default</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td>isChecked</td>
-      <td>boolean</td>
-      <td>Whether the switch is checked</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td>onToggle</td>
-      <td>function</td>
-      <td>Function to call when the switch is toggled</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>disabled</td>
-      <td>boolean</td>
-      <td>Whether the switch is disabled</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td>isVertical</td>
-      <td>boolean</td>
-      <td>Whether the switch is vertical</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td>reversible</td>
-      <td>boolean</td>
-      <td>Whether the switch is reversible</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td>variant</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
-      <span className="badge">android</span>  
-      <span className="badge">iOS</span> 
-      <span className="badge">default</span> 
-      </td>
-      <td>Variant of the switch</td>
-      <td>default</td>
-    </tr>
-    <tr>
-      <td>size</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
-      <span className="badge">sm</span>  
-      <span className="badge">md</span> 
-      <span className="badge">lg</span> 
-      </td>
-      <td>Size of the switch</td>
-      <td>md</td>
-    </tr>
-    <tr>
-      <td>bodyClassName</td>
-      <td>string</td>
-      <td>Classname for the switch body</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>handleClassName</td>
-      <td>string</td>
-      <td>Classname for the switch handle</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>onIcon</td>
-      <td>ReactNode</td>
-      <td>Icon for the on state</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>offIcon</td>
-      <td>ReactNode</td>
-      <td>Icon for the off state</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>onInnerLabel</td>
-      <td>ReactNode | string</td>
-      <td>Inner label for the on state</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>offInnerLabel</td>
-      <td>ReactNode | string</td>
-      <td>Inner label for the off state</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>label</td>
-      <td>string</td>
-      <td>Label for the switch</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>labelPlacement</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
-      <span className="badge">left</span>  
-      <span className="badge">right</span> 
-      <span className="badge">top</span> 
-      <span className="badge">bottom</span> 
-      </td>
-      <td>Placement of the label</td>
-      <td>right</td>
-    </tr>
-    <tr>
-      <td>labelClassName</td>
-      <td>string</td>
-      <td>Classname for the label</td>
-      <td> - </td>
-    </tr>
-  </tbody>
-</table>}
+      <thead>
+        <tr>
+          <th className="w-[10%]" align="left">Attribute</th>
+          <th className="w-[50%]" align="left">Type</th>
+          <th className="w-[30%]" align="left">Description</th>
+          <th className="w-[10%]" align="left">Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>isChecked</td>
+          <td>boolean</td>
+          <td>Whether the switch is checked</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>onToggle</td>
+          <td>function</td>
+          <td>Function to call when the switch is toggled</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>variant</td>
+          <td className="flex flex-wrap gap-y-2 border-none">
+            <span className="badge">android</span>
+            <span className="badge">iOS</span>
+            <span className="badge">default</span>
+          </td>
+          <td>Variant of the switch</td>
+          <td>default</td>
+        </tr>
+        <tr>
+          <td>size</td>
+          <td className="flex flex-wrap gap-y-2 border-none">
+            <span className="badge">xs</span>
+            <span className="badge">sm</span>
+            <span className="badge">md</span>
+            <span className="badge">lg</span>
+            <span className="badge">xl</span>
+          </td>
+          <td>Size of the switch</td>
+          <td>md</td>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td>string</td>
+          <td>Label for the switch</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>labelPlacement</td>
+          <td className="flex flex-wrap gap-y-2 border-none">
+            <span className="badge">left</span>
+            <span className="badge">right</span>
+            <span className="badge">top</span>
+            <span className="badge">bottom</span>
+            <span className="badge">topStart</span>
+            <span className="badge">topEnd</span>
+            <span className="badge">bottomStart</span>
+            <span className="badge">bottomEnd</span>
+          </td>
+          <td>Placement of the label</td>
+          <td>right</td>
+        </tr>
+        <tr>
+          <td>labelClassName</td>
+          <td>string</td>
+          <td>Classname for the label</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>defaultChecked</td>
+          <td>boolean</td>
+          <td>Whether the switch is checked by default</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>boolean</td>
+          <td>Whether the switch is disabled</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>required</td>
+          <td>boolean</td>
+          <td>Whether the switch is required</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>isVertical</td>
+          <td>boolean</td>
+          <td>Whether the switch is vertical</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>reversible</td>
+          <td>boolean</td>
+          <td>Whether the switch is reversible</td>
+          <td>false</td>
+        </tr>
+         <tr>
+          <td>onInnerLabel</td>
+          <td>ReactNode | string</td>
+          <td>Inner label for the on state</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>offInnerLabel</td>
+          <td>ReactNode | string</td>
+          <td>Inner label for the off state</td>
+          <td> - </td>
+        </tr>
+         <tr>
+          <td>onIcon</td>
+          <td>ReactNode</td>
+          <td>Icon for the on state</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>offIcon</td>
+          <td>ReactNode</td>
+          <td>Icon for the off state</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>bodyClassName</td>
+          <td>string</td>
+          <td>Classname for the switch body</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>handleClassName</td>
+          <td>string</td>
+          <td>Classname for the switch handle</td>
+          <td> - </td>
+        </tr>
+      </tbody>
+    </table>}
