@@ -1,3 +1,27 @@
+export const dataTableColumnSample = [
+  {
+    title: "Name",
+    dataIndex: "name",
+  },
+  {
+    title: "Position",
+    dataIndex: "position",
+    align: "center",
+  },
+  {
+    title: "Age",
+    dataIndex: "age",
+  },
+  {
+    title: "Start Date",
+    dataIndex: "start_date",
+  },
+  {
+    title: "Salary",
+    dataIndex: "salary",
+  },
+];
+
 export const rawDataTableData = [
   {
     id: 1,
