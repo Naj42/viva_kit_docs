@@ -1,4 +1,5 @@
-import { VKChip, VKAvatar } from "@vivakits/react-components";
+import { useState } from "react";
+import { Input, VKChip, VKAvatar } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import {
   NameIcon,
@@ -604,7 +605,7 @@ return (
       variant={"filled"}
       color={"light"}
       fontSize={"md"}
-      onClick={() => alert("Clickable chip")}
+      onClick={() => alert("You clicked on the chip")}
     />
 
     <VKChip
@@ -615,7 +616,7 @@ return (
       color={"light"}
       fontSize={"md"}
       leftIcon={<SortUpIcon />}
-      onLeftIconClick={() => alert("Increasing")}
+      onLeftIconClick={() => alert("You clicked on increase icon")}
     />
 
     <VKChip
@@ -626,14 +627,14 @@ return (
       color={"light"}
       fontSize={"md"}
       rightIcon={<SortDownIcon />}
-      onRightIconClick={() => alert("Decreasing")}
+      onRightIconClick={() => alert("You clicked on decrease icon")}
     />
     </div>
 
 </div>
 )}
 
-  <ChipExample/>
+<ChipExample />
   </Tabs.Tab>
 
 <Tabs.Tab>
@@ -721,7 +722,7 @@ return (
       variant={"filled"}
       color={"light"}
       fontSize={"md"}
-      onClick={() => alert("Clickable chip")}
+      onClick={() => alert("You clicked on the chip")}
     />
 
     <VKChip
@@ -732,7 +733,7 @@ return (
       color={"light"}
       fontSize={"md"}
       leftIcon={<SortUpIcon />}
-      onLeftIconClick={() => alert("Increasing")}
+      onLeftIconClick={() => alert("You clicked on increase icon")}
     />
 
     <VKChip
@@ -743,11 +744,93 @@ return (
       color={"light"}
       fontSize={"md"}
       rightIcon={<SortDownIcon />}
-      onRightIconClick={() => alert("Decreasing")}
+      onRightIconClick={() => alert("You clicked on decrease icon")}
     />
     </div>
 
 </div>
+  ```
+</Tabs.Tab>
+</Tabs>
+
+Chip can be used with other component as well. Here is an example of chip being used with Input component.
+
+<Tabs items={['Preview', 'Code']}>
+  <Tabs.Tab>
+export const ChipInsideInput = () => {
+const [chips, setChips] = useState([]);
+
+return(
+
+<div className="m-2 border rounded-lg flex">
+  {chips.map((chip, index) => (
+    <VKChip
+      key={`${chip}_${index}`}
+      open
+      color={"dark"}
+      label={chip}
+      size={"sm"}
+      className="m-1"
+      rightIcon={<CloseIcon />}
+      onRightIconClick={() => setChips(chips.filter((_, i) => i !== index))}
+    />
+  ))}
+  <Input
+    size={"md"}
+    rounded={"lg"}
+    className="border-none"
+    placeholder="Enter any word and press enter"
+    onKeyUp={(e) => {
+      if (e.code === "Enter" || e.code === "NumpadEnter") {
+        const newChip = e.target?.value;
+        setChips([...chips, newChip]);
+        e.target.value = "";
+      }
+    }}
+  />
+</div>
+)}
+
+  <ChipInsideInput />
+  
+  </Tabs.Tab>
+
+<Tabs.Tab>
+  ```jsx copy
+import { useState } from "react";
+export const ChipInsideInput = () => {
+const [chips, setChips] = useState([]);
+
+return(
+
+<div className="m-2 border rounded-lg flex">
+  {chips.map((chip, index) => (
+    <VKChip
+      key={`${chip}_${index}`}
+      open
+      color={"dark"}
+      label={chip}
+      size={"sm"}
+      className="m-1"
+      rightIcon={<CloseIcon />}
+      onRightIconClick={() => setChips(chips.filter((_, i) => i !== index))}
+    />
+  ))}
+  <Input
+    size={"md"}
+    rounded={"lg"}
+    className="border-none"
+    placeholder="Enter any word and press enter"
+    onKeyUp={(e) => {
+      if (e.code === "Enter" || e.code === "NumpadEnter") {
+        const newChip = e.target?.value;
+        setChips([...chips, newChip]);
+        e.target.value = "";
+      }
+    }}
+  />
+</div>
+)}
   ```
 </Tabs.Tab>
 </Tabs>
