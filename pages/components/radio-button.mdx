@@ -1,7 +1,14 @@
-import { RadioButton, RadioGroup } from "@vivakits/react-components";
+import { VKRadioButton, VKGroup, VKTitle } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
+import {useState} from 'react';
 
 # Radio Button
+
+### Import
+
+```jsx copy
+import { VKRadioButton } from "@vivakits/react-components";
+```
 
 ### Sizes
 
@@ -13,9 +20,12 @@ The RadioButton component comes with 3 different sizes that you can change it us
 export const RadioButtonSizeGroup = () => {
   return (
     <div className="flex items-end gap-3">
-      <RadioButton size="sm">Small</RadioButton>
-      <RadioButton size="md">Medium</RadioButton>
-      <RadioButton size="lg">Large</RadioButton>
+      <VKRadioButton size="xs">Extra Small</VKRadioButton>
+      <VKRadioButton size="sm">Small</VKRadioButton>
+      <VKRadioButton size="md">Medium</VKRadioButton>
+      <VKRadioButton size="lg">Large</VKRadioButton>
+      <VKRadioButton size="xl">Extra Large</VKRadioButton>
+      <VKRadioButton size="2xl">Double Extra Large</VKRadioButton>
     </div>
   );
 };
@@ -26,9 +36,12 @@ export const RadioButtonSizeGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 <div className="flex items-end gap-3">
-    <RadioButton size="sm">Small</RadioButton>
-    <RadioButton size="md">Medium</RadioButton>
-    <RadioButton size="lg">Large</RadioButton>
+    <VKRadioButton size="xs">Extra Small</VKRadioButton>
+    <VKRadioButton size="sm">Small</VKRadioButton>
+    <VKRadioButton size="md">Medium</VKRadioButton>
+    <VKRadioButton size="lg">Large</VKRadioButton>
+    <VKRadioButton size="xl">Extra Large</VKRadioButton>
+    <VKRadioButton size="2xl">Double Extra Large</VKRadioButton>
 </div>
   ```
   </Tabs.Tab>
@@ -36,7 +49,7 @@ export const RadioButtonSizeGroup = () => {
 
 ### Colors
 
-The RadioButton component comes with 7 different colors that you can change it using the `color` prop. It has both solid and outline variant
+The RadioButton component comes with 7 different colors that you can change it using the `color` prop. It has both solid and outline variant.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -44,13 +57,13 @@ The RadioButton component comes with 7 different colors that you can change it u
 export const RadioButtonColorGroup = () => {
   return (
     <div className="flex items-end gap-3 flex-wrap">
-      <RadioButton color="primary">Primary</RadioButton>
-      <RadioButton color="secondary">Secondary</RadioButton>
-      <RadioButton color="success">Success</RadioButton>
-      <RadioButton color="warning">Warning</RadioButton>
-      <RadioButton color="danger">Danger</RadioButton>
-      <RadioButton color="dark">Dark</RadioButton>
-      <RadioButton color="accent">Accent</RadioButton>
+      <VKRadioButton color="primary">Primary</VKRadioButton>
+      <VKRadioButton color="secondary">Secondary</VKRadioButton>
+      <VKRadioButton color="success">Success</VKRadioButton>
+      <VKRadioButton color="warning">Warning</VKRadioButton>
+      <VKRadioButton color="danger">Danger</VKRadioButton>
+      <VKRadioButton color="dark">Dark</VKRadioButton>
+      <VKRadioButton color="light">Light</VKRadioButton>
     </div>
   );
 };
@@ -61,29 +74,132 @@ export const RadioButtonColorGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 <div className="flex items-end gap-3">
-  <RadioButton color="primary">Primary</RadioButton>
-  <RadioButton color="secondary">Secondary</RadioButton>
-  <RadioButton color="success">Success</RadioButton>
-  <RadioButton color="warning">Warning</RadioButton>
-  <RadioButton color="danger">Danger</RadioButton>
-  <RadioButton color="dark">Dark</RadioButton>
-  <RadioButton color="accent">Accent</RadioButton>
+  <VKRadioButton color="primary">Primary</VKRadioButton>
+  <VKRadioButton color="secondary">Secondary</VKRadioButton>
+  <VKRadioButton color="success">Success</VKRadioButton>
+  <VKRadioButton color="warning">Warning</VKRadioButton>
+  <VKRadioButton color="danger">Danger</VKRadioButton>
+  <VKRadioButton color="dark">Dark</VKRadioButton>
+  <VKRadioButton color="light">Light</VKRadioButton>
 </div>
   ```
   </Tabs.Tab>
 </Tabs>
 
+### Shapes
+
+The RadioButton component comes with 2 different shapes that you can change it using the `shape` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const RadioButtonShapeGroup = () => {
+  return (
+    <div className="flex items-end gap-3">
+      <VKRadioButton shape="circle">Circle</VKRadioButton>
+      <VKRadioButton shape="square">Square</VKRadioButton>
+    </div>
+  );
+};
+
+<RadioButtonShapeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+  <div className="flex items-end gap-3">
+      <VKRadioButton shape="circle">Circle</VKRadioButton>
+      <VKRadioButton shape="square">Square</VKRadioButton>
+  </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
 ### Radio Group
 
-[Err: type_definitions]
+The Radio Button can be used inside `VKGroup` component to build radio button group.
 
 <Tabs items={['Preview', 'Code']}>
 
 <Tabs.Tab>
 export const RadioButtonGroup = () => {
+  const [selectedHorizontal, setSelectedHorizontal] = useState("");
+  const [selectedVertical, setSelectedVertical] = useState("");
+  const onChangeHorizontalHandler = (event) => {
+    setSelectedHorizontal(event.target.value);
+  }
+  const onChangeVerticalHandler = (event) => {
+    setSelectedVertical(event.target.value);
+  }
+
   return (
-    <div className="flex items-end gap-3 flex-wrap">
-      <RadioButton></RadioButton>
+    <div className="flex flex-col items-start gap-3 flex-wrap">
+      <div className="flex flex-col mb-4">
+        <VKTitle className="mb-2" variant="h6">Horizontal Radio Button Group</VKTitle>
+        <VKGroup color="none" border="none" orientation="horizontal" childrenProps={{wrapperClassName: "mr-2"}} noSeparator>
+          <VKRadioButton
+            value={"accounting"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Accounting
+          </VKRadioButton>
+          <VKRadioButton
+            value={"marketing"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Marketing
+          </VKRadioButton>
+          <VKRadioButton
+            value={"production"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Production
+          </VKRadioButton>
+          <VKRadioButton
+            value={"research"}
+            selectedValue={selectedHorizontal}
+            onChange={onChangeHorizontalHandler}
+          >
+            Research
+          </VKRadioButton>
+        </VKGroup>
+      </div>
+      <div className="flex flex-col">
+        <VKTitle className="mb-2" variant="h6">Vertical Radio Button Group</VKTitle>
+        <VKGroup color="none" border="none" orientation="vertical" childrenProps={{wrapperClassName: "mr-2 py-0.5"}} noSeparator>
+          <VKRadioButton
+            value={"accounting"}
+            selectedValue={selectedVertical}
+            onChange={onChangeVerticalHandler}
+          >
+            Accounting
+          </VKRadioButton>
+          <VKRadioButton
+            value={"marketing"}
+            selectedValue={selectedVertical}
+            onChange={onChangeVerticalHandler}
+          >
+            Marketing
+          </VKRadioButton>
+          <VKRadioButton
+            value={"production"}
+            selectedValue={selectedVertical}
+            onChange={onChangeVerticalHandler}
+          >
+            Production
+          </VKRadioButton>
+          <VKRadioButton
+            value={"research"}
+            selectedValue={selectedVertical}
+            onChange={onChangeVerticalHandler}
+          >
+            Research
+          </VKRadioButton>
+        </VKGroup>
+      </div>
     </div>
   );
 };
@@ -93,9 +209,94 @@ export const RadioButtonGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3">
-</div>
-  ```
+import { VKGroup } from "@vivakits/react-components";
+import { useState } from 'react';
+```
+```jsx copy
+//Horizontal Radio ButtonGroup
+
+export function App() {
+  const [selected, setSelected] = useState("");
+  const onChangeHandler = (event) => {
+    setSelected(event.target.value);
+  }
+  return (
+    <VKGroup color="none" border="none" orientation="horizontal" childrenProps={{wrapperClassName: "mr-2"}} noSeparator>
+      <VKRadioButton
+        value={"accounting"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Accounting
+      </VKRadioButton>
+      <VKRadioButton
+        value={"marketing"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Marketing
+      </VKRadioButton>
+      <VKRadioButton
+        value={"production"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Production
+      </VKRadioButton>
+      <VKRadioButton
+        value={"research"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Research
+      </VKRadioButton>
+    </VKGroup>
+  );
+}
+```
+
+```jsx copy
+//Vertical Radio Button Group
+
+export function App() {
+  const [selected, setSelected] = useState("");
+  const onChangeHandler = (event) => {
+    setSelected(event.target.value);
+  }
+  return (
+    <VKGroup color="none" border="none" orientation="vertical" childrenProps={{wrapperClassName: "mr-2"}} noSeparator>
+      <VKRadioButton
+        value={"accounting"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Accounting
+      </VKRadioButton>
+      <VKRadioButton
+        value={"marketing"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Marketing
+      </VKRadioButton>
+      <VKRadioButton
+        value={"production"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Production
+      </VKRadioButton>
+      <VKRadioButton
+        value={"research"}
+        selectedValue={selected}
+        onChange={onChangeHandler}
+      >
+        Research
+      </VKRadioButton>
+    </VKGroup>
+  );
+}
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -112,9 +313,37 @@ export const RadioButtonGroup = () => {
   </thead>
   <tbody>
     <tr>
+      <td>id</td>
+      <td><span className="badge">string</span></td>
+      <td>Defines id for radio button and label text</td>
+      <td> - </td>
+    </tr>
+    <tr>
       <td>children</td>
-      <td>ReactNode</td>
+      <td><span className="badge">ReactNode</span></td>
       <td>Displays RadioButton content</td>
+      <td> - </td>
+    </tr>
+     <tr> 
+      <td>className</td>
+      <td><span className="badge">string</span></td>
+      <td>Applies custom className to the radio button</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>wrapperClassName</td>
+      <td>
+        <span className="badge">string</span>  
+      </td>
+      <td>Sets className for the wrapper around radio button and children</td>
+      <td> - </td>
+    </tr>
+     <tr>
+      <td>labelClassName</td>
+      <td>
+        <span className="badge">string</span>  
+      </td>
+      <td>Sets className for the label text inside radio button</td>
       <td> - </td>
     </tr>
     <tr>
@@ -122,31 +351,75 @@ export const RadioButtonGroup = () => {
       <td className="flex flex-wrap gap-y-2 border-none">
         <span className="badge">primary</span>   
         <span className="badge">secondary</span>  
-        <span className="badge">accent</span>  
         <span className="badge">success</span>  
         <span className="badge">warning</span>  
         <span className="badge">danger</span>  
+        <span className="badge">dark</span>  
+        <span className="badge">light</span>  
       </td>
-      <td>Changes RadioButton color</td>
+      <td>Changes the color of radio button</td>
       <td><span className="badge">primary</span></td>
-    </tr>
-    <tr>
-      <td>Group</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
-      </td>
-      <td>[]</td>
-      <td><span className="badge">[]</span></td>
     </tr>
      <tr>
       <td>size</td>
       <td>
+        <span className="badge">xs</span>  
         <span className="badge">sm</span>  
         <span className="badge">md</span> 
         <span className="badge">lg</span> 
         <span className="badge">xl</span> 
+        <span className="badge">xl</span> 
+        <span className="badge">2xl</span> 
       </td>
-      <td>Changes RadioButton size</td>
-      <td><span className="badge">md</span></td>
+      <td>Changes the size of radio button</td>
+      <td><span className="badge">sm</span></td>
+    </tr>
+    <tr>
+      <td>shape</td>
+      <td>
+        <span className="badge">circle</span>  
+        <span className="badge">square</span> 
+      </td>
+      <td>Changes Changes the shape of radio button</td>
+      <td><span className="badge">circle</span></td>
+    </tr>
+     <tr>
+      <td>value</td>
+      <td>
+        <span className="badge">string</span>  
+        <span className="badge">number</span>  
+      </td>
+      <td>Sets inner value when radio button is checked</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>selectedValue</td>
+      <td>
+        <span className="badge">string</span>  
+        <span className="badge">number</span>  
+      </td>
+      <td>If this value matches with selectedValue the radio button is checked</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>onLabelClick</td>
+      <td>
+        <span className="badge">function()</span>  
+      </td>
+      <td>Set onClick function for radio button label text</td>
+      <td> - </td>
+    </tr>
+     <tr> 
+      <td>ref</td>
+      <td><span className="badge">React.RefObject</span></td>
+      <td>Attaches reference to the wrapper div</td>
+      <td> - </td>
+    </tr>
+     <tr> 
+      <td>inputRef</td>
+      <td><span className="badge">React.RefObject</span></td>
+      <td>Attaches reference to the radio button</td>
+      <td> - </td>
     </tr>
   </tbody>
 </table>}
