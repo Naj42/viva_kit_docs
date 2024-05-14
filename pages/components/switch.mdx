@@ -168,7 +168,7 @@ export const SwitchLabelGroup = () => {
 
 ### Label Placement
 
-The Switch component can place the label in different positions using the `labelPlacement` prop. The label can be placed on the `left`, `right`, `top`, `bottom`, `topStart`,`topEnd`, `bottomStart` and `bottomEnd` of the switch. Few Examples are given below.
+The Switch component can place the label in different positions using the `labelPlacement` prop. The label can be placed on the `left`, `right`, `top`, `bottom`, `topStart`,`topEnd`, `bottomStart` and `bottomEnd` of the switch. Few examples are given below.
 
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
@@ -641,34 +641,42 @@ The Switch component can be customized using the `bodyClassName`, `handleClassNa
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
 export const CustomSwitchGroup = () => {
-  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  const [isThinSwitchChecked, setThinSwitchChecked] = useState(false);
+  const [isSquareSwitchChecked, setSquareSwitchChecked] = useState(false);
 
   return (
-    <VKSwitch
-      isChecked={isSwitchChecked}
-      onToggle={() => setSwitchChecked(!isSwitchChecked)}
-      label="Dark"
-      labelClassName = "text-black text-bold my-5"
-      bodyClassName="h-1 aspect-[20/1]"
-      wrapperClassName="py-10"
-      handleClassName="h-8 w-8 rounded-sm"
-      offIcon={
-        <img
-          width="20"
-          height="20"
-          src="https://img.icons8.com/ios/50/sun--v1.png"
-          alt="sun--v1"
-        />
-      }
-      onIcon={
-        <img
-          width="20"
-          height="20"
-          src="https://img.icons8.com/ios/50/moon-symbol.png"
-          alt="moon-symbol"
-        />
-      }
-    />
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch
+        isChecked={isThinSwitchChecked}
+        onToggle={() => setThinSwitchChecked(!isThinSwitchChecked)}
+        labelClassName="text-black text-bold my-5"
+        bodyClassName="h-1 aspect-[20/1]"
+        handleClassName="h-8 w-8 rounded-sm"
+        offIcon={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/sun--v1.png"
+            alt="sun--v1"
+          />
+        }
+        onIcon={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/moon-symbol.png"
+            alt="moon-symbol"
+          />
+        }
+      />
+      <VKSwitch
+        isChecked={isSquareSwitchChecked}
+        onToggle={() => setSquareSwitchChecked(!isSquareSwitchChecked)}
+        bodyClassName="h-6 rounded-sm"
+        handleClassName="h-6 w-6 rounded-sm "
+      />
+
+    </div>
 
   );
 };
@@ -679,36 +687,42 @@ export const CustomSwitchGroup = () => {
 <Tabs.Tab>
 ```jsx copy
 export const CustomSwitchGroup = () => {
-  const [isSwitchChecked, setSwitchChecked] = useState(false);
+  const [isThinSwitchChecked, setThinSwitchChecked] = useState(false);
+  const [isSquareSwitchChecked, setSquareSwitchChecked] = useState(false);
 
   return (
-    <VKSwitch
-          isChecked={isSwitchChecked}
-          onToggle={() => setSwitchChecked(!isSwitchChecked)}
-          // size="xs"
-          // isVertical
-          label="Dark"
-          // labelPlacement="top"
-          // offInnerLabel="Light"
-          // onInnerLabel="Dark"
-          bodyClassName="h-1 aspect-[10/1] "
-          offIcon={
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/ios/50/sun--v1.png"
-              alt="sun--v1"
-            />
-          }
-          onIcon={
-            <img
-              width="20"
-              height="20"
-              src="https://img.icons8.com/ios/50/moon-symbol.png"
-              alt="moon-symbol"
-            />
-          }
-        />
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <VKSwitch
+        isChecked={isThinSwitchChecked}
+        onToggle={() => setThinSwitchChecked(!isThinSwitchChecked)}
+        bodyClassName="h-1 aspect-[20/1]"
+        handleClassName="h-8 w-8 rounded-sm"
+        offIcon={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/sun--v1.png"
+            alt="sun--v1"
+          />
+        }
+        onIcon={
+          <img
+            width="20"
+            height="20"
+            src="https://img.icons8.com/ios/50/moon-symbol.png"
+            alt="moon-symbol"
+          />
+        }
+      />
+      <VKSwitch
+        isChecked={isSquareSwitchChecked}
+        onToggle={() => setSquareSwitchChecked(!isSquareSwitchChecked)}
+        bodyClassName="h-6 rounded-sm"
+        handleClassName="h-6 w-6 rounded-sm"
+      />
+
+    </div>
+
   );
 };
 ```
