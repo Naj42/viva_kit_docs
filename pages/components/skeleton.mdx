@@ -1,0 +1,320 @@
+import { Skeleton, VKTitle, VKGroup } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Skeleton
+
+### Variants
+
+The Skeleton component comes with 3 different variants that you can change it using the `variant` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonVarientGroup = () => {
+  return (
+    <div className="flex items-center gap-3">
+        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton variant="rectangular" height={40} />
+        <Skeleton variant="text" height={40} />
+    </div>
+  );
+};
+
+<SkeletonVarientGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-center gap-3">
+  <Skeleton variant="circular" width="40px" height="40px" />
+  <Skeleton variant="rectangular" height="40px" />
+  <Skeleton variant="text" height="40px" />
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Width
+
+It has `width` prop, you can the width of it using the prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonWidthGroup = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton width={80} />
+      <Skeleton width={140} />
+      <Skeleton width={200} />
+    </div>
+  );
+};
+
+<SkeletonWidthGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-center gap-3">
+  <Skeleton width={80} />
+  <Skeleton width={140} />
+  <Skeleton width={200} />
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Height
+
+You can use the `height` prop to change the height of Skeleton.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonHeightGroup = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton height={20} />
+      <Skeleton height={30}/>
+      <Skeleton height={40}/>
+    </div>
+  );
+};
+
+<SkeletonHeightGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-center gap-3">
+  <Skeleton height={20} />
+  <Skeleton height={30}/>
+  <Skeleton height={40}/>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Border Radious
+
+You can use the `rounded` prop to change the radious of the Skeleton.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonRadiousGroup = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton rounded="6px" height={40} />
+      <Skeleton rounded="12px"  height={40} />
+      <Skeleton rounded="20px" height={40} />
+      <Skeleton rounded="40px" width={40} height={40} />
+    </div>
+  );
+};
+
+<SkeletonRadiousGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-center gap-3">
+  <Skeleton rounded="6px" height={40} />
+  <Skeleton rounded="12px"  height={40} />
+  <Skeleton rounded="20px" height={40} />
+  <Skeleton rounded="40px" width={40} height={40} />
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Group of Skeleton
+You can use props named `numOfRows` and `numOfColumns` to generate multiple rows or columns of Skeleton.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonRowColumnGroup = () => {
+  return (
+    <div className="flex items-center gap-5">
+      <Skeleton numOfColumns={2}/>
+      <Skeleton numOfRows={2}/>
+      <Skeleton numOfColumns={2} numOfRows={2}/>
+      <Skeleton numOfColumns={2} numOfRows={3}/>
+    </div>
+  );
+};
+
+<SkeletonRowColumnGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="flex items-center gap-3">
+  <Skeleton numOfColumns={2} />
+  <Skeleton numOfRows={2} />
+  <Skeleton numOfColumns={2} numOfRows={2} />
+  <Skeleton numOfColumns={2} numOfRows={3} />
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+
+### Card
+Sample Card implementation using different varients of Skeleton components.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonCard = () => {
+  return (
+    <div className="w-[440px] flex items-start flex-col gap-4 border p-5 rounded-md m-auto">
+       <div className="w-full flex gap-6">
+          <Skeleton variant="circular" width={60} height={60} />
+          <div className="flex flex-col justify-center gap-1.5">
+            <Skeleton variant="text" width={170}/>
+            <Skeleton variant="text" width={250}/>
+          </div>
+       </div>
+       <Skeleton width={400} height={140} />
+       <div className="flex flex-col justify-center gap-1.5">
+          <Skeleton variant="text" width={250}/>
+          <Skeleton variant="text" width={400}/>
+          <Skeleton variant="text" width={190}/>
+        </div>
+        <Skeleton variant="text" width={400} height={30} />
+    </div>
+  );
+};
+
+<SkeletonCard />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+  <div className="w-[440px] flex items-start flex-col mb-4 gap-4">
+    <div className="w-full flex gap-10">
+      <Skeleton variant="circular" width={60} height={60} />
+      <div className="flex flex-col justify-center gap-1.5">
+        <Skeleton variant="text" width={170}/>
+        <Skeleton variant="text" width={250}/>
+      </div>
+    </div>
+    <Skeleton width={400} height={140} />
+    <div className="flex flex-col justify-center gap-1.5">
+      <Skeleton variant="text" width={250}/>
+      <Skeleton variant="text" width={400}/>
+      <Skeleton variant="text" width={190}/>
+    </div>
+    <Skeleton variant="text" width={400} height={30} />
+  </div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+### List
+Sample List implementation using different varients of Skeleton components.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonList = () => {
+  return (
+    <div className="w-[440px] mx-auto p-4 border rounded-md">
+      <ul className="flex flex-col gap-2 m-0 p-0 list-none">
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+      </ul>
+  </div>
+  );
+};
+
+<SkeletonList />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+  <div className="w-[440px] mx-auto p-4 border rounded-md">
+      <ul className="flex flex-col gap-2 m-0 p-0 list-none">
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div className="flex justify-between">     
+                  <Skeleton variant="circular" width={60} height={60} />
+                  <div className="flex flex-col justify-start gap-2">
+                      <Skeleton width={340} />
+                      <Skeleton width={250} />
+                  </div>
+              </div>
+          </li>
+      </ul>
+  </div>
+  ```
+  </Tabs.Tab>
+</Tabs>
+    
