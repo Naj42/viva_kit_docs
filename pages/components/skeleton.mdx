@@ -318,3 +318,146 @@ export const SkeletonList = () => {
   </Tabs.Tab>
 </Tabs>
     
+
+### Table
+Sample Table implementation using different varients of Skeleton components.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonTable = () => {
+  const tableHeaders = ['Name', 'Position', 'Age', 'Start Date', 'Salary']
+  return (
+    <table className="w-fit p-5 rounded-md border mx-auto">
+      <thead>
+        <tr style={{ borderTop: '0px' }}>
+          {tableHeaders.map((header, index) => (
+            <th className='border-none font-bold' key={index}>
+              {header}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {[...Array(10)].map((_, rowIndex) => (
+          <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
+            {[...Array(5)].map((_, colIndex) => (
+              <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
+                <Skeleton variant="text" height={20} rounded="6px"/>
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+<SkeletonTable />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<table className="w-fit p-5 rounded-md border mx-auto">
+  <thead>
+    <tr style={{ borderTop: '0px' }}>
+      {tableHeaders.map((header, index) => (
+        <th className='border-none font-bold' key={index}>
+          {header}
+        </th>
+      ))}
+    </tr>
+  </thead>
+  <tbody>
+    {[...Array(10)].map((_, rowIndex) => (
+      <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
+        {[...Array(5)].map((_, colIndex) => (
+          <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
+            <Skeleton variant="text" height={20} rounded="6px"/>
+          </td>
+        ))}
+      </tr>
+    ))}
+  </tbody>
+</table>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Paginated Table
+Sample Table skeleton with pagination implementation using different varients of Skeleton components.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const SkeletonTableWithPagination = () => {
+  const tableHeaders = ['Name', 'Position', 'Age', 'Start Date', 'Salary']
+  return (
+    <div className="w-fit p-5 rounded-md border mx-auto">
+      <table>
+        <thead>
+          <tr style={{ borderTop: '0px' }}>
+            {tableHeaders.map((header, index) => (
+              <th className='border-none font-bold' key={index}>
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {[...Array(10)].map((_, rowIndex) => (
+            <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
+              {[...Array(5)].map((_, colIndex) => (
+                <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
+                  <Skeleton variant="text" height={20} rounded="6px"/>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className='flex justify-between mt-4' >
+        <Skeleton variant="text" width={100} rounded="6px"/>
+        <Skeleton variant="text" width={300} rounded="6px"/>
+      </div>
+    </div>
+  );
+};
+
+<SkeletonTableWithPagination />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+<div className="w-fit p-5 rounded-md border mx-auto">
+  <table>
+    <thead>
+      <tr style={{ borderTop: '0px' }}>
+        {tableHeaders.map((header, index) => (
+          <th className='border-none font-bold' key={index}>
+            {header}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {[...Array(10)].map((_, rowIndex) => (
+        <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
+          {[...Array(5)].map((_, colIndex) => (
+            <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
+              <Skeleton variant="text" height={20} rounded="6px"/>
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <div className='flex justify-between mt-4' >
+    <Skeleton variant="text" width={100} rounded="6px"/>
+    <Skeleton variant="text" width={300} rounded="6px"/>
+  </div>
+</div>
+  ```
+  </Tabs.Tab>
+</Tabs>
