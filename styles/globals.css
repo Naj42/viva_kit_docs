@@ -45,4 +45,7 @@
   tr {
     @apply !h-12;
   }
+  hr {
+    @apply !m-0;
+  }
 }
