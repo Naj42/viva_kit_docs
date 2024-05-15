@@ -1,0 +1,460 @@
+import { VKAvatar, VKTitle } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Title
+
+### Import
+
+```jsx copy
+import { VKTitle } from "@vivakits/react-components";
+```
+
+### Variants
+
+The Title component comes with 7 different variants that you can change using the `variant` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const TitleVariantGroup = () => {
+    const variants = [ "h1" ,"h2", "h3", "h4", "h5", "h6", "paragraph" ];
+
+return (
+
+<div className="flex gap-6">
+  {variants.map((variant) => (
+    <VKTitle variant={variant}>{variant}</VKTitle>
+  ))}
+</div>
+); };
+
+    <TitleVariantGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+    <div className="flex gap-6">
+        <VKTitle variant="h1">h1</VKTitle>
+        <VKTitle variant="h2">h2</VKTitle>
+        <VKTitle variant="h3">h3</VKTitle>
+        <VKTitle variant="h4">h4</VKTitle>
+        <VKTitle variant="h5">h5</VKTitle>
+        <VKTitle variant="h6">h6</VKTitle>
+        <VKTitle variant="paragraph">paragraph</VKTitle>
+    </div>
+
+````
+</Tabs.Tab>
+</Tabs>
+
+### Colors
+
+The Title component comes with 8 different colors that you can change using the `color` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const TitleColorGroup = () => {
+  return (
+    <div>
+        <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="light">The quick brown fox jumps over the lazy dog.</VKTitle>
+    </div>
+  );
+};
+
+    <TitleColorGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div>
+  <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
+  <VKTitle color="light">The quick brown fox jumps over the lazy dog.</VKTitle>
+</div>
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+### Decoration
+
+The Title component comes with 4 different decorations and 8 decoration colors that you can change using the `decoration` and `decorationColor` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const TitleDecorationGroup = () => {
+  return (
+    <div>
+        <VKTitle decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <br/>
+        <VKTitle decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <br/>
+        <VKTitle decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <br/>
+        <VKTitle decoration="none">The quick brown fox jumps over the lazy dog.</VKTitle>
+    </div>
+  );
+};
+
+    <TitleDecorationGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div>
+  <VKTitle decoration="underline" decorationColor="primary">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle decoration="lineThrough" decorationColor="danger">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle decoration="overline" decorationColor="secondary">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle decoration="none">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+</div>
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+
+### Font Weight
+
+The Title component comes with 10 different font sizes that you can change using the `weight` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const TitleFontWeightGroup = () => {
+return (
+<div>
+  <VKTitle weight="default">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="100">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="200">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="300">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="400">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="500">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="600">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="700">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="800">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="900">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+</div>
+); };
+
+    <TitleFontWeightGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div>
+  <VKTitle weight="default">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="100">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="200">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="300">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="400">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="500">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="600">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="700">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="800">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle weight="900">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+</div>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Spacing and Breaks
+
+The Title component comes with 5 word breaks and 6 word spacings that you can change using the `wordBreak` and `wordSpacing` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const TitleBreakSpacingGroup = () => {
+return (
+<div>
+  <VKTitle wordBreak="default">
+    The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+  </VKTitle>
+  <br/>
+  <VKTitle wordBreak="all">
+    The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+  </VKTitle>
+  <br/>
+  <VKTitle wordBreak="words">
+    The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+  </VKTitle>
+  <br/>
+  <VKTitle wordSpacing="tighter" variant="h4">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <br/>
+  <VKTitle wordSpacing="tight" variant="h3">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <br/>
+   <VKTitle wordSpacing="normal" variant="h5">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <br/>
+   <VKTitle wordSpacing="wider" variant="h6">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <br/>
+  <VKTitle wordSpacing="widest" variant="h4">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+</div>
+); };
+
+    <TitleBreakSpacingGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div>
+  <VKTitle wordBreak="default">
+    The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+  </VKTitle>
+  <VKTitle wordBreak="all">
+    The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+  </VKTitle>
+  <VKTitle wordBreak="words">
+    The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+  </VKTitle>
+  <VKTitle wordSpacing="tighter" variant="h4">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle wordSpacing="tight" variant="h3">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+   <VKTitle wordSpacing="normal" variant="h5">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+   <VKTitle wordSpacing="wider" variant="h6">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+  <VKTitle wordSpacing="widest" variant="h4">
+    The quick brown fox jumps over the lazy dog.
+  </VKTitle>
+</div>
+```
+</Tabs.Tab>
+</Tabs>
+
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>variant</td>
+      <td>
+        <span className="badge">h1</span>
+        <span className="badge">h2</span>
+        <span className="badge">h3</span>
+        <span className="badge">h4</span>
+        <span className="badge">h5</span>
+        <span className="badge">h6</span>
+        <span className="badge">paragraph</span>
+      </td>
+      <td>Changes title size</td>
+      <td><span className="badge">paragraph</span></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
+        <span className="badge">dark</span>
+        <span className="badge">light</span>
+      </td>
+      <td>Changes title color</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+     <tr>
+      <td>decoration</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">none</span>
+        <span className="badge">underline</span>
+        <span className="badge">overline</span>
+        <span className="badge">lineThrough</span>
+      </td>
+      <td>Changes decoration on title text</td>
+      <td><span className="badge">none</span></td>
+    </tr>
+     <tr>
+      <td>decorationColor</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
+        <span className="badge">dark</span>
+        <span className="badge">light</span>
+      </td>
+      <td>Changes decoration color on title text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>weight</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+         <span className="badge">100</span>
+        <span className="badge">200</span>
+        <span className="badge">300</span>
+        <span className="badge">400</span>
+        <span className="badge">500</span>
+        <span className="badge">600</span>
+        <span className="badge">700</span>
+        <span className="badge">800</span>
+        <span className="badge">900</span>
+      </td>
+      <td>Changes font weight on title text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+     <tr>
+      <td>fontFamily</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">sansSerif</span>
+         <span className="badge">serif</span>
+        <span className="badge">mono</span>
+      </td>
+      <td>Changes font family on title text</td>
+      <td><span className="badge">-</span></td>
+    </tr>
+     <tr>
+      <td>overflow</td>
+      <td>
+        <span className="badge">none</span>
+        <span className="badge">truncate</span>
+        <span className="badge">ellipsis</span>
+        <span className="badge">clip</span>
+      </td>
+      <td>Changes overflow on title text</td>
+      <td><span className="badge">none</span></td>
+    </tr>
+     <tr>
+      <td>wordBreak</td>
+      <td>
+        <span className="badge">default</span>
+        <span className="badge">normal</span>
+        <span className="badge">words</span>
+        <span className="badge">all</span>
+        <span className="badge">keep</span>
+      </td>
+      <td>Controls word breaks in title text</td>
+      <td>default</td>
+    </tr>
+    <tr>
+      <td>wordSpacing</td>
+      <td>
+        <span className="badge">tight</span>
+        <span className="badge">tighter</span>
+        <span className="badge">normal</span>
+        <span className="badge">wide</span>
+        <span className="badge">wider</span>
+        <span className="badge">widest</span>
+      </td>
+      <td>Controls word spacing in title text</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <td>align</td>
+      <td>
+        <span className="badge">start</span>
+        <span className="badge">end</span>
+        <span className="badge">left</span>
+        <span className="badge">right</span>
+        <span className="badge">justify</span>
+        <span className="badge">center</span>
+      </td>
+      <td>Changes alignment on title text</td>
+      <td>left</td>
+    </tr>
+  </tbody>
+</table>}
+````
