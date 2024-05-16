@@ -414,10 +414,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vivakits/react-components@^0.4.16":
-  version "0.4.17"
-  resolved "https://registry.yarnpkg.com/@vivakits/react-components/-/react-components-0.4.17.tgz#cf0dbf6bb7e20cbab1e32a595c359cb15ce6a814"
-  integrity sha512-ebadqUAem3yqflLVQnVFEMqcn9LtqjtasDwqyOZRI58rdAFx114xUCbh4z3MQTzPUgh9qKrSrQl7HDLP7urztA==
+"@vivakits/react-components@^0.4.18":
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/@vivakits/react-components/-/react-components-0.4.18.tgz#579ed594111b7fd22d5ae5880f1c3cbc9f458230"
+  integrity sha512-qwl7nosvoNS7hQ+EfCX6bFHpAQ2BLQQ8U/wRPjeQ0aVIfjim80vZlb3+hyA7ASQlz+2ZFLAAnq4vAklchp1TaQ==
   dependencies:
     class-variance-authority "^0.7.0"
     clsx "^2.0.0"
