@@ -13,6 +13,11 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Vivakit Documentations",
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – Vivakits",
+    };
+  },
 };
 
 export default config;

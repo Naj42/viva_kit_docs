@@ -1,0 +1,746 @@
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalTrigger,
+  VKLabel,
+  Input,
+  Textarea,
+} from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import { useState } from "react";
+
+# Modal
+
+### Import
+
+```jsx copy
+import { Modal } from "@vivakits/react-components";
+```
+
+### Variants
+
+The Modal component comes with two different variants that you can change it using the `variant` props.
+
+`default varient`
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ModalVarient = () => {
+  return (
+    <div className="flex justify-center items-center gap-3">
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[600px]">
+            <ModalHeader className="px-4">Modal Header</ModalHeader>
+            <ModalBody className="p-4">
+              <p className="text-gray-500">
+                Modal content.....
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="outline" onClick={() => {}} className="px-3 py-1.5">Cancel</Button>
+              <Button className="px-3 py-1.5">
+                Save
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+    </div>
+
+);
+};
+
+<ModalVarient />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalTrigger,
+} from "@vivakits/react-components";
+```
+  ```jsx copy
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[600px]">
+            <ModalHeader className="px-4">Modal Header</ModalHeader>
+            <ModalBody className="p-4">
+              <p className="text-gray-500">
+                Modal content.....
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="outline" onClick={() => {}} className="px-3 py-1.5">Cancel</Button>
+              <Button className="px-3 py-1.5">
+                Save
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+Scrollable Modal `varient="screen-size"`
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const ModalVarientScreen = () => {
+  return (
+    <div className="flex justify-center items-center gap-3">
+        <Modal varient="screen-size">
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[600px]">
+            <ModalHeader className="px-4">Modal Header</ModalHeader>
+            <ModalBody className="p-4">
+              <p className="text-gray-500">
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+                <hr />
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+                <hr />
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="outline" onClick={() => {}} className="px-3 py-1.5">Cancel</Button>
+              <Button className="px-3 py-1.5">
+                Save
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+    </div>
+
+);
+};
+
+<ModalVarientScreen />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalTrigger,
+} from "@vivakits/react-components";
+```
+  ```jsx copy
+        <Modal varient="screen-size">
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[600px]">
+            <ModalHeader className="px-4">Modal Header</ModalHeader>
+            <ModalBody className="p-4">
+              <p className="text-gray-500">
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+                <hr />
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+                <hr />
+                Fusce in enim facilisis, placerat elit sed, porta tortor. Vivamus porta non ligula id sagittis.
+                Vivamus neque arcu, vulputate sit amet libero non, lobortis aliquet lorem.
+                Donec viverra aliquam placerat. Integer sed porttitor nisi. Donec pellentesque feugiat purus,
+                sollicitudin scelerisque erat feugiat eu. Ut eget hendrerit augue, a imperdiet dui.
+                Cras hendrerit eu magna sed condimentum. Proin finibus augue sed orci elementum, a hendrerit leo euismod.
+                Suspendisse potenti. Integer accumsan viverra eros, ut egestas ex volutpat vitae. Aenean porta massa id ipsum suscipit,
+                sit amet feugiat enim lobortis.
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="outline" onClick={() => {}} className="px-3 py-1.5">Cancel</Button>
+              <Button className="px-3 py-1.5">
+                Save
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Pop-up modal
+
+You can use this modal example to show a pop-up decision dialog to your users especially
+when deleting an item and making sure if the user really wants to do that by double confirming.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ButtonSizeGroup = () => {
+  return (
+    <div className="flex justify-center items-center gap-3">
+         <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[500px]">
+            <ModalBody className="p-4">
+              <div className="p-4 md:p-5 text-center">
+                <svg className="mx-auto mb-4 text-red-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+               <p className="text-lg font-normal text-gray-950">Are you sure you want to delete this product?</p>
+            </div>
+            </ModalBody>
+            <ModalFooter className="rounded-b-lg">
+                <Button onClick={() => {}} className="px-4 py-2" rounded="md" color="danger">Yes, Delete</Button>
+                <Button rounded="md" vairant="outline" color="light" onClick={() => {}} className="px-4 py-2">Cancel</Button>
+                </ModalFooter>
+          </ModalContent>
+        </Modal>
+    </div>
+  );
+};
+
+<ButtonSizeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalTrigger,
+} from "@vivakits/react-components";
+```
+  ```jsx copy
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[500px]">
+            <ModalBody className="p-4">
+              <div className="p-4 md:p-5 text-center">
+                <svg className="mx-auto mb-4 text-red-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+               <p className="text-lg font-normal text-gray-950">Are you sure you want to delete this product?</p>
+            </div>
+            </ModalBody>
+            <ModalFooter className="rounded-b-lg">
+                <Button onClick={() => {}} className="px-4 py-2" rounded="md" color="danger">Yes, Delete</Button>
+                <Button rounded="md" vairant="outline" color="light" onClick={() => {}} className="px-4 py-2">Cancel</Button>
+                </ModalFooter>
+          </ModalContent>
+        </Modal>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Form element
+
+Use this modal example with form input element.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ModalWithRegistrationForm = () => {
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+          <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[500px] rounded-none">
+          <ModalHeader className="px-6">Registration form</ModalHeader>
+            <ModalBody className="p-6">
+                <form className="space-y-4" action="#form-element">
+                   <Input
+                    labelClassName="text-gray-900"
+                    label="First Name"
+                    size="md"
+                    rounded="md"
+                    className="bg-white"
+                    placeholder="First Name"
+                    required
+                  />
+                  <Input
+                  labelClassName="text-gray-900"
+                  label="Last Name"
+                  size="md"
+                  rounded="md"
+                  className="bg-white"
+                  placeholder="Last Name"
+                />
+                  <Input
+                    labelClassName="text-gray-900"
+                    label="Email"
+                    size="md"
+                    rounded="md"
+                    type="email"
+                    className="bg-white"
+                    placeholder="email@example.com"
+                  />
+                   <Input
+                    labelClassName="text-gray-900"
+                    label="Password"
+                    size="md"
+                    rounded="md"
+                    className="bg-white"
+                    placeholder="Password"
+                  />
+                    <div className="flex justify-between">
+                        <div className="flex items-start">
+                            <div className="flex items-center h-5">
+                                <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-white focus:ring-3 focus:ring-blue-300" />
+                            </div>
+                            <label for="remember" className="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                        </div>
+                        <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                    </div>
+                <Button vairant="solid" color="primary" className="w-full px-4 py-2" rounded="md">Create Account</Button>
+                </form>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+    </div>
+  );
+};
+
+<ModalWithRegistrationForm />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalHeader,
+  ModalTrigger,
+  Input,
+  Button
+} from "@vivakits/react-components";
+```
+  ```jsx copy
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[500px] rounded-none">
+          <ModalHeader className="px-6">Registration form</ModalHeader>
+            <ModalBody className="p-6">
+                <form className="space-y-4" action="#form-element">
+                   <Input
+                    labelClassName="text-gray-900"
+                    label="First Name"
+                    size="md"
+                    rounded="md"
+                    className="bg-white"
+                    placeholder="First Name"
+                    required
+                  />
+                  <Input
+                  labelClassName="text-gray-900"
+                  label="Last Name"
+                  size="md"
+                  rounded="md"
+                  className="bg-white"
+                  placeholder="Last Name"
+                />
+                  <Input
+                    labelClassName="text-gray-900"
+                    label="Email"
+                    size="md"
+                    rounded="md"
+                    type="email"
+                    className="bg-white"
+                    placeholder="email@example.com"
+                  />
+                   <Input
+                    labelClassName="text-gray-900"
+                    label="Password"
+                    size="md"
+                    rounded="md"
+                    className="bg-white"
+                    placeholder="Password"
+                  />
+                    <div className="flex justify-between">
+                        <div className="flex items-start">
+                            <div className="flex items-center h-5">
+                                <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-white focus:ring-3 focus:ring-blue-300" />
+                            </div>
+                            <label for="remember" className="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                        </div>
+                        <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                    </div>
+                <Button vairant="solid" color="primary" className="w-full px-4 py-2" rounded="md">Create Account</Button>
+                </form>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+  ```
+</Tabs.Tab>
+</Tabs>
+
+### Nested Modal
+
+Example of how we can use nested modal. Basically it's necessary when we need to confirmation from user to perform a actions.
+so here is the example of nested modal.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const NestedModal = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[500px] rounded-none">
+          <ModalHeader className="px-6">Nested Modal</ModalHeader>
+            <ModalBody className="p-6">
+                <p className="text-gray-900">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of 
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+                looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
+                the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 
+                </p>
+            </ModalBody>
+            <div className="w-full flex justify-end px-6 py-5">
+          <Button className="px-3 py-1.5 bg-blue-600 rounded-md" rounded="md" onClick={()=> setOpen(true)}>Open Confirm</Button>
+          </div>
+          </ModalContent>
+        </Modal>
+        <Modal open={open} onClose={()=>setOpen(false)}>
+          <ModalContent>
+          <ModalHeader className="px-6">Confirm Modal</ModalHeader>
+            <ModalBody className="px-6">
+                <p className="text-gray-900">
+                Nested Modal looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 </p>
+            </ModalBody>
+             <ModalFooter>
+            <Button onClick={()=> {}} vairant="solid" color="danger" className="px-4 py-1.5 rounded-md">Done</Button>
+          </ModalFooter>
+          </ModalContent>
+        </Modal>
+    </div>
+);
+};
+
+<NestedModal />
+
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalHeader,
+  ModalTrigger,
+  ModalFooter,
+  Button
+} from "@vivakits/react-components";
+```
+  ```jsx copy
+
+      const [open, setOpen] = useState(false);
+
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[500px] rounded-none">
+          <ModalHeader className="px-6">Nested Modal</ModalHeader>
+            <ModalBody className="p-6">
+                <p className="text-gray-900">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+                </p>
+            </ModalBody>
+            <div className="w-full flex justify-end px-6 py-5">
+          <Button className="px-3 py-1.5 bg-blue-600 rounded-md" rounded="md" onClick={()=> setOpen(true)}>Open Confirm</Button>
+          </div>
+          </ModalContent>
+        </Modal>
+        <Modal open={open} onClose={()=>setOpen(false)}>
+          <ModalContent>
+          <ModalHeader className="px-6">Confirm Modal</ModalHeader>
+            <ModalBody className="px-6">
+                <p className="text-gray-900">
+                Nested Modal looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 </p>
+            </ModalBody>
+             <ModalFooter>
+            <Button onClick={()=> {}} vairant="solid" color="danger" className="px-4 py-1.5 rounded-md">Done</Button>
+          </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+````
+</Tabs.Tab>
+</Tabs>
+
+### CRUD Modal
+To create new items, utilize this modal example in CRUD operations.
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ModalWithCrud = () => {
+return (
+  <div className="flex justify-center items-end gap-3">
+      <Modal>
+        <ModalTrigger>
+           <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+        </ModalTrigger>
+        <ModalContent className="w-[800px] rounded-none">
+        <ModalHeader className="px-6">Create New Product</ModalHeader>
+          <ModalBody className="p-6">
+          <form action="#crud-modal">
+              <div className="grid gap-4 mb-4 grid-cols-2">
+                  <div className="col-span-2">
+                      <Input labelClassName="text-gray-900" label="Name" size="md" rounded="md" className="bg-white" placeholder="Product name"/>
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                      <Input labelClassName="text-gray-900" label="Price" size="md" rounded="md" className="bg-white" placeholder="price"/>
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                      <VKLabel className="text-gray-900 mb-2">Category</VKLabel>
+                      <select id="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
+                          <option selected="">Select category</option>
+                          <option value="TV">TV/Monitors</option>
+                          <option value="PC">PC</option>
+                          <option value="GA">Gaming/Console</option>
+                          <option value="PH">Phones</option>
+                      </select>
+                  </div>
+                  <div className="col-span-2">
+                      <Textarea labelClassName="text-gray-900" className="bg-white" rounded="md" label="Product Description" placeholder="Enter Product Description" />
+                  </div>
+              </div>
+              <Button vairant="solid" rounded="md" color="primary" className="px-3 py-1.5">Add new product</Button>
+          </form>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+  </div>
+);
+};
+
+<ModalWithCrud />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+import {
+Modal,
+ModalBody,
+ModalContent,
+ModalFooter,
+ModalHeader,
+ModalTrigger,
+Input,
+VKLabel,
+Textarea,
+Button,
+} from "@vivakits/react-components";
+````
+
+```jsx copy
+<Modal>
+  <ModalTrigger>
+    <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">
+      Open Modal
+    </Button>
+  </ModalTrigger>
+  <ModalContent className="w-[800px] rounded-none">
+    <ModalHeader className="px-6">Create New Product</ModalHeader>
+    <ModalBody className="p-6">
+      <form action="#crud-modal">
+        <div className="grid gap-4 mb-4 grid-cols-2">
+          <div className="col-span-2">
+            <Input
+              labelClassName="text-gray-900"
+              label="Name"
+              size="md"
+              rounded="md"
+              className="bg-white"
+              placeholder="Product name"
+            />
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <Input
+              labelClassName="text-gray-900"
+              label="Price"
+              size="md"
+              rounded="md"
+              className="bg-white"
+              placeholder="price"
+            />
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <VKLabel className="text-gray-900 mb-2">Category</VKLabel>
+            <select
+              id="category"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+            >
+              <option selected="">Select category</option>
+              <option value="TV">TV/Monitors</option>
+              <option value="PC">PC</option>
+              <option value="GA">Gaming/Console</option>
+              <option value="PH">Phones</option>
+            </select>
+          </div>
+          <div className="col-span-2">
+            <Textarea
+              labelClassName="text-gray-900"
+              className="bg-white"
+              rounded="md"
+              label="Product Description"
+              placeholder="Enter Product Description"
+            />
+          </div>
+        </div>
+        <Button
+          vairant="solid"
+          rounded="md"
+          color="primary"
+          className="px-3 py-1.5"
+        >
+          Add new product
+        </Button>
+      </form>
+    </ModalBody>
+  </ModalContent>
+</Modal>
+```
+
+</Tabs.Tab>
+
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>ReactNode</td>
+      <td>Displays the modal content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>vairant</td>
+      <td>
+        <span className="badge">default</span>  
+        <span className="badge">screen-size</span> 
+      </td>
+      <td>Changes the modal scroll features, by default it's scroll inside modal, but if we use varient props `screen-size` , the scroll will append outside the modal</td>
+      <td>default</td>
+    </tr>
+    <tr>
+      <td>onClose</td>
+      <td>
+        optional
+      </td>
+      <td>You can handle the modal close event manually with passing the props `onClose`</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ModalHeader</td>
+      <td className="flex flex-wrap gap-y-2 border-none"></td>
+      <td>Modal header will show the modal header with close button, with `closeButtonPosition` we can change the close icon position with these props `left`, `right`</td>
+      <td>`closeButtonPosition=right`</td>
+    </tr>
+    <tr>
+      <td>ModalContent</td>
+      <td></td>
+      <td>ModalContent is the wrapper of the modal content, we can pass `isDismissible` props to close modal outside click of the modal</td>
+      <td>`isDismissible=true`</td>
+    </tr>
+    <tr>
+      <td>ModalBody</td>
+      <td></td>
+      <td>ModalBody is the wrapper of the modal body content, it's takes children as a ReactNode, we can pass any content here</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ModalFooter</td>
+      <td></td>
+      <td>ModalFooter component is the footer content of modal, it's append in the footer of the modal, it's takes children as a ReactNode  </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>}
