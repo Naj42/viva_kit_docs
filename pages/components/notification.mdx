@@ -1,0 +1,247 @@
+import {
+  VKNotifications,
+  useVKNotifications,
+} from "@vivakits/react-components";
+import { Button } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+## Notifications
+
+### Import
+
+```jsx copy
+import {
+  VKNotifications,
+  useVKNotifications,
+  Button,
+} from "@vivakits/react-components";
+```
+
+### Variants
+
+The Notification component comes with 4 different variants that you can change using the `variant` prop inside the `notify` function.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const NotificationsVariantGroup = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "success",
+                        title: "Success",
+                        description: "Success Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Success
+            </Button>
+
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "warning",
+                        title: "Warning",
+                        description: "Warning Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Warning
+            </Button>
+
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "error",
+                        title: "Error",
+                        description: "Error Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Error
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+<NotificationsVariantGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const Notifications = () => {
+  const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "success",
+                        title: "Success",
+                        description: "Success Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Success
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "warning",
+                        title: "Warning",
+                        description: "Warning Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Warning
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "error",
+                        title: "Error",
+                        description: "Error Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Error
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>size</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">xs</span>
+        <span className="badge">sm</span>
+        <span className="badge">md</span>
+        <span className="badge">lg</span>
+        <span className="badge">xl</span>
+        <span className="badge">2xl</span>
+      </td>
+      <td>Changes font size on anchor text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
+        <span className="badge">dark</span>
+        <span className="badge">light</span>
+      </td>
+      <td>Changes anchor color</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>fontFamily</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+      </td>
+      <td>Changes font family on anchor text</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>underline</td>
+      <td>
+        <span className="badge">none</span>
+        <span className="badge">hover</span>
+        <span className="badge">always</span>
+      </td>
+      <td>Underlines the anchor text</td>
+      <td><span className="badge">none</span></td>
+    </tr>
+  </tbody>
+</table>}
+```
