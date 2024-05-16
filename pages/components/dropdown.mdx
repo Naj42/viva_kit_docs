@@ -92,7 +92,7 @@ export const DropdownMenuComp = () => {
           <DropdownTrigger>
             <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Left</Button>
             </DropdownTrigger>
-            <DropdownMenu OnSelect={() => alert("Hi")} align={"start"}>
+            <DropdownMenu align={"start"}>
             <DropdownItem value="Start">Start</DropdownItem>
             <DropdownItem value="Center">Center</DropdownItem>
             <DropdownItem value="End">End</DropdownItem>
@@ -103,7 +103,7 @@ export const DropdownMenuComp = () => {
           <DropdownTrigger>
             <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Center</Button>
             </DropdownTrigger>
-            <DropdownMenu OnSelect={() => alert("Hi")} align={"center"}>
+            <DropdownMenu align={"center"}>
             <DropdownItem value="Start">Start</DropdownItem>
             <DropdownItem value="Center">Center</DropdownItem>
             <DropdownItem value="End">End</DropdownItem>
@@ -114,7 +114,7 @@ export const DropdownMenuComp = () => {
           <DropdownTrigger>
             <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Right</Button>
             </DropdownTrigger>
-            <DropdownMenu OnSelect={() => alert("Hi")} align={"end"}>
+            <DropdownMenu align={"end"}>
             <DropdownItem value="Start">Start</DropdownItem>
             <DropdownItem value="Center">Center</DropdownItem>
             <DropdownItem value="End">End</DropdownItem>
@@ -134,7 +134,7 @@ export const DropdownMenuComp = () => {
             <DropdownTrigger>
                 <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Left</Button>
             </DropdownTrigger>
-            <DropdownMenu OnSelect={() => alert("Hi")} align={"start"}>
+            <DropdownMenu align={"start"}>
                 <DropdownItem value="Start">Start</DropdownItem>
                 <DropdownItem value="Center">Center</DropdownItem>
                 <DropdownItem value="End">End</DropdownItem>
@@ -145,7 +145,7 @@ export const DropdownMenuComp = () => {
             <DropdownTrigger>
                 <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Center</Button>
             </DropdownTrigger>
-            <DropdownMenu OnSelect={() => alert("Hi")} align={"center"}>
+            <DropdownMenu align={"center"}>
                 <DropdownItem value="Start">Start</DropdownItem>
                 <DropdownItem value="Center">Center</DropdownItem>
                 <DropdownItem value="End">End</DropdownItem>
@@ -156,7 +156,7 @@ export const DropdownMenuComp = () => {
             <DropdownTrigger>
                 <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Right</Button>
             </DropdownTrigger>
-            <DropdownMenu OnSelect={() => alert("Hi")} align={"end"}>
+            <DropdownMenu align={"end"}>
                 <DropdownItem value="Start">Start</DropdownItem>
                 <DropdownItem value="Center">Center</DropdownItem>
                 <DropdownItem value="End">End</DropdownItem>
@@ -168,7 +168,52 @@ export const DropdownMenuComp = () => {
   </Tabs.Tab>
 </Tabs>
 
-### Dropdown item
+
+#### onSelect
+
+The prop `onSelect` of DropdownMenu defines the functionality on selecting the dropdown menu.
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownMenuOnSelect = () => {
+  return (
+
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Trigger</Button>
+            </DropdownTrigger>
+            <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+
+);
+};
+
+<DropdownMenuOnSelect />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"secondary"}>Dropdown Trigger</Button>
+            </DropdownTrigger>
+            <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Dropdown Item
 
 Dropdown items are the actions that will be available on the dropdown. Clicking on those spesific actions will take place. `DropdownItem` comes with several props.
 
@@ -272,7 +317,7 @@ export const DropdownItemOnClick = () => {
 
 #### onSelect
 
-The prop `onSelect` defines the functionality on selecting a specific dropdown item.
+The prop `onSelect` of DropdownItem defines the functionality on selecting a specific dropdown item.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -389,7 +434,7 @@ export const DropdownExample = () => {
           </DropdownMenu>
      </Dropdown>
 
-    <Dropdown >
+     <Dropdown >
         <DropdownTrigger>
             <Button rounded={"md"} size={"md"} color={"light"}>With Icon </Button>
         </DropdownTrigger>
@@ -399,11 +444,35 @@ export const DropdownExample = () => {
             <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon className='h-4 w-4'/> Archive</div></DropdownItem>
             <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon className='h-4 w-4'/> Delete</div></DropdownItem>
         </DropdownMenu>
-    </Dropdown>
+     </Dropdown>
 
-
-
-
+     <Dropdown>
+        <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"light"}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start" className='w-[200px]'>
+          <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
+            <VKAvatar
+                variant="image"
+                color="secondary"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt="person with camera"
+                withBorder
+                className="h-10 w-10"
+        />
+        <div className="flex flex-col justify-center ml-2 gap-1">
+            <span className="font-semibold">Monkey D Luffy</span>
+            <span>strawhat@vivasoftltd.com</span>
+        </div>
+        </div>
+        <hr/>
+        </DropdownItem>
+            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon className='h-4 w-4'/> Profile</div></DropdownItem>
+            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon className='h-4 w-4'/> Setting</div></DropdownItem>
+            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon className='h-4 w-4'/> Support</div></DropdownItem>
+            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon className='h-4 w-4'/> Logout</div></DropdownItem>
+        </DropdownMenu>
+     </Dropdown>
     </div>
 
 );
@@ -424,11 +493,12 @@ export const DropdownExample = () => {
                 <DropdownItem value="Duplicate">Duplicate</DropdownItem>
                 <hr />
                 <DropdownItem value="Archive">Archive</DropdownItem>
+                
                 <DropdownItem value="Duplicate">Delete</DropdownItem>
           </DropdownMenu>
-      </Dropdown>
+     </Dropdown>
 
-      <Dropdown >
+     <Dropdown >
         <DropdownTrigger>
             <Button rounded={"md"} size={"md"} color={"light"}>With Icon </Button>
         </DropdownTrigger>
@@ -438,34 +508,11 @@ export const DropdownExample = () => {
             <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon className='h-4 w-4'/> Archive</div></DropdownItem>
             <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon className='h-4 w-4'/> Delete</div></DropdownItem>
         </DropdownMenu>
-      </Dropdown>
-    </div>
+     </Dropdown>
 
-````
-  </Tabs.Tab>
-</Tabs>
-
-
-The `Dropdown` can be used to show the user profile navigation menu
-
-<Tabs items={['Preview', 'Code']}>
-
-  <Tabs.Tab>
-export const DropdownAvatar = () => {
-
- const [isOpen, setIsOpen] = useState(false);
-
-  const handleOpen = () => {
-    setIsOpen(prev => !prev);
-  };
-
-
-  return (
-
-    <div className="flex items-center gap-3">
-      <Dropdown open={isOpen}>
+     <Dropdown>
         <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"light"} onClick={handleOpen}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon className={`${isOpen ? "rotate-180" : "rotate-0"}`}/></div> </Button>
+            <Button rounded={"md"} size={"md"} color={"light"}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
         </DropdownTrigger>
         <DropdownMenu align="start" className='w-[200px]'>
           <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
@@ -478,8 +525,8 @@ export const DropdownAvatar = () => {
                 className="h-10 w-10"
         />
         <div className="flex flex-col justify-center ml-2 gap-1">
-        <span className="font-semibold">Monkey D Luffy</span>
-        <span>strawhat@vivasoftltd.com</span>
+            <span className="font-semibold">Monkey D Luffy</span>
+            <span>strawhat@vivasoftltd.com</span>
         </div>
         </div>
         <hr/>
@@ -488,31 +535,152 @@ export const DropdownAvatar = () => {
             <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon className='h-4 w-4'/> Setting</div></DropdownItem>
             <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon className='h-4 w-4'/> Support</div></DropdownItem>
             <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon className='h-4 w-4'/> Logout</div></DropdownItem>
-
         </DropdownMenu>
-    </Dropdown>
+     </Dropdown>
     </div>
 
-);
-};
-
-<DropdownAvatar />
-  </Tabs.Tab>
-
-  <Tabs.Tab>
-```jsx copy
-    <div className="flex items-center gap-3">
-        <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown Value</Button>
-            </DropdownTrigger>
-            <DropdownMenu align={"start"}>
-                <DropdownItem value="Edit">Edit</DropdownItem>
-                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-    </div>
-````
-
+```
   </Tabs.Tab>
 </Tabs>
+
+### DropdownMenu API reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>children</td>
+    <td>node</td>
+    <td>Content to be displayed inside the component</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>open</td>
+    <td>boolean</td>
+    <td>Indicates if the component is open or closed</td>
+    <td> - </td>
+</tr>
+
+
+  </tbody>
+</table>}
+```
+
+### DropdownMenu API reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>children</td>
+    <td>node</td>
+    <td>Content to be displayed inside the dropdown menu</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>className</td>
+    <td>string</td>
+    <td>CSS class names for custom styling</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>onSelect</td>
+    <td>function</td>
+    <td>Handler for item selection events</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>align</td>
+    <td>
+        <span className="badge">start</span>
+        <span className="badge">center</span>
+        <span className="badge">end</span>
+    </td>
+    <td>Defines alignment of the dropdown menu</td>
+    <td> <span className="badge">center</span></td>
+</tr>
+<tr>
+    <td>...props</td>
+    <td>object</td>
+    <td>Additional props to be spread onto the component</td>
+    <td> - </td>
+</tr>
+
+  </tbody>
+</table>}
+```
+
+### DropdownItem API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>children</td>
+    <td>ReactNode</td>
+    <td>Content to be displayed inside the component</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>className</td>
+    <td>string</td>
+    <td>CSS class names for custom styling</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>disabled</td>
+    <td>boolean</td>
+    <td>Indicates if the component is inactive</td>
+    <td> <span className="badge">center</span></td>
+</tr>
+<tr>
+    <td>onClick</td>
+    <td>function</td>
+    <td>Handler for click events</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>onSelect</td>
+    <td>function</td>
+    <td>Handler for selection events</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>value</td>
+    <td>any</td>
+    <td>Current value of the component</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>...props</td>
+    <td>object</td>
+    <td>Additional props to be spread onto the component</td>
+    <td> - </td>
+</tr>
+
+  </tbody>
+</table>}
