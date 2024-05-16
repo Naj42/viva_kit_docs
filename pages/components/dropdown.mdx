@@ -1,0 +1,686 @@
+import { useState } from "react";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+  Input,
+  Checkbox,
+  VKAvatar,
+} from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import {
+  CameraIcon,
+  ChatIcon,
+  CartIcon,
+  EditIcon,
+  ExpandIcon,
+  CollapseIcon,
+  DuplicateIcon,
+  ArchiveIcon,
+  DeleteIcon,
+  NameIcon,
+  SettingIcon,
+  TeamIcon,
+  SupportIcon,
+  LogoutIcon,
+} from "./icons";
+
+# Dropdown
+
+### Dropdown Trigger
+
+Dropdown trigger is a wrapper around the element which triggers the dropdown as the name suggests. Inside this, main dropdown contents resides.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownTriggerComp = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Trigger</Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+
+);
+};
+
+<DropdownTriggerComp />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"secondary"}>Dropdown Trigger</Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Dropdown Menu
+
+Dropdown menu is the main container of the dropdown. `DropdownMenu` contains all the dropdown items. It is a wrapper around the dropdown items. It has several props which gives control over the menu that drops when clicking on dropdown button or icon.
+
+#### align
+
+The `align` prop aligns the dropdown menu to the left, right or middle of the dropdown button. It accepts string values `start` or `end` or `center`. By default the value is `center`.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownMenuComp = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Left</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"start"}>
+            <DropdownItem value="Start">Start</DropdownItem>
+            <DropdownItem value="Center">Center</DropdownItem>
+            <DropdownItem value="End">End</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+
+       <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Center</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"center"}>
+            <DropdownItem value="Start">Start</DropdownItem>
+            <DropdownItem value="Center">Center</DropdownItem>
+            <DropdownItem value="End">End</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+
+        <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Right</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"end"}>
+            <DropdownItem value="Start">Start</DropdownItem>
+            <DropdownItem value="Center">Center</DropdownItem>
+            <DropdownItem value="End">End</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+
+)};
+
+<DropdownMenuComp />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Left</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"start"}>
+                <DropdownItem value="Start">Start</DropdownItem>
+                <DropdownItem value="Center">Center</DropdownItem>
+                <DropdownItem value="End">End</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+
+       <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Center</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"center"}>
+                <DropdownItem value="Start">Start</DropdownItem>
+                <DropdownItem value="Center">Center</DropdownItem>
+                <DropdownItem value="End">End</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Right</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"end"}>
+                <DropdownItem value="Start">Start</DropdownItem>
+                <DropdownItem value="Center">Center</DropdownItem>
+                <DropdownItem value="End">End</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+     </div>
+
+````
+  </Tabs.Tab>
+</Tabs>
+
+
+#### onSelect
+
+The prop `onSelect` of DropdownMenu defines the functionality on selecting the dropdown menu.
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownMenuOnSelect = () => {
+  return (
+
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Trigger</Button>
+            </DropdownTrigger>
+            <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+
+);
+};
+
+<DropdownMenuOnSelect />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"secondary"}>Dropdown Trigger</Button>
+            </DropdownTrigger>
+            <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Dropdown Item
+
+Dropdown items are the actions that will be available on the dropdown. Clicking on those spesific actions will take place. `DropdownItem` comes with several props.
+
+#### disabled
+The prop `disabled` specifies whether the dropdown item is disabled or not. If set to `true`, the item cannot be interacted with. Default value for this is `false`.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownItemDisabled = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Action</Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+            <DropdownItem value="Archive">Archive</DropdownItem>
+            <DropdownItem value="Move">Move</DropdownItem>
+            <DropdownItem value="Delete" disabled>Delete</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+);
+};
+
+<DropdownItemDisabled />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Action</Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+                <DropdownItem value="Archive">Archive</DropdownItem>
+                <DropdownItem value="Move">Move</DropdownItem>
+                <DropdownItem value="Delete" disabled>Delete</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+````
+
+  </Tabs.Tab>
+</Tabs>
+
+#### onClick
+
+The prop `onClick` defines the functionality on clicking a specific dropdown item.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownItemOnClick = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown onClick</Button>
+            </DropdownTrigger>
+             <DropdownMenu>
+                <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
+                <DropdownItem value="Duplicate" onClick={() => alert("Clicked on Duplicate")}>Duplicate</DropdownItem>
+                <DropdownItem value="Archive" onClick={() => alert("Clicked on Archive")}>Archive</DropdownItem>
+                <DropdownItem value="Move" onClick={() => alert("Clicked on Move")}>Move</DropdownItem>
+                <DropdownItem value="Delete" disabled onClick={() => alert("Clicked on Delete")}>Delete</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+    </div>
+);
+};
+
+<DropdownItemOnClick />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown onClick</Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+                <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
+                <DropdownItem value="Duplicate" onClick={() => alert("Clicked on Duplicate")}>Duplicate</DropdownItem>
+                <DropdownItem value="Archive" onClick={() => alert("Clicked on Archive")}>Archive</DropdownItem>
+                <DropdownItem value="Move" onClick={() => alert("Clicked on Move")}>Move</DropdownItem>
+                <DropdownItem value="Delete" disabled onClick={() => alert("Clicked on Delete")}>Delete</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+#### onSelect
+
+The prop `onSelect` of DropdownItem defines the functionality on selecting a specific dropdown item.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownItemOnSelect = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown onSelect</Button>
+            </DropdownTrigger>
+             <DropdownMenu>
+                <DropdownItem value="Edit" onSelect={() => alert("Selected Edit")}>Edit</DropdownItem>
+                <DropdownItem value="Duplicate" onSelect={() => alert("Selected Duplicate")}>Duplicate</DropdownItem>
+                <DropdownItem value="Archive" onSelect={() => alert("Selected Archive")}>Archive</DropdownItem>
+                <DropdownItem value="Move" onSelect={() => alert("Selected Move")}>Move</DropdownItem>
+                <DropdownItem value="Delete" disabled onSelect={() => alert("Selected Delete")}>Delete</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+    </div>
+);
+};
+
+<DropdownItemOnSelect />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown onSelect</Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+                <DropdownItem value="Edit" onSelect={() => alert("Selected Edit")}>Edit</DropdownItem>
+                <DropdownItem value="Duplicate" onSelect={() => alert("Selected Duplicate")}>Duplicate</DropdownItem>
+                <DropdownItem value="Archive" onSelect={() => alert("Selected Archive")}>Archive</DropdownItem>
+                <DropdownItem value="Move" onSelect={() => alert("Selected Move")}>Move</DropdownItem>
+                <DropdownItem value="Delete" disabled onSelect={() => alert("Selected Delete")}>Delete</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+#### value
+
+The `value` prop is associated with the dropdown item. This `value` can be used to identify the selected item when handling selection events
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownValue = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown Value</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"start"}>
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+
+);
+};
+
+<DropdownValue />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+        <Dropdown>
+            <DropdownTrigger>
+                <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown Value</Button>
+            </DropdownTrigger>
+            <DropdownMenu align={"start"}>
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+    </div>
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Example
+
+We can use `Dropdown` with break in items or with icons. Examples are provided below
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const DropdownExample = () => {
+  return (
+    
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+             <Button rounded={"md"} size={"md"} color={"light"}>Divided items</Button>
+          </DropdownTrigger>
+           <DropdownMenu align="end">
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+                <hr />
+                <DropdownItem value="Archive">Archive</DropdownItem>
+                
+                <DropdownItem value="Duplicate">Delete</DropdownItem>
+          </DropdownMenu>
+     </Dropdown>
+
+     <Dropdown >
+        <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"light"}>With Icon </Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start" className='w-[150px]'>
+            <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon className='h-4 w-4'/> Edit</div></DropdownItem>
+            <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon className='h-4 w-4'/> Duplicate</div></DropdownItem>
+            <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon className='h-4 w-4'/> Archive</div></DropdownItem>
+            <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon className='h-4 w-4'/> Delete</div></DropdownItem>
+        </DropdownMenu>
+     </Dropdown>
+
+     <Dropdown>
+        <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"light"}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start" className='w-[200px]'>
+          <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
+            <VKAvatar
+                variant="image"
+                color="secondary"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt="person with camera"
+                withBorder
+                className="h-10 w-10"
+        />
+        <div className="flex flex-col justify-center ml-2 gap-1">
+            <span className="font-semibold">Monkey D Luffy</span>
+            <span>strawhat@vivasoftltd.com</span>
+        </div>
+        </div>
+        <hr/>
+        </DropdownItem>
+            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon className='h-4 w-4'/> Profile</div></DropdownItem>
+            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon className='h-4 w-4'/> Setting</div></DropdownItem>
+            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon className='h-4 w-4'/> Support</div></DropdownItem>
+            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon className='h-4 w-4'/> Logout</div></DropdownItem>
+        </DropdownMenu>
+     </Dropdown>
+    </div>
+
+);
+};
+
+<DropdownExample />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+      <Dropdown>
+          <DropdownTrigger>
+             <Button rounded={"md"} size={"md"} color={"light"}>Divided items</Button>
+          </DropdownTrigger>
+           <DropdownMenu align="end">
+                <DropdownItem value="Edit">Edit</DropdownItem>
+                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+                <hr />
+                <DropdownItem value="Archive">Archive</DropdownItem>
+                
+                <DropdownItem value="Duplicate">Delete</DropdownItem>
+          </DropdownMenu>
+     </Dropdown>
+
+     <Dropdown >
+        <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"light"}>With Icon </Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start" className='w-[150px]'>
+            <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon className='h-4 w-4'/> Edit</div></DropdownItem>
+            <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon className='h-4 w-4'/> Duplicate</div></DropdownItem>
+            <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon className='h-4 w-4'/> Archive</div></DropdownItem>
+            <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon className='h-4 w-4'/> Delete</div></DropdownItem>
+        </DropdownMenu>
+     </Dropdown>
+
+     <Dropdown>
+        <DropdownTrigger>
+            <Button rounded={"md"} size={"md"} color={"light"}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start" className='w-[200px]'>
+          <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
+            <VKAvatar
+                variant="image"
+                color="secondary"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt="person with camera"
+                withBorder
+                className="h-10 w-10"
+        />
+        <div className="flex flex-col justify-center ml-2 gap-1">
+            <span className="font-semibold">Monkey D Luffy</span>
+            <span>strawhat@vivasoftltd.com</span>
+        </div>
+        </div>
+        <hr/>
+        </DropdownItem>
+            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon className='h-4 w-4'/> Profile</div></DropdownItem>
+            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon className='h-4 w-4'/> Setting</div></DropdownItem>
+            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon className='h-4 w-4'/> Support</div></DropdownItem>
+            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon className='h-4 w-4'/> Logout</div></DropdownItem>
+        </DropdownMenu>
+     </Dropdown>
+    </div>
+
+```
+  </Tabs.Tab>
+</Tabs>
+
+### DropdownMenu API reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>children</td>
+    <td>node</td>
+    <td>Content to be displayed inside the component</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>open</td>
+    <td>boolean</td>
+    <td>Indicates if the component is open or closed</td>
+    <td> - </td>
+</tr>
+
+
+  </tbody>
+</table>}
+```
+
+### DropdownMenu API reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>children</td>
+    <td>node</td>
+    <td>Content to be displayed inside the dropdown menu</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>className</td>
+    <td>string</td>
+    <td>CSS class names for custom styling</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>onSelect</td>
+    <td>function</td>
+    <td>Handler for item selection events</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>align</td>
+    <td>
+        <span className="badge">start</span>
+        <span className="badge">center</span>
+        <span className="badge">end</span>
+    </td>
+    <td>Defines alignment of the dropdown menu</td>
+    <td> <span className="badge">center</span></td>
+</tr>
+<tr>
+    <td>...props</td>
+    <td>object</td>
+    <td>Additional props to be spread onto the component</td>
+    <td> - </td>
+</tr>
+
+  </tbody>
+</table>}
+```
+
+### DropdownItem API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>children</td>
+    <td>ReactNode</td>
+    <td>Content to be displayed inside the component</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>className</td>
+    <td>string</td>
+    <td>CSS class names for custom styling</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>disabled</td>
+    <td>boolean</td>
+    <td>Indicates if the component is inactive</td>
+    <td> <span className="badge">center</span></td>
+</tr>
+<tr>
+    <td>onClick</td>
+    <td>function</td>
+    <td>Handler for click events</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>onSelect</td>
+    <td>function</td>
+    <td>Handler for selection events</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>value</td>
+    <td>any</td>
+    <td>Current value of the component</td>
+    <td> - </td>
+</tr>
+<tr>
+    <td>...props</td>
+    <td>object</td>
+    <td>Additional props to be spread onto the component</td>
+    <td> - </td>
+</tr>
+
+  </tbody>
+</table>}
