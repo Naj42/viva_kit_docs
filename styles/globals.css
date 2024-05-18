@@ -40,9 +40,13 @@
     @apply !bg-primary !text-primary-foreground;
   }
   .badge {
-    @apply text-sm bg-primary-light text-primary rounded-lg px-4 py-1 mx-1;
+    @apply px-4 py-1 mx-1 text-sm rounded-lg bg-primary-light text-primary;
   }
   tr {
     @apply !h-12;
   }
+  hr {
+    @apply !m-0;
+  }
 }
+
