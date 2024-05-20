@@ -1,0 +1,411 @@
+import { VKAvatar } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Avatar
+
+### Import
+
+```jsx copy
+import { VKAvatar } from "@vivakits/react-components";
+```
+
+### Variants
+
+The Avatar component comes with 2 different variants that you can change using the `variant` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const AvatarVariantGroup = () => {
+    const variants = [ "image" ,"text"];
+    const imageSrc = "/avatar.jpg"
+
+return (
+
+<div className="flex gap-6">
+  {variants.map((variant) => (
+    <VKAvatar
+      key={variant}
+      variant={variant}
+      size="md"
+      color="primary"
+      src={imageSrc}
+    />
+  ))}
+</div>
+); };
+
+    <AvatarVariantGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+const imageSrc = "/avatar.jpg"
+
+    <div className="flex gap-6">
+        <VKAvatar variant="image" size="md" src={imageSrc}/>
+        <VKAvatar variant="text" size="md" color="primary"/>
+    </div>
+
+````
+</Tabs.Tab>
+</Tabs>
+
+### Shapes
+
+The Avatar component comes with 3 different shapes that you can change using the `shape` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const AvatarShapeGroup = () => {
+    const shapes = [ "rounded" ,"curved", "square"];
+    const imageSrc = "/avatar.jpg"
+
+return (
+
+<div className="flex gap-6">
+  {shapes.map((shape) => (
+    <VKAvatar
+      key={shape}
+      variant={"image"}
+      shape={shape}
+      size="md"
+      color="primary"
+      src={imageSrc}
+    />
+  ))}
+</div>
+); };
+
+    <AvatarShapeGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+
+const imageSrc = "/avatar.jpg"
+
+    <div className="flex gap-6">
+        <VKAvatar variant="image" size="md" src={imageSrc} shape={"rounded"}/>
+        <VKAvatar variant="image" size="md" src={imageSrc} shape={"curved"}/>
+        <VKAvatar variant="image" size="md" src={imageSrc} shape={"square"}/>
+    </div>
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+### Sizes
+
+The Avatar component comes with 6 different sizes that you can change using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const AvatarSizeGroup = () => {
+    const imageSrc = "/avatar.jpg"
+    const sizes = [ "xs", "sm", "md", "lg", "xl", "2xl"];
+
+return (
+
+<div className="flex gap-6">
+  {sizes.map((size) => (
+    <VKAvatar key={size} variant="image" size={size} src={imageSrc} />
+  ))}
+</div>
+); };
+
+    <AvatarSizeGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+const imageSrc = "/avatar.jpg"
+
+    <div className="flex gap-6">
+        <VKAvatar variant="image" size="xs" src={imageSrc}/>
+        <VKAvatar variant="image" size="sm" src={imageSrc}/>
+        <VKAvatar variant="image" size="md" src={imageSrc}/>
+        <VKAvatar  variant="image" size="lg" src={imageSrc}/>
+        <VKAvatar variant="image" size="xl" src={imageSrc}/>
+        <VKAvatar variant="image" size="2xl" src={imageSrc}/>
+    </div>
+
+````
+</Tabs.Tab>
+</Tabs>
+
+### Colors
+
+The Avatar component comes with 8 different colors that you can change using the `color` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const AvatarColorGroup = () => {
+    const colors = [ "primary" ,"secondary", "success", "danger", "warning", "dark", "light", "default"];
+  return (
+    <div className="flex gap-6">
+        {colors.map(color => (
+        <VKAvatar
+            key={color}
+            variant="text"
+            size="md"
+            color={color}
+        />
+        ))}
+    </div>
+  );
+};
+
+    <AvatarColorGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div className="flex gap-6">
+  <VKAvatar variant="text" size="md" color="primary" />
+  <VKAvatar variant="text" size="md" color="secondary" />
+  <VKAvatar variant="text" size="md" color="success" />
+  <VKAvatar variant="text" size="md" color="danger" />
+  <VKAvatar variant="text" size="md" color="warning" />
+  <VKAvatar variant="text" size="md" color="dark" />
+  <VKAvatar variant="text" size="md" color="light" />
+  <VKAvatar variant="text" size="md" color="default" />
+</div>
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+### Font Sizes
+
+The Avatar component comes with 7 different font sizes that you can change using the `fontSize` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const AvatarFontSizeGroup = () => {
+    const fontSizes = [ "xs" ,"sm", "md", "lg", "xl", "2xl"];
+return (
+<div className="flex gap-6">
+  {fontSizes.map((fontSize) => (
+    <VKAvatar
+      key={fontSize}
+      fontSize={fontSize}
+      color="light"
+      variant={"text"}
+      textValue="Samin Yasar"
+    />
+  ))}
+</div>
+); };
+
+    <AvatarFontSizeGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div className="flex gap-6">
+  <VKAvatar variant="text" color="light" fontSize="xs" textValue="Samin Yasar"/>
+  <VKAvatar variant="text" color="light" fontSize="sm" textValue="Samin Yasar"/>
+  <VKAvatar variant="text" color="light" fontSize="md" textValue="Samin Yasar"/>
+  <VKAvatar variant="text" color="light" fontSize="xl" textValue="Samin Yasar"/>
+  <VKAvatar variant="text" color="light" fontSize="xl" textValue="Samin Yasar"/>
+  <VKAvatar variant="text" color="light" fontSize="2xl" textValue="Samin Yasar"/>
+</div>
+```
+</Tabs.Tab>
+</Tabs>
+
+### Border Color
+
+The Avatar component comes with 7 different border color that you can change using the `borderColor` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const AvatarBorderColorGroup = () => {
+    const borderColors = [ "primary" , "secondary", "success", "danger", "warning", "dark", "light" ];
+
+return (
+
+<div className="flex gap-6">
+  {borderColors.map((borderColor) => (
+    <VKAvatar
+      key={borderColor}
+      variant="text"
+      size="md"
+      color="light"
+      withBorder
+      borderColor={borderColor}
+    />
+  ))}
+</div>
+); };
+
+    <AvatarBorderColorGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+
+<div className="flex gap-6">
+  <VKAvatar variant="text" size="md" color="light" withBorder borderColor="primary"/>
+  <VKAvatar variant="text" size="md" color="light" withBorder borderColor="secondary"/>
+  <VKAvatar variant="text" size="md" color="light" withBorder borderColor="light"/>
+  <VKAvatar variant="text" size="md" color="light" withBord  borderColor="danger"/>
+  <VKAvatar variant="text" size="md" color="light" withBorder borderColor="warning"/>
+  <VKAvatar variant="text" size="md" color="light" withBorder borderColor="dark"/>
+  <VKAvatar variant="text" size="md" color="light" withBorder borderColor="light"/>
+</div>
+```
+</Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>variant</td>
+      <td>
+        <span className="badge">image</span>  
+        <span className="badge">text</span> 
+      </td>
+      <td>Changes avatar type</td>
+      <td><span className="badge">text</span></td>
+    </tr>
+    <tr>
+      <td>shape</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">rounded</span>   
+        <span className="badge">curved</span>  
+        <span className="badge">square</span>  
+      </td>
+      <td>Changes avatar shape</td>
+      <td><span className="badge">rounded</span></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">none</span>   
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">success</span>  
+        <span className="badge">danger</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">dark</span>  
+        <span className="badge">light</span>  
+      </td>
+      <td>Changes avatar color</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+     <tr>
+      <td>borderColor</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">success</span>  
+        <span className="badge">danger</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">dark</span>  
+        <span className="badge">light</span>  
+      </td>
+      <td>Changes avatar border color</td>
+      <td><span className="badge">dark</span></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span> 
+        <span className="badge">2xl</span> 
+      </td>
+      <td>Changes avatar size</td>
+      <td><span className="badge">lg</span></td>
+    </tr>
+    <tr>
+      <td>fontSize</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>   
+         <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span> 
+        <span className="badge">2xl</span> 
+      </td>
+      <td>Changes font size on avatar text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+     <tr>
+      <td>fontFamily</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>   
+        <span className="badge">sans-serif</span>   
+         <span className="badge">serif</span>  
+        <span className="badge">mono</span>  
+      </td>
+      <td>Changes font family on avatar text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+      <tr>
+      <td>fontColor</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>   
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">success</span>  
+        <span className="badge">danger</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">dark</span>  
+        <span className="badge">light</span>  
+      </td>
+      <td>Changes font color on avatar text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+     <tr>
+      <td>withBorder</td>
+      <td>
+        <span className="badge">boolean</span>
+      </td>
+      <td>Determines if avatar should have border</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+     <tr>
+      <td>textValue</td>
+      <td>
+        <span className="badge">string</span>
+      </td>
+      <td>Applies shortened version of text using textValue. Ex: "John Doe" will be shown as "JD". only first 2 words are used</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
