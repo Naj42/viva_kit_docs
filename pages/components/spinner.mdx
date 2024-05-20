@@ -167,7 +167,7 @@ export const ButtonSpinnerGroup = () => {
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Spinner } from "@vivakits/react-components";
+import { Button, Spinner } from "@vivakits/react-components";
 
 const App = () => (
 
@@ -223,7 +223,7 @@ return (
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Spinner } from "@vivakits/react-components";
+import { AsyncDatatable, Spinner } from "@vivakits/react-components";
 
 const App = () => (
 
@@ -275,7 +275,7 @@ return (
 
 ```jsx copy
 import React from "react";
-import { Spinner } from "@vivakits/react-components";
+import { Select } from "@vivakits/react-components";
 
 const App = () => (
 
@@ -319,6 +319,13 @@ export default App;
       <td><span className="badge">primary</span></td>
     </tr>
 
+     <tr>
+      <td>className</td>
+      <td>CSS</td>
+      <td>Additional CSS class(es) to apply to the chip component</td>
+      <td> - </td>
+    </tr>
+
     <tr>
       <td>size</td>
       <td>
@@ -329,13 +336,6 @@ export default App;
       </td>
       <td>Changes spinner size</td>
       <td><span className="badge">md</span></td>
-    </tr>
-
-     <tr>
-      <td>className</td>
-      <td>CSS</td>
-      <td>Additional CSS class(es) to apply to the chip component</td>
-      <td> - </td>
     </tr>
 
   </tbody>
