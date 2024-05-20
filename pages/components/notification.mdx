@@ -1,0 +1,898 @@
+import {
+  VKNotifications,
+  useVKNotifications,
+} from "@vivakits/react-components";
+import { Button } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+## Notifications
+
+### Import
+
+```jsx copy
+import {
+  VKNotifications,
+  useVKNotifications,
+  Button,
+} from "@vivakits/react-components";
+```
+
+### Variants
+
+The Notification component comes with 4 different variants that you can change using the `variant` prop inside the `notify` function.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const NotificationsVariantGroup = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "success",
+                        title: "Success",
+                        description: "Success Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Success
+            </Button>
+
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "warning",
+                        title: "Warning",
+                        description: "Warning Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Warning
+            </Button>
+
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "error",
+                        title: "Error",
+                        description: "Error Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Error
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+<NotificationsVariantGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const Notifications = () => {
+  const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "success",
+                        title: "Success",
+                        description: "Success Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Success
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "warning",
+                        title: "Warning",
+                        description: "Warning Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Warning
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        variant: "error",
+                        title: "Error",
+                        description: "Error Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Error
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+````
+</Tabs.Tab>
+</Tabs>
+
+### Colors
+
+The Notification component comes with 8 different colors that you can change using the `color` prop inside the `notify` function.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const NotificationsColorGroup = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                onClick={() => {
+                    notify({
+                        color: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                onClick={() => {
+                    notify({
+                        color: "primary",
+                        title: "Primary",
+                        description: "Primary Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Primary
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="secondary"
+                onClick={() => {
+                    notify({
+                        color: "secondary",
+                        title: "Secondary",
+                        description: "Secondary Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Secondary
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="success"
+                onClick={() => {
+                    notify({
+                        color: "success",
+                        title: "Success",
+                        description: "Success Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Success
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="danger"
+                onClick={() => {
+                    notify({
+                        color: "danger",
+                        title: "Danger",
+                        description: "Danger Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Danger
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="warning"
+                onClick={() => {
+                    notify({
+                        color: "warning",
+                        title: "Warning",
+                        description: "Warning Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Warning
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="dark"
+                onClick={() => {
+                    notify({
+                        color: "dark",
+                        title: "Dark",
+                        description: "Dark Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Dark
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="light"
+                onClick={() => {
+                    notify({
+                        color: "light",
+                        title: "Light",
+                        description: "Light Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Light
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+<NotificationsColorGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const Notifications = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                onClick={() => {
+                    notify({
+                        color: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                onClick={() => {
+                    notify({
+                        color: "primary",
+                        title: "Primary",
+                        description: "Primary Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Primary
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="secondary"
+                onClick={() => {
+                    notify({
+                        color: "secondary",
+                        title: "Secondary",
+                        description: "Secondary Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Secondary
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="success"
+                onClick={() => {
+                    notify({
+                        color: "success",
+                        title: "Success",
+                        description: "Success Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Success
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="danger"
+                onClick={() => {
+                    notify({
+                        color: "danger",
+                        title: "Danger",
+                        description: "Danger Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Danger
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="warning"
+                onClick={() => {
+                    notify({
+                        color: "warning",
+                        title: "Warning",
+                        description: "Warning Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Warning
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="dark"
+                onClick={() => {
+                    notify({
+                        color: "dark",
+                        title: "Dark",
+                        description: "Dark Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Dark
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                variant="outline"
+                color="light"
+                onClick={() => {
+                    notify({
+                        color: "light",
+                        title: "Light",
+                        description: "Light Notification",
+                        autoClose: true,
+                        duration: 3000,
+                    });
+                }}
+            >
+                Light
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+### Sizes
+
+The Notification component comes with 4 different sizes that you can change using the `size` prop inside the `notify` function.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const NotificationsSizeGroup = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "sm",
+                        title: "Small",
+                        description: "Small Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Small
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "md",
+                        title: "Medium",
+                        description: "Medium Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Medium
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "lg",
+                        title: "Large",
+                        description: "Large Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Large
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+<NotificationsSizeGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const Notifications = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "default",
+                        title: "Default",
+                        description: "Default Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Default
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "sm",
+                        title: "Small",
+                        description: "Small Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Small
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "md",
+                        title: "Medium",
+                        description: "Medium Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Medium
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        size: "lg",
+                        title: "Large",
+                        description: "Large Notification",
+                        autoClose: true,
+                        duration: 3000
+                    });
+                }}
+            >
+                Large
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+### Placements
+
+The Notification component comes with 4 different placements that you can change using the `placement` prop inside the `notify` function.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const NotificationsPlacementGroup = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Top Left",
+                        description: "Top Left Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "topLeft"
+                    });
+                }}
+            >
+                Top Left
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Top Right",
+                        description: "Top Right Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "topRight"
+                    });
+                }}
+            >
+                Top Right
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Bottom Left",
+                        description: "Bottom Left Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "bottomLeft"
+                    });
+                }}
+            >
+                Bottom Left
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Bottom Right",
+                        description: "Bottom Right Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "bottomRight"
+                    });
+                }}
+            >
+                Bottom Right
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+<NotificationsPlacementGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+export const Notifications = () => {
+    const { notify } = useVKNotifications();
+  return (
+    <>
+        <VKNotifications />
+        <div className="flex items-center gap-3">
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Top Left",
+                        description: "Top Left Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "topLeft"
+                    });
+                }}
+            >
+                Top Left
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Top Right",
+                        description: "Top Right Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "topRight"
+                    });
+                }}
+            >
+                Top Right
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Bottom Left",
+                        description: "Bottom Left Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "bottomLeft"
+                    });
+                }}
+            >
+                Bottom Left
+            </Button>
+            <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                        title: "Bottom Right",
+                        description: "Bottom Right Notification",
+                        autoClose: true,
+                        duration: 3000,
+                        placement: "bottomRight"
+                    });
+                }}
+            >
+                Bottom Right
+            </Button>
+        </div>
+    </>
+
+);
+};
+
+````
+
+</Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>variant</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">success</span>
+        <span className="badge">warning</span>
+        <span className="badge">error</span>
+      </td>
+      <td>Changes notification variant</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">sm</span>
+        <span className="badge">md</span>
+        <span className="badge">lg</span>
+      </td>
+      <td>Changes size on notification</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
+        <span className="badge">dark</span>
+        <span className="badge">light</span>
+      </td>
+      <td>Changes notification color</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>fontFamily</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">sansSerif</span>
+        <span className="badge">serif</span>
+        <span className="badge">mono</span>
+      </td>
+      <td>Changes font family on notification text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>placement</td>
+      <td>
+        <span className="badge">topLeft</span>
+        <span className="badge">topRight</span>
+        <span className="badge">bottomLeft</span>
+        <span className="badge">bottomRight</span>
+      </td>
+      <td>Changes placement of notification</td>
+      <td><span className="badge">topRight</span></td>
+    </tr>
+     <tr>
+      <td>autoClose</td>
+      <td>
+        <span className="badge">true</span>
+        <span className="badge">false</span>
+      </td>
+      <td>Determines notification auto closing</td>
+      <td><span className="badge">true</span></td>
+    </tr>
+  </tbody>
+</table>}
+```
+````
