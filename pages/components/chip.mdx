@@ -13,6 +13,19 @@ import {
 
 # Chip
 
+### import
+
+To use Chip component, import it from `@vivakits/react-components`.
+
+<Tabs items={[]}>
+
+  <Tabs.Tab>
+  ```jsx copy
+    import { VKChip } from "@vivakits/react-components";
+```
+   </Tabs.Tab>
+   </Tabs>
+
 ### Variants
 
 `variant` prop specifies visual styling of the chip component. The Chip component comes with 2 different variants that can be changed using the `variant` prop.
@@ -668,7 +681,7 @@ return (
       rightIcon={<CloseIcon />}
     />
     <VKChip
-      rounded={true}
+       rounded={true}
       label="Avatar"
       open={true}
       variant={"filled"}
