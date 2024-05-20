@@ -39,12 +39,10 @@ export const ChipVariant = () => {
     <div className="flex items-center gap-3">
       <VKChip
           label="Outlined"
-          open={true}
           variant={"outlined"}
         />
       <VKChip
           label="Filled"
-          open={true}
           variant={"filled"}
         />
     </div>
@@ -57,32 +55,33 @@ export const ChipVariant = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-      <VKChip
-          label="Outlined"
-          open={true}
-          variant={"outlined"}
-        />
-      <VKChip
-          label="Filled"
-          open={true}
-          variant={"filled"}
-        />
-    </div>
-```
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+return (
+
+<div className="flex items-center gap-3">
+  <VKChip label="Outlined" variant={"outlined"} />
+  <VKChip label="Filled" variant={"filled"} />
+</div>
+); };
+
+default export App;
+
+````
   </Tabs.Tab>
 </Tabs>
 
 ### Open
 
-The `open` prop is a boolean prop which indicates if the chip is currently displayed or hidden.
+The `open` prop is a boolean prop which indicates if the chip is currently displayed or hidden. By default this is set to `true`.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
 export const ChipOpen = () => {
   return (
-    
+
     <div className="flex items-center gap-3">
       <VKChip
           label="Open"
@@ -92,10 +91,6 @@ export const ChipOpen = () => {
       <VKChip
           label="Hidden"
           open={false}
-          variant={"filled"}
-        />
-      <VKChip
-          label="NoOpen"
           variant={"filled"}
         />
     </div>
@@ -108,24 +103,27 @@ export const ChipOpen = () => {
 
   <Tabs.Tab>
 ```jsx copy
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+  return (
     <div className="flex items-center gap-3">
       <VKChip
           label="Open"
-          open={true}
           variant={"filled"}
         />
       <VKChip
           label="Hidden"
-          open={true}
+          open={false}
           variant={"filled"}
         />
-      <VKChip
-          label="NoOpen"
-          variant={"filled"}
-        />
-
   </div>
-```
+  );
+};
+
+default export App;
+````
+
   </Tabs.Tab>
 </Tabs>
 
