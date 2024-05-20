@@ -1,0 +1,378 @@
+import { VKOtpInput, Button } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+
+# OTP Input
+
+## Import 
+    
+    ```jsx
+    import { VKOtpInput } from "@vivakits/react-components";
+    ```
+
+### Basic Usage
+The  `VKOtpInput`  component is used to get the OTP from the user. 
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput />
+    </Tabs.Tab>   
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Sizes
+The size of the OTP Input can be updated using `size` prop. The default size is `md`. The available sizes are `sm`, `md`, `lg`, `xl`. The examples below show the input with `sm` and `xl` sizes.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+       <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+            <VKOtpInput size="sm" />
+            <VKOtpInput size="xl" />
+        </div>
+    </Tabs.Tab>   
+    <Tabs.Tab>
+        ```jsx copy
+       <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+            <VKOtpInput size="sm" />
+            <VKOtpInput size="xl" />
+        </div>
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Rounded
+The shape of the OTP Input component can be customized using the rounded prop. The possible shapes include `none`,`default`, `xs`, `sm`, `md`, `lg`, `xl`, and `full`. The examples below display the OTP Input with the shapes `none`, `xs`, `lg`, and `full` respectively.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+            <VKOtpInput />  
+            <VKOtpInput rounded="xs" />       
+            <VKOtpInput rounded="lg" />   
+            <VKOtpInput rounded="full" />
+        </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+            <VKOtpInput />  
+            <VKOtpInput rounded="xs" />       
+            <VKOtpInput rounded="lg" />   
+            <VKOtpInput rounded="full" />
+        </div>
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Error
+
+The OTP Input component can display an error state using the `hasError` prop. The error message can be customized using the `errorMessage` prop.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput hasError errorMessage="Custom error message" />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+      <VKOtpInput hasError errorMessage="Custom error message" />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Submit 
+The OTP Input value can be submitted using the `onSubmit` prop. The example below includes a enter button for this purpose.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput onSubmit={(value) => alert(value)} />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+    <VKOtpInput onSubmit={(value) => alert(value)} />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Custom Submit Button
+The submit button can be customized using the `renderSubmitButton` prop. The example below shows the OTP Input with a custom submit button.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+
+### Custom Reset Button
+The reset button can be added using the `renderResetButton` prop. The example below shows the OTP Input with a custom reset button.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Length 
+You can adjust the length of the OTP Input using the `length` prop. The default length is `6`. The example below illustrates an OTP Input with a length of `4`.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput length={4} />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput length={4} />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Group Size
+The group size of the OTP Input can be changed using the `groupSize` prop. By default, the group size is the same as the length of the OTP Input. In the example below, the OTP Input is shown with a group size of `2`.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput groupSize={2} />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput groupSize={2} />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Separator
+
+The separator between groups can be changed using the `separator` prop. The default separator is `-`. The example below demonstrates an OTP Input with a separator of `.`.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput separator="." groupSize={3} />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput separator="." groupSize={3} />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Masked Icon
+You can mask the OTP Input value using the `maskedIcon` prop. The default masked icon is `*`. The example below shows an OTP Input with a masked icon of 🔒.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+       <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+        <VKOtpInput isMasked />
+        <VKOtpInput isMasked maskedIcon="🔒" />
+       </div>
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+         <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+        <VKOtpInput isMasked />
+        <VKOtpInput isMasked maskedIcon="🔒" />
+       </div>
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Allow Charcter
+You can allow characters in the OTP Input using the `allowChar` prop. The default value is `false`. The example below shows an OTP Input with characters allowed.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput allowChar />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput allowChar />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Required
+You can make the OTP Input required using the `required` prop. The default value is `false`. The example below shows a required OTP Input.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput required />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput required />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### Custom Class
+You can customize the OTP Input using the `wrapperClass` and `className` prop. The example below shows an OTP Input with a custom class.
+
+<Tabs items={['Preview', 'Code']}>
+    <Tabs.Tab>
+        <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```jsx copy
+        <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{
+    <table>
+        <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+    <tbody>
+     <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">sm</span>  
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span> 
+      </td>
+      <td>Changes otp input size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+     <tr>
+      <td>rounded</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>  
+        <span className="badge">none</span>   
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span>  
+        <span className="badge">lg</span>
+        <span className="badge">fulll</span>
+      </td>
+      <td>Changes the border radius of input</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+     <tr>
+      <td>hasError</td>
+      <td>
+        boolean
+      </td>
+      <td>Shows error</td>
+      <td> false </td>
+    </tr>
+ <tr>
+      <td>errorMessage</td>
+      <td>
+        string
+      </td>
+      <td>Modify the error message</td>
+      <td>Please fill all the inputs</td>
+    </tr>
+     <tr>
+        <td>onSubmit</td>
+        <td>(value: string | number) =&gt; void</td>
+        <td>Submit the OTP input value</td>
+        <td>-</td>
+    </tr>
+     <tr>
+        <td>renderSubmitButton</td>
+        <td>(value: string, callback: (value: string) =&gt; void) =&gt; ReactNode</td>
+        <td>Custom submit button for the OTP input</td>
+        <td>-</td>
+    </tr>
+      <tr>
+        <td>renderResetButton</td>
+        <td>(callback: () =&gt; void) =&gt; ReactNode</td>
+        <td>Custom reset button for the OTP input</td>
+        <td>-</td>
+    </tr>
+
+    
+    <tr>
+        <td>length</td>
+        <td>number</td>
+        <td>Length of the OTP input</td>
+        <td>6</td>
+    </tr>
+      <tr>
+        <td>groupSize</td>
+        <td>number</td>
+        <td>Group size of the OTP input</td>
+        <td>length</td>
+    </tr>
+     <tr>
+        <td>separator</td>
+        <td>string | ReactNode</td>
+        <td>Separator between groups</td>
+        <td>-</td>
+    </tr>
+      <tr>
+        <td>isMasked</td>
+        <td>boolean</td>
+        <td>Mask the OTP input</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>maskedIcon</td>
+        <td>string</td>
+        <td>Icon to mask the OTP input</td>
+        <td>*</td>
+    </tr>
+   
+    <tr>
+        <td>allowChar</td>
+        <td>boolean</td>
+        <td>Allow characters in the OTP input</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>required</td>
+        <td>boolean</td>
+        <td>Make the OTP input required</td>
+        <td>false</td>
+    </tr>
+
+    <tr>
+        <td>className</td>
+        <td>string</td>
+        <td>Custom class for the OTP input</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>wrapperClass</td>
+        <td>string</td>
+        <td>Custom class for the OTP input wrapper</td>
+        <td>-</td>
+    </tr>
+  
+    </tbody>
+
+    </table>
+}
+
+
+
+
+
+
+
+
+
+
