@@ -1,0 +1,99 @@
+import { VKLabel } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+
+# Label
+
+### isRequired
+
+This is a boolean prop indicating whether the field associated with this label is required or not. This can be controlled using `isRequired` prop.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelIsRequired = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKLabel isRequired={true}>Name:</VKLabel>
+    <input placeholder="Enter name" className="border border-gray-600 rounded-md w-52 h-9 p-1"/>
+    </div>
+);
+};
+
+<LabelIsRequired />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+    <VKLabel isRequired={true}>Name:</VKLabel>
+    <Input />
+    </div>
+```
+    </Tabs.Tab>
+ </Tabs>
+
+### isDisabled
+
+This is a boolean prop that specifies whether the label should appear as disabled or not. It can be controlled using `isDisabled`
+prop
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelIsDisabled = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKLabel isDisabled={true}>Name:</VKLabel>
+    <input placeholder="Enter name" className="border border-gray-600 rounded-md w-52 h-9 p-1"/>
+    </div>
+);
+};
+
+<LabelIsDisabled />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+    <div className="flex items-center gap-3">
+    <VKLabel isDisabled={true}>Name:</VKLabel>
+    <Input />
+    </div>
+```
+    </Tabs.Tab>
+ </Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>ReactNode</td>
+      <td>Displays badge content</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>isRequired</td>
+      <td>boolean</td>
+      <td>Whether the field associated with label is required or not</td>
+      <td> false </td>
+    </tr>
+
+     <tr>
+      <td>isDisabled</td>
+      <td>boolean</td>
+      <td>Whether the label is diabled or not</td>
+      <td> false </td>
+    </tr>
+
+  </tbody>
+</table>}
+```
