@@ -61,8 +61,10 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <VKChip label="Outlined" variant={"outlined"} />
-    <VKChip label="Filled" variant={"filled"} />
+    <>
+      <VKChip label="Outlined" variant={"outlined"} />
+      <VKChip label="Filled" variant={"filled"} />
+    </>
   ); 
 };
 
@@ -106,6 +108,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
+    <>
       <VKChip
           label="Open"
           variant={"filled"}
@@ -115,6 +118,7 @@ const App = () => {
           open={false}
           variant={"filled"}
         />
+      </>
   );
 };
 
@@ -179,6 +183,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
+    <>
       <VKChip
         size={"xs"}
         label="Extra small"
@@ -204,11 +209,12 @@ const App = () => {
         label="Extra large"
         variant={"filled"}
       />
-       <VKChip
+      <VKChip
         size={"2xl"}
         label="Extra extra large"
         variant={"filled"}
       />
+    </>
   ); 
 };
 
@@ -273,36 +279,38 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <VKChip
-        fontSize={"xs"}
-        label="Extra small"
-        variant={"filled"}
-      />
+    <>
       <VKChip
-        fontSize={"sm"}
-        label="Small"
-        variant={"filled"}
-      />
-      <VKChip
-        fontSize={"md"}
-        label="Medium"
-        variant={"filled"}
-      />
-      <VKChip
-        fontSize={"lg"}
-        label="Large"
-        variant={"filled"}
-      />
+          fontSize={"xs"}
+          label="Extra small"
+          variant={"filled"}
+        />
         <VKChip
-        fontSize={"xl"}
-        label="Extra large"
-        variant={"filled"}
-      />
-       <VKChip
-        fontSize={"2xl"}
-        label="Extra extra large"
-        variant={"filled"}
-      />
+          fontSize={"sm"}
+          label="Small"
+          variant={"filled"}
+        />
+        <VKChip
+          fontSize={"md"}
+          label="Medium"
+          variant={"filled"}
+        />
+        <VKChip
+          fontSize={"lg"}
+          label="Large"
+          variant={"filled"}
+        />
+          <VKChip
+          fontSize={"xl"}
+          label="Extra large"
+          variant={"filled"}
+        />
+        <VKChip
+          fontSize={"2xl"}
+          label="Extra extra large"
+          variant={"filled"}
+        />
+    </>
   )
 }
   
@@ -376,41 +384,43 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <VKChip
-          color={"primary"}
-          label="Primary"
-          variant={"filled"}
-        />
+    <>
       <VKChip
-          color={"secondary"}
-          label="Secondary"
-          variant={"filled"}
-        />
-      <VKChip
-          color={"success"}
-          label="Success"
-          variant={"filled"}
-        />
-      <VKChip
-          color={"danger"}
-          label="Danger"
-          variant={"filled"}
-        />
-      <VKChip
-          color={"warning"}
-          label="Warning"
-          variant={"filled"}
-        />
-      <VKChip
-          color={"dark"}
-          label="Dark"
-          variant={"filled"}
-        />
-       <VKChip
-          color={"light"}
-          label="Light"
-          variant={"filled"}
-        />
+            color={"primary"}
+            label="Primary"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"secondary"}
+            label="Secondary"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"success"}
+            label="Success"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"danger"}
+            label="Danger"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"warning"}
+            label="Warning"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"dark"}
+            label="Dark"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"light"}
+            label="Light"
+            variant={"filled"}
+          />
+      </>
   );
 };
 
@@ -451,6 +461,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
+    <>
       <VKChip
           state={"selected"}
           label="Selected"
@@ -466,6 +477,7 @@ const App = () => {
           label="Disabled"
           variant={"filled"}
         />
+    </>
   );
 };
 
@@ -509,8 +521,10 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
    return (
-    <VKChip rounded={true} label="Rounded" variant={"filled"} />
-    <VKChip rounded={false} label="Square" variant={"filled"} />
+    <>
+      <VKChip rounded={true} label="Rounded" variant={"filled"} />
+      <VKChip rounded={false} label="Square" variant={"filled"} />
+    </>
    );
 };
 
@@ -570,6 +584,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
    return (
+      <>
         <VKChip
           leftIcon={<NameIcon />}
           label="Left icon"
@@ -580,6 +595,7 @@ const App = () => {
           label="Right icon"
           variant={"filled"}
         />
+      </>
     );
   };
 
