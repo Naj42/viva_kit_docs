@@ -8,9 +8,12 @@ import {
 
 # Badge
 
+The Badge component is a versatile UI element designed to display notifications, counts, or statuses. It is highly customizable through a variety of props, allowing for different appearances and behaviors. Below is a detailed description of each prop and its usage.
+
+
 ### Variants
 
-The `variant` prop determines the styling of the badge component. It comes with 2 different visual styles.
+The `variant` prop determines the overall style and appearance of the badge. The `variant` prop allows to choose from 2 predefined styles, `square` and `circular`, which can provide different visual effects and suit various design requirements.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -33,17 +36,30 @@ export const BadgeVariantGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-    <VKBadge variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge variant={"square"}><div className="h-14 w-20 border border-black"/></VKBadge>
-    </div>
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+   <>
+    <VKBadge variant={"circular"}>
+      <div className="h-16 w-16 border border-black rounded-full" />
+    </VKBadge>
+    <VKBadge variant={"square"}>
+      <div className="h-14 w-20 border border-black"/>
+    </VKBadge>
+   </>
+  );
+};
+
+export default App;
+
 ```
   </Tabs.Tab>
 </Tabs>
 
-### Size
+### Sizes
 
-The `size` prop controls the size of the badge. It comes with 4 different sizes.
+The `size` prop controls the size of the badge. It accepts 6 predefined sizes such as `xs` `sm`  `md` `lg` `xl` and `2xl`. This allows precise control over the badge's dimensions to fit different UI elements.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -52,13 +68,12 @@ export const BadgeSizeGroup = () => {
   return (
     
     <div className="flex items-center gap-3">
-    <VKBadge size={"xs"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-
-    <VKBadge size={"sm"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-
-    <VKBadge size={"md"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-
-    <VKBadge size={"lg"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge size={"xs"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge size={"sm"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge size={"md"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge size={"lg"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge size={"xl"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge size={"2xl"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
     </div>
 
 );
@@ -69,19 +84,43 @@ export const BadgeSizeGroup = () => {
 
    <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-    <VKBadge size={"xs"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge size={"sm"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge size={"md"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge size={"lg"} variant={"circular"} color={"warning"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    </div>
+
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
+      <VKBadge size={"xs"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge size={"sm"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge size={"md"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge size={"lg"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge size={"xl"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge size={"2xl"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+    </>
+  );
+};
+    
+export default App;
+  
 ```
   </Tabs.Tab>
 </Tabs>
 
-### Color
+### Colors
 
-The `color` prop sets the background color of the badge. There are 7 colors offered for the background of the badge.
+The `color` prop sets the background color of the badge. There are 7 predefined colors offered for the background of the badge to match applications theme or usage of the badge.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -113,22 +152,88 @@ export const BadgeColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-   <div className="flex items-center gap-3">
-    <VKBadge color={"primary"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge color={"secondary"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge color={"success"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge color={"danger"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge color={"warning"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge color={"dark"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge color={"light"} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    </div>
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
+      <VKBadge color={"primary"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge color={"secondary"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge color={"success"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge color={"danger"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge color={"warning"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge color={"dark"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge color={"light"} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+    </>
+  );
+};
+
+export default App;
+
 ```
   </Tabs.Tab>
 </Tabs>
 
-### Bordercolor
 
-The `borderColor` prop sets the border color of the badge. There are 7 border colors available.
+### With border
+Determines whether the badge has a border. When `withBorder` is set to `true`, the badge will display a border whose color can be customized using the `borderColor` prop. This can help the badge stand out more prominently against its background.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeWithBorder = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKBadge borderColor={"danger"} withBorder variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge borderColor={"danger"} withBorder={false} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    </div>
+);
+};
+
+<BadgeWithBorder />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+   <>
+      <VKBadge borderColor={"danger"} withBorder variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"danger"} withBorder={false} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+   </>
+  );
+};
+
+export default App;
+
+```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Border colors
+
+`borderColor` defines the color of the badge's border. This prop is particularly useful when `withBorder` is set to `true`, as it allows to specify a distinct color for the border, enhancing the visual distinction of the badge.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -160,22 +265,45 @@ export const BadgeBorderColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-      <VKBadge borderColor={"primary"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-      <VKBadge borderColor={"secondary"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-      <VKBadge borderColor={"success"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-      <VKBadge borderColor={"danger"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-      <VKBadge borderColor={"warning"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-      <VKBadge borderColor={"dark"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-      <VKBadge borderColor={"light"} withBorder={true} variant={"circular"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    </div>
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
+      <VKBadge borderColor={"primary"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"secondary"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"success"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"danger"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"warning"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"dark"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge borderColor={"light"} withBorder={true} variant={"circular"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+    </>
+  );
+};
+
+export default App;
+    
 ```
   </Tabs.Tab>
 </Tabs>
 
 ### Placement
 
-The `placement` prop determines the position of the badge relative to its children. There are 4 options for placement of the badge.
+The `placement` pecifies the position of the badge relative to its container element. The placement prop enables you to place the badge at various positions, such as "top-right" or "bottom-left", ensuring it appears exactly where you need it within the UI layout. There are 4 predefined varieties available.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -201,15 +329,134 @@ export const BadgePlacement = () => {
 
    <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-    <VKBadge placement={"topRight"} variant={"circular"} color={"danger"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge placement={"bottomRight"} variant={"circular"} color={"danger"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge placement={"topLeft"} variant={"circular"} color={"danger"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge placement={"bottomLeft"} variant={"circular"} color={"danger"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    </div>
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
+      <VKBadge placement={"topRight"} variant={"circular"} color={"danger"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge placement={"bottomRight"} variant={"circular"} color={"danger"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge placement={"topLeft"} variant={"circular"} color={"danger"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge placement={"bottomLeft"} variant={"circular"} color={"danger"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+    </>
+  );
+};
+
+export default App;
 ```
   </Tabs.Tab>
 </Tabs>
+
+### Invisible
+
+`invisible` controls the visibility of the badge. When invisible is set to `true`, the badge will not be rendered visually but will remain in the DOM. This is useful for scenarios where you want to hide the badge temporarily without removing it from the layout. By default the value is set to `false`.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeInvisible = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKBadge variant={"circular"} invisible> 
+      <div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge variant={"circular"}> 
+      <div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    </div>
+);
+};
+
+<BadgeInvisible />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+   <>
+    <VKBadge variant={"circular"} invisible>
+      <div className="h-16 w-16 border border-black rounded-full" />
+    </VKBadge>
+    <VKBadge variant={"circular"}>
+      <div className="h-16 w-16 border border-black rounded-full" />
+    </VKBadge>
+   </>
+  );
+};
+
+export default App;
+
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Content
+
+The content to be displayed inside the badge. The `content` prop can include text, icons, or any other React elements, allowing for versatile and dynamic badge contents that can convey various types of information.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BadgeContent = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKBadge variant={"circular"} content={9}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    <VKBadge variant={"circular"} content={<CameraIcon />}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
+    </div>
+);
+};
+
+<BadgeContent />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKBadge } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
+      <VKBadge variant={"circular"} content={9}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge variant={"circular"} content={<CameraIcon />}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+    </>
+  );
+};
+
+const CameraIcon = () => {
+  return (
+    <svg
+      fill="#ffffff"
+      height={16}
+      width={14}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 74.207 74.207"
+      {...props}
+    >
+      <path d="M57.746,14.658h-2.757l-1.021-3.363c-0.965-3.178-3.844-5.313-7.164-5.313H28.801c-3.321,0-6.201,2.135-7.165,5.313 l-1.021,3.363h-4.153C7.385,14.658,0,22.043,0,31.121v20.642c0,9.077,7.385,16.462,16.462,16.462h41.283 c9.077,0,16.462-7.385,16.462-16.462V31.121C74.208,22.043,66.823,14.658,57.746,14.658z M68.208,51.762 c0,5.769-4.693,10.462-10.462,10.462H16.462C10.693,62.223,6,57.53,6,51.762V31.121c0-5.769,4.693-10.462,10.462-10.462h8.603 l2.313-7.621c0.192-0.631,0.764-1.055,1.423-1.055h18.003c0.659,0,1.23,0.424,1.423,1.057l2.314,7.619h7.204 c5.769,0,10.462,4.693,10.462,10.462L68.208,51.762L68.208,51.762z"></path>
+      <path d="M37.228,25.406c-8.844,0-16.04,7.195-16.04,16.04c0,8.844,7.195,16.039,16.04,16.039s16.041-7.195,16.041-16.039 C53.269,32.601,46.073,25.406,37.228,25.406z M37.228,51.486c-5.536,0-10.04-4.504-10.04-10.039c0-5.536,4.504-10.04,10.04-10.04 c5.537,0,10.041,4.504,10.041,10.04C47.269,46.982,42.765,51.486,37.228,51.486z"></path>
+    </svg>
+  );
+};
+
+export default App;
+
+```
+  </Tabs.Tab>
+</Tabs>
+
 
 ### Example
 
@@ -228,14 +475,16 @@ return (
 
     <VKBadge placement={"bottomRight"} variant={"circular"} content={<CameraIcon />}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
 
-    <VKBadge placement={"bottomRight"} variant={"circular"}><VKAvatar
+    <VKBadge placement={"bottomRight"} variant={"circular"}>
+      <VKAvatar
         variant="image"
         color="secondary"
         src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
         alt="person with camera"
         withBorder
         className=""
-      /></VKBadge>
+      />
+    </VKBadge>
      <VKBadge size={"sm"} placement={"topRight"} variant={"circular"} content={100} color={"danger"}><ChatIcon /></VKBadge>
      <VKBadge size={"sm"} placement={"bottomRight"} variant={"circular"} content={5} color={"secondary"}><CartIcon /></VKBadge>
     </div>
@@ -248,21 +497,84 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-    <VKBadge placement={"topRight"} variant={"circular"} content={9} color={"secondary"}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge placement={"bottomRight"} variant={"circular"} content={<CameraIcon />}><div className="h-16 w-16 border border-black rounded-full" /></VKBadge>
-    <VKBadge placement={"bottomRight"} variant={"circular"}><VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-        alt="person with camera"
-        withBorder
-        className=""
-    /></VKBadge>
-    <VKBadge size={"sm"} placement={"topRight"} variant={"circular"} content={100} color={"danger"}><ChatIcon /></VKBadge>
-    <VKBadge size={"sm"} placement={"bottomRight"} variant={"circular"} content={5} color={"secondary"}><CartIcon /></VKBadge>
+import { VKBadge, VKAvatar } from "@vivakits/react-components";
 
-    </div>
+const App = () => {
+  return (
+    <>
+      <VKBadge placement={"topRight"} variant={"circular"} content={9} color={"secondary"}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge placement={"bottomRight"} variant={"circular"} content={<CameraIcon />}>
+        <div className="h-16 w-16 border border-black rounded-full" />
+      </VKBadge>
+      <VKBadge placement={"bottomRight"} variant={"circular"}>
+        <VKAvatar
+            variant="image"
+            color="secondary"
+            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+            alt="person with camera"
+            withBorder
+            className=""
+        />
+      </VKBadge>
+      <VKBadge size={"sm"} placement={"topRight"} variant={"circular"} content={100} color={"danger"}>
+        <ChatIcon />
+      </VKBadge>
+      <VKBadge size={"sm"} placement={"bottomRight"} variant={"circular"} content={5} color={"secondary"}>
+        <CartIcon />
+      </VKBadge>                            
+    </>
+  );
+};
+
+const ChatIcon = () => {
+  return (
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000000"
+    >
+      <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+    </svg>
+  );
+};
+
+const CartIcon = () => {
+  return (
+    <svg
+      fill="#000000"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 902.86 902.86"
+      width="28"
+      height="28"
+    >
+      <g>
+        <g>
+          <path
+            d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z
+        M685.766,247.188l-67.077,262.64H131.199L81.928,246.756L685.766,247.188z"
+          />
+          <path
+            d="M578.418,825.641c59.961,0,108.743-48.783,108.743-108.744s-48.782-108.742-108.743-108.742H168.717
+       c-59.961,0-108.744,48.781-108.744,108.742s48.782,108.744,108.744,108.744c59.962,0,108.743-48.783,108.743-108.744
+       c0-14.4-2.821-28.152-7.927-40.742h208.069c-5.107,12.59-7.928,26.342-7.928,40.742
+       C469.675,776.858,518.457,825.641,578.418,825.641z M209.46,716.897c0,22.467-18.277,40.744-40.743,40.744
+       c-22.466,0-40.744-18.277-40.744-40.744c0-22.465,18.277-40.742,40.744-40.742C191.183,676.155,209.46,694.432,209.46,716.897z
+        M619.162,716.897c0,22.467-18.277,40.744-40.743,40.744s-40.743-18.277-40.743-40.744c0-22.465,18.277-40.742,40.743-40.742
+       S619.162,694.432,619.162,716.897z"
+          />
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+export default App;
 
 ```
   </Tabs.Tab>
@@ -288,7 +600,7 @@ return (
       <td> - </td>
     </tr>
     <tr>
-      <td>vairant</td>
+      <td>variant</td>
       <td>
         <span className="badge">circular</span>
         <span className="badge">square</span>
@@ -334,19 +646,15 @@ return (
     <tr>
       <td>size</td>
       <td>
+        <span className="badge">xs</span>
         <span className="badge">sm</span>
         <span className="badge">md</span>
         <span className="badge">lg</span>
         <span className="badge">xl</span>
+        <span className="badge">2xl</span>
       </td>
       <td>Changes button size</td>
       <td><span className="badge">md</span></td>
-    </tr>
-    <tr>
-      <td>loading</td>
-      <td>boolean</td>
-      <td>Whether the button is loading</td>
-      <td> false </td>
     </tr>
 
      <tr>
@@ -393,8 +701,4 @@ return (
 
   </tbody>
 </table>}
-```
 
-```
-
-```
