@@ -11,7 +11,22 @@ import {
   SortDownIcon,
 } from "../../components/assets/icons.tsx";
 
+
+
 # Chip
+
+### import
+
+To use Chip component, import it from `@vivakits/react-components`.
+
+<Tabs items={[]}>
+
+  <Tabs.Tab>
+  ```jsx copy
+    import { VKChip } from "@vivakits/react-components";
+```
+   </Tabs.Tab>
+   </Tabs>
 
 ### Variants
 
@@ -22,18 +37,16 @@ import {
   <Tabs.Tab>
 export const ChipVariant = () => {
   return (
-    
+
     <div className="flex items-center gap-3">
       <VKChip
-          label="Outlined"
-          open={true}
-          variant={"outlined"}
-        />
+        label="Outlined"
+        variant={"outlined"}
+      />
       <VKChip
-          label="Filled"
-          open={true}
-          variant={"filled"}
-        />
+        label="Filled"
+        variant={"filled"}
+      />
     </div>
 
 );
@@ -44,50 +57,46 @@ export const ChipVariant = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-      <VKChip
-          label="Outlined"
-          open={true}
-          variant={"outlined"}
-        />
-      <VKChip
-          label="Filled"
-          open={true}
-          variant={"filled"}
-        />
-    </div>
-```
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
+      <VKChip label="Outlined" variant={"outlined"} />
+      <VKChip label="Filled" variant={"filled"} />
+    </>
+  ); 
+};
+
+export default App;
+````
   </Tabs.Tab>
 </Tabs>
 
 ### Open
 
-The `open` prop is a boolean prop which indicates if the chip is currently displayed or hidden.
+The `open` prop is a boolean prop which indicates if the chip is currently displayed or hidden. By default this is set to `true`.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
 export const ChipOpen = () => {
   return (
-    
+
     <div className="flex items-center gap-3">
       <VKChip
-          label="Open"
-          open={true}
-          variant={"filled"}
-        />
+        label="Open"
+        open={true}
+        variant={"filled"}
+      />
       <VKChip
-          label="Hidden"
-          open={false}
-          variant={"filled"}
-        />
-      <VKChip
-          label="NoOpen"
-          variant={"filled"}
-        />
+        label="Hidden"
+        open={false}
+        variant={"filled"}
+      />
     </div>
 
-);
+  );
 };
 
 <ChipOpen />
@@ -95,30 +104,33 @@ export const ChipOpen = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
       <VKChip
           label="Open"
-          open={true}
           variant={"filled"}
         />
       <VKChip
           label="Hidden"
-          open={true}
+          open={false}
           variant={"filled"}
         />
-      <VKChip
-          label="NoOpen"
-          variant={"filled"}
-        />
+      </>
+  );
+};
 
-  </div>
-```
+export default App;
+````
+
   </Tabs.Tab>
 </Tabs>
 
-### Size
+### Sizes
 
-The `size` prop allows for consistent sizing across different parts of your user interface. There are 3 options offered for this prop.
+The `size` prop allows for consistent sizing across different parts of your user interface. There are 6 options offered for this prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -128,26 +140,35 @@ export const ChipSize = () => {
 
     <div className="flex items-center gap-3">
       <VKChip
-          size={"sm"}
-          label="Small"
-          open={true}
-          variant={"filled"}
-          color={"secondary"}
-        />
+        size={"xs"}
+        label="Extra small"
+        variant={"filled"}
+      />
       <VKChip
-          size={"md"}
-          label="Medium"
-          open={true}
-          variant={"filled"}
-          color={"secondary"}
-        />
+        size={"sm"}
+        label="Small"
+        variant={"filled"}
+      />
       <VKChip
-          size={"lg"}
-          label="Large"
-          open={true}
-          variant={"filled"}
-          color={"secondary"}
-        />
+        size={"md"}
+        label="Medium"
+        variant={"filled"}
+      />
+      <VKChip
+        size={"lg"}
+        label="Large"
+        variant={"filled"}
+      />
+        <VKChip
+        size={"xl"}
+        label="Extra large"
+        variant={"filled"}
+      />
+       <VKChip
+        size={"2xl"}
+        label="Extra extra large"
+        variant={"filled"}
+      />
     </div>
 
 );
@@ -158,69 +179,95 @@ export const ChipSize = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-       <VKChip
-          size={"sm"}
-          label="Small"
-          open={true}
-          variant={"filled"}
-          color={"secondary"}
-        />
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <>
       <VKChip
-          size={"md"}
-          label="Medium"
-          open={true}
-          variant={"filled"}
-          color={"secondary"}
-        />
+        size={"xs"}
+        label="Extra small"
+        variant={"filled"}
+      />
       <VKChip
-          size={"lg"}
-          label="Large"
-          open={true}
-          variant={"filled"}
-          color={"secondary"}
-        />
-  </div>
-```
+        size={"sm"}
+        label="Small"
+        variant={"filled"}
+      />
+      <VKChip
+        size={"md"}
+        label="Medium"
+        variant={"filled"}
+      />
+      <VKChip
+        size={"lg"}
+        label="Large"
+        variant={"filled"}
+      />
+        <VKChip
+        size={"xl"}
+        label="Extra large"
+        variant={"filled"}
+      />
+      <VKChip
+        size={"2xl"}
+        label="Extra extra large"
+        variant={"filled"}
+      />
+    </>
+  ); 
+};
+
+export default App;
+````
 
   </Tabs.Tab>
 </Tabs>
 
-### Fontsize
+### Fontsizes
 
-The `fontsize` prop allows to set the font size specifically for the text within the chip. There are 3 options offered for this prop.
+The `fontsize` prop allows to set the font size specifically for the text within the chip. There are 6 options offered for this prop.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
 export const ChipFontsize = () => {
   return (
-    
+
     <div className="flex items-center gap-3">
       <VKChip
-          fontSize={"sm"}
-          label="Small"
-          open={true}
-          variant={"filled"}
-          color={"warning"}
-        />
+        fontSize={"xs"}
+        label="Extra small"
+        variant={"filled"}
+      />
       <VKChip
-          fontSize={"md"}
-          label="Medium"
-          open={true}
-          variant={"filled"}
-          color={"warning"}
-        />
+        fontSize={"sm"}
+        label="Small"
+        variant={"filled"}
+      />
       <VKChip
-          fontSize={"lg"}
-          label="Large"
-          open={true}
-          variant={"filled"}
-          color={"warning"}
-        />
+        fontSize={"md"}
+        label="Medium"
+        variant={"filled"}
+      />
+      <VKChip
+        fontSize={"lg"}
+        label="Large"
+        variant={"filled"}
+      />
+        <VKChip
+        fontSize={"xl"}
+        label="Extra large"
+        variant={"filled"}
+      />
+       <VKChip
+        fontSize={"2xl"}
+        label="Extra extra large"
+        variant={"filled"}
+      />
     </div>
 
-);
+  );
 };
 
 <ChipFontsize />
@@ -228,34 +275,52 @@ export const ChipFontsize = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-       <VKChip
+import { VKChip } from "@vivakits/react-components";    
+
+const App = () => {
+  return (
+    <>
+      <VKChip
+          fontSize={"xs"}
+          label="Extra small"
+          variant={"filled"}
+        />
+        <VKChip
           fontSize={"sm"}
           label="Small"
-          open={true}
           variant={"filled"}
-          color={"warning"}
         />
-      <VKChip
+        <VKChip
           fontSize={"md"}
           label="Medium"
-          open={true}
           variant={"filled"}
-          color={"warning"}
         />
-      <VKChip
+        <VKChip
           fontSize={"lg"}
           label="Large"
-          open={true}
           variant={"filled"}
-          color={"warning"}
         />
-    </div>
-```
+          <VKChip
+          fontSize={"xl"}
+          label="Extra large"
+          variant={"filled"}
+        />
+        <VKChip
+          fontSize={"2xl"}
+          label="Extra extra large"
+          variant={"filled"}
+        />
+    </>
+  )
+}
+  
+export default App;
+````
+
   </Tabs.Tab>
 </Tabs>
 
-### Color
+### Colors
 
 The `color` prop defines the background colour of the chip to convey meaningful message with the chip. There are 7 options for `color` prop.
 
@@ -265,53 +330,46 @@ The `color` prop defines the background colour of the chip to convey meaningful 
 export const ChipColor = () => {
   return (
     <div className="flex flex-col justify-center gap-2">
-    <div className="flex items-center gap-3">
-      <VKChip
+      <div className="flex items-center gap-3">
+        <VKChip
           color={"primary"}
           label="Primary"
-          open={true}
           variant={"filled"}
         />
-      <VKChip
+        <VKChip
           color={"secondary"}
           label="Secondary"
-          open={true}
           variant={"filled"}
         />
-      <VKChip
+        <VKChip
           color={"success"}
           label="Success"
-          open={true}
           variant={"filled"}
         />
-      <VKChip
+        <VKChip
           color={"danger"}
           label="Danger"
-          open={true}
           variant={"filled"}
         />
-      <VKChip
+        <VKChip
           color={"warning"}
           label="Warning"
-          open={true}
           variant={"filled"}
         />
-  
-    </div>
-    <div className="flex items-center gap-3">
-      <VKChip
+
+      </div>
+      <div className="flex items-center gap-3">
+        <VKChip
           color={"dark"}
           label="Dark"
-          open={true}
           variant={"filled"}
         />
-       <VKChip
+        <VKChip
           color={"light"}
           label="Light"
-          open={true}
           variant={"filled"}
         />
-     </div>
+      </div>
     </div>
 
 );
@@ -322,55 +380,56 @@ export const ChipColor = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+import { VKChip } from "@vivakits/react-components";    
+
+const App = () => {
+  return (
+    <>
       <VKChip
-          color={"primary"}
-          label="Primary"
-          open={true}
-          variant={"filled"}
-        />
-      <VKChip
-          color={"secondary"}
-          label="Secondary"
-          open={true}
-          variant={"filled"}
-        />
-      <VKChip
-          color={"success"}
-          label="Success"
-          open={true}
-          variant={"filled"}
-        />
-      <VKChip
-          color={"danger"}
-          label="Danger"
-          open={true}
-          variant={"filled"}
-        />
-      <VKChip
-          color={"warning"}
-          label="Warning"
-          open={true}
-          variant={"filled"}
-        />
-      <VKChip
-          color={"dark"}
-          label="Dark"
-          open={true}
-          variant={"filled"}
-        />
-       <VKChip
-          color={"light"}
-          label="Light"
-          open={true}
-          variant={"filled"}
-        />
-    </div>
+            color={"primary"}
+            label="Primary"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"secondary"}
+            label="Secondary"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"success"}
+            label="Success"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"danger"}
+            label="Danger"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"warning"}
+            label="Warning"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"dark"}
+            label="Dark"
+            variant={"filled"}
+          />
+        <VKChip
+            color={"light"}
+            label="Light"
+            variant={"filled"}
+          />
+      </>
+  );
+};
+
+export default App;
 ```
   </Tabs.Tab>
 </Tabs>
 
-### State
+### States
 
 The `state` prop allows to set the current state or status of the chip. There are 3 options offered for this prop.
 
@@ -380,16 +439,15 @@ The `state` prop allows to set the current state or status of the chip. There ar
 export const ChipState = () => {
   return (
 
-<div className="flex items-center gap-3">
-  <VKChip state={"selected"} label="Selected" open={true} variant={"filled"} />
-  <VKChip
-    state={"unselected"}
-    label="Unselected"
-    open={true}
-    variant={"filled"}
-  />
-  <VKChip state={"disabled"} label="Disabled" open={true} variant={"filled"} />
-</div>
+    <div className="flex items-center gap-3">
+      <VKChip state={"selected"} label="Selected" variant={"filled"} />
+      <VKChip
+        state={"unselected"}
+        label="Unselected"
+        variant={"filled"}
+      />
+      <VKChip state={"disabled"} label="Disabled" variant={"filled"} />
+    </div>
 
 );
 };
@@ -399,26 +457,31 @@ export const ChipState = () => {
 
   <Tabs.Tab>
 ```jsx copy
-  <div className="flex items-center gap-3">
+import { VKChip } from "@vivakits/react-components";    
+
+const App = () => {
+  return (
+    <>
       <VKChip
           state={"selected"}
           label="Selected"
-          open={true}
           variant={"filled"}
         />
       <VKChip
           state={"unselected"}
           label="Unselected"
-          open={true}
           variant={"filled"}
         />
       <VKChip
           state={"disabled"}
           label="Disabled"
-          open={true}
           variant={"filled"}
         />
-  </div>
+    </>
+  );
+};
+
+export default App;
 ```
 
   </Tabs.Tab>
@@ -431,85 +494,154 @@ The `rounded` prop is a boolean prop that indicates whether the chip should have
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
 export const ChipRounded = () => {
-return (
+  return (
 
-<div className="flex items-center gap-3">
-  <VKChip
-    rounded={true}
-    label="Rounded"
-    open={true}
-    variant={"filled"}
-    color={"dark"}
-  />
-  <VKChip
-    rounded={false}
-    label="Square"
-    open={true}
-    variant={"filled"}
-    color={"dark"}
-  />
-</div>
+    <div className="flex items-center gap-3">
+      <VKChip
+        rounded={true}
+        label="Rounded"
+        variant={"filled"}
+      />
+      <VKChip
+        rounded={false}
+        label="Square"
+        variant={"filled"}
+      />
+    </div>
 
-)}
+)
+}
 
-  <ChipRounded/>
+  <ChipRounded />
   </Tabs.Tab>
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex items-center gap-3">
-    <VKChip rounded={true} label="Rounded" open={true} variant={"filled"} />
-    <VKChip rounded={false} label="Square" open={true} variant={"filled"} />
-  </div>
+import { VKChip } from "@vivakits/react-components";   
+
+const App = () => {
+   return (
+    <>
+      <VKChip rounded={true} label="Rounded" variant={"filled"} />
+      <VKChip rounded={false} label="Square" variant={"filled"} />
+    </>
+   );
+};
+
+export default App;
   ```
 </Tabs.Tab>
 </Tabs>
 
-### Icon
+### Icons
 
-The are two props offerd to show icons on left or right side of the chip. `leftIcon` allows icon on left side and `rightIcon` allows icon on right side of the chip.
+The are two props offerd to show icons on left or right side of the chip. `leftIcon` allows icon on left side and `rightIcon` allows icon on right side of the chip. On icon prop, icon component can be passed or a svg can be used directly as the value of the prop. 
 
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
 export const ChipIcon = () => {
-return (
+  return (
 
-<div className="flex items-center gap-3">
-  <VKChip
-    leftIcon={<NameIcon />}
-    label="Left icon"
-    open={true}
-    variant={"filled"}
-  />
-  <VKChip
-    rightIcon={<CloseIcon />}
-    label="Right icon"
-    open={true}
-    variant={"filled"}
-  />
-</div>
+  <div className="flex items-center gap-3">
+      <VKChip
+          leftIcon={
+          <svg
+          width="14"
+          height="16"
+          viewBox="0 0 15 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.0012 15.0051C15.0012 14.9063 14.9747 14.8076 14.9747 14.7088C14.7895 12.1409 12.7525 9.91866 10.0805 9.35076C8.54614 9.02977 6.98529 9.07915 5.4509 9.25199C2.43503 9.59767 0.0540779 12.1409 0.00116781 14.9557C-0.0252872 15.7705 0.397993 16.1656 1.24455 16.1656C3.30805 16.1656 5.39799 16.1656 7.46149 16.1656C8.28159 16.1656 9.07524 16.1656 9.89535 16.1656C11.1916 16.1656 12.4879 16.1656 13.7842 16.1656C14.5779 16.1656 15.0276 15.7211 15.0012 15.0051Z"
+            fill="currentColor"
+          />
+          <path
+            d="M7.48609 8.16578C9.86705 8.16578 11.7718 6.388 11.7718 4.16578C11.7983 1.99294 9.86705 0.190469 7.539 0.165778C5.18451 0.141087 3.22683 1.94356 3.22683 4.11639C3.20038 6.36331 5.10514 8.16578 7.48609 8.16578Z"
+            fill="currentColor"
+          />
+         </svg>
+         }
+            label="Left icon"
+            variant={"filled"}
+      />
+      <VKChip
+        rightIcon={<CloseIcon />}
+        label="Right icon"
+        variant={"filled"}
+      />
+    </div>
 
-)}
+)
+}
 
-  <ChipIcon/>
+  <ChipIcon />
   </Tabs.Tab>
 
 <Tabs.Tab>
   ```jsx copy
-    <div className="flex items-center gap-3">
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+   return (
+      <>
         <VKChip
           leftIcon={<NameIcon />}
           label="Left icon"
-          open={true}
           variant={"filled"}
         />
         <VKChip
           rightIcon={<CloseIcon />}
           label="Right icon"
-          open={true}
           variant={"filled"}
         />
-    </div>
+      </>
+    );
+  };
+
+const NameIcon = () => {
+  return (
+      <svg
+        width="14"
+        height="16"
+        viewBox="0 0 15 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.0012 15.0051C15.0012 14.9063 14.9747 14.8076 14.9747 14.7088C14.7895 12.1409 12.7525 9.91866 10.0805 9.35076C8.54614 9.02977 6.98529 9.07915 5.4509 9.25199C2.43503 9.59767 0.0540779 12.1409 0.00116781 14.9557C-0.0252872 15.7705 0.397993 16.1656 1.24455 16.1656C3.30805 16.1656 5.39799 16.1656 7.46149 16.1656C8.28159 16.1656 9.07524 16.1656 9.89535 16.1656C11.1916 16.1656 12.4879 16.1656 13.7842 16.1656C14.5779 16.1656 15.0276 15.7211 15.0012 15.0051Z"
+          fill="currentColor"
+        />
+        <path
+          d="M7.48609 8.16578C9.86705 8.16578 11.7718 6.388 11.7718 4.16578C11.7983 1.99294 9.86705 0.190469 7.539 0.165778C5.18451 0.141087 3.22683 1.94356 3.22683 4.11639C3.20038 6.36331 5.10514 8.16578 7.48609 8.16578Z"
+          fill="currentColor"
+        />
+      </svg>
+  );
+};
+
+
+const CloseIcon = () => {
+   return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+  );
+};
+
+export default App;
+    
   ```
 </Tabs.Tab>
 </Tabs>
@@ -521,234 +653,348 @@ Here are some examples of how Badge component can be used with the different pro
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
 export const ChipExample = () => {
-return (
-<div className="flex flex-col gap-2">
-  <div className="flex items-center gap-3">
-    <VKChip
-      rounded={true}
-      label="Basic"
-      open={true}
-      variant={"outlined"}
-      color={"dark"}
-      fontSize={"sm"}
-    />
-    <VKChip
-      rounded={true}
-      label="User"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      leftIcon={<NameIcon />}
-    />
-      <VKChip
-      rounded={true}
-      label="Close"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      rightIcon={<CloseIcon />}
-    />
-    <VKChip
-      rounded={true}
-      label="Avatar"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      leftIcon={
-        <VKAvatar
-          variant="image"
-          color="secondary"
-          src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-          alt="person with camera"
-          withBorder
-          className="h-6 w-6"
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center gap-3">
+        <VKChip
+          rounded={true}
+          label="Basic"
+          variant={"outlined"}
+          color={"dark"}
+          fontSize={"sm"}
         />
-      }
-    />
-    <VKChip
-      rounded={true}
-      label="Right Arrow"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      rightIcon={<ArrowRightIcon />}
-  />
-  </div>
+        <VKChip
+          rounded={true}
+          label="User"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"sm"}
+          leftIcon={<NameIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Close"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"sm"}
+          rightIcon={<CloseIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Avatar"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"sm"}
+          leftIcon={
+            <VKAvatar
+              variant="image"
+              color="secondary"
+              src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+              alt="person with camera"
+              withBorder
+              className="h-6 w-6"
+            />
+          }
+        />
+        <VKChip
+          rounded={true}
+          label="Right Arrow"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"sm"}
+          rightIcon={<ArrowRightIcon />}
+        />
+      </div>
 
-  <div className="flex items-center gap-3">
-    <VKChip
-      rounded={true}
-      label="Up arrow"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      rightIcon={<UpArrowIcon />}
-    />
-    <VKChip
-      rounded={true}
-      label="Search"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      size={"md"}
-      rightIcon={<SearchIcon />}
-    />
-    <VKChip
-      rounded={true}
-      label="Clickable"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"md"}
-      onClick={() => alert("You clicked on the chip")}
-    />
+      <div className="flex items-center gap-3">
+        <VKChip
+          rounded={true}
+          label="Up arrow"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"sm"}
+          rightIcon={<UpArrowIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Search"
+          variant={"filled"}
+          color={"light"}
+          size={"md"}
+          rightIcon={<SearchIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Clickable"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"md"}
+          onClick={() => alert("You clicked on the chip")}
+        />
 
-    <VKChip
-      rounded={true}
-      label="Increase"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"md"}
-      leftIcon={<SortUpIcon />}
-      onLeftIconClick={() => alert("You clicked on increase icon")}
-    />
+        <VKChip
+          rounded={true}
+          label="Increase"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"md"}
+          leftIcon={<SortUpIcon />}
+          onLeftIconClick={() => alert("You clicked on increase icon")}
+        />
 
-    <VKChip
-      rounded={true}
-      label="Decrease"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"md"}
-      rightIcon={<SortDownIcon />}
-      onRightIconClick={() => alert("You clicked on decrease icon")}
-    />
+        <VKChip
+          rounded={true}
+          label="Decrease"
+          variant={"filled"}
+          color={"light"}
+          fontSize={"md"}
+          rightIcon={<SortDownIcon />}
+          onRightIconClick={() => alert("You clicked on decrease icon")}
+        />
+      </div>
+
     </div>
 
-</div>
-)}
+)
+}
 
 <ChipExample />
   </Tabs.Tab>
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex flex-col gap-2">
-  <div className="flex items-center gap-3">
-    <VKChip
-      rounded={true}
-      label="Basic"
-      open={true}
-      variant={"outlined"}
-      color={"dark"}
-      fontSize={"sm"}
-    />
-    <VKChip
-      rounded={true}
-      label="User"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      leftIcon={<NameIcon />}
-    />
-      <VKChip
-      rounded={true}
-      label="Close"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      rightIcon={<CloseIcon />}
-    />
-    <VKChip
-      rounded={true}
-      label="Avatar"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      leftIcon={
-        <VKAvatar
-          variant="image"
-          color="secondary"
-          src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-          alt="person with camera"
-          withBorder
-          className="h-6 w-6"
+import { VKChip, VKAvatar } from "@vivakits/react-components";
+
+const App = () => {
+    return (
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-3">
+          <VKChip
+            rounded={true}
+            label="Basic"
+            variant={"outlined"}
+            color={"dark"}
+            fontSize={"sm"}
+          />
+          <VKChip
+            rounded={true}
+            label="User"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"sm"}
+            leftIcon={<NameIcon />}
+          />
+            <VKChip
+            rounded={true}
+            label="Close"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"sm"}
+            rightIcon={<CloseIcon />}
+          />
+          <VKChip
+            rounded={true}
+            label="Avatar"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"sm"}
+            leftIcon={
+              <VKAvatar
+                variant="image"
+                color="secondary"
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                alt="person with camera"
+                withBorder
+                className="h-6 w-6"
+              />
+            }
+          />
+          <VKChip
+            rounded={true}
+            label="Right Arrow"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"sm"}
+            rightIcon={<ArrowRightIcon />}
+          />
+        </div>
+
+        <div className="flex items-center gap-3">
+          <VKChip
+            rounded={true}
+            label="Up arrow"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"sm"}
+            rightIcon={<UpArrowIcon />}
+          />
+          <VKChip
+            rounded={true}
+            label="Search"
+            variant={"filled"}
+            color={"light"}
+            size={"md"}
+            rightIcon={<SearchIcon />}
+          />
+          <VKChip
+            rounded={true}
+            label="Clickable"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"md"}
+            onClick={() => alert("You clicked on the chip")}
+          />
+          <VKChip
+            rounded={true}
+            label="Increase"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"md"}
+            leftIcon={<SortUpIcon />}
+            onLeftIconClick={() => alert("You clicked on increase icon")}
+          />
+          <VKChip
+            rounded={true}
+            label="Decrease"
+            variant={"filled"}
+            color={"light"}
+            fontSize={"md"}
+            rightIcon={<SortDownIcon />}
+            onRightIconClick={() => alert("You clicked on decrease icon")}
+          />
+          </div>
+      </div>
+   );
+};
+
+const NameIcon = () => {
+    return (
+      <svg
+        width="14"
+        height="16"
+        viewBox="0 0 15 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.0012 15.0051C15.0012 14.9063 14.9747 14.8076 14.9747 14.7088C14.7895 12.1409 12.7525 9.91866 10.0805 9.35076C8.54614 9.02977 6.98529 9.07915 5.4509 9.25199C2.43503 9.59767 0.0540779 12.1409 0.00116781 14.9557C-0.0252872 15.7705 0.397993 16.1656 1.24455 16.1656C3.30805 16.1656 5.39799 16.1656 7.46149 16.1656C8.28159 16.1656 9.07524 16.1656 9.89535 16.1656C11.1916 16.1656 12.4879 16.1656 13.7842 16.1656C14.5779 16.1656 15.0276 15.7211 15.0012 15.0051Z"
+          fill="currentColor"
         />
-      }
-    />
-    <VKChip
-      rounded={true}
-      label="Right Arrow"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      rightIcon={<ArrowRightIcon />}
-    />
-  </div>
+        <path
+          d="M7.48609 8.16578C9.86705 8.16578 11.7718 6.388 11.7718 4.16578C11.7983 1.99294 9.86705 0.190469 7.539 0.165778C5.18451 0.141087 3.22683 1.94356 3.22683 4.11639C3.20038 6.36331 5.10514 8.16578 7.48609 8.16578Z"
+          fill="currentColor"
+        />
+      </svg>
+  );
+};
 
-  <div className="flex items-center gap-3">
-    <VKChip
-      rounded={true}
-      label="Up arrow"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"sm"}
-      rightIcon={<UpArrowIcon />}
-    />
-    <VKChip
-      rounded={true}
-      label="Search"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      size={"md"}
-      rightIcon={<SearchIcon />}
-    />
-    <VKChip
-      rounded={true}
-      label="Clickable"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"md"}
-      onClick={() => alert("You clicked on the chip")}
-    />
+const CloseIcon = () => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+  );
+};
 
-    <VKChip
-      rounded={true}
-      label="Increase"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"md"}
-      leftIcon={<SortUpIcon />}
-      onLeftIconClick={() => alert("You clicked on increase icon")}
-    />
+const ArrowRightIcon = () => {
+    return (
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4.16602 9.99996H15.8327M15.8327 9.99996L9.99935 4.16663M15.8327 9.99996L9.99935 15.8333"
+          stroke="#344054"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+  );
+};
 
-    <VKChip
-      rounded={true}
-      label="Decrease"
-      open={true}
-      variant={"filled"}
-      color={"light"}
-      fontSize={"md"}
-      rightIcon={<SortDownIcon />}
-      onRightIconClick={() => alert("You clicked on decrease icon")}
-    />
-    </div>
+const UpArrowIcon = () => {
+    return (
+      <svg
+        width="800px"
+        height="800px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-5 h-5"
+      >
+        <path
+          d="M12.7071 4.29289C12.3166 3.90237 11.6834 3.90237 11.2929 4.29289L6.29289 9.29289C5.90237 9.68342 5.90237 10.3166 6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11 7.41421L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19L13 7.41421L16.2929 10.7071C16.6834 11.0976 17.3166 11.0976 17.7071 10.7071C18.0976 10.3166 18.0976 9.68342 17.7071 9.29289L12.7071 4.29289Z"
+          fill="#000000"
+        />
+      </svg>
+  );
+};
 
-</div>
+const SearchIcon = () => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={40}
+        height={40}
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          fillRule="evenodd"
+          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+          clipRule="evenodd"
+        />
+      </svg>
+  );
+};
+
+const SortUpIcon = () => {
+    return (
+      <svg
+        width={16}
+        height={14}
+        viewBox="-2.4 -2.4 28.80 28.80"
+        xmlns="http://www.w3.org/2000/svg"
+        transform="rotate(0)"
+        stroke="#000000"
+      >
+        <path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"></path>
+      </svg>
+  );
+};
+
+const SortDownIcon = () => {
+    return (
+      <svg
+        width={16}
+        height={14}
+        viewBox="-2.4 -2.4 28.80 28.80"
+        xmlns="http://www.w3.org/2000/svg"
+        transform="rotate(180)"
+        stroke="#000000"
+      >
+        <path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"></path>
+      </svg>
+  );
+};
+
+export default App;
   ```
 </Tabs.Tab>
 </Tabs>
@@ -757,39 +1003,42 @@ Chip can be used with other component as well. Here is an example of chip being 
 
 <Tabs items={['Preview', 'Code']}>
   <Tabs.Tab>
+
 export const ChipInsideInput = () => {
-const [chips, setChips] = useState([]);
+  const [chips, setChips] = useState([]);
 
-return(
+return (
 
-<div className="m-2 border rounded-lg flex">
-  {chips.map((chip, index) => (
-    <VKChip
-      key={`${chip}_${index}`}
-      open
-      color={"dark"}
-      label={chip}
-      size={"sm"}
-      className="m-1"
-      rightIcon={<CloseIcon />}
-      onRightIconClick={() => setChips(chips.filter((_, i) => i !== index))}
-    />
-  ))}
-  <Input
-    size={"md"}
-    rounded={"lg"}
-    className="border-none"
-    placeholder="Enter any word and press enter"
-    onKeyUp={(e) => {
-      if (e.code === "Enter" || e.code === "NumpadEnter") {
-        const newChip = e.target?.value;
-        setChips([...chips, newChip]);
-        e.target.value = "";
-      }
-    }}
-  />
-</div>
-)}
+    <div className="m-2 border rounded-lg flex">
+      {chips.map((chip, index) => (
+        <VKChip
+          key={`${chip}_${index}`}
+          open
+          color={"dark"}
+          label={chip}
+          size={"sm"}
+          className="m-1"
+          rightIcon={<CloseIcon />}
+          onRightIconClick={() => setChips(chips.filter((_, i) => i !== index))}
+        />
+      ))}
+      <Input
+        size={"md"}
+        rounded={"lg"}
+        className="border-none"
+        placeholder="Enter any word and press enter"
+        onKeyUp={(e) => {
+          if (e.code === "Enter" || e.code === "NumpadEnter") {
+            const newChip = e.target?.value;
+            setChips([...chips, newChip]);
+            e.target.value = "";
+          }
+        }}
+      />
+    </div>
+
+)
+}
 
   <ChipInsideInput />
   
@@ -798,39 +1047,62 @@ return(
 <Tabs.Tab>
   ```jsx copy
 import { useState } from "react";
-export const ChipInsideInput = () => {
+import { Input, VKChip } from "@vivakits/react-components";
+
+const App = () => {
 const [chips, setChips] = useState([]);
 
-return(
+  return(
+    <div className="m-2 border rounded-lg flex">
+      {chips.map((chip, index) => (
+        <VKChip
+          key={`${chip}_${index}`}
+          open
+          color={"dark"}
+          label={chip}
+          size={"sm"}
+          className="m-1"
+          rightIcon={<CloseIcon />}
+          onRightIconClick={() => setChips(chips.filter((_, i) => i !== index))}
+        />
+      ))}
+      <Input
+        size={"md"}
+        rounded={"lg"}
+        className="border-none"
+        placeholder="Enter any word and press enter"
+        onKeyUp={(e) => {
+          if (e.code === "Enter" || e.code === "NumpadEnter") {
+            const newChip = e.target?.value;
+            setChips([...chips, newChip]);
+            e.target.value = "";
+          }
+        }}
+      />
+    </div>
+   );
+};
 
-<div className="m-2 border rounded-lg flex">
-  {chips.map((chip, index) => (
-    <VKChip
-      key={`${chip}_${index}`}
-      open
-      color={"dark"}
-      label={chip}
-      size={"sm"}
-      className="m-1"
-      rightIcon={<CloseIcon />}
-      onRightIconClick={() => setChips(chips.filter((_, i) => i !== index))}
-    />
-  ))}
-  <Input
-    size={"md"}
-    rounded={"lg"}
-    className="border-none"
-    placeholder="Enter any word and press enter"
-    onKeyUp={(e) => {
-      if (e.code === "Enter" || e.code === "NumpadEnter") {
-        const newChip = e.target?.value;
-        setChips([...chips, newChip]);
-        e.target.value = "";
-      }
-    }}
-  />
-</div>
-)}
+const CloseIcon = () => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+  );
+};
+
+export default App;
   ```
 </Tabs.Tab>
 </Tabs>
@@ -839,181 +1111,190 @@ return(
 
 {<table>
 
-  <thead>
-    <tr>
-      <th className="w-[10%]" align="left">Attribute</th>
-      <th className="w-[50%]" align="left">Type</th>
-      <th className="w-[30%]" align="left">Description</th>
-      <th className="w-[10%]" align="left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>children</td>
-      <td>ReactNode</td>
-      <td>Displays badge content</td>
-      <td> - </td>
-    </tr>
-    <tr>
-      <td>variant</td>
-      <td>
-        <span className="badge">filled</span>
-        <span className="badge">outlined</span>
+      <thead>
+        <tr>
+          <th className="w-[10%]" align="left">Attribute</th>
+          <th className="w-[50%]" align="left">Type</th>
+          <th className="w-[30%]" align="left">Description</th>
+          <th className="w-[10%]" align="left">Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>children</td>
+          <td>ReactNode</td>
+          <td>Displays badge content</td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td>variant</td>
+          <td>
+            <span className="badge">filled</span>
+            <span className="badge">outlined</span>
 
-      </td>
-      <td>Specifies chip visual style</td>
-      <td><span className="badge">filled</span></td>
-    </tr>
+          </td>
+          <td>Specifies chip visual style</td>
+          <td><span className="badge">filled</span></td>
+        </tr>
 
-    <tr>
-      <td>size</td>
-      <td>
-        <span className="badge">sm</span>
-        <span className="badge">md</span>
-        <span className="badge">lg</span>
-      </td>
-      <td>Specifies chip size</td>
-      <td><span className="badge">md</span></td>
-    </tr>
+        <tr>
+          <td>size</td>
+          <td>
+            <span className="badge">xs</span>
+            <span className="badge">sm</span>
+            <span className="badge">md</span>
+            <span className="badge">lg</span>
+            <span className="badge">xl</span>
+            <span className="badge">2xl</span>
+          </td>
+          <td>Specifies chip size</td>
+          <td><span className="badge">md</span></td>
+        </tr>
 
-{" "}
+        {" "}
 
-<tr>
-  <td>fontSize</td>
-  <td>
-    <span className="badge">sm</span>
-    <span className="badge">md</span>
-    <span className="badge">lg</span>
-  </td>
-  <td>Specifies fontsize of label inside chip</td>
-  <td>
-    <span className="badge">md</span>
-  </td>
-</tr>
+        <tr>
+          <td>fontSize</td>
+          <td>
+            <span className="badge">xs</span>
+            <span className="badge">sm</span>
+            <span className="badge">md</span>
+            <span className="badge">lg</span>
+            <span className="badge">xl</span>
+            <span className="badge">2xl</span>
+          </td>
+          <td>Specifies fontsize of label inside chip</td>
+          <td>
+            <span className="badge">md</span>
+          </td>
+        </tr>
 
-<tr>
-  <td>color</td>
-  <td className="flex flex-wrap gap-y-2 border-none">
-    <span className="badge">primary</span>
-    <span className="badge">secondary</span>
-    <span className="badge">success</span>
-    <span className="badge">danger</span>
-    <span className="badge">warning</span>
-    <span className="badge">dark</span>
-    <span className="badge">light</span>
-  </td>
-  <td>Specifies chip background or border color</td>
-  <td>
-    <span className="badge">success</span>
-  </td>
-</tr>
+        <tr>
+          <td>color</td>
+          <td className="flex flex-wrap gap-y-2 border-none">
+            <span className="badge">primary</span>
+            <span className="badge">secondary</span>
+            <span className="badge">success</span>
+            <span className="badge">danger</span>
+            <span className="badge">warning</span>
+            <span className="badge">dark</span>
+            <span className="badge">light</span>
+          </td>
+          <td>Specifies chip background or border color</td>
+          <td>
+            <span className="badge">success</span>
+          </td>
+        </tr>
 
-<tr>
-  <td>state</td>
-  <td>
-    <span className="badge">selected</span>
-    <span className="badge">unselected</span>
-    <span className="badge">disabled</span>
-  </td>
-  <td>Specifies current state or status of the chip</td>
-  <td>
-    <span className="badge"> selected </span>
-  </td>
-</tr>
+        <tr>
+          <td>state</td>
+          <td>
+            <span className="badge">selected</span>
+            <span className="badge">unselected</span>
+            <span className="badge">disabled</span>
+          </td>
+          <td>Specifies current state or status of the chip</td>
+          <td>
+            <span className="badge"> selected </span>
+          </td>
+        </tr>
 
-    <tr>
-      <td>label</td>
-      <td>text</td>
-      <td>Defines the label on the chip</td>
-      <td> - </td>
-    </tr>
+        <tr>
+          <td>label</td>
+          <td>text</td>
+          <td>Defines the label on the chip</td>
+          <td> - </td>
+        </tr>
 
-     <tr>
-      <td>rounded</td>
-      <td>boolean</td>
-      <td>Defines if the chip will be rounded or not</td>
-      <td> false </td>
-    </tr>
+        <tr>
+          <td>rounded</td>
+          <td>boolean</td>
+          <td>Defines if the chip will be rounded or not</td>
+          <td> false </td>
+        </tr>
 
-    <tr>
-      <td>leftIcon</td>
-      <td>component</td>
-      <td>Icon component displayed on the left side of the chip</td>
-      <td> - </td>
-    </tr>
+        <tr>
+          <td>leftIcon</td>
+          <td>JSX element</td>
+          <td>Icon component displayed on the left side of the chip</td>
+          <td> - </td>
+        </tr>
 
-    <tr>
-      <td>rightIcon</td>
-      <td>component</td>
-      <td>Icon component displayed on the right side of the chip</td>
-      <td> - </td>
-    </tr>
+        <tr>
+          <td>rightIcon</td>
+          <td>JSX element</td>
+          <td>Icon component displayed on the right side of the chip</td>
+          <td> - </td>
+        </tr>
 
-     <tr>
-      <td>onClick</td>
-      <td>function</td>
-      <td>Defines functionality on clicking the chip</td>
-      <td> - </td>
-    </tr>
+        <tr>
+          <td>onClick</td>
+          <td>function</td>
+          <td>Defines functionality on clicking the chip</td>
+          <td> - </td>
+        </tr>
 
-    <tr>
-      <td>onLeftIconClick</td>
-      <td>function</td>
-      <td>Defines functionality on clicking the left icon on chip</td>
-      <td> - </td>
-    </tr>
+        <tr>
+          <td>onLeftIconClick</td>
+          <td>function</td>
+          <td>Defines functionality on clicking the left icon on chip</td>
+          <td> - </td>
+        </tr>
 
-    <tr>
-      <td>onRightIconClick</td>
-      <td>function</td>
-      <td>Defines functionality on clicking the right icon on chip</td>
-      <td> - </td>
-    </tr>
+        <tr>
+          <td>onRightIconClick</td>
+          <td>function</td>
+          <td>Defines functionality on clicking the right icon on chip</td>
+          <td> - </td>
+        </tr>
 
-{" "}
+        {" "}
 
-<tr>
-  <td>onRightIconClick</td>
-  <td>function</td>
-  <td>Defines functionality on clicking the right icon on chip</td>
-  <td> - </td>
-</tr>
+        <tr>
+          <td>onRightIconClick</td>
+          <td>function</td>
+          <td>Defines functionality on clicking the right icon on chip</td>
+          <td> - </td>
+        </tr>
 
-<tr>
-  <td>className</td>
-  <td>CSS</td>
-  <td>Additional CSS class(es) to apply to the chip component</td>
-  <td> - </td>
-</tr>
+        <tr>
+          <td>className</td>
+          <td>CSS</td>
+          <td>Additional CSS class(es) to apply to the chip component</td>
+          <td> - </td>
+        </tr>
 
-<tr>
-  <td>iconClassName</td>
-  <td>CSS</td>
-  <td>Additional CSS class(es) to apply to the icon components</td>
-  <td> - </td>
-</tr>
+        <tr>
+          <td>iconClassName</td>
+          <td>CSS</td>
+          <td>Additional CSS class(es) to apply to the icon components</td>
+          <td> - </td>
+        </tr>
 
-<tr>
-  <td>leftIconClassName</td>
-  <td>CSS</td>
-  <td>Additional CSS class(es) to apply to the left icon component</td>
-  <td> - </td>
-</tr>
+        <tr>
+          <td>leftIconClassName</td>
+          <td>CSS</td>
+          <td>Additional CSS class(es) to apply to the left icon component</td>
+          <td> - </td>
+        </tr>
 
-<tr>
-  <td>rightIconClassName</td>
-  <td>CSS</td>
-  <td>Additional CSS class(es) to apply to the right icon component</td>
-  <td> - </td>
-</tr>
+        <tr>
+          <td>rightIconClassName</td>
+          <td>CSS</td>
+          <td>Additional CSS class(es) to apply to the right icon component</td>
+          <td> - </td>
+        </tr>
 
-<tr>
-  <td>labelClassName</td>
-  <td>CSS</td>
-  <td>Additional CSS class(es) to apply to the label text within the chip</td>
-  <td> - </td>
-</tr>
+        <tr>
+          <td>labelClassName</td>
+          <td>CSS</td>
+          <td>Additional CSS class(es) to apply to the label text within the chip</td>
+          <td> - </td>
+        </tr>
 
-  </tbody>
-</table>}
+      </tbody>
+    </table>}
+
+```
+
 ```
