@@ -618,6 +618,20 @@ function LogoutIcon(props: React.SVGAttributes<SVGElement>) {
   );
 }
 
+function ForwardSlashIcon(props: React.SVGAttributes<SVGElement>) {
+  return (
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="m7 21 7.9-18h2.1l-7.9 18z" />
+    </svg>
+  );
+}
+
 export {
   NameIcon,
   SearchIcon,
@@ -647,4 +661,5 @@ export {
   SupportIcon,
   LogoutIcon,
   DropdownIcon,
+  ForwardSlashIcon,
 };
