@@ -1,0 +1,600 @@
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import {
+  Input,
+  VKChip,
+  VKAvatar,
+  VKBreadCrumbs,
+} from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import {
+  NameIcon,
+  CloseIcon,
+  ArrowRightIcon,
+  UpArrowIcon,
+  SearchIcon,
+  SortUpIcon,
+  SortDownIcon,
+  ForwardSlashIcon,
+} from "../../components/assets/icons.tsx";
+
+# Breadcrumb
+
+Breadcrumb is a navigation aid which helps user to understand current location in the website hierarchy.
+
+### Seperator
+
+The `seperator` prop is an icon component or simply an icon to be displayed between breadcrumb items. This functions as path seperator.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BreadcrumbSeperator = () => {
+  const VKBreadCrumbs = dynamic(() =>
+  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+    const breadcrumbOptions = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+     
+    },
+    {
+      title: "Contact",
+      href: "/about/contact",
+    },
+    {
+      title: "Profile",
+      href: "/about/contact/profile",
+    },
+  ];
+
+return (
+
+    <div className="">
+       <VKBreadCrumbs
+          separator={<ForwardSlashIcon />}
+          options={breadcrumbOptions}
+        />
+    </div>
+
+);
+};
+
+<BreadcrumbSeperator />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+import dynamic from "next/dynamic";
+
+export const BreadcrumbSeperator = () => {
+
+const VKBreadCrumbs = dynamic(() =>
+import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+const breadcrumbOptions = [
+{
+title: "Home",
+href: "/",
+},
+{
+title: "About",
+href: "/about",
+},
+{
+title: "Contact",
+href: "/about/contact",
+},
+{
+title: "Profile",
+href: "/about/contact/profile",
+},
+
+];
+
+return (
+
+  <div className="">
+      <VKBreadCrumbs
+      separator={<ForwardSlashIcon />}
+      options={breadcrumbOptions} 
+      />
+  </div>
+);
+};  
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Options
+
+The `options` prop is an array of objects that represents the breadcrumb items. Each object here contains `title` that dsiplays the text for the breadcrumb item and `href` which contains the URL of the breadcrumb item.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BreadcrumbOptions = () => {
+  const VKBreadCrumbs = dynamic(() =>
+  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+    const breadcrumbOptions = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+     
+    },
+    {
+      title: "Contact",
+      href: "/about/contact",
+    },
+    {
+      title: "Profile",
+      href: "/about/contact/profile",
+    },
+  ];
+
+return (
+
+    <div className="">
+       <VKBreadCrumbs
+          separator=">"
+          options={breadcrumbOptions}
+        />
+    </div>
+
+);
+};
+
+<BreadcrumbOptions />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+import dynamic from "next/dynamic";
+
+export const BreadcrumbOptions = () => {
+
+const VKBreadCrumbs = dynamic(() =>
+import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+const breadcrumbOptions = [
+{
+title: "Home",
+href: "/",
+},
+{
+title: "About",
+href: "/about",
+},
+{
+title: "Contact",
+href: "/about/contact",
+},
+{
+title: "Profile",
+href: "/about/contact/profile",
+},
+
+];
+
+return (
+
+  <div className="">
+      <VKBreadCrumbs
+      separator={<ForwardSlashIcon />}
+      options={breadcrumbOptions} 
+      />
+  </div>
+);
+};  
+```
+  </Tabs.Tab>
+</Tabs>
+
+### WrapperClass
+
+The `wrapperClass` prop is a CSS class used to style the wrapper of the breadcrumb items. If `wrapperClass` is not provided then it the component uses the default style.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BreadcrumbWrapperClass = () => {
+  const VKBreadCrumbs = dynamic(() =>
+  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+    const breadcrumbOptions = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+     
+    },
+    {
+      title: "Contact",
+      href: "/about/contact",
+    },
+    {
+      title: "Profile",
+      href: "/about/contact/profile",
+    },
+  ];
+
+return (
+
+    <div className="">
+       <VKBreadCrumbs
+          separator=">"
+          options={breadcrumbOptions}
+          wrapperClass="bg-gray-200 rounded-sm p-3"
+        />
+    </div>
+
+);
+};
+
+<BreadcrumbWrapperClass />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+import dynamic from "next/dynamic";
+
+export const BreadcrumbWrapperClass = () => {
+
+const VKBreadCrumbs = dynamic(() =>
+import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+const breadcrumbOptions = [
+{
+title: "Home",
+href: "/",
+},
+{
+title: "About",
+href: "/about",
+},
+{
+title: "Contact",
+href: "/about/contact",
+},
+{
+title: "Profile",
+href: "/about/contact/profile",
+},
+
+];
+
+return (
+
+  <div className="">
+      <VKBreadCrumbs
+      separator={<ForwardSlashIcon />}
+      options={breadcrumbOptions} 
+      wrapperClass="bg-gray-200 rounded-sm p-3"
+      />
+  </div>
+);
+};  
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Style
+
+The `style` prop is inline style to be applied to the breadcrumb wrapper, item, link, and href. It provides freedom to particularly style the other props.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BreadcrumbStyle = () => {
+  const VKBreadCrumbs = dynamic(() =>
+  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+    const breadcrumbOptions = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+     
+    },
+    {
+      title: "Contact",
+      href: "/about/contact",
+    },
+    {
+      title: "Profile",
+      href: "/about/contact/profile",
+    },
+  ];
+
+return (
+
+    <div className="flex items-center gap-3">
+       <VKBreadCrumbs
+          separator=">"
+          options={breadcrumbOptions}
+           style={{
+              bg: "bg-[#f5f5dc]",
+              wrapper: "rounded-md p-10 shadow-lg",
+              item: "font-sans inline-flex items-center",
+              link: "text-blue-500",
+              href: ""
+        }}
+        />
+    </div>
+
+);
+};
+
+<BreadcrumbStyle />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+import dynamic from "next/dynamic";
+
+export const BreadcrumbStyle = () => {
+
+const VKBreadCrumbs = dynamic(() =>
+import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+const breadcrumbOptions = [
+{
+title: "Home",
+href: "/",
+},
+{
+title: "About",
+href: "/about",
+},
+{
+title: "Contact",
+href: "/about/contact",
+},
+{
+title: "Profile",
+href: "/about/contact/profile",
+},
+];
+
+return (
+
+  <div className="flex items-center gap-3">
+      <VKBreadCrumbs
+          separator=">"
+          options={breadcrumbOptions}
+            style={{
+              bg: "bg-[#f5f5dc]",
+              wrapper: "rounded-md p-10 shadow-lg",
+              item: "font-sans inline-flex items-center",
+              link: "text-blue-500",
+              href: ""
+        }}
+        />
+  </div>
+);
+};  
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Underline
+
+The `underline` is a boolean prop that determines if the breadcrumb link should be underlined or not. It has default value set to `true`.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const BreadcrumbUnderline = () => {
+  const VKBreadCrumbs = dynamic(() =>
+  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+    const breadcrumbOptions = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+     
+    },
+    {
+      title: "Contact",
+      href: "/about/contact",
+    },
+    {
+      title: "Profile",
+      href: "/about/contact/profile",
+    },
+  ];
+
+return (
+
+<div className="flex items-center gap-3">
+  <VKBreadCrumbs
+    separator={<ForwardSlashIcon />}
+    options={breadcrumbOptions}
+    wrapperClass="bg-gray-200 rounded-sm p-3"
+    underline
+  />
+
+      <VKBreadCrumbs
+      separator={<ForwardSlashIcon />}
+      options={breadcrumbOptions}
+      wrapperClass="bg-gray-200 rounded-sm p-3"
+      underline={false}
+      />
+
+</div>
+
+);
+};
+
+<BreadcrumbUnderline />
+  </Tabs.Tab>
+        
+  <Tabs.Tab>
+```jsx copy
+import dynamic from "next/dynamic";
+
+export const BreadcrumbUnderline = () => {
+
+const VKBreadCrumbs = dynamic(() =>
+import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+);
+const breadcrumbOptions = [
+{
+title: "Home",
+href: "/",
+},
+{
+title: "About",
+href: "/about",
+},
+{
+title: "Contact",
+href: "/about/contact",
+},
+{
+title: "Profile",
+href: "/about/contact/profile",
+},
+];
+
+return (
+
+ <div className="flex items-center gap-3">
+      <VKBreadCrumbs
+        separator={<ForwardSlashIcon />}
+        options={breadcrumbOptions}
+        wrapperClass="bg-gray-200 rounded-sm p-3"
+        underline
+      />
+
+      <VKBreadCrumbs
+      separator={<ForwardSlashIcon />}
+      options={breadcrumbOptions}
+      wrapperClass="bg-gray-200 rounded-sm p-3"
+      underline={false}
+      />
+
+</div>
+);
+};  
+```
+  </Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>separator</td>
+      <td>string | React.ReactNode</td>
+      <td>Defines the separator between breadcrumb items</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>options</td>
+      <td>any</td>
+      <td>Specifies the breadcrumb items and their properties</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>wrapperClass</td>
+      <td>string</td>
+      <td>Additional CSS class(es) to apply to the breadcrumb wrapper</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>underline</td>
+      <td>boolean</td>
+      <td>Specifies whether breadcrumb items should be underlined</td>
+      <td> false </td>
+    </tr>
+    <tr>
+      <td>style</td>
+      <td>
+        <span className="badge">bg</span>
+        <span className="badge">wrapper</span>
+        <span className="badge">item</span>
+        <span className="badge">link</span>
+        <span className="badge">href</span>
+      </td>
+      <td>Specifies custom styles for breadcrumb elements</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
+
+### BreadcrumbStyle types
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[20%]" align="left">Attribute</th>
+      <th className="w-[80%]" align="left">Type</th>
+      <th className="w-[80%]" align="left">Description</th>
+      <th className="w-[20%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bg</td>
+      <td>string</td>
+      <td>Custom background style for breadcrumbs</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>wrapper</td>
+      <td>string</td>
+      <td>Custom wrapper style for the breadcrumb container</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>item</td>
+      <td>string</td>
+      <td>Custom style for individual breadcrumb items</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>link</td>
+      <td>string</td>
+      <td>Custom style for the breadcrumb links</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>href</td>
+      <td>string</td>
+      <td>Custom style for the breadcrumb href elements</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
