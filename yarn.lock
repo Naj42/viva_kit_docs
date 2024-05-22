@@ -324,10 +324,10 @@
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vivakits/react-components@^0.4.18":
-  version "0.4.18"
-  resolved "https://registry.npmjs.org/@vivakits/react-components/-/react-components-0.4.18.tgz"
-  integrity sha512-qwl7nosvoNS7hQ+EfCX6bFHpAQ2BLQQ8U/wRPjeQ0aVIfjim80vZlb3+hyA7ASQlz+2ZFLAAnq4vAklchp1TaQ==
+"@vivakits/react-components@^0.4.19":
+  version "0.4.19"
+  resolved "https://registry.npmjs.org/@vivakits/react-components/-/react-components-0.4.19.tgz"
+  integrity sha512-Y51MTQefDybGbRC4z6gdgVFawc+d63w31WkbTWURCv3MnT0QL+0myhxq/rppPL7mUpv/DAPZWjyARMCaNoYuZg==
   dependencies:
     class-variance-authority "^0.7.0"
     clsx "^2.0.0"

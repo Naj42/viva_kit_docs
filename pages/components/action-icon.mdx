@@ -1,0 +1,595 @@
+import { VKGroup, Button, VKActionIcon } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import { SearchIcon } from "../../components/assets/icons.tsx";
+
+# Action Icon
+
+### Import
+
+```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+```
+
+### Variants
+
+The ActionIcon component comes with 3 different variants that you can change using the `variant` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+  <Tabs.Tab>
+export const ActionIconVariantGroup = () => {
+  return (
+    <div className="flex justify-center items-center gap-3">
+        <VKActionIcon icon={<SearchIcon/>} size="md" rounded="md" variant="solid"/>
+        <VKActionIcon icon={<SearchIcon/>} size="md" rounded="md" variant="outline"/>
+        <VKActionIcon icon={<SearchIcon/>} size="md" rounded="md" variant="light"/>
+    </div>
+  );
+};
+
+<ActionIconVariantGroup />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+  ```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+
+const App = () => {
+
+return (
+
+    <div className="flex justify-center items-center gap-3">
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="solid" />
+        <VKActionIcon icon={<SearchIcon />} size="md"  rounded="md" variant="outline" />
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="light" />
+    </div>
+
+); };
+
+export default App;
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Sizes
+
+The ActionIcon component comes with 7 different sizes that you can change using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ActionIconSizeGroup = () => {
+  return (
+    <div className="flex justify-center items-center gap-3">
+        <VKActionIcon icon={<SearchIcon />} size="default" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="xs"  rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="sm" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="lg"  rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="xl" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="2xl" rounded="md"/>
+    </div>
+  );
+};
+
+<ActionIconSizeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+  ```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+
+const App = () => {
+
+return (
+
+    <div className="flex justify-center items-center gap-3">
+        <VKActionIcon icon={<SearchIcon />} size="default" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="xs" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="sm" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="lg" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="xl" rounded="md"/>
+        <VKActionIcon icon={<SearchIcon />} size="2xl" rounded="md"/>
+    </div>
+
+); };
+
+export default App;
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+### Colors
+
+The ActionIcon component comes with 5 different colors that you can change using the `color` prop. It has both solid and outline variants.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ActionIconColorGroup = () => {
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" className="!bg-primary !text-primary-foreground"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="outline" color="primary"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" className="!bg-secondary !text-secondary-foreground"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="outline" color="secondary"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" className="!bg-success !text-success-foreground"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="outline" color="success"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" className="!bg-warning !text-warning-foreground"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="outline" color="warning"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" className="!bg-danger !text-danger-foreground"/>
+        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md" variant="outline" color="danger"/>
+    </div>
+  );
+};
+
+<ActionIconColorGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+  ```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+
+const App = () => {
+
+return (
+
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            className="!bg-primary !text-primary-foreground"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            variant="outline" color="primary"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            className="!bg-secondary !text-secondary-foreground"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            variant="outline" color="secondary"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            className="!bg-success !text-success-foreground"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            variant="outline" color="success"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            className="!bg-warning !text-warning-foreground"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            variant="outline" color="warning"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            className="!bg-danger !text-danger-foreground"
+        />
+        <VKActionIcon
+            icon={<SearchIcon />}
+            size="md"
+            rounded="md"
+            variant="outline" color="danger"
+        />
+    </div>
+
+); };
+
+export default App;
+
+````
+</Tabs.Tab>
+</Tabs>
+
+### Rounded
+
+The shape of the ActionIcon component can be changed using `rounded` prop
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ActionIconRoundedGroup = () => {
+return (
+  <div className="flex justify-center items-end gap-3">
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="none"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="default"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="sm"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="md"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="lg"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="full"/>
+  </div>
+);
+};
+
+<ActionIconRoundedGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+
+const App = () => {
+
+return (
+
+  <div className="flex justify-center items-end gap-3">
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="none"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="default"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="sm"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="md"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="lg"/>
+      <VKActionIcon icon={<SearchIcon />} size="md" rounded="full"/>
+  </div>
+);
+};
+
+export default App;
+````
+
+</Tabs.Tab>
+
+</Tabs>
+
+### Icon With Text
+
+The ActionIcon can also be written using text.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const IconButtons = () => {
+  return (
+    <div className="w-full flex flex-col gap-3 justify-start">
+        <div className="w-full flex items-center justify-center gap-2">
+            <VKActionIcon 
+                icon={ <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
+                  <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+                  <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+                  <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+                  <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+                </svg>} 
+                size="md" 
+                rounded="md" 
+                className="w-60 !bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]"
+            >
+                Sign in with Google
+            </VKActionIcon>
+            <VKActionIcon 
+                icon={<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32" fill="none">
+                  <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+                  <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+                  <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+                  <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+                </svg>} 
+                size="md" 
+                rounded="md" 
+                className="!bg-[#ffffff] border border-[#d0d5dd]" aria-label="Google"
+            />
+        </div>
+        <div className="w-full flex items-center justify-center gap-2">
+            <VKActionIcon 
+                icon={<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>} 
+                size="md" 
+                rounded="md" 
+                className="w-60 !bg-[#1877f2] !text-white flex gap-2"
+            >
+                Sign in with Facebook
+            </VKActionIcon>
+            <VKActionIcon 
+                icon={<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none"><path fill="#ffffff" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#1877F2" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>} 
+                size="md" 
+                rounded="md" 
+                className="!bg-[#1877f2]" aria-label="Facebook"
+            />
+        </div>
+        <div className="w-full flex items-center justify-center gap-2">
+            <VKActionIcon 
+                icon={<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+                <rect width="24" height="24" fill="none"/>
+                <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
+                </svg>} 
+                size="md" 
+                rounded="md" 
+                className="w-60 !bg-black !text-white flex gap-2"
+            >  
+                Sign in with Apple
+            </VKActionIcon>
+            <VKActionIcon 
+                icon={<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+                <rect width="24" height="24" fill="none"/>
+                <path d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z" fill="white"/>
+                </svg>} 
+                size="md" 
+                rounded="md" 
+                className="!bg-black" aria-label="Apple"
+            />
+        </div>        
+    </div>
+  );
+};
+
+<IconButtons />
+</Tabs.Tab>
+
+<Tabs.Tab>
+  ```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+
+const App = () => {
+
+return (
+
+<div className="w-full flex flex-col gap-3 justify-start">
+  <div className="w-full flex items-center justify-center gap-2">
+    <VKActionIcon
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z"
+            fill="#4285F4"
+          />
+          <path
+            d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z"
+            fill="#34A853"
+          />
+          <path
+            d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z"
+            fill="#FBBC05"
+          />
+          <path
+            d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z"
+            fill="#EB4335"
+          />
+        </svg>
+      }
+      size="md"
+      rounded="md"
+      className="w-60 !bg-[#ffffff] !text-black flex gap-2 border border-[#d0d5dd]"
+    >
+      Sign in with Google
+    </VKActionIcon>
+    <VKActionIcon
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z"
+            fill="#4285F4"
+          />
+          <path
+            d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z"
+            fill="#34A853"
+          />
+          <path
+            d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z"
+            fill="#FBBC05"
+          />
+          <path
+            d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z"
+            fill="#EB4335"
+          />
+        </svg>
+      }
+      size="md"
+      rounded="md"
+      className="!bg-[#ffffff] border border-[#d0d5dd]"
+      aria-label="Google"
+    />
+  </div>
+  <div className="w-full flex items-center justify-center gap-2">
+    <VKActionIcon
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <path
+            fill="#ffffff"
+            d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"
+          />
+          <path
+            fill="#1877F2"
+            d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"
+          />
+        </svg>
+      }
+      size="md"
+      rounded="md"
+      className="w-60 !bg-[#1877f2] !text-white flex gap-2"
+    >
+      Sign in with Facebook
+    </VKActionIcon>
+    <VKActionIcon
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <path
+            fill="#ffffff"
+            d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"
+          />
+          <path
+            fill="#1877F2"
+            d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"
+          />
+        </svg>
+      }
+      size="md"
+      rounded="md"
+      className="!bg-[#1877f2]"
+      aria-label="Facebook"
+    />
+  </div>
+  <div className="w-full flex items-center justify-center gap-2">
+    <VKActionIcon
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 24 24"
+        >
+          <rect width="24" height="24" fill="none" />
+          <path
+            d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z"
+            fill="white"
+          />
+        </svg>
+      }
+      size="md"
+      rounded="md"
+      className="w-60 !bg-black !text-white flex gap-2"
+    >
+      Sign in with Apple
+    </VKActionIcon>
+    <VKActionIcon
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 24 24"
+        >
+          <rect width="24" height="24" fill="none" />
+          <path
+            d="M18.71,19.5C17.88,20.74,17,22,15.66,22s-1.77-.79-3.29-.79-2,.77-3.27.82S6.8,20.68,6,19.47c-1.71-2.47-3-7-1.26-10.08A4.88,4.88,0,0,1,8.82,6.88c1.28,0,2.5.87,3.29.87s2.26-1.07,3.81-.91a4.64,4.64,0,0,1,3.64,2,4.56,4.56,0,0,0-2.15,3.81,4.41,4.41,0,0,0,2.68,4,11.05,11.05,0,0,1-1.38,2.83M13,3.5A4.55,4.55,0,0,1,15.94,2a4.38,4.38,0,0,1-1,3.19,3.65,3.65,0,0,1-3,1.42A4.27,4.27,0,0,1,13,3.5Z"
+            fill="white"
+          />
+        </svg>
+      }
+      size="md"
+      rounded="md"
+      className="!bg-black"
+      aria-label="Apple"
+    />
+  </div>
+</div>
+); };
+
+export default App;
+  ```
+</Tabs.Tab>
+
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>icon</td>
+      <td>ReactNode</td>
+      <td>Displays ActionIcon content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>variant</td>
+      <td>
+        <span className="badge">solid</span>  
+        <span className="badge">outline</span> 
+        <span className="badge">light</span> 
+      </td>
+      <td>Changes ActionIcon appreance</td>
+      <td><span className="badge">solid</span></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">accent</span>  
+        <span className="badge">success</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">danger</span>  
+      </td>
+      <td>Changes ActionIcon color</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">default</span> 
+        <span className="badge">xs</span> 
+        <span className="badge">sm</span> 
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span>
+        <span className="badge">2xl</span> 
+      </td>
+      <td>Changes ActionIcon size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+    <tr>
+      <td>rounded</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>  
+        <span className="badge">none</span>   
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span>  
+        <span className="badge">lg</span>
+        <span className="badge">full</span>
+      </td>
+      <td>Changes ActionIcon the border radius</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>loading</td>
+      <td>boolean</td>
+      <td>Whether the ActionIcon is loading</td>
+      <td> false </td>
+    </tr>
+  </tbody>
+</table>}
