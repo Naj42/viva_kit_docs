@@ -272,7 +272,6 @@ export const SelectRoundedGroup = () => {
   const [roundedDefaultValue, setRoundedDefaultValue] = useState();
   const [roundedMdValue, setRoundedMdValue] = useState();
   const [roundedLgValue, setRoundedLgValue] = useState();
-  const [roundedXlValue, setRoundedXlValue] = useState();
   const [roundedFullValue, setRoundedFullValue] = useState();
 
   const [options, setOptions] = useState([
@@ -325,13 +324,6 @@ export const SelectRoundedGroup = () => {
         value={roundedLgValue}
         rounded='lg'
         label="Large"
-      />
-      <Select
-        options={options}
-        onChange={(option) => setRoundedXlValue(option)}
-        value={roundedXlValue}
-        rounded='xl'
-        label="Extra Large"
       />
       <Select
         options={options}
@@ -357,7 +349,6 @@ export const SelectRoundedGroup = () => {
   const [roundedDefaultValue, setRoundedDefaultValue] = useState();
   const [roundedMdValue, setRoundedMdValue] = useState();
   const [roundedLgValue, setRoundedLgValue] = useState();
-  const [roundedXlValue, setRoundedXlValue] = useState();
   const [roundedFullValue, setRoundedFullValue] = useState();
 
   const [options, setOptions] = useState([
@@ -410,13 +401,6 @@ export const SelectRoundedGroup = () => {
         value={roundedLgValue}
         rounded='lg'
         label="Large"
-      />
-      <Select
-        options={options}
-        onChange={(option) => setRoundedXlValue(option)}
-        value={roundedXlValue}
-        rounded='xl'
-        label="Extra Large"
       />
       <Select
         options={options}
