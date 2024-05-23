@@ -41,6 +41,34 @@ export const SingleString= () => {
 </Tabs.Tab>
 </Tabs>
 
+### Highlight Multiple string
+
+You can Highlight mutiple selected string by passing all string as an array using the `highlightText` prop
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const MultipleString =() => {
+  return(
+    <div>
+    <VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
+        You can also highlight multiple selection to meet your requirments.
+    </VKHighlight>
+    </div>
+  );
+};
+
+<MultipleString />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+<VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
+    You can also highlight multiple selection to meet your requirments.
+</VKHighlight>
+```
+</Tabs.Tab>
+</Tabs>
+
 ### Background Colors
 
 Enhance user experience by highlighting selections with seven different background colors. Using `background` prop you can easily customize background color. 
