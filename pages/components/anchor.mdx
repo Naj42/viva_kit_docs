@@ -17,28 +17,21 @@ The Anchor component comes with 6 different sizes that you can change using the 
 
   <Tabs.Tab>
 export const AnchorSizeGroup = () => {
+    const sizes = [ "xs", "sm", "md", "lg", "xl", "2xl"];
 
 return (
 
 <div className="flex gap-6">
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xs">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="sm">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="md">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="lg">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xl">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="2xl">
-    Let's Go
-  </VKAnchor>
+  {sizes.map((size) => (
+    <VKAnchor
+      href="https://viva-kit.vivasoftltd.com/"
+      target="_blank"
+      key={size}
+      size={size}
+    >
+      Let's Go
+    </VKAnchor>
+  ))}
 </div>
 ); };
 
@@ -48,35 +41,15 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAnchor } from "@vivakits/react-components";
 
-const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xs">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="sm">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="md">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="lg">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xl">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="2xl">
-    Let's Go
-  </VKAnchor>
-</div>
-); };
-
-export default App;
+    <div className="flex gap-6">
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" size="xs">Let's Go</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" size="sm">Let's Go</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" size="md">Let's Go</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" size="lg">Let's Go</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" size="xl">Let's Go</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" size="2xl">Let's Go</VKAnchor>
+    </div>
 
 ````
 </Tabs.Tab>
@@ -92,19 +65,19 @@ The Anchor component comes with 7 different colors that you can change using the
 export const AnchorColorGroup = () => {
   return (
     <div>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="primary">This is a primary color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="primary">This is a primary color anchor</VKAnchor>
         <br/>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="secondary">This is a secondary color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="secondary">This is a secondary color anchor</VKAnchor>
         <br/>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="success">This is a success color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="success">This is a success color anchor</VKAnchor>
         <br/>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="danger">This is a danger color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="danger">This is a danger color anchor</VKAnchor>
         <br/>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="warning">This is a warning color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="warning">This is a warning color anchor</VKAnchor>
         <br/>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="dark">This is a dark color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="dark">This is a dark color anchor</VKAnchor>
         <br/>
-        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="light">This is a light color anchor</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" color="light">This is a light color anchor</VKAnchor>
     </div>
   );
 };
@@ -115,65 +88,64 @@ export const AnchorColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAnchor } from "@vivakits/react-components";
 
-const App = () => {
-  return (
-    <div>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="primary"
-          >
-          This is a primary color anchor
-        </VKAnchor>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="secondary"
-        >
-        This is a secondary color anchor
-        </VKAnchor>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="success"
-        >
-          This is a success color anchor
-        </VKAnchor>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="danger"
-        >
-          This is a danger color anchor
-        </VKAnchor>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="warning"
-        >
-          This is a warning color anchor
-        </VKAnchor>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="dark"
-        >
-          This is a dark color anchor
-        </VKAnchor>
-        <VKAnchor
-          href="https://vivakit.vivasoftltd.com/"
-          target="_blank"
-          color="light"
-        >
-          This is a light color anchor
-        </VKAnchor>
-    </div>
-  );
-};
-
-export default App;
+<div>
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="primary"
+  >
+    This is a primary color anchor
+  </VKAnchor>
+  <br />
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="secondary"
+  >
+    This is a secondary color anchor
+  </VKAnchor>
+  <br />
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="success"
+  >
+    This is a success color anchor
+  </VKAnchor>
+  <br />
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="danger"
+  >
+    This is a danger color anchor
+  </VKAnchor>
+  <br />
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="warning"
+  >
+    This is a warning color anchor
+  </VKAnchor>
+  <br />
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="dark"
+  >
+    This is a dark color anchor
+  </VKAnchor>
+  <br />
+  <VKAnchor
+    href="https://viva-kit.vivasoftltd.com/"
+    target="_blank"
+    color="light"
+  >
+    This is a light color anchor
+  </VKAnchor>
+</div>
 
 ````
 
@@ -193,21 +165,21 @@ return (
 
 <div className="flex gap-6">
   <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
+    href="https://viva-kit.vivasoftltd.com/"
     target="_blank"
     underline="none"
   >
     No Underline
   </VKAnchor>
   <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
+    href="https://viva-kit.vivasoftltd.com/"
     target="_blank"
     underline="hover"
   >
     Hover To See Underline
   </VKAnchor>
   <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
+    href="https://viva-kit.vivasoftltd.com/"
     target="_blank"
     underline="always"
   >
@@ -222,38 +194,12 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAnchor } from "@vivakits/react-components";
 
-const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
-    target="_blank"
-    underline="none"
-  >
-    No Underline
-  </VKAnchor>
-  <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
-    target="_blank"
-    underline="hover"
-  >
-    Hover To See Underline
-  </VKAnchor>
-  <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
-    target="_blank"
-    underline="always"
-  >
-    Always Underlined
-  </VKAnchor>
-</div>
-); };
-
-export default App;
+    <div className="flex gap-6">
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" underline="none">No Underline</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" underline="hover">Hover To See Underline</VKAnchor>
+        <VKAnchor href="https://viva-kit.vivasoftltd.com/" target="_blank" underline="always">Always Underlined</VKAnchor>
+    </div>
 
 ```
 </Tabs.Tab>
