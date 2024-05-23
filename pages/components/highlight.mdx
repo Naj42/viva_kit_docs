@@ -34,9 +34,18 @@ export const SingleString= () => {
 </Tabs.Tab>
 <Tabs.Tab>
 ```jsx copy
-<VKHighlight highlightText="highlight your selection">
-    With the Highlight component, you can highlight your selection
-</VKHighlight>
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="highlight your selection">
+          With the Highlight component, you can highlight your selection
+      </VKHighlight>
+    </div>
+  )
+}
 ```
 </Tabs.Tab>
 </Tabs>
@@ -62,9 +71,18 @@ export const MultipleString =() => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
-    You can also highlight multiple selection to meet your requirments.
-</VKHighlight>
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
+          You can also highlight multiple selection to meet your requirments.
+      </VKHighlight>
+    </div>
+  )
+}
 ```
 </Tabs.Tab>
 </Tabs>
@@ -107,27 +125,36 @@ export const DifferntVarientsBG= () => {
 </Tabs.Tab>
 <Tabs.Tab>
 ```jsx copy
-<VKHighlight highlightText="spotlight" background="primary">
-    Highlight selection with primary background color. 
-</VKHighlight>
-<VKHighlight highlightText="spotlight" background="secondary">
-    Highlight selection with secondary background color. 
-</VKHighlight>
-<VKHighlight highlightText="spotlight" background="success">
-    Highlight selection with success background color.
-</VKHighlight>
-<VKHighlight highlightText="spotlight" background="danger">
-    Highlight selection with danger background color. 
-</VKHighlight>
-<VKHighlight highlightText="spotlight" background="warning">
-    Highlight selection with warning background color. 
-</VKHighlight>
-<VKHighlight highlightText="spotlight" background="dark">
-    Highlight selection with dark background color. 
-</VKHighlight>
-<VKHighlight highlightText="spotlight" background="light">
-    Highlight selection with light background color.
-</VKHighlight>
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="spotlight" background="primary">
+          Highlight selection with primary background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="secondary">
+          Highlight selection with secondary background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="success">
+          Highlight selection with success background color.
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="danger">
+          Highlight selection with danger background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="warning">
+          Highlight selection with warning background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="dark">
+          Highlight selection with dark background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="light">
+          Highlight selection with light background color.
+      </VKHighlight>
+    </div>
+  )
+}
 ```
 </Tabs.Tab>
 </Tabs>
@@ -168,9 +195,18 @@ export const VarientsRadius= () => {
 </Tabs.Tab>
 <Tabs.Tab>
 ```jsx copy
-<VKHighlight highlightText="corner radius" rounded="default" background="secondary">
-  You can change corner radius of your selection.
-</VKHighlight>
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="corner radius" rounded="default" background="secondary">
+        You can change corner radius of your selection.
+      </VKHighlight>
+    </div>
+  )
+}
 ```
 </Tabs.Tab>
 </Tabs>
@@ -198,12 +234,21 @@ export const AddingStyles= () => {
 </Tabs.Tab>
 <Tabs.Tab>
 ```jsx copy
-<VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
-    Customize selection using style. 
-</VKHighlight>
-<VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-3xl">
-    Customize selection using className. 
-</VKHighlight>
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
+          Customize selection using style. 
+      </VKHighlight>
+      <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-3xl">
+          Customize selection using className. 
+      </VKHighlight>
+    </div>
+  )
+}
 ```
 </Tabs.Tab>
 </Tabs>
