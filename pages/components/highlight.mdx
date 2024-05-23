@@ -50,8 +50,8 @@ You can Highlight mutiple selected string by passing all string as an array usin
 export const MultipleString =() => {
   return(
     <div>
-    <VKHighlight highlightText={['highlight', 'your', 'selection']}>
-        With the Highlight component, you can highlight your selection.
+    <VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
+        You can also highlight multiple selection to meet your requirments.
     </VKHighlight>
     </div>
   );
@@ -62,7 +62,7 @@ export const MultipleString =() => {
 
 <Tabs.Tab>
 ```jsx copy
-<VKHighlight highlightText={['highlight', 'your', 'selection']}>
+<VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
     You can also highlight multiple selection to meet your requirments.
 </VKHighlight>
 ```
