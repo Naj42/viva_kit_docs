@@ -1,0 +1,339 @@
+import { Select, VKGroup, Checkbox } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import {useState} from 'react';
+
+# Select
+
+### Basic Select
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SelectComponent = () => {
+  const [value, setValue] = useState();
+  const [isClearable, setIsClearable] = useState(false);
+  const [isSearchable, setIsSearchable] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isMultiple, setIsMultiple] = useState(false);
+  const [isCreatable, setIsCreatable] = useState(false);
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  return (
+    <div className="flex flex-col items-start gap-3">
+      <Select 
+        options={options} 
+        onChange={(option) => setValue(option)} 
+        value={value} 
+        showCancel={isClearable} 
+        isSearchable={isSearchable} 
+        isLoading={isLoading} 
+        isMultiple={isMultiple}
+        isCreatable={isCreatable}
+      /> 
+      <div className='space-x-3' >
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsClearable((state) => !state)} 
+        >
+          Clearable
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsSearchable((state) => !state)} 
+          checked={isSearchable}
+        >
+          Searchable
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsLoading((state) => !state)} 
+        >
+          Loading
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsMultiple((state) => !state)} 
+        >
+          Multiple
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={(e) => { 
+            setIsCreatable((state) => !state);
+            if(e.target.checked) {
+              setIsSearchable(true);
+            }
+          }} 
+        >
+          Createable
+        </Checkbox>
+      </div>
+    </div>
+  );
+};
+
+<SelectComponent />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+const [value, setValue] = useState();
+  const [isClearable, setIsClearable] = useState(false);
+  const [isSearchable, setIsSearchable] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isMultiple, setIsMultiple] = useState(false);
+  const [isCreatable, setIsCreatable] = useState(false);
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  return (
+    <div className="flex flex-col items-start gap-3">
+      <Select 
+        options={options} 
+        onChange={(option) => setValue(option)} 
+        value={value} 
+        showCancel={isClearable} 
+        isSearchable={isSearchable} 
+        isLoading={isLoading} 
+        isMultiple={isMultiple}
+        isCreatable={isCreatable}
+      /> 
+      <div className='space-x-3' >
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsClearable((state) => !state)} 
+        >
+          Clearable
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsSearchable((state) => !state)} 
+          checked={isSearchable}
+        >
+          Searchable
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsLoading((state) => !state)} 
+        >
+          Loading
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={() => setIsMultiple((state) => !state)} 
+        >
+          Multiple
+        </Checkbox>
+        <Checkbox 
+          labelClassName='ml-2' 
+          rounded='md' 
+          onChange={(e) => { 
+            setIsCreatable((state) => !state);
+            if(e.target.checked) {
+              setIsSearchable(true);
+            }
+          }} 
+        >
+          Createable
+        </Checkbox>
+      </div>
+    </div>
+  );
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+### Async
+
+##### Async Options
+If your options are not static, you need to fetch it from backend. You can enable `asyncLoading` to true and 
+also need to pass a callback function to `loadOptions` prop which returns an array of options.
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const AysncOptionsSelect = () => {
+  const [value, setValue] = useState();
+  const [isSearchable, setIsSearchable] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const options = [
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ];
+
+  const loadOptions = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      return options;
+    }, 1000);
+    setIsLoading(false);
+  };
+
+  return (
+    <div className="flex flex-col items-start gap-3">
+      <Select 
+        options={options} 
+        onChange={(option) => setValue(option)} 
+        value={value} 
+        asyncLoading={true}
+        loadOptions={loadOptions}
+        isLoading={isLoading}
+      /> 
+    </div>
+  );
+};
+
+<AysncOptionsSelect />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+const [value, setValue] = useState();
+  const [isSearchable, setIsSearchable] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const options = [
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ];
+
+  const loadOptions = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      return options;
+    }, 1000);
+    setIsLoading(false);
+  };
+
+  return (
+    <div className="flex flex-col items-start gap-3">
+      <Select 
+        options={options} 
+        onChange={(option) => setValue(option)} 
+        value={value} 
+        asyncLoading={true}
+        loadOptions={loadOptions}
+        isLoading={isLoading}
+      /> 
+    </div>
+  );
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+##### Async Creatable Select
+If your options are not static, you need to fetch it from backend. You can enable `asyncLoading` to true and 
+also need to pass a callback function to `loadOptions` prop which returns an array of options.
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const AysncCreatableSelect = () => {
+  const [value, setValue] = useState();
+  const [isSearchable, setIsSearchable] = useState(false);
+  const [isCreatable, setIsCreatable] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const options = [
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ];
+
+  const addOptionAsync = async (options) => {
+    setIsLoading(true);
+    console.log(options);
+    setTimeout(() => {
+      return options;
+    }, 1000);
+    setIsLoading(false);
+    
+  };
+
+  return (
+    <div className="flex flex-col items-start gap-3">
+      <Select
+        options={options}
+        onChange={(option) => setValue(option)} 
+        value={value}
+        isCreatable
+        asyncLoading
+        isSearchable
+        addOptionAsync={addOptionAsync}
+        isLoading={isLoading}
+      /> 
+    </div>
+  );
+};
+
+<AysncCreatableSelect />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+  const [value, setValue] = useState();
+  const [isSearchable, setIsSearchable] = useState(false);
+  const [isCreatable, setIsCreatable] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const options = [
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ];
+
+  const addOptionAsync = async (options) => {
+    setIsLoading(true);
+    console.log(options);
+    setTimeout(() => {
+      return options;
+    }, 1000);
+    setIsLoading(false);
+    
+  };
+
+  return (
+    <div className="flex flex-col items-start gap-3">
+      <Select
+        options={options}
+        onChange={(option) => setValue(option)} 
+        value={value}
+        isCreatable
+        asyncLoading
+        isSearchable
+        addOptionAsync={addOptionAsync}
+        isLoading={isLoading}
+      /> 
+    </div>
+  );
+  ```
+  </Tabs.Tab>
+</Tabs>
+
