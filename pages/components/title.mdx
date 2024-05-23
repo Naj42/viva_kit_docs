@@ -17,14 +17,17 @@ The Title component comes with 7 different variants that you can change using th
 
   <Tabs.Tab>
 export const TitleVariantGroup = () => {
-    const variants = [ "h1" ,"h2", "h3", "h4", "h5", "h6", "paragraph" ];
 
 return (
 
-<div className="flex gap-6">
-  {variants.map((variant) => (
-    <VKTitle variant={variant}>{variant}</VKTitle>
-  ))}
+<div className="flex justify-center items-center gap-6">
+  <VKTitle variant="h1">h1</VKTitle>
+  <VKTitle variant="h2">h2</VKTitle>
+  <VKTitle variant="h3">h3</VKTitle>
+  <VKTitle variant="h4">h4</VKTitle>
+  <VKTitle variant="h5">h5</VKTitle>
+  <VKTitle variant="h6">h6</VKTitle>
+  <VKTitle variant="paragraph">paragraph</VKTitle>
 </div>
 ); };
 
@@ -34,16 +37,24 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
+import { VKTitle } from "@vivakits/react-components";
 
-    <div className="flex gap-6">
-        <VKTitle variant="h1">h1</VKTitle>
-        <VKTitle variant="h2">h2</VKTitle>
-        <VKTitle variant="h3">h3</VKTitle>
-        <VKTitle variant="h4">h4</VKTitle>
-        <VKTitle variant="h5">h5</VKTitle>
-        <VKTitle variant="h6">h6</VKTitle>
-        <VKTitle variant="paragraph">paragraph</VKTitle>
-    </div>
+const App = () => {
+
+return (
+
+<div className="flex justify-center items-center gap-6">
+  <VKTitle variant="h1">h1</VKTitle>
+  <VKTitle variant="h2">h2</VKTitle>
+  <VKTitle variant="h3">h3</VKTitle>
+  <VKTitle variant="h4">h4</VKTitle>
+  <VKTitle variant="h5">h5</VKTitle>
+  <VKTitle variant="h6">h6</VKTitle>
+  <VKTitle variant="paragraph">paragraph</VKTitle>
+</div>
+); };
+
+export default App;
 
 ````
 </Tabs.Tab>
@@ -58,7 +69,7 @@ The Title component comes with 8 different colors that you can change using the 
   <Tabs.Tab>
 export const TitleColorGroup = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-3">
         <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
         <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
         <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
@@ -77,17 +88,24 @@ export const TitleColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
+import { VKTitle } from "@vivakits/react-components";
 
-<div>
-  <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
-  <VKTitle color="light">The quick brown fox jumps over the lazy dog.</VKTitle>
-</div>
+const App = () => {
+  return (
+    <div className="flex flex-col justify-center items-center gap-3">
+        <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTitle color="light">The quick brown fox jumps over the lazy dog.</VKTitle>
+    </div>
+  );
+};
+
+export default App;
 
 ````
 
@@ -103,13 +121,10 @@ The Title component comes with 4 different decorations and 8 decoration colors t
   <Tabs.Tab>
 export const TitleDecorationGroup = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-3">
         <VKTitle decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <br/>
         <VKTitle decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <br/>
         <VKTitle decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <br/>
         <VKTitle decoration="none">The quick brown fox jumps over the lazy dog.</VKTitle>
     </div>
   );
@@ -121,8 +136,13 @@ export const TitleDecorationGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
+import { VKTitle } from "@vivakits/react-components";
 
-<div>
+const App = () => {
+
+return (
+
+<div className="flex flex-col justify-center items-center gap-3">
   <VKTitle decoration="underline" decorationColor="primary">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
@@ -136,6 +156,9 @@ export const TitleDecorationGroup = () => {
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
 </div>
+); };
+
+export default App;
 
 ````
 
@@ -152,7 +175,7 @@ The Title component comes with 10 different font sizes that you can change using
   <Tabs.Tab>
 export const TitleFontWeightGroup = () => {
 return (
-<div>
+<div className="flex flex-col justify-center items-center gap-3">
   <VKTitle weight="default">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
@@ -192,39 +215,45 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
+import { VKTitle } from "@vivakits/react-components";
 
-<div>
-  <VKTitle weight="default">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="100">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="200">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="300">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="400">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="500">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="600">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="700">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="800">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="900">
-    The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-</div>
+const App = () => {
+
+return (
+
+  <div className="flex flex-col justify-center items-center gap-3">
+    <VKTitle weight="default">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="100">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="200">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="300">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="400">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="500">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="600">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="700">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="800">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+    <VKTitle weight="900">
+      The quick brown fox jumps over the lazy dog.
+    </VKTitle>
+  </div>
+); };
 ```
 </Tabs.Tab>
 </Tabs>
@@ -238,35 +267,28 @@ The Title component comes with 5 word breaks and 6 word spacings that you can ch
   <Tabs.Tab>
 export const TitleBreakSpacingGroup = () => {
 return (
-<div>
+<div className="flex flex-col justify-center items-center gap-3">
   <VKTitle wordBreak="default">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
   </VKTitle>
-  <br/>
   <VKTitle wordBreak="all">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
   </VKTitle>
-  <br/>
   <VKTitle wordBreak="words">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
   </VKTitle>
-  <br/>
   <VKTitle wordSpacing="tighter" variant="h4">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
-  <br/>
   <VKTitle wordSpacing="tight" variant="h3">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
-  <br/>
    <VKTitle wordSpacing="normal" variant="h5">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
-  <br/>
    <VKTitle wordSpacing="wider" variant="h6">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
-  <br/>
   <VKTitle wordSpacing="widest" variant="h4">
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
@@ -279,8 +301,13 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
+import { VKTitle } from "@vivakits/react-components";
 
-<div>
+const App = () => {
+
+return (
+
+<div className="flex flex-col justify-center items-center gap-3">
   <VKTitle wordBreak="default">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
   </VKTitle>
@@ -306,6 +333,9 @@ return (
     The quick brown fox jumps over the lazy dog.
   </VKTitle>
 </div>
+); };
+
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>

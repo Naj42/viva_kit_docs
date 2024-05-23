@@ -1,8 +1,8 @@
 import {
   VKNotifications,
   useVKNotifications,
+  Button,
 } from "@vivakits/react-components";
-import { Button } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
 ## Notifications
@@ -13,7 +13,6 @@ import { Tabs } from "nextra/components";
 import {
   VKNotifications,
   useVKNotifications,
-  Button,
 } from "@vivakits/react-components";
 ```
 
@@ -104,77 +103,84 @@ export const NotificationsVariantGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-export const Notifications = () => {
-  const { notify } = useVKNotifications();
-  return (
-    <>
-        <VKNotifications />
-        <div className="flex items-center gap-3">
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "default",
-                        title: "Default",
-                        description: "Default Notification",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Default
-            </Button>
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "success",
-                        title: "Success",
-                        description: "Success Notification",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Success
-            </Button>
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "warning",
-                        title: "Warning",
-                        description: "Warning Notification",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Warning
-            </Button>
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "error",
-                        title: "Error",
-                        description: "Error Notification",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Error
-            </Button>
-        </div>
-    </>
+import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+
+const App = () => {
+
+const { notify } = useVKNotifications();
+
+return (
+
+<>
+  <VKNotifications />
+  <div className="flex items-center gap-3">
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          variant: "default",
+          title: "Default",
+          description: "Default Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Default
+    </Button>
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          variant: "success",
+          title: "Success",
+          description: "Success Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Success
+    </Button>
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          variant: "warning",
+          title: "Warning",
+          description: "Warning Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Warning
+    </Button>
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          variant: "error",
+          title: "Error",
+          description: "Error Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Error
+    </Button>
+  </div>
+</>
 
 );
 };
+
+export default App;
 
 ````
 </Tabs.Tab>
@@ -338,8 +344,11 @@ export const NotificationsColorGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-export const Notifications = () => {
-    const { notify } = useVKNotifications();
+import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+
+const App = () => {
+const { notify } = useVKNotifications();
+
   return (
     <>
         <VKNotifications />
@@ -484,6 +493,8 @@ export const Notifications = () => {
 );
 };
 
+export default App;
+
 ````
 
 </Tabs.Tab>
@@ -573,77 +584,82 @@ export const NotificationsSizeGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-export const Notifications = () => {
-    const { notify } = useVKNotifications();
-  return (
-    <>
-        <VKNotifications />
-        <div className="flex items-center gap-3">
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        size: "default",
-                        title: "Default",
-                        description: "Default Notification",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Default
-            </Button>
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        size: "sm",
-                        title: "Small",
-                        description: "Small Notification",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Small
-            </Button>
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        size: "md",
-                        title: "Medium",
-                        description: "Medium Notification",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Medium
-            </Button>
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        size: "lg",
-                        title: "Large",
-                        description: "Large Notification",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Large
-            </Button>
-        </div>
-    </>
+import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+
+const App = () => {
+const { notify } = useVKNotifications();
+return (
+
+<>
+  <VKNotifications />
+  <div className="flex items-center gap-3">
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          size: "default",
+          title: "Default",
+          description: "Default Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Default
+    </Button>
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          size: "sm",
+          title: "Small",
+          description: "Small Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Small
+    </Button>
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          size: "md",
+          title: "Medium",
+          description: "Medium Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Medium
+    </Button>
+    <Button
+      size="md"
+      rounded="lg"
+      onClick={() => {
+        notify({
+          size: "lg",
+          title: "Large",
+          description: "Large Notification",
+          autoClose: true,
+          duration: 3000,
+        });
+      }}
+    >
+      Large
+    </Button>
+  </div>
+</>
 
 );
 };
+
+export default App;
 
 ````
 
@@ -734,7 +750,9 @@ export const NotificationsPlacementGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-export const Notifications = () => {
+import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+
+const App = () => {
     const { notify } = useVKNotifications();
   return (
     <>
@@ -805,6 +823,8 @@ export const Notifications = () => {
 
 );
 };
+
+export default App;
 
 ````
 
