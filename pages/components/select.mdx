@@ -1304,6 +1304,91 @@ export const SelectCheckedIconGroup = () => {
 </Tabs.Tab>
 </Tabs>
 
+### Customization
+We can customize the options using the `node` property in the options array. And if we want to show the node in the selected value, we can use the `showValueNode` prop. 
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+
+export const SelectCustomizationGroup = () => {
+
+const [customSelect1, setCustomSelect1] = useState();
+const [customSelect2, setCustomSelect2] = useState();
+
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-blue-900"/><div>Blue</div></div>) },
+    { label: 'White', value: 'White', node :(<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-white border"/><div>White</div></div>) },
+    { label: 'Black', value: 'Black', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-black"/><div>Black</div></div>) },
+    { label: 'Orange', value: 'Orange', node : (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-orange-600"/><div>Orange</div></div>) }
+  ]);
+
+
+
+  return (
+   <div className="flex items-center gap-16 flex-wrap justify-around py-8 ">
+    <Select
+      options={options}
+      onChange={(option) => setCustomSelect1(option)}
+      value={customSelect1}
+
+    />
+    <Select
+      options={options}
+      onChange={(option) => setCustomSelect2(option)}
+      value={customSelect2}
+      showValueNode
+    />
+    </div>
+  );
+};
+
+<SelectCustomizationGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+export const SelectCustomizationGroup = () => {
+
+const [customSelect1, setCustomSelect1] = useState();
+const [customSelect2, setCustomSelect2] = useState();
+
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-blue-900"/><div>Blue</div></div>) },
+    { label: 'White', value: 'White', node :(<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-white border"/><div>White</div></div>) },
+    { label: 'Black', value: 'Black', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-black"/><div>Black</div></div>) },
+    { label: 'Orange', value: 'Orange', node : (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-orange-600"/><div>Orange</div></div>) }
+  ]);
+
+
+
+  return (
+   <div className="flex items-center gap-16 flex-wrap justify-around py-8 ">
+    <Select
+      options={options}
+      onChange={(option) => setCustomSelect1(option)}
+      value={customSelect1}
+
+    />
+    <Select
+      options={options}
+      onChange={(option) => setCustomSelect2(option)}
+      value={customSelect2}
+      showValueNode
+    />
+    </div>
+  );
+};
+
+```
+</Tabs.Tab>
+</Tabs>
+
+
+
+
+
+
 
 
 
