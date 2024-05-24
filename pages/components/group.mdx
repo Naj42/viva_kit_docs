@@ -1,6 +1,13 @@
-import {  VKGroup, Button, VKTitle, VKRadioButton, Checkbox, VKAvatar} from "@vivakits/react-components";
+import {
+  VKGroup,
+  Button,
+  VKTitle,
+  VKRadioButton,
+  Checkbox,
+  VKAvatar,
+} from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
-import { useState } from 'react'
+import { useState } from "react";
 
 # Group
 
@@ -10,9 +17,9 @@ import { useState } from 'react'
 import { VKGroup } from "@vivakits/react-components";
 ```
 
-### Orientations
+### Orientation
 
-The Group component comes with 2 different orientations that you can change it using the `orientation` prop.
+The Group component comes with 2 different orientations that you can change using the `orientation` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -57,64 +64,74 @@ export const GroupOrientationGroup = () => {
 };
 
     <GroupOrientationGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
 ```jsx copy
-import { Button } from "@vivakits/react-components";
+import { VKGroup, Button } from "@vivakits/react-components";
 ```
 
 ```jsx copy
 // Horizontal Group
 
-<div className="flex items-end gap-3">
-    <VKGroup
+const App = () => {
+  return (
+    <div className="flex flex-col items-start gap-6">
+      <VKGroup
         orientation="horizontal"
-        childrenProps={
-          {
-            variant: "outline",
-            className: "border-0",
-          } 
-        }
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
         size="md"
         rounded="sm"
-    >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-      <Button>Button 4</Button>
-    </VKGroup>
-</div>
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
 
 ```jsx copy
 // Vertical Group
 
-<div className="flex items-end gap-3">
-    <VKGroup
-      orientation="vertical"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex flex-col items-start gap-6">
+      <VKGroup
+        orientation="vertical"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } as ButtonProps
-      }
-      size="md"
-      rounded="sm"
-    >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-      <Button>Button 4</Button>
-    </VKGroup>
-</div>
+        }}
+        size="md"
+        rounded="sm"
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
-### Separator Colors 
+### Separator Color
 
-The Group component comes with 7 different separator colors that you can change it using the `separatorColor` prop.
+The Group component comes with 7 different separator colors that you can change using the `separatorColor` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -148,158 +165,149 @@ export const GroupSeparatorColorGroup = () => {
 };
 
     <GroupSeparatorColorGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
-```jsx copy
-import { Button } from "@vivakits/react-components";
-```
 
 ```jsx copy
-<div className="flex flex-wrap gap-3">
+import { VKGroup, Button } from "@vivakits/react-components";
 
-    {/* primary */}
-    <VKGroup
-      separatorColor="primary"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex flex-wrap gap-3">
+      {/* primary */}
+      <VKGroup
+        separatorColor="primary"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* secondary */}
-     <VKGroup
-      separatorColor="secondary"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* secondary */}
+      <VKGroup
+        separatorColor="secondary"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* success */}
-     <VKGroup
-      separatorColor="success"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* success */}
+      <VKGroup
+        separatorColor="success"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-        
-     {/* warning */}
-     <VKGroup
-      separatorColor="warning"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* warning */}
+      <VKGroup
+        separatorColor="warning"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* danger */}
-     <VKGroup
-      separatorColor="danger"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* danger */}
+      <VKGroup
+        separatorColor="danger"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* dark */}
-     <VKGroup
-      separatorColor="dark"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* dark */}
+      <VKGroup
+        separatorColor="dark"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* light */}
-     <VKGroup
-      separatorColor="light"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* light */}
+      <VKGroup
+        separatorColor="light"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-</div>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
+### Color
 
-### Colors 
-
-The Group component comes with 8 different colors that you can change it using the `color` prop.
+The Group component comes with 8 different colors that you can change using the `color` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
 <Tabs.Tab>
 export const GroupColorGroup = () => {
   const colors = [
-                {color: "primary", fontColor: "light"}, 
-                {color: "secondary", fontColor: "light"},
-                {color: "success", fontColor: "light"},
-                {color: "warning", fontColor: "light"},
-                {color: "danger", fontColor: "light"},
-                {color: "dark", fontColor: "light"},
-                {color: "light", fontColor: "dark"},
-                {color: "none", fontColor: "dark"},
-                ]
+    {color: "primary", fontColor: "light"}, 
+    {color: "secondary", fontColor: "light"},
+    {color: "success", fontColor: "light"},
+    {color: "warning", fontColor: "light"},
+    {color: "danger", fontColor: "light"},
+    {color: "dark", fontColor: "light"},
+    {color: "light", fontColor: "dark"},
+    {color: "none", fontColor: "dark"},
+  ]
   return (
     <div className="flex flex-wrap items-start gap-2">
     {
@@ -325,129 +333,120 @@ export const GroupColorGroup = () => {
 };
 
     <GroupColorGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
-```jsx copy
-import { VKTitle } from "@vivakits/react-components";
-```
 
 ```jsx copy
-<div className="flex items-end gap-3">
+import { VKGroup, VKTitle } from "@vivakits/react-components";
 
-    {/* primary */}
-    <VKGroup
-      color="primary"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+      {/* primary */}
+      <VKGroup
+        color="primary"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="light">Text 1</VKTitle>
-      <VKTitle color="light">Text 2</VKTitle>
-      <VKTitle color="light">Text 3</VKTitle>
-    </VKGroup>
-    
-     {/* secondary */}
-     <VKGroup
-      color="secondary"
-      childrenProps={
-        {
+        <VKTitle color="light">Text 1</VKTitle>
+        <VKTitle color="light">Text 2</VKTitle>
+        <VKTitle color="light">Text 3</VKTitle>
+      </VKGroup>
+
+      {/* secondary */}
+      <VKGroup
+        color="secondary"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="light">Text 1</VKTitle>
-      <VKTitle color="light">Text 2</VKTitle>
-      <VKTitle color="light">Text 3</VKTitle>
-    </VKGroup>
-    
-     {/* success */}
-     <VKGroup
-      color="success"
-      childrenProps={
-        {
+        <VKTitle color="light">Text 1</VKTitle>
+        <VKTitle color="light">Text 2</VKTitle>
+        <VKTitle color="light">Text 3</VKTitle>
+      </VKGroup>
+
+      {/* success */}
+      <VKGroup
+        color="success"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="light">Text 1</VKTitle>
-      <VKTitle color="light">Text 2</VKTitle>
-      <VKTitle color="light">Text 3</VKTitle>
-    </VKGroup>
-        
-     {/* warning */}
-     <VKGroup
-      color="warning"
-      childrenProps={
-        {
+        <VKTitle color="light">Text 1</VKTitle>
+        <VKTitle color="light">Text 2</VKTitle>
+        <VKTitle color="light">Text 3</VKTitle>
+      </VKGroup>
+
+      {/* warning */}
+      <VKGroup
+        color="warning"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="light">Text 1</VKTitle>
-      <VKTitle color="light">Text 2</VKTitle>
-      <VKTitle color="light">Text 3</VKTitle>
-    </VKGroup>
-    
-     {/* danger */}
-     <VKGroup
-      color="danger"
-      childrenProps={
-        {
+        <VKTitle color="light">Text 1</VKTitle>
+        <VKTitle color="light">Text 2</VKTitle>
+        <VKTitle color="light">Text 3</VKTitle>
+      </VKGroup>
+
+      {/* danger */}
+      <VKGroup
+        color="danger"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="light">Text 1</VKTitle>
-      <VKTitle color="light">Text 2</VKTitle>
-      <VKTitle color="light">Text 3</VKTitle>
-    </VKGroup>
-    
-    {/* dark */}
-     <VKGroup
-      color="dark"
-      childrenProps={
-        {
+        <VKTitle color="light">Text 1</VKTitle>
+        <VKTitle color="light">Text 2</VKTitle>
+        <VKTitle color="light">Text 3</VKTitle>
+      </VKGroup>
+
+      {/* dark */}
+      <VKGroup
+        color="dark"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="dark">Text 1</VKTitle>
-      <VKTitle color="dark">Text 2</VKTitle>
-      <VKTitle color="dark">Text 3</VKTitle>
-    </VKGroup>
-    
-    {/* light */}
-     <VKGroup
-      color="light"
-      childrenProps={
-        {
+        <VKTitle color="dark">Text 1</VKTitle>
+        <VKTitle color="dark">Text 2</VKTitle>
+        <VKTitle color="dark">Text 3</VKTitle>
+      </VKGroup>
+
+      {/* light */}
+      <VKGroup
+        color="light"
+        childrenProps={{
           className: "p-3",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <VKTitle color="dark">Text 1</VKTitle>
-      <VKTitle color="dark">Text 2</VKTitle>
-      <VKTitle color="dark">Text 3</VKTitle>
-    </VKGroup>
-</div>
+        <VKTitle color="dark">Text 1</VKTitle>
+        <VKTitle color="dark">Text 2</VKTitle>
+        <VKTitle color="dark">Text 3</VKTitle>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
-
 ### Border
 
-The Group component comes with 7 different border widths that you can change it using the `border` prop.
+The Group component comes with 7 different border widths that you can change using the `border` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -481,143 +480,134 @@ export const GroupBorderGroup = () => {
 };
 
     <GroupBorderGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
-```jsx copy
-import { Button } from "@vivakits/react-components";
-```
 
 ```jsx copy
-<div className="flex items-end gap-3">
+import { VKGroup, Button } from "@vivakits/react-components";
 
-    {/* none */}
-    <VKGroup
-      border="none"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+      {/* none */}
+      <VKGroup
+        border="none"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* xs */}
-     <VKGroup
-      border="xs"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* xs */}
+      <VKGroup
+        border="xs"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* sm */}
-     <VKGroup
-      border="sm"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* sm */}
+      <VKGroup
+        border="sm"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-        
-     {/* md */}
-     <VKGroup
-      border="md"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* md */}
+      <VKGroup
+        border="md"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* lg */}
-     <VKGroup
-      border="lg"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* lg */}
+      <VKGroup
+        border="lg"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* xl */}
-     <VKGroup
-      border="xl"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* xl */}
+      <VKGroup
+        border="xl"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* 2xl */}
-     <VKGroup
-      border="2xl"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* 2xl */}
+      <VKGroup
+        border="2xl"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-</div>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
-
 ### Border Color
 
-The Group component comes with 8 different border colors that you can change it using the `borderColor` prop.
+The Group component comes with 8 different border colors that you can change using the `borderColor` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -651,159 +641,149 @@ export const GroupBorderColorGroup = () => {
 };
 
     <GroupBorderColorGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
-```jsx copy
-import { Button } from "@vivakits/react-components";
-```
 
 ```jsx copy
-<div className="flex flex-wrap gap-3">
-    {/* default */}
-    <VKGroup
-      borderColor="default"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
+import { VKGroup, Button } from "@vivakits/react-components";
 
-    {/* primary */}
-    <VKGroup
-      borderColor="primary"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex flex-wrap gap-3">
+      {/* default */}
+      <VKGroup
+        borderColor="default"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* secondary */}
-     <VKGroup
-      borderColor="secondary"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* primary */}
+      <VKGroup
+        borderColor="primary"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* success */}
-     <VKGroup
-      borderColor="success"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* secondary */}
+      <VKGroup
+        borderColor="secondary"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-        
-     {/* warning */}
-     <VKGroup
-      borderColor="warning"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* success */}
+      <VKGroup
+        borderColor="success"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* danger */}
-     <VKGroup
-      borderColor="danger"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* warning */}
+      <VKGroup
+        borderColor="warning"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* dark */}
-     <VKGroup
-      borderColor="dark"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* danger */}
+      <VKGroup
+        borderColor="danger"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* light */}
-     <VKGroup
-      borderColor="light"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* dark */}
+      <VKGroup
+        borderColor="dark"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      size="md"
-      rounded="sm"
+        }}
+        size="md"
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-</div>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* light */}
+      <VKGroup
+        borderColor="light"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+        size="md"
+        rounded="sm"
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
+### Size
 
-### Sizes
-
-The Group component comes with 7 different border widths that you can change it using the `border` prop.
+The Group component comes with 7 different border widths that you can change using the `border` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -836,135 +816,127 @@ export const GroupSizeGroup = () => {
 };
 
     <GroupSizeGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
-```jsx copy
-import { Button } from "@vivakits/react-components";
-```
 
 ```jsx copy
-<div className="flex items-end gap-3">
+import { VKGroup, Button } from "@vivakits/react-components";
 
-    {/* default */}
-    <VKGroup
-      size="default"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+      {/* default */}
+      <VKGroup
+        size="default"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* xs */}
-     <VKGroup
-      size="xs"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* xs */}
+      <VKGroup
+        size="xs"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* sm */}
-     <VKGroup
-      size="sm"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* sm */}
+      <VKGroup
+        size="sm"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-        
-     {/* md */}
-     <VKGroup
-      size="md"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* md */}
+      <VKGroup
+        size="md"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* lg */}
-     <VKGroup
-      size="lg"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* lg */}
+      <VKGroup
+        size="lg"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* xl */}
-     <VKGroup
-      size="xl"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* xl */}
+      <VKGroup
+        size="xl"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* 2xl */}
-     <VKGroup
-      size="2xl"
-      childrenProps={
-        {
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* 2xl */}
+      <VKGroup
+        size="2xl"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
-      rounded="sm"
+        }}
+        rounded="sm"
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-</div>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
 ### Border Radius
 
-The Group component comes with 7 different border radius that you can change it using the `rounded` prop.
+The Group component comes with 7 different border radius that you can change using the `rounded` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -997,152 +969,143 @@ export const GroupRoundedSizeGroup = () => {
 };
 
     <GroupRoundedSizeGroup />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
-```jsx copy
-import { Button } from "@vivakits/react-components";
-```
 
 ```jsx copy
-<div className="flex items-end gap-3">
+import { VKGroup, Button } from "@vivakits/react-components";
 
-    {/* none */}
-    <VKGroup
-      size="md"
-      rounded="none"
-      childrenProps={
-        {
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+      {/* none */}
+      <VKGroup
+        size="md"
+        rounded="none"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
+        }}
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* xs */}
-     <VKGroup
-      size="md"
-      rounded="xs"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* sm */}
-     <VKGroup
-      size="md"
-      rounded="sm"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-        
-     {/* md */}
-     <VKGroup
-      size="md"
-      rounded="md"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-     {/* lg */}
-     <VKGroup
-      size="md"
-      rounded="lg"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* xl */}
-     <VKGroup
-      size="md"
-      rounded="xl"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-    
-    {/* 2xl */}
-     <VKGroup
-      size="md"
-      rounded="2xl"
-      childrenProps={
-        {
-          variant: "outline",
-          className: "border-0",
-        } 
-      }
-      >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
 
-    {/* full */}
-     <VKGroup
-      size="md"
-      rounded="full"
-      childrenProps={
-        {
+      {/* xs */}
+      <VKGroup
+        size="md"
+        rounded="xs"
+        childrenProps={{
           variant: "outline",
           className: "border-0",
-        } 
-      }
+        }}
       >
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </VKGroup>
-</div>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* sm */}
+      <VKGroup
+        size="md"
+        rounded="sm"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* md */}
+      <VKGroup
+        size="md"
+        rounded="md"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* lg */}
+      <VKGroup
+        size="md"
+        rounded="lg"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* xl */}
+      <VKGroup
+        size="md"
+        rounded="xl"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* 2xl */}
+      <VKGroup
+        size="md"
+        rounded="2xl"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+
+      {/* full */}
+      <VKGroup
+        size="md"
+        rounded="full"
+        childrenProps={{
+          variant: "outline",
+          className: "border-0",
+        }}
+      >
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </VKGroup>
+    </div>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
 
------------------------------------------------
+---
+
 ### Examples
 
-The Group component comes with 2 different orientations that you can change it using the `orientation` prop.
+The Group component comes with 2 different orientations that you can change using the `orientation` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -1154,306 +1117,349 @@ export const GroupExamples = () => {
     setSelectedValue(event.target.value);
   }
 
-  return (
-    <div className="flex flex-col items-start gap-6">
-        <div>
-        <VKTitle variant="h5" className="mb-2">Radio Group</VKTitle>
-        <VKGroup color="none" border="none" orientation="horizontal" childrenProps={{wrapperClassName: "mr-2"}} noSeparator>
-          <VKRadioButton
-            value={"accounting"}
-            selectedValue={selectedValue}
-            onChange={onRadioButtonChange}
-          >
-            Accounting
-          </VKRadioButton>
-          <VKRadioButton
-            value={"marketing"}
-            selectedValue={selectedValue}
-            onChange={onRadioButtonChange}
-          >
-            Marketing
-          </VKRadioButton>
-          <VKRadioButton
-            value={"production"}
-            selectedValue={selectedValue}
-            onChange={onRadioButtonChange}
-          >
-            Production
-          </VKRadioButton>
-          <VKRadioButton
-            value={"research"}
-            selectedValue={selectedValue}
-            onChange={onRadioButtonChange}
-          >
-            Research
-          </VKRadioButton>
-        </VKGroup>
-        </div>
-        <div>
-        <VKTitle variant="h5" className="mb-2">Button Group</VKTitle>
-        <VKGroup
-        orientation="horizontal"
-        childrenProps={
-          {
-            variant: "outline",
-            className: "border-0",
-          } 
-        }
-        size="md"
-        rounded="sm"
+return (
+
+<div className="flex flex-col items-start gap-6">
+  <div>
+    <VKTitle variant="h5" className="mb-2">
+      Radio Group
+    </VKTitle>
+    <VKGroup
+      color="none"
+      border="none"
+      orientation="horizontal"
+      childrenProps={{ wrapperClassName: "mr-2" }}
+      noSeparator
+    >
+      <VKRadioButton
+        value={"accounting"}
+        selectedValue={selectedValue}
+        onChange={onRadioButtonChange}
       >
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-      </VKGroup>
-    </div>
-    <div>
-        <VKTitle variant="h5" className="mb-2">Checkbox Group</VKTitle>
-        <VKGroup
-        color="none"
-        border="none"
-        noSeparator
-        childrenProps={
-            {
-            className: "m-2",
-            } 
-        }
-        rounded="sm"
-        >
-        <Checkbox rounded="full">1</Checkbox>
-        <Checkbox rounded="full">2</Checkbox>
-        <Checkbox rounded="full">3</Checkbox>
-        </VKGroup>
-    </div>
-    <div>
-        <VKTitle variant="h5" className="mb-2">Avatar Group</VKTitle>
-        <VKGroup
-        color="none"
-        border="none"
-        shouldOverlapChildren
-        noSeparator
-        maxCount={2}
-        truncatedElement={
-            <VKAvatar variant="text" color="light" size="md" />
-        }
-        childrenProps={{ className: "" }}
-        >
-        <VKAvatar
-            variant="image"
-            color="secondary"
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-            alt="person with camera"
-        />
-        <VKAvatar
-            variant="image"
-            color="secondary"
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-            alt="person with camera"
-        />
-        <VKAvatar
-            variant="image"
-            color="secondary"
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-            alt="person with camera"
-        />
-        </VKGroup>
-    </div>
-    <div>
-        <VKTitle variant="h5" className="mb-2">Avatar Group Without Overlap & Truncate Element </VKTitle>
-        <VKGroup
-        color="none"
-        border="none"
-        noSeparator
-        childrenProps={{ className: "" }}
-        >
-        <VKAvatar
-            variant="image"
-            color="secondary"
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-            alt="person with camera"
-        />
-        <VKAvatar
-            variant="image"
-            color="secondary"
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-            alt="person with camera"
-        />
-        <VKAvatar
-            variant="image"
-            color="secondary"
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-            alt="person with camera"
-        />
-        </VKGroup>
-    </div>
-    </div>
-  );
-};
+        Accounting
+      </VKRadioButton>
+      <VKRadioButton
+        value={"marketing"}
+        selectedValue={selectedValue}
+        onChange={onRadioButtonChange}
+      >
+        Marketing
+      </VKRadioButton>
+      <VKRadioButton
+        value={"production"}
+        selectedValue={selectedValue}
+        onChange={onRadioButtonChange}
+      >
+        Production
+      </VKRadioButton>
+      <VKRadioButton
+        value={"research"}
+        selectedValue={selectedValue}
+        onChange={onRadioButtonChange}
+      >
+        Research
+      </VKRadioButton>
+    </VKGroup>
+  </div>
+  <div>
+    <VKTitle variant="h5" className="mb-2">
+      Button Group
+    </VKTitle>
+    <VKGroup
+      orientation="horizontal"
+      childrenProps={{
+        variant: "outline",
+        className: "border-0",
+      }}
+      size="md"
+      rounded="sm"
+    >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+      <Button>Button 4</Button>
+    </VKGroup>
+  </div>
+  <div>
+    <VKTitle variant="h5" className="mb-2">
+      Checkbox Group
+    </VKTitle>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{
+        className: "m-2",
+      }}
+      rounded="sm"
+    >
+      <Checkbox rounded="full">1</Checkbox>
+      <Checkbox rounded="full">2</Checkbox>
+      <Checkbox rounded="full">3</Checkbox>
+    </VKGroup>
+  </div>
+  <div>
+    <VKTitle variant="h5" className="mb-2">
+      Avatar Group
+    </VKTitle>
+    <VKGroup
+      color="none"
+      border="none"
+      shouldOverlapChildren
+      noSeparator
+      maxCount={2}
+      truncatedElement={<VKAvatar variant="text" color="light" size="md" />}
+      childrenProps={{ className: "" }}
+    >
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+    </VKGroup>
+  </div>
+  <div>
+    <VKTitle variant="h5" className="mb-2">
+      Avatar Group Without Overlap & Truncate Element{" "}
+    </VKTitle>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ className: "" }}
+    >
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+    </VKGroup>
+  </div>
+</div>
+); };
 
     <GroupExamples />
+
   </Tabs.Tab>
 
   <Tabs.Tab>
 ```jsx copy
-import { VKRadioButton } from "@vivakits/react-components";
+import { VKGroup, VKRadioButton } from "@vivakits/react-components";
 ```
 
 ```jsx copy
+const App = () => {
   const [selectedValue, setSelectedValue] = useState("");
   const onRadioButtonChange = (event) => {
     setSelectedValue(event.target.value);
-  }
+  };
 
-<VKGroup color="none" border="none" orientation="horizontal" childrenProps={{wrapperClassName: "mr-2"}} noSeparator>
-  <VKRadioButton
-    value={"accounting"}
-    selectedValue={selectedValue}
-    onChange={onRadioButtonChange}
-  >
-    Accounting
-  </VKRadioButton>
-  <VKRadioButton
-    value={"marketing"}
-    selectedValue={selectedValue}
-    onChange={onRadioButtonChange}
-  >
-    Marketing
-  </VKRadioButton>
-  <VKRadioButton
-    value={"production"}
-    selectedValue={selectedValue}
-    onChange={onRadioButtonChange}
-  >
-    Production
-  </VKRadioButton>
-  <VKRadioButton
-    value={"research"}
-    selectedValue={selectedValue}
-    onChange={onChangeHorizontalHandler}
-  >
-    Research
-  </VKRadioButton>
-</VKGroup>
+  return (
+      <VKGroup
+        color="none"
+        border="none"
+        orientation="horizontal"
+        childrenProps={{ wrapperClassName: "mr-2" }}
+        noSeparator
+      >
+        <VKRadioButton
+          value={"accounting"}
+          selectedValue={selectedValue}
+          onChange={onRadioButtonChange}
+        >
+          Accounting
+        </VKRadioButton>
+        <VKRadioButton
+          value={"marketing"}
+          selectedValue={selectedValue}
+          onChange={onRadioButtonChange}
+        >
+          Marketing
+        </VKRadioButton>
+        <VKRadioButton
+          value={"production"}
+          selectedValue={selectedValue}
+          onChange={onRadioButtonChange}
+        >
+          Production
+        </VKRadioButton>
+        <VKRadioButton
+          value={"research"}
+          selectedValue={selectedValue}
+          onChange={onChangeHorizontalHandler}
+        >
+          Research
+        </VKRadioButton>
+      </VKGroup>;
+    );
+  };
+
+export default App;
 ```
 
 ```jsx copy
-import { Button } from "@vivakits/react-components";
+import { VKGroup, Button } from "@vivakits/react-components";
 ```
 
 ```jsx copy
- <VKGroup
-  orientation="horizontal"
-  childrenProps={
-    {
-      variant: "outline",
-      className: "border-0",
-    } 
-  }
-  size="md"
-  rounded="sm"
->
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
-  <Button>Button 3</Button>
-  <Button>Button 4</Button>
-</VKGroup>
+const App = () => {
+  return (
+    <VKGroup
+      orientation="horizontal"
+      childrenProps={{
+        variant: "outline",
+        className: "border-0",
+      }}
+      size="md"
+      rounded="sm"
+    >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+      <Button>Button 4</Button>
+    </VKGroup>
+  );
+};
+
+export default App;
 ```
 
 ```jsx copy
-import { Checkbox } from "@vivakits/react-components";
+import { VKGroup, Checkbox } from "@vivakits/react-components";
 ```
 
 ```jsx copy
-<VKGroup
-  color="none"
-  border="none"
-  noSeparator
-  childrenProps={
-      {
-      className: "m-2",
-      } 
-  }
-  rounded="sm"
-  >
-  <Checkbox rounded="full">1</Checkbox>
-  <Checkbox rounded="full">2</Checkbox>
-  <Checkbox rounded="full">3</Checkbox>
-</VKGroup>
+const App = () => {
+  return (
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{
+        className: "m-2",
+      }}
+      rounded="sm"
+    >
+      <Checkbox rounded="full">1</Checkbox>
+      <Checkbox rounded="full">2</Checkbox>
+      <Checkbox rounded="full">3</Checkbox>
+    </VKGroup>
+  );
+};
+
+export default App;
 ```
 
 ```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
+import { VKGroup, VKAvatar } from "@vivakits/react-components";
 ```
 
 ```jsx copy
- <VKGroup
-  color="none"
-  border="none"
-  shouldOverlapChildren
-  noSeparator
-  maxCount={2}
-  truncatedElement={
-      <VKAvatar variant="text" color="light" size="md" />
-  }
-  childrenProps={{ className: "" }}
-  >
-  <VKAvatar
-      variant="image"
-      color="secondary"
-      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-      alt="person with camera"
-  />
-  <VKAvatar
-      variant="image"
-      color="secondary"
-      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-      alt="person with camera"
-  />
-  <VKAvatar
-      variant="image"
-      color="secondary"
-      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-      alt="person with camera"
-  />
-</VKGroup>
+const App = () => {
+  return (
+    <VKGroup
+      color="none"
+      border="none"
+      shouldOverlapChildren
+      noSeparator
+      maxCount={2}
+      truncatedElement={<VKAvatar variant="text" color="light" size="md" />}
+      childrenProps={{ className: "" }}
+    >
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+    </VKGroup>
+  );
+};
+
+export default App;
 ```
+
 ```jsx copy
 // Avatar Group Without Overlap and Truncate Element
 
-<VKGroup
-  color="none"
-  border="none"
-  noSeparator
-  childrenProps={{ className: "" }}
-  >
-  <VKAvatar
-      variant="image"
-      color="secondary"
-      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-      alt="person with camera"
-  />
-  <VKAvatar
-      variant="image"
-      color="secondary"
-      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-      alt="person with camera"
-  />
-  <VKAvatar
-      variant="image"
-      color="secondary"
-      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-      alt="person with camera"
-  />
-</VKGroup>
+const App = () => {
+  return (
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ className: "" }}
+    >
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+      <VKAvatar
+        variant="image"
+        color="secondary"
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="person with camera"
+      />
+    </VKGroup>
+  );
+};
+
+export default App;
 ```
+
   </Tabs.Tab>
 </Tabs>
-
 
 ### API Reference
 
 {<table>
+
   <thead>
     <tr>
       <th className="w-[10%]" align="left">Attribute</th>
