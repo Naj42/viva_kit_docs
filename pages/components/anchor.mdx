@@ -9,7 +9,7 @@ import { Tabs } from "nextra/components";
 import { VKAnchor } from "@vivakits/react-components";
 ```
 
-### Sizes
+### Size
 
 The Anchor component comes with 6 different sizes that you can change using the `size` prop.
 
@@ -20,7 +20,7 @@ export const AnchorSizeGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
   <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xs">
     Let's Go
   </VKAnchor>
@@ -51,30 +51,29 @@ return (
 import { VKAnchor } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xs">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="sm">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="md">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="lg">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xl">
-    Let's Go
-  </VKAnchor>
-  <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="2xl">
-    Let's Go
-  </VKAnchor>
-</div>
-); };
+  return (  
+    <div className="flex justify-center items-center gap-6">
+        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xs">
+          Let's Go
+        </VKAnchor>
+        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="sm">
+          Let's Go
+        </VKAnchor>
+        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="md">
+          Let's Go
+        </VKAnchor>
+        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="lg">
+          Let's Go
+        </VKAnchor>
+        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="xl">
+          Let's Go
+        </VKAnchor>
+        <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" size="2xl">
+          Let's Go
+        </VKAnchor>
+    </div>
+  ); 
+};
 
 export default App;
 
@@ -82,7 +81,7 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Colors
+### Color
 
 The Anchor component comes with 7 different colors that you can change using the `color` prop.
 
@@ -91,19 +90,13 @@ The Anchor component comes with 7 different colors that you can change using the
   <Tabs.Tab>
 export const AnchorColorGroup = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-3">
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="primary">This is a primary color anchor</VKAnchor>
-        <br/>
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="secondary">This is a secondary color anchor</VKAnchor>
-        <br/>
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="success">This is a success color anchor</VKAnchor>
-        <br/>
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="danger">This is a danger color anchor</VKAnchor>
-        <br/>
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="warning">This is a warning color anchor</VKAnchor>
-        <br/>
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="dark">This is a dark color anchor</VKAnchor>
-        <br/>
         <VKAnchor href="https://vivakit.vivasoftltd.com/" target="_blank" color="light">This is a light color anchor</VKAnchor>
     </div>
   );
@@ -119,7 +112,7 @@ import { VKAnchor } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-3">
         <VKAnchor
           href="https://vivakit.vivasoftltd.com/"
           target="_blank"
@@ -191,7 +184,7 @@ export const AnchorUnderlineGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
   <VKAnchor
     href="https://vivakit.vivasoftltd.com/"
     target="_blank"
@@ -225,33 +218,32 @@ return (
 import { VKAnchor } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
-    target="_blank"
-    underline="none"
-  >
-    No Underline
-  </VKAnchor>
-  <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
-    target="_blank"
-    underline="hover"
-  >
-    Hover To See Underline
-  </VKAnchor>
-  <VKAnchor
-    href="https://vivakit.vivasoftltd.com/"
-    target="_blank"
-    underline="always"
-  >
-    Always Underlined
-  </VKAnchor>
-</div>
-); };
+  return (
+    <div className="flex justify-center items-center gap-6">
+        <VKAnchor
+          href="https://vivakit.vivasoftltd.com/"
+          target="_blank"
+          underline="none"
+        >
+          No Underline
+        </VKAnchor>
+        <VKAnchor
+          href="https://vivakit.vivasoftltd.com/"
+          target="_blank"
+          underline="hover"
+        >
+          Hover To See Underline
+        </VKAnchor>
+        <VKAnchor
+          href="https://vivakit.vivasoftltd.com/"
+          target="_blank"
+          underline="always"
+        >
+          Always Underlined
+        </VKAnchor>
+    </div>
+  ); 
+};
 
 export default App;
 
