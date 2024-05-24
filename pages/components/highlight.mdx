@@ -1,0 +1,322 @@
+import { VKHighlight } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
+import { useState } from "react";
+
+# Highlight
+
+### Import
+
+<Tabs items={[]}>
+  <Tabs.Tab>
+    ```jsx copy 
+    import {VKHighlight} from "@vivakits/react-components"; 
+    ```
+  </Tabs.Tab>
+</Tabs>
+
+### Highlight string
+
+Highlight component render the main string as children and pass the string you want to highlight using the `highlightText` prop
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SingleString= () => {
+  return (
+    <div>
+    <VKHighlight highlightText="highlight your selection">
+        With the Highlight component, you can highlight your selection.
+    </VKHighlight>
+    </div>
+  );
+};
+
+<SingleString />
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="highlight your selection">
+          With the Highlight component, you can highlight your selection
+      </VKHighlight>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### Highlight Multiple string
+
+You can Highlight mutiple selected string by passing all string as an array using the `highlightText` prop
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const MultipleString =() => {
+  return(
+    <div>
+    <VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
+        You can also highlight multiple selection to meet your requirments.
+    </VKHighlight>
+    </div>
+  );
+};
+
+<MultipleString />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText={['highlight', 'your', 'selection']} background="danger">
+          You can also highlight multiple selection to meet your requirments.
+      </VKHighlight>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### Background Colors
+
+Enhance user experience by highlighting selections with seven different background colors. Using `background` prop you can easily customize background color. 
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const DifferntVarientsBG= () => {
+  return (
+    <div className="flex flex-col gap-2">
+        <VKHighlight highlightText="primary background" background="primary">
+            Highlight selection with primary background color.
+        </VKHighlight>
+        <VKHighlight highlightText="secondary background" background="secondary">
+            Highlight selection with secondary background color.
+        </VKHighlight>
+        <VKHighlight highlightText="success background" background="success">
+            Highlight selection with success background color.
+        </VKHighlight>
+        <VKHighlight highlightText="danger background" background="danger">
+            Highlight selection with danger background color.
+        </VKHighlight>
+        <VKHighlight highlightText="warning background" background="warning">
+            Highlight selection with warning background color.
+        </VKHighlight>
+        <VKHighlight highlightText="dark background" background="dark">
+            Highlight selection with dark background color.
+        </VKHighlight>
+        <VKHighlight highlightText="light background" background="light">
+            Highlight selection with light background color.
+        </VKHighlight>
+    </div>
+  );
+};
+
+<DifferntVarientsBG />
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="spotlight" background="primary">
+          Highlight selection with primary background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="secondary">
+          Highlight selection with secondary background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="success">
+          Highlight selection with success background color.
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="danger">
+          Highlight selection with danger background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="warning">
+          Highlight selection with warning background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="dark">
+          Highlight selection with dark background color. 
+      </VKHighlight>
+      <VKHighlight highlightText="spotlight" background="light">
+          Highlight selection with light background color.
+      </VKHighlight>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### Rounded
+
+You can enhance highlighted strings by customizing their corner radius using `rounded` prop.  
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const VarientsRadius= () => {
+  const [rounded, setRounded] = useState([]);
+  const handleChange = (e) =>{
+    setRounded(e.target.value);
+  }
+  return (
+    <div className="w-full flex flex-row-reverse justify-between items-center">
+      <div className="flex flex-col gap-2">
+        <label for="radius">Choose radius</label>
+        <select name="radius" id="radius" value={rounded} onChange={handleChange} className="px-3 py-1">
+          <option value="default">default</option>
+          <option value="none">none</option>
+          <option value="xs">xs</option>
+          <option value="sm">sm</option>
+          <option value="md">md</option>
+          <option value="lg">lg</option>
+          <option value="full">full</option>
+        </select>
+      </div>
+      <VKHighlight highlightText="corner radius" rounded={`${rounded}`} background="secondary" className="px-3 py-1">
+          You can change corner radius of your selection.
+      </VKHighlight>
+    </div>
+  );
+};
+
+<VarientsRadius />
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="corner radius" rounded="default" background="secondary">
+        You can change corner radius of your selection.
+      </VKHighlight>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### Styles
+
+You can make more cutomization to meet your design, using `style` or `className` prop.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const AddingStyles= () => {
+  return (
+    <div className="flex flex-col gap-2">
+        <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
+            Customize selection using style. 
+        </VKHighlight>
+        <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-xl">
+            Customize selection using className. 
+        </VKHighlight>
+    </div>
+  );
+};
+
+<AddingStyles />
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKHighlight} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex flex-col gap-2">
+      <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
+          Customize selection using style. 
+      </VKHighlight>
+      <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-3xl">
+          Customize selection using className. 
+      </VKHighlight>
+    </div>
+  )
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>ReactNode</td>
+      <td>Displays main content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>highlightText</td>
+      <td>string</td>
+      <td>Displays highlighted content</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>background</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>   
+        <span className="badge">secondary</span>  
+        <span className="badge">success</span>  
+        <span className="badge">danger</span>  
+        <span className="badge">warning</span>  
+        <span className="badge">dark</span>  
+        <span className="badge">light</span>  
+      </td>
+      <td>Changes highlighted content background color</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>rounded</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>  
+        <span className="badge">none</span>   
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span>  
+        <span className="badge">lg</span>
+        <span className="badge">full</span>
+      </td>
+      <td>Changes highlighted content border radius</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>className</td>
+      <td>string</td>
+      <td>Additional CSS applied to highlight components</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>style</td>
+      <td>CSSProperties</td>
+      <td>Additional styles applied to highlight components</td>
+      <td> - </td>
+    </tr>
+  </tbody>
+</table>}
