@@ -3,7 +3,13 @@ import { Tabs } from "nextra/components";
 
 # Checkbox
 
-### Sizes
+### Import
+
+```jsx copy
+import { Checkbox } from "@vivakits/react-components";
+```
+
+### Size
 
 The Checkbox component comes with 3 different sizes that you can change it using the `size` prop.
 
@@ -12,7 +18,7 @@ The Checkbox component comes with 3 different sizes that you can change it using
 <Tabs.Tab>
 export const CheckboxSizeGroup = () => {
   return (
-    <div className="flex items-end gap-3">
+    <div className="flex gap-3">
         <Checkbox size="sm">Small</Checkbox>
         <Checkbox size="md">Medium</Checkbox>
         <Checkbox size="lg">Large</Checkbox>
@@ -25,16 +31,24 @@ export const CheckboxSizeGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3">
-    <Checkbox size="sm">Small</Checkbox>
-    <Checkbox size="md">Medium</Checkbox>
-    <Checkbox size="lg">Large</Checkbox>
-</div>
-  ```
+import { Checkbox } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex gap-3">
+        <Checkbox size="sm">Small</Checkbox>
+        <Checkbox size="md">Medium</Checkbox>
+        <Checkbox size="lg">Large</Checkbox>
+    </div>
+  );
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
-### Colors
+### Color
 
 The Checkbox component comes with 7 different colors that you can change it using the `color` prop. It has both solid and outline variant
 
@@ -43,7 +57,7 @@ The Checkbox component comes with 7 different colors that you can change it usin
 <Tabs.Tab>
 export const CheckboxColorGroup = () => {
   return (
-    <div className="flex items-end gap-3 flex-wrap">
+    <div className="flex gap-3 flex-wrap">
         <Checkbox color="primary">Primary</Checkbox>
         <Checkbox color="secondary">Secondary</Checkbox>
         <Checkbox color="success">Success</Checkbox>
@@ -60,16 +74,24 @@ export const CheckboxColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3">
-  <Checkbox color="primary">Primary</Checkbox>
-  <Checkbox color="secondary">Secondary</Checkbox>
-  <Checkbox color="success">Success</Checkbox>
-  <Checkbox color="warning">Warning</Checkbox>
-  <Checkbox color="danger">Danger</Checkbox>
-  <Checkbox color="dark">Dark</Checkbox>
-  <Checkbox color="accent">Accent</Checkbox>
-</div>
-  ```
+import { Checkbox } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex gap-3 flex-wrap">
+        <Checkbox color="primary">Primary</Checkbox>
+        <Checkbox color="secondary">Secondary</Checkbox>
+        <Checkbox color="success">Success</Checkbox>
+        <Checkbox color="warning">Warning</Checkbox>
+        <Checkbox color="danger">Danger</Checkbox>
+        <Checkbox color="dark">Dark</Checkbox>
+        <Checkbox color="accent">Accent</Checkbox>
+    </div>
+  );
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -82,7 +104,7 @@ The shape of the Checkbox component can be updated using `rounded` prop
 <Tabs.Tab>
 export const CheckboxRoundedGroup = () => {
   return (
-    <div className="flex items-end gap-3">
+    <div className="flex gap-3">
         <Checkbox rounded="none">None</Checkbox>
         <Checkbox rounded="default">Default</Checkbox>
         <Checkbox rounded="sm">Small</Checkbox>
@@ -98,15 +120,21 @@ export const CheckboxRoundedGroup = () => {
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex items-end gap-3">
-    <Checkbox rounded="none">None</Checkbox>
-    <Checkbox rounded="default">Default</Checkbox>
-    <Checkbox rounded="sm">Small</Checkbox>
-    <Checkbox rounded="md">Medium</Checkbox>
-    <Checkbox rounded="lg">Large</Checkbox>
-    <Checkbox rounded="full">Full</Checkbox>
-  </div>
-  ```
+ const App = () => {
+  return (
+    <div className="flex gap-3">
+        <Checkbox rounded="none">None</Checkbox>
+        <Checkbox rounded="default">Default</Checkbox>
+        <Checkbox rounded="sm">Small</Checkbox>
+        <Checkbox rounded="md">Medium</Checkbox>
+        <Checkbox rounded="lg">Large</Checkbox>
+        <Checkbox rounded="full">Full</Checkbox>
+    </div>
+  );
+};
+
+export default App;
+```
 </Tabs.Tab>
 
 </Tabs>
