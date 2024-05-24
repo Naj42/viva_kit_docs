@@ -38,18 +38,15 @@ Dropdown trigger is a wrapper around the element which triggers the dropdown as 
   <Tabs.Tab>
 export const DropdownTriggerComp = () => {
   return (
-    
-    <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Trigger</Button>
+            <Button rounded="md" size="md" color="primary">Dropdown Trigger</Button>
             </DropdownTrigger>
             <DropdownMenu>
             <DropdownItem value="Edit">Edit</DropdownItem>
             <DropdownItem value="Duplicate">Duplicate</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-    </div>
 
 );
 };
@@ -59,17 +56,29 @@ export const DropdownTriggerComp = () => {
         
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-        <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"secondary"}>Dropdown Trigger</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-                <DropdownItem value="Edit">Edit</DropdownItem>
-                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-    </div>
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+  return (
+      <Dropdown>
+          <DropdownTrigger>
+              <Button rounded="md" size="md" color="secondary">Dropdown Trigger</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+              <DropdownItem value="Edit">Edit</DropdownItem>
+              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+   );
+};
+
+export default App;
 ```
   </Tabs.Tab>
 </Tabs>
@@ -90,9 +99,9 @@ export const DropdownMenuComp = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Left</Button>
+            <Button rounded="md" size="md" color="warning">Dropdown Left</Button>
             </DropdownTrigger>
-            <DropdownMenu align={"start"}>
+            <DropdownMenu align="start">
             <DropdownItem value="Start">Start</DropdownItem>
             <DropdownItem value="Center">Center</DropdownItem>
             <DropdownItem value="End">End</DropdownItem>
@@ -101,9 +110,9 @@ export const DropdownMenuComp = () => {
 
        <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Center</Button>
+            <Button rounded="md" size="md" color="warning">Dropdown Center</Button>
             </DropdownTrigger>
-            <DropdownMenu align={"center"}>
+            <DropdownMenu align="center">
             <DropdownItem value="Start">Start</DropdownItem>
             <DropdownItem value="Center">Center</DropdownItem>
             <DropdownItem value="End">End</DropdownItem>
@@ -112,7 +121,7 @@ export const DropdownMenuComp = () => {
 
         <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Right</Button>
+            <Button rounded="md" size="md" color="warning">Dropdown Right</Button>
             </DropdownTrigger>
             <DropdownMenu align={"end"}>
             <DropdownItem value="Start">Start</DropdownItem>
@@ -122,49 +131,63 @@ export const DropdownMenuComp = () => {
         </Dropdown>
     </div>
 
-)};
+)
+};
 
 <DropdownMenuComp />
   </Tabs.Tab>
         
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
+      <div className="flex items-center gap-3">
+          <Dropdown>
+              <DropdownTrigger>
+                  <Button rounded="md" size="md" color="warning">Dropdown Left</Button>
+              </DropdownTrigger>
+              <DropdownMenu align="start">
+                  <DropdownItem value="Start">Start</DropdownItem>
+                  <DropdownItem value="Center">Center</DropdownItem>
+                  <DropdownItem value="End">End</DropdownItem>
+              </DropdownMenu>
+          </Dropdown>
+
         <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Left</Button>
-            </DropdownTrigger>
-            <DropdownMenu align={"start"}>
-                <DropdownItem value="Start">Start</DropdownItem>
-                <DropdownItem value="Center">Center</DropdownItem>
-                <DropdownItem value="End">End</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
+              <DropdownTrigger>
+                  <Button rounded="md" size="md" color="warning">Dropdown Center</Button>
+              </DropdownTrigger>
+              <DropdownMenu align="center">
+                  <DropdownItem value="Start">Start</DropdownItem>
+                  <DropdownItem value="Center">Center</DropdownItem>
+                  <DropdownItem value="End">End</DropdownItem>
+              </DropdownMenu>
+          </Dropdown>
 
-       <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Center</Button>
-            </DropdownTrigger>
-            <DropdownMenu align={"center"}>
-                <DropdownItem value="Start">Start</DropdownItem>
-                <DropdownItem value="Center">Center</DropdownItem>
-                <DropdownItem value="End">End</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
+          <Dropdown>
+              <DropdownTrigger>
+                  <Button rounded="md" size="md" color="warning">Dropdown Right</Button>
+              </DropdownTrigger>
+              <DropdownMenu align={"end"}>
+                  <DropdownItem value="Start">Start</DropdownItem>
+                  <DropdownItem value="Center">Center</DropdownItem>
+                  <DropdownItem value="End">End</DropdownItem>
+              </DropdownMenu>
+          </Dropdown>
+      </div>
+    );
+};
 
-        <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"warning"}>Dropdown Right</Button>
-            </DropdownTrigger>
-            <DropdownMenu align={"end"}>
-                <DropdownItem value="Start">Start</DropdownItem>
-                <DropdownItem value="Center">Center</DropdownItem>
-                <DropdownItem value="End">End</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-     </div>
-
-````
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -181,7 +204,7 @@ export const DropdownMenuOnSelect = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Trigger</Button>
+            <Button rounded="md" size="md" color="primary">Dropdown Trigger</Button>
             </DropdownTrigger>
             <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
             <DropdownItem value="Edit">Edit</DropdownItem>
@@ -198,17 +221,29 @@ export const DropdownMenuOnSelect = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
         <Dropdown>
             <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"secondary"}>Dropdown Trigger</Button>
+                <Button rounded="md" size="md" color="secondary">Dropdown Trigger</Button>
             </DropdownTrigger>
             <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
                 <DropdownItem value="Edit">Edit</DropdownItem>
                 <DropdownItem value="Duplicate">Duplicate</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-    </div>
+    );
+};
+        
+export default App;
 ```
   </Tabs.Tab>
 </Tabs>
@@ -228,7 +263,7 @@ export const DropdownItemDisabled = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Action</Button>
+            <Button rounded="md" size="md" color="primary">Dropdown Action</Button>
             </DropdownTrigger>
             <DropdownMenu>
             <DropdownItem value="Edit">Edit</DropdownItem>
@@ -247,10 +282,19 @@ export const DropdownItemDisabled = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-        <Dropdown>
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
+          <Dropdown>
             <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown Action</Button>
+                <Button rounded="md" size="md" color="primary">Dropdown Action</Button>
             </DropdownTrigger>
             <DropdownMenu>
                 <DropdownItem value="Edit">Edit</DropdownItem>
@@ -258,11 +302,13 @@ export const DropdownItemDisabled = () => {
                 <DropdownItem value="Archive">Archive</DropdownItem>
                 <DropdownItem value="Move">Move</DropdownItem>
                 <DropdownItem value="Delete" disabled>Delete</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-    </div>
-````
+           </DropdownMenu>
+         </Dropdown>
+    );
+};
 
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -278,7 +324,7 @@ export const DropdownItemOnClick = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown onClick</Button>
+            <Button rounded="md" size="md" color="dark">Dropdown onClick</Button>
             </DropdownTrigger>
              <DropdownMenu>
                 <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
@@ -297,20 +343,32 @@ export const DropdownItemOnClick = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
         <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown onClick</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-                <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
-                <DropdownItem value="Duplicate" onClick={() => alert("Clicked on Duplicate")}>Duplicate</DropdownItem>
-                <DropdownItem value="Archive" onClick={() => alert("Clicked on Archive")}>Archive</DropdownItem>
-                <DropdownItem value="Move" onClick={() => alert("Clicked on Move")}>Move</DropdownItem>
-                <DropdownItem value="Delete" disabled onClick={() => alert("Clicked on Delete")}>Delete</DropdownItem>
-            </DropdownMenu>
+          <DropdownTrigger>
+                <Button rounded="md" size="md" color="dark">Dropdown onClick</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+              <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
+              <DropdownItem value="Duplicate" onClick={() => alert("Clicked on Duplicate")}>Duplicate</DropdownItem>
+              <DropdownItem value="Archive" onClick={() => alert("Clicked on Archive")}>Archive</DropdownItem>
+              <DropdownItem value="Move" onClick={() => alert("Clicked on Move")}>Move</DropdownItem>
+              <DropdownItem value="Delete" disabled onClick={() => alert("Clicked on Delete")}>Delete</DropdownItem>
+          </DropdownMenu>
         </Dropdown>
-    </div>
+    );
+};
+
+export default App;
 ```
   </Tabs.Tab>
 </Tabs>
@@ -327,7 +385,7 @@ export const DropdownItemOnSelect = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown onSelect</Button>
+            <Button rounded="md" size="md" color="primary">Dropdown onSelect</Button>
             </DropdownTrigger>
              <DropdownMenu>
                 <DropdownItem value="Edit" onSelect={() => alert("Selected Edit")}>Edit</DropdownItem>
@@ -346,10 +404,19 @@ export const DropdownItemOnSelect = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-        <Dropdown>
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
+          <Dropdown>
             <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"primary"}>Dropdown onSelect</Button>
+                <Button rounded="md" size="md" color="primary">Dropdown onSelect</Button>
             </DropdownTrigger>
             <DropdownMenu>
                 <DropdownItem value="Edit" onSelect={() => alert("Selected Edit")}>Edit</DropdownItem>
@@ -358,8 +425,11 @@ export const DropdownItemOnSelect = () => {
                 <DropdownItem value="Move" onSelect={() => alert("Selected Move")}>Move</DropdownItem>
                 <DropdownItem value="Delete" disabled onSelect={() => alert("Selected Delete")}>Delete</DropdownItem>
             </DropdownMenu>
-        </Dropdown>
-    </div>
+          </Dropdown>
+    );
+};
+ 
+export default App; 
 ```
   </Tabs.Tab>
 </Tabs>
@@ -377,9 +447,9 @@ export const DropdownValue = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown Value</Button>
+            <Button rounded="md" size="md" color="dark">Dropdown Value</Button>
             </DropdownTrigger>
-            <DropdownMenu align={"start"}>
+            <DropdownMenu align="start">
             <DropdownItem value="Edit">Edit</DropdownItem>
             <DropdownItem value="Duplicate">Duplicate</DropdownItem>
           </DropdownMenu>
@@ -394,17 +464,29 @@ export const DropdownValue = () => {
         
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
         <Dropdown>
-            <DropdownTrigger>
-                <Button rounded={"md"} size={"md"} color={"dark"}>Dropdown Value</Button>
-            </DropdownTrigger>
-            <DropdownMenu align={"start"}>
-                <DropdownItem value="Edit">Edit</DropdownItem>
-                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          <DropdownTrigger>
+                <Button rounded="md" size="md" color="dark">Dropdown Value</Button>
+          </DropdownTrigger>
+          <DropdownMenu align="start">
+              <DropdownItem value="Edit">Edit</DropdownItem>
+              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-    </div>
+    );
+};
+
+export default App; 
 ```
   </Tabs.Tab>
 </Tabs>
@@ -422,7 +504,7 @@ export const DropdownExample = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-             <Button rounded={"md"} size={"md"} color={"light"}>Divided items</Button>
+             <Button rounded="md" size="md" color="light">Divided items</Button>
           </DropdownTrigger>
            <DropdownMenu align="end">
                 <DropdownItem value="Edit">Edit</DropdownItem>
@@ -436,19 +518,19 @@ export const DropdownExample = () => {
 
      <Dropdown >
         <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"light"}>With Icon </Button>
+            <Button rounded="md" size="md" color="light">With Icon </Button>
         </DropdownTrigger>
         <DropdownMenu align="start" className='w-[150px]'>
-            <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon className='h-4 w-4'/> Edit</div></DropdownItem>
-            <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon className='h-4 w-4'/> Duplicate</div></DropdownItem>
-            <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon className='h-4 w-4'/> Archive</div></DropdownItem>
-            <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon className='h-4 w-4'/> Delete</div></DropdownItem>
+            <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon /> Edit</div></DropdownItem>
+            <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon /> Duplicate</div></DropdownItem>
+            <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon /> Archive</div></DropdownItem>
+            <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon /> Delete</div></DropdownItem>
         </DropdownMenu>
      </Dropdown>
 
      <Dropdown>
         <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"light"}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
+            <Button rounded="md" size="md" color="light"><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
         </DropdownTrigger>
         <DropdownMenu align="start" className='w-[200px]'>
           <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
@@ -467,10 +549,10 @@ export const DropdownExample = () => {
         </div>
         <hr/>
         </DropdownItem>
-            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon className='h-4 w-4'/> Profile</div></DropdownItem>
-            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon className='h-4 w-4'/> Setting</div></DropdownItem>
-            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon className='h-4 w-4'/> Support</div></DropdownItem>
-            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon className='h-4 w-4'/> Logout</div></DropdownItem>
+            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon /> Profile</div></DropdownItem>
+            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon /> Setting</div></DropdownItem>
+            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon /> Support</div></DropdownItem>
+            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon /> Logout</div></DropdownItem>
         </DropdownMenu>
      </Dropdown>
     </div>
@@ -483,10 +565,19 @@ export const DropdownExample = () => {
         
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-      <Dropdown>
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
+        <Dropdown>
           <DropdownTrigger>
-             <Button rounded={"md"} size={"md"} color={"light"}>Divided items</Button>
+             <Button rounded="md" size="md" color="light">Divided items</Button>
           </DropdownTrigger>
            <DropdownMenu align="end">
                 <DropdownItem value="Edit">Edit</DropdownItem>
@@ -495,53 +586,304 @@ export const DropdownExample = () => {
                 <DropdownItem value="Archive">Archive</DropdownItem>
                 
                 <DropdownItem value="Duplicate">Delete</DropdownItem>
-          </DropdownMenu>
-     </Dropdown>
+            </DropdownMenu>
+        </Dropdown>
+    );
+};
 
-     <Dropdown >
-        <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"light"}>With Icon </Button>
-        </DropdownTrigger>
-        <DropdownMenu align="start" className='w-[150px]'>
-            <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon className='h-4 w-4'/> Edit</div></DropdownItem>
-            <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon className='h-4 w-4'/> Duplicate</div></DropdownItem>
-            <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon className='h-4 w-4'/> Archive</div></DropdownItem>
-            <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon className='h-4 w-4'/> Delete</div></DropdownItem>
-        </DropdownMenu>
-     </Dropdown>
-
-     <Dropdown>
-        <DropdownTrigger>
-            <Button rounded={"md"} size={"md"} color={"light"}><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
-        </DropdownTrigger>
-        <DropdownMenu align="start" className='w-[200px]'>
-          <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
-            <VKAvatar
-                variant="image"
-                color="secondary"
-                src="https://cdn.oneesports.gg/cdn-data/2024/02/Anime_Luffy_smiling.jpg"
-                alt="person with camera"
-                withBorder
-                className="h-10 w-10"
-        />
-        <div className="flex flex-col justify-center ml-2 gap-1">
-            <span className="font-semibold">Monkey D Luffy</span>
-            <span>strawhat@vivasoftltd.com</span>
-        </div>
-        </div>
-        <hr/>
-        </DropdownItem>
-            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon className='h-4 w-4'/> Profile</div></DropdownItem>
-            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon className='h-4 w-4'/> Setting</div></DropdownItem>
-            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon className='h-4 w-4'/> Support</div></DropdownItem>
-            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon className='h-4 w-4'/> Logout</div></DropdownItem>
-        </DropdownMenu>
-     </Dropdown>
-    </div>
-
+export default App;
 ```
-  </Tabs.Tab>
+
+```jsx copy
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
+        <Dropdown >
+          <DropdownTrigger>
+              <Button rounded="md" size="md" color="light">With Icon </Button>
+          </DropdownTrigger>
+          <DropdownMenu align="start" className='w-[150px]'>
+              <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon /> Edit</div></DropdownItem>
+              <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon /> Duplicate</div></DropdownItem>
+              <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon /> Archive</div></DropdownItem>
+              <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon /> Delete</div></DropdownItem>
+          </DropdownMenu>
+      </Dropdown>
+    );
+};
+
+const EditIcon = () => {
+  return (
+    <svg
+      fill="#000000"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 494.936 494.936"
+    >
+      <g>
+        <g>
+          <path
+            d="M389.844,182.85c-6.743,0-12.21,5.467-12.21,12.21v222.968c0,23.562-19.174,42.735-42.736,42.735H67.157
+			c-23.562,0-42.736-19.174-42.736-42.735V150.285c0-23.562,19.174-42.735,42.736-42.735h267.741c6.743,0,12.21-5.467,12.21-12.21
+			s-5.467-12.21-12.21-12.21H67.157C30.126,83.13,0,113.255,0,150.285v267.743c0,37.029,30.126,67.155,67.157,67.155h267.741
+			c37.03,0,67.156-30.126,67.156-67.155V195.061C402.054,188.318,396.587,182.85,389.844,182.85z"
+          />
+          <path
+            d="M483.876,20.791c-14.72-14.72-38.669-14.714-53.377,0L221.352,229.944c-0.28,0.28-3.434,3.559-4.251,5.396l-28.963,65.069
+			c-2.057,4.619-1.056,10.027,2.521,13.6c2.337,2.336,5.461,3.576,8.639,3.576c1.675,0,3.362-0.346,4.96-1.057l65.07-28.963
+			c1.83-0.815,5.114-3.97,5.396-4.25L483.876,74.169c7.131-7.131,11.06-16.61,11.06-26.692
+			C494.936,37.396,491.007,27.915,483.876,20.791z M466.61,56.897L257.457,266.05c-0.035,0.036-0.055,0.078-0.089,0.107
+			l-33.989,15.131L238.51,247.3c0.03-0.036,0.071-0.055,0.107-0.09L447.765,38.058c5.038-5.039,13.819-5.033,18.846,0.005
+			c2.518,2.51,3.905,5.855,3.905,9.414C470.516,51.036,469.127,54.38,466.61,56.897z"
+          />
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+const DuplicateIcon = () => {
+  return (
+    <svg
+      fill="#000000"
+      width="16"
+      height="16"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+    >
+      <g>
+        <path
+          d="M45,0H11c-0.552,0-1,0.448-1,1v3H7C6.448,4,6,4.448,6,5v46c0,0.552,0.448,1,1,1h34c0.552,0,1-0.448,1-1v-3h3
+     c0.552,0,1-0.448,1-1V1C46,0.448,45.552,0,45,0z M40,50H8V6h23v8c0,0.552,0.448,1,1,1h8V50z M33,7.414L38.586,13H33V7.414z M44,46
+     h-2V14c0-0.022-0.011-0.041-0.013-0.063c-0.006-0.088-0.023-0.173-0.051-0.257c-0.011-0.032-0.019-0.063-0.034-0.094
+     c-0.049-0.106-0.11-0.207-0.196-0.293l-9-9c-0.086-0.086-0.187-0.147-0.293-0.196c-0.031-0.014-0.062-0.022-0.094-0.033
+     c-0.084-0.029-0.169-0.046-0.258-0.051C32.041,4.011,32.021,4,32,4H12V2h32V46z"
+        />
+      </g>
+    </svg>
+  );
+};
+
+const ArchiveIcon = () => {
+  return (
+    <svg
+      fill="#000000"
+      height="16"
+      width="16"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 331.533 331.533"
+    >
+      <path
+        id="XMLID_589_"
+        d="M197.074,216.42c0,6.075-4.925,11-11,11h-40.612c-6.075,0-11-4.925-11-11s4.925-11,11-11h40.612
+	C192.149,205.42,197.074,210.345,197.074,216.42z M331.533,51.903v68.317c0,6.075-4.925,11-11,11h-7.13V279.63
+	c0,6.075-4.925,11-11,11H29.131c-6.075,0-11-4.925-11-11V131.221H11c-6.075,0-11-4.925-11-11V51.903c0-6.075,4.925-11,11-11h309.533
+	C326.608,40.903,331.533,45.828,331.533,51.903z M291.403,131.221H221.24c-5.133,25.933-28.055,45.545-55.472,45.545
+	c-27.417,0-50.34-19.612-55.472-45.545H40.131V268.63h251.272V131.221z M165.768,154.766c15.205,0,28.147-9.873,32.75-23.545
+	h-65.501C137.621,144.893,150.563,154.766,165.768,154.766z M309.533,62.903H22v46.317h287.533V62.903z"
+      />
+    </svg>
+  );
+};
+
+const DeleteIcon = () => {
+  return (
+    <svg
+      fill="#000000"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 482.428 482.429"
+    >
+      <g>
+        <g>
+          <path
+            d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098
+			c-30.39,0-55.111,24.728-55.111,55.117v2.828c0,23.223,14.46,43.1,34.83,51.199v260.369c0,30.39,24.724,55.117,55.112,55.117
+			h210.236c30.389,0,55.111-24.729,55.111-55.117V166.944c20.369-8.1,34.83-27.977,34.83-51.199v-2.828
+			C436.274,82.527,411.551,57.799,381.163,57.799z M241.214,26.139c19.037,0,34.927,13.645,38.443,31.66h-76.879
+			C206.293,39.783,222.184,26.139,241.214,26.139z M375.305,427.312c0,15.978-13,28.979-28.973,28.979H136.096
+			c-15.973,0-28.973-13.002-28.973-28.979V170.861h268.182V427.312z M410.135,115.744c0,15.978-13,28.979-28.973,28.979H101.266
+			c-15.973,0-28.973-13.001-28.973-28.979v-2.828c0-15.978,13-28.979,28.973-28.979h279.897c15.973,0,28.973,13.001,28.973,28.979
+			V115.744z"
+          />
+          <path
+            d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07
+			c-7.217,0-13.069,5.854-13.069,13.07v147.154C158.074,417.012,163.926,422.863,171.144,422.863z"
+          />
+          <path
+            d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07
+			c-7.217,0-13.069,5.854-13.069,13.07v147.154C228.145,417.012,233.996,422.863,241.214,422.863z"
+          />
+          <path
+            d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07
+			c-7.219,0-13.07,5.854-13.07,13.07v147.154C298.213,417.012,304.067,422.863,311.284,422.863z"
+          />
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+
+export default App;
+``` 
+
+
+```jsx copy
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+  VKAvatar
+} from "@vivakits/react-components";
+
+const App = () => {
+    return (
+        <Dropdown>
+          <DropdownTrigger>
+              <Button rounded="md" size="md" color="light"><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
+          </DropdownTrigger>
+          <DropdownMenu align="start" className='w-[200px]'>
+            <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
+              <VKAvatar
+                  variant="image"
+                  color="secondary"
+                  src="https://cdn.oneesports.gg/cdn-data/2024/02/Anime_Luffy_smiling.jpg"
+                  alt="person with camera"
+                  withBorder
+                  className="h-10 w-10"
+          />
+          <div className="flex flex-col justify-center ml-2 gap-1">
+              <span className="font-semibold">Monkey D Luffy</span>
+              <span>strawhat@vivasoftltd.com</span>
+          </div>
+          </div>
+          <hr/>
+          </DropdownItem>
+              <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon /> Profile</div></DropdownItem>
+              <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon /> Setting</div></DropdownItem>
+              <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon /> Support</div></DropdownItem>
+              <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon /> Logout</div></DropdownItem>
+          </DropdownMenu>
+      </Dropdown>
+    );
+};
+
+const NameIcon = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 15 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.0012 15.0051C15.0012 14.9063 14.9747 14.8076 14.9747 14.7088C14.7895 12.1409 12.7525 9.91866 10.0805 9.35076C8.54614 9.02977 6.98529 9.07915 5.4509 9.25199C2.43503 9.59767 0.0540779 12.1409 0.00116781 14.9557C-0.0252872 15.7705 0.397993 16.1656 1.24455 16.1656C3.30805 16.1656 5.39799 16.1656 7.46149 16.1656C8.28159 16.1656 9.07524 16.1656 9.89535 16.1656C11.1916 16.1656 12.4879 16.1656 13.7842 16.1656C14.5779 16.1656 15.0276 15.7211 15.0012 15.0051Z"
+        fill="currentColor"
+      />
+      <path
+        d="M7.48609 8.16578C9.86705 8.16578 11.7718 6.388 11.7718 4.16578C11.7983 1.99294 9.86705 0.190469 7.539 0.165778C5.18451 0.141087 3.22683 1.94356 3.22683 4.11639C3.20038 6.36331 5.10514 8.16578 7.48609 8.16578Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+const SettingIcon = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.99992 9.99998C9.10449 9.99998 9.99992 9.10455 9.99992 7.99998C9.99992 6.89541 9.10449 5.99998 7.99992 5.99998C6.89535 5.99998 5.99992 6.89541 5.99992 7.99998C5.99992 9.10455 6.89535 9.99998 7.99992 9.99998Z"
+        stroke="#344054"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12.4848 9.81816C12.4041 10.001 12.38 10.2037 12.4157 10.4003C12.4513 10.5969 12.545 10.7784 12.6848 10.9212L12.7211 10.9576C12.8338 11.0701 12.9232 11.2038 12.9842 11.351C13.0452 11.4981 13.0766 11.6558 13.0766 11.8151C13.0766 11.9744 13.0452 12.1322 12.9842 12.2793C12.9232 12.4265 12.8338 12.5601 12.7211 12.6727C12.6086 12.7854 12.4749 12.8748 12.3277 12.9358C12.1806 12.9968 12.0228 13.0282 11.8636 13.0282C11.7043 13.0282 11.5465 12.9968 11.3994 12.9358C11.2522 12.8748 11.1186 12.7854 11.006 12.6727L10.9696 12.6363C10.8268 12.4966 10.6454 12.4029 10.4488 12.3673C10.2522 12.3316 10.0494 12.3557 9.86659 12.4363C9.68733 12.5132 9.53445 12.6407 9.42677 12.8033C9.31909 12.9659 9.2613 13.1565 9.26052 13.3515V13.4545C9.26052 13.776 9.13282 14.0843 8.9055 14.3116C8.67819 14.5389 8.36988 14.6666 8.0484 14.6666C7.72693 14.6666 7.41862 14.5389 7.1913 14.3116C6.96399 14.0843 6.83628 13.776 6.83628 13.4545V13.4C6.83159 13.1994 6.76666 13.0048 6.64993 12.8416C6.53319 12.6784 6.37006 12.5541 6.18174 12.4848C5.99894 12.4042 5.79617 12.3801 5.59956 12.4157C5.40296 12.4514 5.22154 12.5451 5.07871 12.6848L5.04234 12.7212C4.92977 12.8339 4.79609 12.9233 4.64894 12.9843C4.50179 13.0453 4.34406 13.0767 4.18477 13.0767C4.02548 13.0767 3.86775 13.0453 3.7206 12.9843C3.57345 12.9233 3.43976 12.8339 3.32719 12.7212C3.21449 12.6086 3.12509 12.4749 3.06409 12.3278C3.00309 12.1806 2.97169 12.0229 2.97169 11.8636C2.97169 11.7043 3.00309 11.5466 3.06409 11.3994C3.12509 11.2523 3.21449 11.1186 3.32719 11.006L3.36356 10.9697C3.50327 10.8268 3.597 10.6454 3.63265 10.4488C3.6683 10.2522 3.64423 10.0494 3.56355 9.86665C3.48673 9.68739 3.35916 9.53452 3.19656 9.42683C3.03396 9.31915 2.84343 9.26136 2.6484 9.26059H2.54537C2.2239 9.26059 1.91559 9.13288 1.68827 8.90556C1.46096 8.67825 1.33325 8.36994 1.33325 8.04846C1.33325 7.72699 1.46096 7.41868 1.68827 7.19137C1.91559 6.96405 2.2239 6.83634 2.54537 6.83634H2.59992C2.80052 6.83165 2.99507 6.76672 3.15828 6.64999C3.32149 6.53325 3.44581 6.37012 3.51507 6.1818C3.59575 5.999 3.61981 5.79623 3.58416 5.59962C3.54852 5.40302 3.45479 5.2216 3.31507 5.07877L3.27871 5.0424C3.16601 4.92983 3.0766 4.79615 3.0156 4.649C2.9546 4.50185 2.92321 4.34412 2.92321 4.18483C2.92321 4.02554 2.9546 3.86781 3.0156 3.72066C3.0766 3.57351 3.16601 3.43983 3.27871 3.32725C3.39128 3.21455 3.52496 3.12515 3.67211 3.06415C3.81926 3.00315 3.97699 2.97175 4.13628 2.97175C4.29557 2.97175 4.4533 3.00315 4.60045 3.06415C4.7476 3.12515 4.88128 3.21455 4.99386 3.32725L5.03022 3.36362C5.17306 3.50334 5.35447 3.59706 5.55108 3.63271C5.74768 3.66836 5.95045 3.64429 6.13325 3.56362H6.18174C6.36099 3.48679 6.51387 3.35923 6.62155 3.19663C6.72923 3.03403 6.78702 2.84349 6.7878 2.64846V2.54543C6.7878 2.22396 6.9155 1.91565 7.14282 1.68834C7.37014 1.46102 7.67844 1.33331 7.99992 1.33331C8.32139 1.33331 8.6297 1.46102 8.85702 1.68834C9.08433 1.91565 9.21204 2.22396 9.21204 2.54543V2.59998C9.21282 2.795 9.27061 2.98554 9.37829 3.14814C9.48597 3.31074 9.63885 3.43831 9.8181 3.51513C10.0009 3.59581 10.2037 3.61987 10.4003 3.58422C10.5969 3.54858 10.7783 3.45485 10.9211 3.31513L10.9575 3.27877C11.0701 3.16607 11.2038 3.07666 11.3509 3.01566C11.4981 2.95467 11.6558 2.92327 11.8151 2.92327C11.9744 2.92327 12.1321 2.95467 12.2792 3.01566C12.4264 3.07666 12.5601 3.16607 12.6726 3.27877C12.7853 3.39134 12.8748 3.52502 12.9357 3.67217C12.9967 3.81932 13.0281 3.97705 13.0281 4.13634C13.0281 4.29563 12.9967 4.45336 12.9357 4.60051C12.8748 4.74766 12.7853 4.88135 12.6726 4.99392L12.6363 5.03028C12.4966 5.17312 12.4028 5.35453 12.3672 5.55114C12.3315 5.74774 12.3556 5.95052 12.4363 6.13331V6.1818C12.5131 6.36105 12.6407 6.51393 12.8033 6.62161C12.9659 6.72929 13.1564 6.78708 13.3514 6.78786H13.4545C13.7759 6.78786 14.0842 6.91556 14.3116 7.14288C14.5389 7.3702 14.6666 7.67851 14.6666 7.99998C14.6666 8.32145 14.5389 8.62976 14.3116 8.85708C14.0842 9.0844 13.7759 9.2121 13.4545 9.2121H13.3999C13.2049 9.21288 13.0144 9.27067 12.8518 9.37835C12.6892 9.48603 12.5616 9.63891 12.4848 9.81816Z"
+        stroke="#344054"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+const SupportIcon = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.05992 6.00004C6.21665 5.55449 6.52602 5.17878 6.93322 4.93946C7.34042 4.70015 7.81918 4.61267 8.2847 4.69252C8.75022 4.77236 9.17246 5.01439 9.47664 5.37573C9.78081 5.73706 9.94729 6.19439 9.94659 6.66671C9.94659 8.00004 7.94659 8.66671 7.94659 8.66671M7.99992 11.3334H8.00659M14.6666 8.00004C14.6666 11.6819 11.6818 14.6667 7.99992 14.6667C4.31802 14.6667 1.33325 11.6819 1.33325 8.00004C1.33325 4.31814 4.31802 1.33337 7.99992 1.33337C11.6818 1.33337 14.6666 4.31814 14.6666 8.00004Z"
+        stroke="#344054"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+const LogoutIcon = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.66667 10.3333L13 7M13 7L9.66667 3.66667M13 7H5M5 1H4.2C3.0799 1 2.51984 1 2.09202 1.21799C1.7157 1.40973 1.40973 1.71569 1.21799 2.09202C1 2.51984 1 3.07989 1 4.2V9.8C1 10.9201 1 11.4802 1.21799 11.908C1.40973 12.2843 1.71569 12.5903 2.09202 12.782C2.51984 13 3.0799 13 4.2 13H5"
+        stroke="#344054"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+export default App;
+``` 
+ </Tabs.Tab>
 </Tabs>
+   
+     
+   
+
 
 ### Dropdown API reference
 
@@ -685,4 +1027,3 @@ export const DropdownExample = () => {
   </tbody>
 </table>}
 
-```
