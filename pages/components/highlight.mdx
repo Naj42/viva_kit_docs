@@ -155,29 +155,29 @@ const App = ()=> {
 </Tabs.Tab>
 </Tabs>
 
-### Rounded
+### Size
 
-You can enhance highlighted strings by customizing their corner radius using `rounded` prop.  
+You can cahnge the size of rounded corner radius using `rounded` prop.  
 
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
 export const VarientsRadius= () => {
   return (
     <div className="flex flex-col gap-2">
-      <VKHighlight highlightText="extra small" rounded="">
-          You can change corner radius none of your selection
-      </VKHighlight>      
-      <VKHighlight highlightText="extra small" rounded="">
-          You can change corner radius none of your selection
+      <VKHighlight highlightText="none" rounded="none">
+          You can remove corner radius and set it to none for your selection
+      </VKHighlight> 
+      <VKHighlight highlightText="extra small" rounded="xs">
+          You can change the corner radius to extra small for your selection
       </VKHighlight>      
       <VKHighlight highlightText="medium" rounded="md">
-          You can change corner radius medium of your selection
+          You can change the corner radius to  medium for your selection
       </VKHighlight>      
       <VKHighlight highlightText="large" rounded="lg">
-          You can change corner radius large of your selection
+          You can change the corner radius to large for your selection
       </VKHighlight>      
       <VKHighlight highlightText="full" rounded="full">
-          You can change corner radius full of your selection
+          You can change the corner radius to full for your selection
       </VKHighlight>
     </div>
   );
@@ -193,8 +193,20 @@ import {VKHighlight} from "@vivakits/react-components";
 const App = ()=> {
   return(
     <div className="flex flex-col gap-2">
-      <VKHighlight highlightText="extra small" rounded="">
-          You can change corner radius none of your selection
+      <VKHighlight highlightText="none" rounded="none">
+          You can remove corner radius and set it to none for your selection
+      </VKHighlight> 
+      <VKHighlight highlightText="extra small" rounded="xs">
+          You can change the corner radius to extra small for your selection
+      </VKHighlight>      
+      <VKHighlight highlightText="medium" rounded="md">
+          You can change the corner radius to  medium for your selection
+      </VKHighlight>      
+      <VKHighlight highlightText="large" rounded="lg">
+          You can change the corner radius to large for your selection
+      </VKHighlight>      
+      <VKHighlight highlightText="full" rounded="full">
+          You can change the corner radius to full for your selection
       </VKHighlight>
     </div>
   )
