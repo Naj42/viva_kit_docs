@@ -15,20 +15,23 @@ import {
 
 # Chip
 
+The Chip component is a versatile UI element, designed to encapsulate and display individual pieces of information in a compact form. This component is commonly used to represent tags, labels, or selected items, providing a visually appealing way to manage and interact with discrete data points.
+
+
 ### import
 
-To use Chip component, import it from `@vivakits/react-components`.
+To utilize the Chip component, import it from `@vivakits/react-components`.
 
 <Tabs items={[]}>
 
-  <Tabs.Tab>
-  ```jsx copy
-    import { VKChip } from "@vivakits/react-components";
+<Tabs.Tab>
+```jsx copy
+import { VKChip } from "@vivakits/react-components";
 ```
    </Tabs.Tab>
    </Tabs>
 
-### Variants
+### Variant
 
 `variant` prop specifies visual styling of the chip component. The Chip component comes with 2 different variants that can be changed using the `variant` prop.
 
@@ -41,11 +44,11 @@ export const ChipVariant = () => {
     <div className="flex items-center gap-3">
       <VKChip
         label="Outlined"
-        variant={"outlined"}
+        variant="outlined"
       />
       <VKChip
         label="Filled"
-        variant={"filled"}
+        variant="filled"
       />
     </div>
 
@@ -62,14 +65,14 @@ import { VKChip } from "@vivakits/react-components";
 const App = () => {
   return (
     <>
-      <VKChip label="Outlined" variant={"outlined"} />
-      <VKChip label="Filled" variant={"filled"} />
+      <VKChip label="Outlined" variant="outlined" />
+      <VKChip label="Filled" variant="filled" />
     </>
   ); 
 };
 
 export default App;
-````
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -87,12 +90,12 @@ export const ChipOpen = () => {
       <VKChip
         label="Open"
         open={true}
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
         label="Hidden"
         open={false}
-        variant={"filled"}
+        variant="filled"
       />
     </div>
 
@@ -111,26 +114,26 @@ const App = () => {
     <>
       <VKChip
           label="Open"
-          variant={"filled"}
+          variant="filled"
         />
       <VKChip
           label="Hidden"
           open={false}
-          variant={"filled"}
+          variant="filled"
         />
       </>
   );
 };
 
 export default App;
-````
+```
 
   </Tabs.Tab>
 </Tabs>
 
-### Sizes
+### Size
 
-The `size` prop allows for consistent sizing across different parts of your user interface. There are 6 options offered for this prop.
+The `size` prop allows for consistent sizing across different parts of your user interface and offers 6 options.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -140,34 +143,34 @@ export const ChipSize = () => {
 
     <div className="flex items-center gap-3">
       <VKChip
-        size={"xs"}
+        size="xs"
         label="Extra small"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"sm"}
+        size="sm"
         label="Small"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"md"}
+        size="md"
         label="Medium"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"lg"}
+        size="lg"
         label="Large"
-        variant={"filled"}
+        variant="filled"
       />
         <VKChip
-        size={"xl"}
+        size="xl"
         label="Extra large"
-        variant={"filled"}
+        variant="filled"
       />
        <VKChip
-        size={"2xl"}
+        size="2xl"
         label="Extra extra large"
-        variant={"filled"}
+        variant="filled"
       />
     </div>
 
@@ -185,46 +188,46 @@ const App = () => {
   return (
     <>
       <VKChip
-        size={"xs"}
+        size="xs"
         label="Extra small"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"sm"}
+        size="sm"
         label="Small"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"md"}
+        size="md"
         label="Medium"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"lg"}
+        size="lg"
         label="Large"
-        variant={"filled"}
+        variant="filled"
       />
         <VKChip
-        size={"xl"}
+        size="xl"
         label="Extra large"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        size={"2xl"}
+        size="2xl"
         label="Extra extra large"
-        variant={"filled"}
+        variant="filled"
       />
     </>
   ); 
 };
 
 export default App;
-````
+```
 
   </Tabs.Tab>
 </Tabs>
 
-### Fontsizes
+### Font size
 
 The `fontsize` prop allows to set the font size specifically for the text within the chip. There are 6 options offered for this prop.
 
@@ -236,34 +239,34 @@ export const ChipFontsize = () => {
 
     <div className="flex items-center gap-3">
       <VKChip
-        fontSize={"xs"}
+        fontSize="xs"
         label="Extra small"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        fontSize={"sm"}
+        fontSize="sm"
         label="Small"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        fontSize={"md"}
+        fontSize="md"
         label="Medium"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
-        fontSize={"lg"}
+        fontSize="lg"
         label="Large"
-        variant={"filled"}
+        variant="filled"
       />
         <VKChip
-        fontSize={"xl"}
+        fontSize="xl"
         label="Extra large"
-        variant={"filled"}
+        variant="filled"
       />
        <VKChip
-        fontSize={"2xl"}
+        fontSize="2xl"
         label="Extra extra large"
-        variant={"filled"}
+        variant="filled"
       />
     </div>
 
@@ -281,46 +284,46 @@ const App = () => {
   return (
     <>
       <VKChip
-          fontSize={"xs"}
+          fontSize="xs"
           label="Extra small"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          fontSize={"sm"}
+          fontSize="sm"
           label="Small"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          fontSize={"md"}
+          fontSize="md"
           label="Medium"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          fontSize={"lg"}
+          fontSize="lg"
           label="Large"
-          variant={"filled"}
+          variant="filled"
         />
           <VKChip
-          fontSize={"xl"}
+          fontSize="xl"
           label="Extra large"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          fontSize={"2xl"}
+          fontSize="2xl"
           label="Extra extra large"
-          variant={"filled"}
+          variant="filled"
         />
     </>
   )
 }
   
 export default App;
-````
+```
 
   </Tabs.Tab>
 </Tabs>
 
-### Colors
+### Color
 
 The `color` prop defines the background colour of the chip to convey meaningful message with the chip. There are 7 options for `color` prop.
 
@@ -332,42 +335,42 @@ export const ChipColor = () => {
     <div className="flex flex-col justify-center gap-2">
       <div className="flex items-center gap-3">
         <VKChip
-          color={"primary"}
+          color="primary"
           label="Primary"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          color={"secondary"}
+          color="secondary"
           label="Secondary"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          color={"success"}
+          color="success"
           label="Success"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          color={"danger"}
+          color="danger"
           label="Danger"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          color={"warning"}
+          color="warning"
           label="Warning"
-          variant={"filled"}
+          variant="filled"
         />
 
       </div>
       <div className="flex items-center gap-3">
         <VKChip
-          color={"dark"}
+          color="dark"
           label="Dark"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
-          color={"light"}
+          color="light"
           label="Light"
-          variant={"filled"}
+          variant="filled"
         />
       </div>
     </div>
@@ -386,39 +389,39 @@ const App = () => {
   return (
     <>
       <VKChip
-            color={"primary"}
+            color="primary"
             label="Primary"
-            variant={"filled"}
+            variant="filled"
           />
         <VKChip
-            color={"secondary"}
+            color="secondary"
             label="Secondary"
-            variant={"filled"}
-          />
+            variant="filled"
+         />
         <VKChip
-            color={"success"}
+            color="success"
             label="Success"
-            variant={"filled"}
+            variant="filled"
           />
         <VKChip
-            color={"danger"}
+            color="danger"
             label="Danger"
-            variant={"filled"}
+            variant="filled"
           />
         <VKChip
-            color={"warning"}
+            color="warning"
             label="Warning"
-            variant={"filled"}
+            variant="filled"
           />
         <VKChip
-            color={"dark"}
+            color="dark"
             label="Dark"
-            variant={"filled"}
+            variant="filled"
           />
         <VKChip
-            color={"light"}
+            color="light"
             label="Light"
-            variant={"filled"}
+            variant="filled"
           />
       </>
   );
@@ -429,7 +432,7 @@ export default App;
   </Tabs.Tab>
 </Tabs>
 
-### States
+### State
 
 The `state` prop allows to set the current state or status of the chip. There are 3 options offered for this prop.
 
@@ -440,13 +443,13 @@ export const ChipState = () => {
   return (
 
     <div className="flex items-center gap-3">
-      <VKChip state={"selected"} label="Selected" variant={"filled"} />
+      <VKChip state="selected" label="Selected" variant="filled" />
       <VKChip
-        state={"unselected"}
+        state="unselected"
         label="Unselected"
-        variant={"filled"}
+        variant="filled"
       />
-      <VKChip state={"disabled"} label="Disabled" variant={"filled"} />
+      <VKChip state="disabled" label="Disabled" variant="filled" />
     </div>
 
 );
@@ -463,19 +466,19 @@ const App = () => {
   return (
     <>
       <VKChip
-          state={"selected"}
+          state="selected"
           label="Selected"
-          variant={"filled"}
+          variant="filled"
         />
       <VKChip
-          state={"unselected"}
+          state="unselected"
           label="Unselected"
-          variant={"filled"}
+          variant="filled"
         />
       <VKChip
-          state={"disabled"}
+          state="disabled"
           label="Disabled"
-          variant={"filled"}
+          variant="filled"
         />
     </>
   );
@@ -500,12 +503,12 @@ export const ChipRounded = () => {
       <VKChip
         rounded={true}
         label="Rounded"
-        variant={"filled"}
+        variant="filled"
       />
       <VKChip
         rounded={false}
         label="Square"
-        variant={"filled"}
+        variant="filled"
       />
     </div>
 
@@ -522,8 +525,8 @@ import { VKChip } from "@vivakits/react-components";
 const App = () => {
    return (
     <>
-      <VKChip rounded={true} label="Rounded" variant={"filled"} />
-      <VKChip rounded={false} label="Square" variant={"filled"} />
+      <VKChip rounded={true} label="Rounded" variant="filled" />
+      <VKChip rounded={false} label="Square" variant="filled" />
     </>
    );
 };
@@ -533,7 +536,7 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Icons
+### Icon
 
 The are two props offerd to show icons on left or right side of the chip. `leftIcon` allows icon on left side and `rightIcon` allows icon on right side of the chip. On icon prop, icon component can be passed or a svg can be used directly as the value of the prop. 
 
@@ -563,12 +566,12 @@ export const ChipIcon = () => {
          </svg>
          }
             label="Left icon"
-            variant={"filled"}
+            variant="filled"
       />
       <VKChip
         rightIcon={<CloseIcon />}
         label="Right icon"
-        variant={"filled"}
+        variant="filled"
       />
     </div>
 
@@ -588,16 +591,16 @@ const App = () => {
         <VKChip
           leftIcon={<NameIcon />}
           label="Left icon"
-          variant={"filled"}
+          variant="filled"
         />
         <VKChip
           rightIcon={<CloseIcon />}
           label="Right icon"
-          variant={"filled"}
+          variant="filled"
         />
       </>
     );
-  };
+};
 
 const NameIcon = () => {
   return (
@@ -617,7 +620,7 @@ const NameIcon = () => {
           fill="currentColor"
         />
       </svg>
-  );
+   );
 };
 
 
@@ -637,7 +640,7 @@ const CloseIcon = () => {
           d="M6 18 18 6M6 6l12 12"
         />
       </svg>
-  );
+   );
 };
 
 export default App;
@@ -659,37 +662,37 @@ export const ChipExample = () => {
         <VKChip
           rounded={true}
           label="Basic"
-          variant={"outlined"}
-          color={"dark"}
-          fontSize={"sm"}
+          variant="outlined"
+          color="dark"
+          fontSize="sm"
         />
         <VKChip
           rounded={true}
           label="User"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"sm"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           leftIcon={<NameIcon />}
         />
         <VKChip
           rounded={true}
           label="Close"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"sm"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           rightIcon={<CloseIcon />}
         />
         <VKChip
           rounded={true}
           label="Avatar"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"sm"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           leftIcon={
             <VKAvatar
               variant="image"
               color="secondary"
-              src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+              src="https://i.pinimg.com/originals/1f/db/96/1fdb96e98f5fabacf6a7c509916333a3.png"
               alt="person with camera"
               withBorder
               className="h-6 w-6"
@@ -699,9 +702,9 @@ export const ChipExample = () => {
         <VKChip
           rounded={true}
           label="Right Arrow"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"sm"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           rightIcon={<ArrowRightIcon />}
         />
       </div>
@@ -710,34 +713,34 @@ export const ChipExample = () => {
         <VKChip
           rounded={true}
           label="Up arrow"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"sm"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           rightIcon={<UpArrowIcon />}
         />
         <VKChip
           rounded={true}
           label="Search"
-          variant={"filled"}
-          color={"light"}
-          size={"md"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           rightIcon={<SearchIcon />}
         />
         <VKChip
           rounded={true}
           label="Clickable"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"md"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           onClick={() => alert("You clicked on the chip")}
         />
 
         <VKChip
           rounded={true}
           label="Increase"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"md"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           leftIcon={<SortUpIcon />}
           onLeftIconClick={() => alert("You clicked on increase icon")}
         />
@@ -745,17 +748,16 @@ export const ChipExample = () => {
         <VKChip
           rounded={true}
           label="Decrease"
-          variant={"filled"}
-          color={"light"}
-          fontSize={"md"}
+          variant="filled"
+          color="light"
+          fontSize="sm"
           rightIcon={<SortDownIcon />}
           onRightIconClick={() => alert("You clicked on decrease icon")}
         />
       </div>
-
     </div>
 
-)
+  )
 }
 
 <ChipExample />
@@ -767,42 +769,41 @@ import { VKChip, VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
     return (
-      <div className="flex flex-col gap-2">
         <div className="flex items-center gap-3">
           <VKChip
             rounded={true}
             label="Basic"
-            variant={"outlined"}
-            color={"dark"}
-            fontSize={"sm"}
+            variant="outlined"
+            color="dark"
+            fontSize="sm"
           />
           <VKChip
             rounded={true}
             label="User"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"sm"}
+            variant="filled"
+            color="light"
+            fontSize="sm"
             leftIcon={<NameIcon />}
           />
-            <VKChip
+          <VKChip
             rounded={true}
             label="Close"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"sm"}
+            variant="filled"
+            color="light"
+            fontSize="sm"
             rightIcon={<CloseIcon />}
           />
           <VKChip
             rounded={true}
             label="Avatar"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"sm"}
+            variant="filled"
+            color="light"
+            fontSize="sm"
             leftIcon={
               <VKAvatar
                 variant="image"
                 color="secondary"
-                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                src="https://i.pinimg.com/originals/1f/db/96/1fdb96e98f5fabacf6a7c509916333a3.png"
                 alt="person with camera"
                 withBorder
                 className="h-6 w-6"
@@ -812,60 +813,15 @@ const App = () => {
           <VKChip
             rounded={true}
             label="Right Arrow"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"sm"}
+            variant="filled"
+            color="light"
+            fontSize="sm"
             rightIcon={<ArrowRightIcon />}
           />
         </div>
-
-        <div className="flex items-center gap-3">
-          <VKChip
-            rounded={true}
-            label="Up arrow"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"sm"}
-            rightIcon={<UpArrowIcon />}
-          />
-          <VKChip
-            rounded={true}
-            label="Search"
-            variant={"filled"}
-            color={"light"}
-            size={"md"}
-            rightIcon={<SearchIcon />}
-          />
-          <VKChip
-            rounded={true}
-            label="Clickable"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"md"}
-            onClick={() => alert("You clicked on the chip")}
-          />
-          <VKChip
-            rounded={true}
-            label="Increase"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"md"}
-            leftIcon={<SortUpIcon />}
-            onLeftIconClick={() => alert("You clicked on increase icon")}
-          />
-          <VKChip
-            rounded={true}
-            label="Decrease"
-            variant={"filled"}
-            color={"light"}
-            fontSize={"md"}
-            rightIcon={<SortDownIcon />}
-            onRightIconClick={() => alert("You clicked on decrease icon")}
-          />
-          </div>
-      </div>
-   );
+    );
 };
+
 
 const NameIcon = () => {
     return (
@@ -885,7 +841,7 @@ const NameIcon = () => {
           fill="currentColor"
         />
       </svg>
-  );
+   );
 };
 
 const CloseIcon = () => {
@@ -904,7 +860,7 @@ const CloseIcon = () => {
           d="M6 18 18 6M6 6l12 12"
         />
       </svg>
-  );
+   );
 };
 
 const ArrowRightIcon = () => {
@@ -924,7 +880,66 @@ const ArrowRightIcon = () => {
           strokeLinejoin="round"
         />
       </svg>
-  );
+    );
+};
+
+
+export default App;
+```
+
+```jsx copy
+import { VKChip } from "@vivakits/react-components";
+
+const App = () => {
+    return (
+        <div className="flex items-center gap-3">
+          <VKChip
+            rounded={true}
+            label="Up arrow"
+            variant="filled"
+            color="light"
+            fontSize="sm"
+            rightIcon={<UpArrowIcon />}
+          />
+          <VKChip
+            rounded={true}
+            label="Search"
+            variant="filled"
+            color="light"
+            fontSize="sm"
+            rightIcon={<SearchIcon />}
+          />
+          <VKChip
+            rounded={true}
+            label="Clickable"
+            variant="filled"
+            color="light"
+            fontSize="sm"
+            onClick={() => alert("You clicked on the chip")}
+          />
+
+          <VKChip
+            rounded={true}
+            label="Increase"
+            variant="filled"
+            color="light"
+            fontSize="sm"
+            leftIcon={<SortUpIcon />}
+            onLeftIconClick={() => alert("You clicked on increase icon")}
+          />
+
+          <VKChip
+            rounded={true}
+            label="Decrease"
+            variant="filled"
+            color="light"
+            fontSize="sm"
+            rightIcon={<SortDownIcon />}
+            onRightIconClick={() => alert("You clicked on decrease icon")}
+          />
+        </div>
+  
+    );
 };
 
 const UpArrowIcon = () => {
@@ -942,7 +957,7 @@ const UpArrowIcon = () => {
           fill="#000000"
         />
       </svg>
-  );
+    );
 };
 
 const SearchIcon = () => {
@@ -961,7 +976,7 @@ const SearchIcon = () => {
           clipRule="evenodd"
         />
       </svg>
-  );
+    );
 };
 
 const SortUpIcon = () => {
@@ -976,7 +991,7 @@ const SortUpIcon = () => {
       >
         <path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"></path>
       </svg>
-  );
+    );
 };
 
 const SortDownIcon = () => {
@@ -991,7 +1006,7 @@ const SortDownIcon = () => {
       >
         <path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"></path>
       </svg>
-  );
+    );
 };
 
 export default App;
@@ -1080,7 +1095,7 @@ const [chips, setChips] = useState([]);
         }}
       />
     </div>
-   );
+    );
 };
 
 const CloseIcon = () => {
@@ -1099,7 +1114,7 @@ const CloseIcon = () => {
           d="M6 18 18 6M6 6l12 12"
         />
       </svg>
-  );
+    );
 };
 
 export default App;
@@ -1295,6 +1310,3 @@ export default App;
       </tbody>
     </table>}
 
-```
-
-```
