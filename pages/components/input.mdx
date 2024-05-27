@@ -1,41 +1,18 @@
 import { Input } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
-import { FaSearch, FaEdit } from "react-icons/fa";
+import { FaSearch, FaExclamation } from "react-icons/fa";
 
 # Input
 
-### Variants
+### Import
 
-The Input component comes with 2 different variants that you can change it using the `variant` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-  <Tabs.Tab>
-export const InputVariantGroup = () => {
-  return (
-    <div className="flex items-center gap-3">
-        <Input label="Outlined:" variant="outline" />
-        <Input label="Solid:" variant="solid" className="!bg-gray-300" />        
-    </div>
-  );
-};
-
-<InputVariantGroup />
-  </Tabs.Tab>
-
-  <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-        <Input label="Outlined input variant" variant="outline" />
-        <Input label="Solid input variant" variant="solid" className="!bg-gray-300" />
-    </div>
+import { Input } from "@vivakits/react-components";
 ```
-  </Tabs.Tab>
-</Tabs>
 
-### Sizes
+### Size
 
-The Input component comes with 4 different sizes that you can change it using the `size` prop.
+The Input component comes with 4 different sizes that you can change using the `size` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -56,19 +33,27 @@ export const InputSizeGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3">
-    <Input size="sm" label="Small" />
-    <Input size="md" label="Medium" />
-    <Input size="lg" label="Large" />
-    <Input size="xl" label="Extra Large" />
-</div>
+import { Input } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+        <Input size="sm" label="Small" />
+        <Input size="md" label="Medium" />
+        <Input size="lg" label="Large" />
+        <Input size="xl" label="Extra Large" />
+    </div>
+  );
+};
+
+export default App;
   ```
   </Tabs.Tab>
 </Tabs>
 
-### Colors
+### Color
 
-The Input component comes with 6 different colors that you can change it using the `color` prop. It has both solid and outline variant
+The Input component comes with 6 different colors that you can change it using the `color` prop. It has both solid and outline variant.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -91,21 +76,29 @@ export const InputColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3 flex-wrap">
-  <Input variant="outline" label="Primary" color="primary" />
-  <Input variant="outline" label="Secondary" color="secondary" />
-  <Input variant="outline" label="Success" color="success" />
-  <Input variant="outline" label="Warning" color="warning" />
-  <Input variant="outline" label="Danger" color="danger" />
-  <Input variant="outline" label="Light" color="light" />
-</div>
-  ```
+import { Input } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-end gap-3 flex-wrap">
+        <Input variant="outline" label="Primary" color="primary" />
+        <Input variant="outline" label="Secondary" color="secondary" />
+        <Input variant="outline" label="Success" color="success" />
+        <Input variant="outline" label="Warning" color="warning" />
+        <Input variant="outline" label="Danger" color="danger" />
+        <Input variant="outline" label="Light" color="light" />
+    </div>
+  );
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
 ### Rounded
 
-The shape of the input component can be updated using `rounded` prop
+The shape of the input component can be updated using `rounded` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -114,9 +107,9 @@ export const InputRoundedGroup = () => {
   return (
     <div className="flex items-end gap-3">
       <Input rounded="none" label="None" />
+      <Input rounded="default" label="Default" />
       <Input rounded="xs" label="Extra Small" />
       <Input rounded="sm" label="Small" />
-      <Input rounded="default" label="Default" />
       <Input rounded="md" label="Medium" />
       <Input rounded="lg" label="Large" />
       <Input rounded="xl" label="Extra Large" />
@@ -130,16 +123,24 @@ export const InputRoundedGroup = () => {
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex items-end gap-3">
-    <Input rounded="none" label="None" />
-    <Input rounded="xs" label="Extra Small" />
-    <Input rounded="sm" label="Small" />
-    <Input rounded="default" label="Default" />
-    <Input rounded="md" label="Medium" />
-    <Input rounded="lg" label="Large" />
-    <Input rounded="xl" label="Extra Large" />
-    <Input rounded="full" label="Full" />
-  </div>
+import { Input } from "@vivakits/react-components";
+
+  const App = () => {
+    return (
+      <div className="flex items-end gap-3">
+        <Input rounded="none" label="None" />
+        <Input rounded="default" label="Default" />
+        <Input rounded="xs" label="Extra Small" />
+        <Input rounded="sm" label="Small" />
+        <Input rounded="md" label="Medium" />
+        <Input rounded="lg" label="Large" />
+        <Input rounded="xl" label="Extra Large" />
+        <Input rounded="full" label="Full" />
+      </div>
+    );
+};
+
+export default App;
   ```
 </Tabs.Tab>
 
@@ -147,7 +148,7 @@ export const InputRoundedGroup = () => {
 
 ### Icon
 
-An icon can be append or prepend using `icon` prop. The position of the icon can be specified by the `iconPosition` prop.
+An icon can be appended or prepended using `icon` prop. The position of the icon can be specified by the `iconPosition` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -166,10 +167,19 @@ export const InputIconGroup = () => {
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex items-end gap-3">
-    <Input icon={<FaSearch />} placeholder="Search" />
-    <Input iconPosition="end" icon={<FaSearch />} placeholder="Search" />
-  </div>
+import { Input } from "@vivakits/react-components";
+import { FaSearch } from "react-icons/fa";
+
+const App = () => {
+    return (
+      <div className="flex items-end gap-3">
+        <Input icon={<FaSearch />} placeholder="Search" />
+        <Input iconPosition="end" icon={<FaSearch />} placeholder="Search" />
+      </div>
+    );
+};
+
+export default App;
   ```
 </Tabs.Tab>
 
@@ -177,7 +187,7 @@ export const InputIconGroup = () => {
 
 ### Error
 
-Conditional error handling for input can be done via `hasError` props. Error message can also be modified via `errorMessage` props.
+Conditional error handling for input can be done via `hasError` prop. Error message can also be modified via `errorMessage` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -185,8 +195,8 @@ Conditional error handling for input can be done via `hasError` props. Error mes
 export const InputErrorGroup = () => {
   return (
     <div className="flex items-end gap-3">
-      <Input icon={<FaEdit />} placeholder="Error variant" hasError={true} />
-      <Input icon={<FaEdit />} placeholder="Error variant" hasError={true} errorMessage="Custom error message" />
+      <Input icon={<FaExclamation />} placeholder="Default Error" hasError={true} />
+      <Input icon={<FaExclamation />} placeholder="Custom Error" hasError={true} errorMessage="Custom error message" />
     </div>
   );
 };
@@ -196,10 +206,19 @@ export const InputErrorGroup = () => {
 
 <Tabs.Tab>
   ```jsx copy
-  <div className="flex items-end gap-3">
-    <Input icon={<FaEdit />} placeholder="Error variant" hasError={true} />
-    <Input icon={<FaEdit />} placeholder="Error variant" hasError={true} errorMessage="Custom error message" />
-  </div>
+import { Input } from "@vivakits/react-components";
+import { FaExclamation } from "react-icons/fa";
+
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+      <Input icon={<FaExclamation />} placeholder="Default Error" hasError={true} />
+      <Input icon={<FaExclamation />} placeholder="Custom Error" hasError={true} errorMessage="Custom error message" />
+    </div>
+  );
+};
+
+export default App;
   ```
 </Tabs.Tab>
 
@@ -218,15 +237,6 @@ export const InputErrorGroup = () => {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>vairant</td>
-      <td>
-        <span className="badge">solid</span>  
-        <span className="badge">outline</span> 
-      </td>
-      <td>Changes input appreance</td>
-      <td><span className="badge">solid</span></td>
-    </tr>
     <tr>
       <td>color</td>
       <td className="flex flex-wrap gap-y-2 border-none">
@@ -335,7 +345,7 @@ export const InputErrorGroup = () => {
       <td>
         string
       </td>
-      <td>Modify the appreance of input box</td>
+      <td>Modify the appearance of input box</td>
       <td> - </td>
     </tr>
   </tbody>
