@@ -9,7 +9,7 @@ import { Tabs } from "nextra/components";
 import { VKAvatar } from "@vivakits/react-components";
 ```
 
-### Variants
+### Variant
 
 The Avatar component comes with 2 different variants that you can change using the `variant` prop. If no variant is provided, a default icon is shown.
 
@@ -20,7 +20,7 @@ export const AvatarVariantGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
   <VKAvatar
     variant="image"
     size="md"
@@ -40,19 +40,18 @@ return (
 import { VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAvatar
-    variant="image"
-    size="md"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar variant="text" size="md" textValue="Viva Kit" />
-  <VKAvatar size="md" />
-</div>
-)};
+  return (
+    <div className="flex justify-center items-center gap-6">
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar variant="text" size="md" textValue="Viva Kit" />
+        <VKAvatar size="md" />
+    </div>
+  );
+};
 
 export default App;
 
@@ -60,7 +59,7 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Shapes
+### Shape
 
 The Avatar component comes with 3 different shapes that you can change using the `shape` prop.
 
@@ -71,24 +70,24 @@ export const AvatarShapeGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
     <VKAvatar
       variant="image"
       size="md"
       src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape={"rounded"}
+      shape="rounded"
     />
     <VKAvatar
       variant="image"
       size="md"
       src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape={"curved"}
+      shape="curved"
     />
     <VKAvatar
       variant="image"
       size="md"
       src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape={"square"}
+      shape="square"
     />
 </div>
 ); };
@@ -102,30 +101,29 @@ return (
 import { VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-    <VKAvatar
-      variant="image"
-      size="md"
-      src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape={"rounded"}
-    />
-    <VKAvatar
-      variant="image"
-      size="md"
-      src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape={"curved"}
-    />
-    <VKAvatar
-      variant="image"
-      size="md"
-      src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape={"square"}
-    />
-</div>
-); };
+  return (
+    <div className="flex justify-center items-center gap-6">
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+          shape="rounded"
+        />
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+          shape="curved"
+        />
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+          shape="square"
+        />
+    </div>
+  ); 
+};
 
 export default App;
 
@@ -134,7 +132,7 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Sizes
+### Size
 
 The Avatar component comes with 6 different sizes that you can change using the `size` prop.
 
@@ -145,7 +143,7 @@ export const AvatarSizeGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
   <VKAvatar
     variant="image"
     size="xs"
@@ -188,42 +186,41 @@ return (
 import { VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAvatar
-    variant="image"
-    size="xs"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="sm"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="md"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="lg"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="xl"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="2xl"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-</div>
-); };
+  return (
+    <div className="flex justify-center items-center gap-6">
+        <VKAvatar
+          variant="image"
+          size="xs"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="sm"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="lg"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="xl"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="2xl"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+    </div>
+  ); 
+};
 
 export const App;
 
@@ -231,7 +228,7 @@ export const App;
 </Tabs.Tab>
 </Tabs>
 
-### Colors
+### Color
 
 The Avatar component comes with 8 different colors that you can change using the `color` prop.
 
@@ -242,7 +239,7 @@ export const AvatarColorGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
     <VKAvatar size="md" color="primary" />
     <VKAvatar size="md" color="secondary" />
     <VKAvatar size="md" color="success" />
@@ -263,20 +260,19 @@ return (
 import { VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-    <VKAvatar size="md" color="primary" />
-    <VKAvatar size="md" color="secondary" />
-    <VKAvatar size="md" color="success" />
-    <VKAvatar size="md" color="danger" />
-    <VKAvatar size="md" color="warning" />
-    <VKAvatar size="md" color="dark" />
-    <VKAvatar size="md" color="light" />
-    <VKAvatar size="md" color="default" />
-</div>
-); };
+  return (
+    <div className="flex justify-center items-center gap-6">
+        <VKAvatar size="md" color="primary" />
+        <VKAvatar size="md" color="secondary" />
+        <VKAvatar size="md" color="success" />
+        <VKAvatar size="md" color="danger" />
+        <VKAvatar size="md" color="warning" />
+        <VKAvatar size="md" color="dark" />
+        <VKAvatar size="md" color="light" />
+        <VKAvatar size="md" color="default" />
+    </div>
+  ); 
+};
 
 export default App;
 
@@ -285,7 +281,7 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Font Sizes
+### Font Size
 
 The Avatar component comes with 7 different font sizes that you can change using the `fontSize` prop.
 
@@ -296,7 +292,7 @@ export const AvatarFontSizeGroup = () => {
   
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
   <VKAvatar color="light" fontSize="xs" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="sm" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="md" textValue="Samin Yasar" />
@@ -315,18 +311,17 @@ return (
 import { VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAvatar color="light" fontSize="xs" textValue="Samin Yasar" />
-  <VKAvatar color="light" fontSize="sm" textValue="Samin Yasar" />
-  <VKAvatar color="light" fontSize="md" textValue="Samin Yasar" />
-  <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
-  <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
-  <VKAvatar color="light" fontSize="2xl" textValue="Samin Yasar" />
-</div>
-); };
+  return (
+    <div className="flex justify-center items-center gap-6">
+        <VKAvatar color="light" fontSize="xs" textValue="Samin Yasar" />
+        <VKAvatar color="light" fontSize="sm" textValue="Samin Yasar" />
+        <VKAvatar color="light" fontSize="md" textValue="Samin Yasar" />
+        <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
+        <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
+        <VKAvatar color="light" fontSize="2xl" textValue="Samin Yasar" />
+    </div>
+  ); 
+};
 
 export default App;
 ```
@@ -344,11 +339,11 @@ export const AvatarBorderColorGroup = () => {
 
 return (
 
-<div className="flex gap-6">
+<div className="flex justify-center items-center gap-6">
   <VKAvatar size="md" color="light" withBorder borderColor="primary" />
   <VKAvatar size="md" color="light" withBorder borderColor="secondary" />
-  <VKAvatar size="md" color="light" withBorder borderColor="light" />
-  <VKAvatar size="md" color="light" withBord borderColor="danger" />
+  <VKAvatar size="md" color="light" withBorder borderColor="success" />
+  <VKAvatar size="md" color="light" withBorder borderColor="danger" />
   <VKAvatar size="md" color="light" withBorder borderColor="warning" />
   <VKAvatar size="md" color="light" withBorder borderColor="dark" />
   <VKAvatar size="md" color="light" withBorder borderColor="light" />
@@ -364,19 +359,18 @@ return (
 import { VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
-
-return (
-
-<div className="flex gap-6">
-  <VKAvatar size="md" color="light" withBorder borderColor="primary" />
-  <VKAvatar size="md" color="light" withBorder borderColor="secondary" />
-  <VKAvatar size="md" color="light" withBorder borderColor="light" />
-  <VKAvatar size="md" color="light" withBord borderColor="danger" />
-  <VKAvatar size="md" color="light" withBorder borderColor="warning" />
-  <VKAvatar size="md" color="light" withBorder borderColor="dark" />
-  <VKAvatar size="md" color="light" withBorder borderColor="light" />
-</div>
-); };
+  return (
+    <div className="flex justify-center items-center gap-6">
+      <VKAvatar size="md" color="light" withBorder borderColor="primary" />
+      <VKAvatar size="md" color="light" withBorder borderColor="secondary" />
+      <VKAvatar size="md" color="light" withBorder borderColor="success" />
+      <VKAvatar size="md" color="light" withBorder borderColor="danger" />
+      <VKAvatar size="md" color="light" withBorder borderColor="warning" />
+      <VKAvatar size="md" color="light" withBorder borderColor="dark" />
+      <VKAvatar size="md" color="light" withBorder borderColor="light" />
+    </div>
+  ); 
+};
 
 export default App;
 ```
