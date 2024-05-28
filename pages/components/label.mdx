@@ -780,20 +780,26 @@ Below are few examples for the usage of Label component
 <Tabs.Tab>
 export const LabelExample = () => {
   return (
-    <div className="flex flex-col gap-1">
-    <VKLabel bold gutterBottom>Choose topics you are interested in:</VKLabel>
-    <div className="flex gap-1">
-    <Checkbox />
-    <VKLabel>Science</VKLabel>
-    </div>
-    <div className="flex gap-1">
-    <Checkbox />
-    <VKLabel>Philosophy</VKLabel>
-    </div>
-    <div className="flex gap-1">
-    <Checkbox />
-    <VKLabel>Sports</VKLabel>
-     </div>
+    <div className="flex gap-5">
+      <div className="flex flex-col gap-1">
+        <VKLabel bold gutterBottom>Choose topics you are interested in:</VKLabel>
+        <div className="flex gap-1">
+        <Checkbox />
+        <VKLabel>Science</VKLabel>
+        </div>
+        <div className="flex gap-1">
+        <Checkbox />
+        <VKLabel>Philosophy</VKLabel>
+        </div>
+        <div className="flex gap-1">
+        <Checkbox />
+        <VKLabel>Sports</VKLabel>
+        </div>
+      </div>
+      <div className="flex flex-col gap-1">
+        <VKLabel bold gutterBottom>Write your comment</VKLabel>
+           <Textarea />
+      </div>
     </div>
 );
 };
@@ -803,7 +809,7 @@ export const LabelExample = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKLabel, Textarea } from "@vivakits/react-components";
+import { VKLabel, Checkbox } from "@vivakits/react-components";
 
 const App = () => {
   return (
@@ -821,6 +827,21 @@ const App = () => {
           <Checkbox />
           <VKLabel>Sports</VKLabel>
         </div>
+    </div>
+  );
+};
+
+export default App;
+```
+
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex flex-col gap-1">
+      <VKLabel bold gutterBottom>Write your comment</VKLabel>
+        <Textarea />
     </div>
   );
 };
