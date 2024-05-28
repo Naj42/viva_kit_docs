@@ -1,7 +1,25 @@
 {
-  "index": "Installation",
-  "customization": "Customization",
-  "components": "Components",
+  "index":{
+    "title": "Home",
+    "theme":{
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": false,
+      "pagination": false
+    }
+  },
+  "alldocs":{
+    "title": "Get Started",
+    "index":"installation"
+  },
+  "components":{
+    "title":"Components"
+  },
+  "docs":{
+    "title":"Docs",
+    "type":"page"
+  },
   "about": {
     "title": "About",
     "type": "page"
