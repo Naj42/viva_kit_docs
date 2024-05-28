@@ -1,7 +1,482 @@
-import { VKLabel } from "@vivakits/react-components";
+import { VKLabel, Input, Checkbox, VKRadioButton, Textarea, VKSwitch, Select } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
 # Label
+
+The Label component is a fundamental UI element used to display static text or descriptive information within an application. It is often paired with form elements, such as text fields and checkboxes, to provide context or instructions to users. Labels enhance accessibility by improving the usability and readability of the interface, ensuring that users understand the purpose and function of adjacent elements.
+
+### Import 
+To utilize the Label prop, import it from `@vivakits/react-components`
+
+<Tabs items={[]}>
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel } from "@vivakits/react-components";
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### Color
+
+The `color` prop specifies the text color of the label. This allows to tailor the label's text color to fit the design of the application. There are 7 predefined values for `color` prop.
+
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelColor = () => {
+  return (
+
+    <div className="flex items-center gap-2">
+    <Checkbox />
+    <VKLabel color="primary">Primary</VKLabel>
+    <Checkbox />
+    <VKLabel color="secondary">Secondary</VKLabel>
+    <Checkbox />
+    <VKLabel color="success">Success</VKLabel>
+    <Checkbox />
+    <VKLabel color="warning">Warning</VKLabel>
+      <Checkbox />
+    <VKLabel color="danger">Danger</VKLabel>
+     <Checkbox />
+    <VKLabel color="dark" className="bg-black">Dark</VKLabel>
+     <Checkbox />
+    <VKLabel color="light">Light</VKLabel>
+    </div>
+);
+};
+
+<LabelColor />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Checkbox } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <Checkbox />
+        <VKLabel color="primary">Primary</VKLabel>
+      <Checkbox />
+        <VKLabel color="secondary">Secondary</VKLabel>
+      <Checkbox />
+        <VKLabel color="success">Success</VKLabel>
+      <Checkbox />
+        <VKLabel color="warning">Warning</VKLabel>
+      <Checkbox />
+        <VKLabel color="danger">Danger</VKLabel>
+      <Checkbox />
+        <VKLabel color="dark" className="bg-black">Dark</VKLabel>
+      <Checkbox />
+        <VKLabel color="light">Light</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+### Decoration Color
+The `decorationColor` prop defines the color of the text decoration, such as underlines or line-through effects. Accepts any valid CSS color value. This prop is useful for ensuring that decorative elements match overall color scheme. It accepts 8 values.
+
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelDecorationColor = () => {
+  return (
+
+    <div className="flex items-center gap-2">
+    <Checkbox />
+    <VKLabel decorationColor="default">Default</VKLabel>
+    <Checkbox />
+    <VKLabel decorationColor="primary">Primary</VKLabel>
+    <Checkbox />
+    <VKLabel decorationColor="secondary">Secondary</VKLabel>
+    <Checkbox />
+    <VKLabel decorationColor="success">Success</VKLabel>
+    <Checkbox />
+    <VKLabel decorationColor="warning">Warning</VKLabel>
+      <Checkbox />
+    <VKLabel decorationColor="danger">Danger</VKLabel>
+     <Checkbox />
+    <VKLabel decorationColor="dark" className="bg-black">Dark</VKLabel>
+     <Checkbox />
+    <VKLabel decorationColor="light">Light</VKLabel>
+    </div>
+);
+};
+
+<LabelDecorationColor />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Checkbox } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <Checkbox />
+        <VKLabel decorationColor="default">Default</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="primary">Primary</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="secondary">Secondary</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="success">Success</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="warning">Warning</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="danger">Danger</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="dark" className="bg-black">Dark</VKLabel>
+      <Checkbox />
+        <VKLabel decorationColor="light">Light</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### Size
+
+The `size` prop determines the font size of the label text. This prop allows to adjust the size of the text to ensure readability and visual hierarchy within the UI. There are 5 predefined sizes.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelSize = () => {
+  return (
+
+    <div className="flex items-center gap-2">
+    <Checkbox />
+    <VKLabel size="xs">Extra small</VKLabel>
+    <Checkbox />
+    <VKLabel size="sm">Small</VKLabel>
+    <Checkbox />
+    <VKLabel size="md">Medium</VKLabel>
+    <Checkbox />
+    <VKLabel size="lg">Large</VKLabel>
+    <Checkbox />
+    <VKLabel size="xl">Extra large</VKLabel>
+    </div>
+);
+};
+
+<LabelSize />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Checkbox } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <Checkbox />
+        <VKLabel size="xs">Extra small</VKLabel>
+      <Checkbox />
+        <VKLabel size="sm">Small</VKLabel>
+      <Checkbox />
+        <VKLabel size="md">Medium</VKLabel>
+      <Checkbox />
+        <VKLabel size="lg">Large</VKLabel>
+      <Checkbox />
+        <VKLabel size="xl">Extra large</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+
+
+### Alignment
+
+The `align` prop sets the text alignment within the label. This allows control over the horizontal positioning of the label's content, making it easy to align text according to your layout requirements. It accepts 3 prosition values.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelAlign = () => {
+  return (
+    <div className="flex items-center gap-2">
+    <VKLabel align="start">Start:</VKLabel>
+        <Textarea />
+      <VKLabel align="end">End:</VKLabel>
+        <Textarea />
+      <VKLabel align="center">Center:</VKLabel>
+        <Textarea />
+    </div>
+);
+};
+
+<LabelAlign />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <VKLabel align="start">Start:</VKLabel>
+        <Textarea />
+      <VKLabel align="end">End:</VKLabel>
+        <Textarea />
+      <VKLabel align="center">Center:</VKLabel>
+        <Textarea />
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### Font Family
+
+The `fontFamily` specifies the font family for the label text. This allows to use custom fonts to match your brand's typography. 4 types are allowed for this.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelFontFamily = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <Checkbox />
+    <VKLabel fontFamily="default">Default</VKLabel>
+    <Checkbox />
+    <VKLabel fontFamily="mono">Mono</VKLabel>
+    <Checkbox />
+    <VKLabel fontFamily="sans">Sans</VKLabel>
+    <Checkbox />
+    <VKLabel fontFamily="sansSerif">Sans Serif</VKLabel> 
+      
+    </div>
+);
+};
+
+<LabelFontFamily />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Checkbox />
+        <VKLabel fontFamily="default">Default</VKLabel>
+      <Checkbox />
+        <VKLabel fontFamily="mono">Mono</VKLabel>
+      <Checkbox />
+        <VKLabel fontFamily="sans">Sans</VKLabel>
+      <Checkbox />
+        <VKLabel fontFamily="sansSerif">Sans Serif</VKLabel> 
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+
+### Decoration
+
+The `decoration` prop defines the text decoration style, such as `underline` `overline` or `line-through`. This prop enables you to add visual emphasis to the text, which can be useful for indicating links, completed tasks, or other special statuses. There are 4 variants of this.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelDecoration = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKRadioButton />
+    <VKLabel decoration="underline">Underline</VKLabel>
+    <VKRadioButton />
+    <VKLabel decoration="overline">Overline</VKLabel>
+    <VKRadioButton />
+    <VKLabel decoration="lineThrough">Line Through</VKLabel>
+    <VKRadioButton />
+    <VKLabel decoration="none">None</VKLabel>
+    </div>
+);
+};
+
+<LabelDecoration />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, VKRadioButton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <VKRadioButton />
+        <VKLabel decoration="underline">Underline</VKLabel>
+      <VKRadioButton />
+        <VKLabel decoration="overline">Overline</VKLabel>
+      <VKRadioButton />
+        <VKLabel decoration="lineThrough">Line Through</VKLabel>
+      <VKRadioButton />
+       <VKLabel decoration="none">None</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+
+### Word spacing
+
+The `wordSpacing` prop sets the spacing between words in the label text. This prop allows to adjust the spacing to improve readability or to achieve a specific visual effect. The are 6 possible values. 
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelWordSpacing = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKRadioButton />
+    <VKLabel wordSpacing="tighter">Tighter spacing</VKLabel>
+    <VKRadioButton />
+    <VKLabel wordSpacing="tight">Tight spacing</VKLabel>
+    <VKRadioButton />
+    <VKLabel wordSpacing="normal">Normal spacing</VKLabel>
+    <VKRadioButton />
+    <VKLabel wordSpacing="wide">Wide spacing</VKLabel>
+    <VKRadioButton />
+    <VKLabel wordSpacing="wider">Wider spacing</VKLabel>
+    <VKRadioButton />
+    <VKLabel wordSpacing="widest">Widest spacing</VKLabel>
+    </div>
+);
+};
+
+<LabelWordSpacing />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, VKRadioButton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <VKRadioButton />
+        <VKLabel wordSpacing="tighter">Tighter spacing</VKLabel>
+      <VKRadioButton />
+        <VKLabel wordSpacing="tight">Tight spacing</VKLabel>
+      <VKRadioButton />
+        <VKLabel wordSpacing="normal">Normal spacing</VKLabel>
+      <VKRadioButton />
+        <VKLabel wordSpacing="wide">Wide spacing</VKLabel>
+      <VKRadioButton />
+        <VKLabel wordSpacing="wider">Wider spacing</VKLabel>
+      <VKRadioButton />
+        <VKLabel wordSpacing="widest">Widest spacing</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### Weight
+
+The `weight` prop specifies the font weight of the label text. Accepts 10 predefined values. This allows to make the text appear bolder or lighter to enhance emphasis or match the design specifications.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelWeight = () => {
+  return (
+    <div className="flex items-center gap-3">
+    <VKRadioButton />
+    <VKLabel weight="default">Default</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="100">100</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="200">200</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="300">300</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="400">400</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="500">500</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="600">600</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="700">700</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="800">800</VKLabel>
+    <VKRadioButton />
+    <VKLabel weight="900">900</VKLabel>
+    </div>
+);
+};
+
+<LabelWeight />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, VKRadioButton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <VKRadioButton />
+        <VKLabel weight="default">Default</VKLabel>
+      <VKRadioButton />
+       <VKLabel weight="100">100</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="200">200</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="300">300</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="400">400</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="500">500</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="600">600</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="700">700</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="800">800</VKLabel>
+      <VKRadioButton />
+        <VKLabel weight="900">900</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
 
 ### isRequired
 
@@ -11,9 +486,9 @@ This is a boolean prop indicating whether the field associated with this label i
 <Tabs.Tab>
 export const LabelIsRequired = () => {
   return (
-    <div className="flex items-center gap-3">
-    <VKLabel isRequired={true}>Name:</VKLabel>
-    <input placeholder="Enter name" className="border border-gray-600 rounded-md w-52 h-9 p-1"/>
+    <div className="flex items-center gap-2">
+    <VKLabel isRequired>Name:</VKLabel>
+    <Input placeholder="Enter your beautiful name" size="md" rounded="md"/>
     </div>
 );
 };
@@ -23,10 +498,19 @@ export const LabelIsRequired = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-    <VKLabel isRequired={true}>Name:</VKLabel>
-    <Input />
+import { VKLabel, Input } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <VKLabel isRequired>Name:</VKLabel>
+      <Input placeholder="Enter your beautiful name" size="md" rounded="md"/>
     </div>
+  );
+};
+
+export default App;
+    
 ```
     </Tabs.Tab>
  </Tabs>
@@ -40,9 +524,9 @@ prop
 <Tabs.Tab>
 export const LabelIsDisabled = () => {
   return (
-    <div className="flex items-center gap-3">
-    <VKLabel isDisabled={true}>Name:</VKLabel>
-    <input placeholder="Enter name" className="border border-gray-600 rounded-md w-52 h-9 p-1"/>
+    <div className="flex items-center gap-2">
+    <VKLabel isDisabled>Name:</VKLabel>
+    <Input placeholder="Enter your beautiful name" size="md" rounded="md" />
     </div>
 );
 };
@@ -52,18 +536,306 @@ export const LabelIsDisabled = () => {
 
   <Tabs.Tab>
 ```jsx copy
-    <div className="flex items-center gap-3">
-    <VKLabel isDisabled={true}>Name:</VKLabel>
-    <Input />
+import { VKLabel, Input } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <VKLabel isDisabled>Name:</VKLabel>
+      <Input placeholder="Enter your beautiful name" size="md" rounded="md" />
     </div>
+  );
+};
+
+export default App;
 ```
     </Tabs.Tab>
  </Tabs>
 
+
+### hasError
+
+If `true`, applies styles indicating that the label is associated with a field that has an error. This usually involves changing the text color to red to signify an error, helping to draw the user's attention to the problematic field.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelHasError = () => {
+  return (
+    <div>
+    <VKLabel hasError isRequired>Email address:</VKLabel>
+    <Input placeholder="Enter your email address" size="md" rounded="md" />
+    </div>
+);
+};
+
+<LabelHasError />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Input } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div>
+      <VKLabel hasError isRequired>Email address:</VKLabel>
+        <Input placeholder="Enter your email address" size="md" rounded="md" />
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### italic
+If `italic` prop is set to `true`, it renders the label text in italic. This can be useful for emphasizing certain words or phrases within the label.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelItalic = () => {
+  return (
+    <div>
+    <VKLabel italic color="primary">Describe yourself:</VKLabel>
+    <Textarea placeholder="Describe yourself" size="md" rounded="md" />
+    </div>
+);
+};
+
+<LabelItalic />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div>
+      <VKLabel italic color="primary">Describe yourself:</VKLabel>
+        <Textarea placeholder="Describe yourself" size="md" rounded="md" />
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+
+### bold
+If `bold` prop is set to true, it renders the label text in bold. This can help to highlight important information or headings.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelBold = () => {
+  return (
+    <div className="flex items-center gap-2">
+    <Checkbox/>
+    <VKLabel bold>Accept terms and conditions</VKLabel>
+    </div>
+);
+};
+
+<LabelBold />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <Checkbox/>
+        <VKLabel bold>Accept terms and conditions</VKLabel>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### gutterBottom
+If `gutterBottom` is set to true, it adds spacing below the label. This is useful for creating visual separation between the label and subsequent elements.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelGutterBottom = () => {
+  return (
+    <div>
+      <VKLabel gutterBottom >Gutter bottom</VKLabel>
+        <Textarea size="md" rounded="md" />
+      
+    </div>
+);
+};
+
+<LabelGutterBottom />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div>
+      <VKLabel gutterBottom >Gutter bottom</VKLabel>
+        <Textarea size="md" rounded="md" />
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+### gutterTop
+If `gutterTop` is set to true, it adds spacing below the label. This is useful for creating visual separation between the label and subsequent elements.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelGutterTop = () => {
+  return (
+    <div>
+    <VKLabel gutterTop>Gutter top</VKLabel>
+    <Textarea size="md" rounded="md" />
+    </div>
+);
+};
+
+<LabelGutterTop />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div>
+      <VKLabel gutterTop>Gutter top</VKLabel>
+        <Textarea size="md" rounded="md" />
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+### disableCopy
+If `disableCopy` is set to true, prevents the text of the label from being copied to the clipboard. This can be useful in scenarios where the label contains sensitive information or where you want to prevent users from copying certain text.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelDisableCopy = () => {
+  return (
+    <div>
+    <VKLabel disableCopy color="primary">Describe yourself:</VKLabel>
+    <Textarea placeholder="Describe yourself" size="lg" rounded="md" />
+    </div>
+);
+};
+
+<LabelDisableCopy />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div>
+      <VKLabel disableCopy color="primary">Describe yourself:</VKLabel>
+        <Textarea placeholder="Describe yourself" size="md" rounded="md" />
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+
+### Example
+Below are few examples for the usage of Label component 
+
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const LabelExample = () => {
+  return (
+    <div className="flex flex-col gap-1">
+    <VKLabel bold gutterBottom>Choose topics you are interested in:</VKLabel>
+    <div className="flex gap-1">
+    <Checkbox />
+    <VKLabel>Science</VKLabel>
+    </div>
+    <div className="flex gap-1">
+    <Checkbox />
+    <VKLabel>Philosophy</VKLabel>
+    </div>
+    <div className="flex gap-1">
+    <Checkbox />
+    <VKLabel>Sports</VKLabel>
+     </div>
+    </div>
+);
+};
+
+<LabelExample />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKLabel, Textarea } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex flex-col gap-1">
+      <VKLabel bold gutterBottom>Choose topics you are interested in:</VKLabel>
+        <div className="flex gap-1">
+          <Checkbox />
+          <VKLabel>Science</VKLabel>
+        </div>
+        <div className="flex gap-1">
+          <Checkbox />
+          <VKLabel>Philosophy</VKLabel>
+        </div>
+        <div className="flex gap-1">
+          <Checkbox />
+          <VKLabel>Sports</VKLabel>
+        </div>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+ </Tabs>
+
+
+
+
 ### API Reference
 
 {<table>
-
   <thead>
     <tr>
       <th className="w-[10%]" align="left">Attribute</th>
@@ -74,26 +846,182 @@ export const LabelIsDisabled = () => {
   </thead>
   <tbody>
     <tr>
-      <td>children</td>
-      <td>ReactNode</td>
-      <td>Displays badge content</td>
+      <td>color</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
+        <span className="badge">light</span>
+        <span className="badge">dark</span>
+      </td>
+      <td>Specifies the text color of the label</td>
+      <td><span className="badge">light</span></td>
+    </tr>
+    <tr>
+      <td>decorationColor</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">primary</span>
+        <span className="badge">secondary</span>
+        <span className="badge">success</span>
+        <span className="badge">danger</span>
+        <span className="badge">warning</span>
+        <span className="badge">light</span>
+        <span className="badge">dark</span>
+        <span className="badge">default</span>
+      </td>
+      <td>Defines the color of the text decoration</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>align</td>
+      <td>
+        <span className="badge">start</span>
+        <span className="badge">end</span>
+        <span className="badge">center</span>
+      </td>
+      <td>Sets the text alignment within the label.</td>
       <td> - </td>
     </tr>
-
+    <tr>
+      <td>size</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">xs</span>
+        <span className="badge">sm</span>
+        <span className="badge">md</span>
+        <span className="badge">lg</span>
+        <span className="badge">xl</span>
+      </td>
+      <td>Determines the font size of the label text.</td>
+      <td><span className="badge">sm</span></td>
+    </tr>
+    <tr>
+      <td>fontFamily</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>
+        <span className="badge">sansSerif</span>
+        <span className="badge">sans</span>
+        <span className="badge">mono</span>
+      </td>
+      <td>Specifies the font family for the label text.</td>
+      <td><span className="badge">default</span></td>
+    </tr>
+    <tr>
+      <td>decoration</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">underline</span>
+        <span className="badge">overline</span>
+        <span className="badge">line-through</span>
+        <span className="badge">none</span>
+      </td>
+      <td>Defines the text decoration style</td>
+      <td><span className="badge">none</span></td>
+    </tr>
+    <tr>
+      <td>wordSpacing</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">tighter</span>
+        <span className="badge">tight</span>
+        <span className="badge">normal</span>
+        <span className="badge">wide</span>
+        <span className="badge">wider</span>
+        <span className="badge">widest</span>
+      </td>
+      <td>Sets the spacing between words in the label text</td>
+      <td><span className="badge">normal</span></td>
+    </tr>
+    <tr>
+      <td>weight</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">100</span>
+        <span className="badge">200</span>
+        <span className="badge">300</span>
+        <span className="badge">400</span>
+        <span className="badge">500</span>
+        <span className="badge">600</span>
+        <span className="badge">700</span>
+        <span className="badge">800</span>
+        <span className="badge">900</span>
+        <span className="badge">default</span>
+      </td>
+      <td>Specifies the font weight of the label text</td>
+      <td><span className="badge">default</span></td>
+    </tr>
     <tr>
       <td>isRequired</td>
       <td>boolean</td>
-      <td>Whether the field associated with label is required or not</td>
-      <td> false </td>
+      <td>if <span className="badge">true</span>, indicates that the label is for a required field</td>
+      <td><span className="badge">false</span></td>
     </tr>
-
-     <tr>
+    <tr>
       <td>isDisabled</td>
       <td>boolean</td>
-      <td>Whether the label is diabled or not</td>
-      <td> false </td>
+      <td>if <span className="badge">true</span>, applies styles indicating that the label is associated with a disabled field.</td>
+      <td><span className="badge">false</span></td>
     </tr>
-
+    <tr>
+      <td>hasError</td>
+      <td>boolean</td>
+      <td>if <span className="badge">true</span>, applies styles indicating that the label is associated with a field that has an error.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+    <tr>
+      <td>italic</td>
+      <td>boolean</td>
+      <td>if <span className="badge">true</span>, renders the label text in italic.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+    <tr>
+      <td>bold</td>
+      <td>boolean</td>
+      <td>if <span className="badge">true</span>, renders the label text in bold.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+    <tr>
+      <td>gutterBottom</td>
+      <td>boolean</td>
+      <td>if <span className="badge">true</span>, adds spacing below the label.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+    <tr>
+      <td>gutterTop</td>
+      <td>boolean</td>
+      <td>if <span className="badge">true</span>, adds spacing above the label.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+    <tr>
+      <td>disableCopy</td>
+      <td>boolean</td>
+      <td>if <span className="badge">true</span>, prevents the text of the label from being copied to the clipboard.</td>
+      <td><span className="badge">false</span></td>
+    </tr>
+    <tr>
+      <td>className</td>
+      <td>string</td>
+      <td>Allows for the addition of custom CSS class names for further styling.</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>children</td>
+      <td>string | number | React.ReactNode</td>
+      <td>The content to be displayed within the label. Can be text or other React components.</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>translationFn</td>
+      <td>function</td>
+      <td>A function for translating the label text, useful for internationalization.</td>
+      <td> - </td>
+    </tr>
+    <tr>
+      <td>props</td>
+      <td>object</td>
+      <td>Additional props that can be spread onto the component for further customization.</td>
+      <td> - </td>
+    </tr>
   </tbody>
 </table>}
-```
+
+
+
