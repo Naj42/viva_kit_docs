@@ -1,7 +1,57 @@
 import { Button } from "@vivakits/react-components";
+import Image from "next/image";
+
+export const Features =()=>{
+    const allFeatures = [
+        {
+            image: "https://www.svgrepo.com/show/408381/stack-apps-layers.svg",
+            title: "UI Components",
+            description: "The ultimate set of UI Components to assist you with impressive React Components."
+        },{
+            image: "https://www.svgrepo.com/show/111729/ball.svg",
+            title: "Styled or Unstyled",
+            description: "Choose from a variety of pre-built themes or implement your design systems with the CSS library of your choice like TailwindCSS."
+        },{
+            image: "https://www.svgrepo.com/show/353655/discord-icon.svg",
+            title: "Community",
+            description: "Connect with the other open source community members, collaborate and have a voice in the project roadmap."
+        },{
+            image: "https://www.svgrepo.com/show/348545/accessibility-human.svg",
+            title: "Accessibility",
+            description: "Compliant with the Web Content Accessibility Guidelines"
+        },{
+            image: "https://www.svgrepo.com/show/506728/mobile.svg",
+            title: "Mobile",
+            description: "First class support for responsive design led by touch optimized elements."
+        },{
+            image: "https://www.svgrepo.com/show/439022/typescript.svg",
+            title: "Typescript",
+            description: "Top-notch support for Typescript with types and tooling assistance."
+        }
+    ]
+    return(
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        {
+            allFeatures?.map((feature,index)=>(
+                <div key={index} className="flex flex-col gap-2 bg-slate-100 p-4 rounded-lg border transition-all delay-200 ease-linear hover:border-[#00156a]">
+                    <Image src={`${feature?.image}`} width={30} height={30} alt={feature?.title} />
+                    <h1 className="text-xl font-semibold">{feature?.title}</h1>
+                    <p className="text-base">{feature?.description}</p>
+                </div>
+            ))
+        }
+        </div>
+    )
+}
 
 <div className="mt-10 md:mt-20 lg:mt-30 flex flex-col items-center gap-5 text-center">
     <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold">Build your component library</h1>
     <p className="text-base">Beautifully designed components that you can copy and <br/> paste into your apps. Accessible. Customizable. Open Source.</p>
     <Button variant="solid" color="light" size="md" rounded="md"> <a href="/docs/installation">Get Started</a></Button>
 </div> 
+
+<div className="flex flex-col justify-center items-center mt-10 lg:mt-20 gap-2">
+    <h1 className="text-2xl md:text-4xl">Features</h1>
+    <p>Vivakit is the complete solution for your UI requiements.</p>
+    <Features/>
+</div>
