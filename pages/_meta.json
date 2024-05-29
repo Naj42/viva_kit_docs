@@ -3,6 +3,7 @@
     "title": "Home",
     "display": "hidden",
     "theme":{
+      "layout":"full",
       "breadcrumb": false,
       "footer": true,
       "sidebar": false,
@@ -17,7 +18,8 @@
     "title":"Components"
   },
   "support":{
-    "title":"Support"
+    "title":"Support",
+    "href": "#"
   },
   "discover":{
     "title": "Discover"

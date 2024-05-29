@@ -4,6 +4,7 @@ import Image from "next/image";
 
 const config: DocsThemeConfig = {
   // logo: <span style={{ fontWeight: "600" }}>Vivakits</span>,
+  faviconGlyph: "V",
   logo:(
     <>
       <Image src="/vivakits.png" width={150} height={80} alt="Vivakits" />
