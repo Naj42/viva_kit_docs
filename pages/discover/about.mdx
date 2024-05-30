@@ -1,2 +1,68 @@
 # Meet the Team
+import Image from "next/image";
+
+export const Members = ()=>{
+    const allMembers = [
+        {
+            image: "https://vivasoftltd.com/wp-content/uploads/2024/03/Logo.svg",
+            name: "Vivasoft Limited",
+            designation: "Founder"
+        },
+        {
+            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1717049647~exp=1717053247~hmac=fbcaa729e99d9f5efef29d45bd6f0069c8de9ce4519c6f08fc55a9af70191bdf&w=740",
+            name: "John Doe",
+            designation: "Frontend Developer"
+        },
+        {
+            image: "https://img.freepik.com/free-photo/portrait-friendly-confident-caucasian-bearded-guy-with-moustache-wearing-glasses-smiling-politely-looking-relaxed-calm-gray-wall-listening-customer-complaint-gray-wall_176420-22514.jpg?t=st=1717049699~exp=1717053299~hmac=780a2f906282e9bd8e9bb94bf346a8592410053aed06e2424b242653bab113c4&w=740",
+            name: "Jane Smith",
+            designation: "UI/UX Designer"
+        },
+        {
+            image: "https://img.freepik.com/free-photo/portrait-handsome-european-male-student-has-gentle-smile-face-happy-hear-pleasant-news-stands-delighted-wears-round-spectacles-orange-jumper_273609-45004.jpg?w=740&t=st=1717050030~exp=1717050630~hmac=7766520693bdd3bab23d93137edd840c075eb622146e7d5bf11bcc9b6d540095",
+            name: "Michael Johnson",
+            designation: "Software Engineer"
+        },
+        {
+            image: "https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?t=st=1717049816~exp=1717053416~hmac=d71671b41871ac68973b53cf2508b4c9319fcc00b1ea20aaafb9bafcc63ae70f&w=740",
+            name: "Emily Brown",
+            designation: "Product Manager"
+        },
+        {
+            image: "https://img.freepik.com/free-photo/close-up-portrait-curly-handsome-european-male_176532-8133.jpg?t=st=1717049841~exp=1717053441~hmac=e54c114c952567f1beb1f5834996afab092d930dd3f12982942b56adc62cede7&w=740",
+            name: "David Lee",
+            designation: "Full Stack Developer"
+        }
+        
+    ]
+    return(
+        <div className="bg-slate-50 p-10 rounded-lg my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {
+                allMembers.map((member, index)=>(
+                    <div key={index} className="flex flex-col gap-2 items-center">
+                        <div className="w-32 h-32 flex justify-center items-center rounded-full p-2 overflow-hidden">
+                            <Image src={`${member?.image}`} width={250} height={200} alt={member?.title} />
+                        </div>
+                            <h1 className="text-xl font-semibold">{member?.name}</h1>
+                            <p className="text-base">{member?.designation}</p>
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
+
+<Members/>
+
+# About Vivakit
+Vivakits, a versatile and powerful UI component library meticulously crafted with Tailwind CSS integration. Designed to accelerate your development workflow and enhance the user experience, Vivakits brings a collection of reusable and customizable components that seamlessly integrate into your React and Nextjs projects.
+
+
+# Our Goal
+Our component library aims to streamline web development by providing a comprehensive collection of reusable UI components. Our goal is to enhance developer productivity, promote consistency in design, and ensure accessibility and performance across different platforms and devices.
+
+
+
+
+
 
