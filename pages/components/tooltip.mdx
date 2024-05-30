@@ -1,9 +1,9 @@
 import { Tooltip } from "@vivakits/react-components";
-import { Tabs } from "nextra/components";
+import { Tabs, Button } from "nextra/components";
 
 # Tooltip
 
-### Positions
+### Position
 
 The Tooltip component can be positioned in various ways using the `position` prop.
 
@@ -13,14 +13,30 @@ The Tooltip component can be positioned in various ways using the `position` pro
 export const TooltipPositionGroup = () => {
   return (
     <div className="flex items-center gap-8 flex-wrap">
-      <Tooltip position="top" content="Top Tooltip">Top</Tooltip>
-      <Tooltip position="topLeft" content="Top Left Tooltip">Top Left</Tooltip> 
-      <Tooltip position="topRight" content="Top Right Tooltip">Top Right</Tooltip>
-      <Tooltip position="left" content="Left Tooltip">Left</Tooltip>
-      <Tooltip position="bottom" content="Bottom Tooltip">Bottom</Tooltip>
-      <Tooltip position="bottomLeft" content="Bottom Left Tooltip">Bottom Left</Tooltip>
-      <Tooltip position="bottomRight" content="Bottom Right Tooltip">Bottom Right</Tooltip>
-      <Tooltip position="right" content="Right Tooltip">Right</Tooltip>
+      <Tooltip position="top" content="Top Tooltip">
+        <Button className="w-28" color>Top</Button>
+      </Tooltip>
+      <Tooltip position="topLeft" content="Top Left Tooltip">
+        <Button className="w-28">Top Left</Button>
+      </Tooltip> 
+      <Tooltip position="topRight" content="Top Right Tooltip">
+        <Button className="w-28">Top Right</Button>
+      </Tooltip>
+      <Tooltip position="bottom" content="Bottom Tooltip">
+        <Button className="w-28">Bottomt</Button>
+      </Tooltip>
+      <Tooltip position="bottomLeft" content="Bottom Left Tooltip">
+        <Button className="w-28">Bottomt Left</Button>
+      </Tooltip>
+      <Tooltip position="bottomRight" content="Bottom Right Tooltip">
+        <Button className="w-28">Bottom Right</Button>
+      </Tooltip>
+      <Tooltip position="left" content="Left Tooltip">
+        <Button className="w-28">Left</Button>
+      </Tooltip>
+      <Tooltip position="right" content="Right Tooltip">
+        <Button className="w-28">Right</Button>
+      </Tooltip>
     </div>
   );
 };
@@ -30,16 +46,37 @@ export const TooltipPositionGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
+const App = () => {
+  return (
     <div className="flex items-center gap-8 flex-wrap">
-      <Tooltip position="top" content="Top Tooltip">Top</Tooltip>
-      <Tooltip position="topLeft" content="Top Left Tooltip">Top Left</Tooltip> 
-      <Tooltip position="topRight" content="Top Right Tooltip">Top Right</Tooltip>
-      <Tooltip position="left" content="Left Tooltip">Left</Tooltip>
-      <Tooltip position="bottom" content="Bottom Tooltip">Bottom</Tooltip>
-      <Tooltip position="bottomLeft" content="Bottom Left Tooltip">Bottom Left</Tooltip>
-      <Tooltip position="bottomRight" content="Bottom Right Tooltip">Bottom Right</Tooltip>
-      <Tooltip position="right" content="Right Tooltip">Right</Tooltip>
+      <Tooltip position="top" content="Top Tooltip">
+        <Button className="w-28" color>Top</Button>
+      </Tooltip>
+      <Tooltip position="topLeft" content="Top Left Tooltip">
+        <Button className="w-28">Top Left</Button>
+      </Tooltip> 
+      <Tooltip position="topRight" content="Top Right Tooltip">
+        <Button className="w-28">Top Right</Button>
+      </Tooltip>
+      <Tooltip position="bottom" content="Bottom Tooltip">
+        <Button className="w-28">Bottomt</Button>
+      </Tooltip>
+      <Tooltip position="bottomLeft" content="Bottom Left Tooltip">
+        <Button className="w-28">Bottomt Left</Button>
+      </Tooltip>
+      <Tooltip position="bottomRight" content="Bottom Right Tooltip">
+        <Button className="w-28">Bottom Right</Button>
+      </Tooltip>
+      <Tooltip position="left" content="Left Tooltip">
+        <Button className="w-28">Left</Button>
+      </Tooltip>
+      <Tooltip position="right" content="Right Tooltip">
+        <Button className="w-28">Right</Button>
+      </Tooltip>
     </div>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -53,7 +90,9 @@ The Tooltip component can display any content passed to it using the `content` p
 <Tabs.Tab>
 export const TooltipContentGroup = () => {
   return (
-    <Tooltip content="This is a tooltip">Hover me</Tooltip>
+    <Tooltip content="This is a tooltip">
+      <Button className="w-28">Hover me</Button>
+    </Tooltip>
   );
 };
 
@@ -62,14 +101,22 @@ export const TooltipContentGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip content="This is a tooltip">
+      <Button className="w-28">Hover me</Button>
+    </Tooltip>
+  )
+};
+export default App;
 ```
+
 </Tabs.Tab>
 </Tabs>
 
 ### Caret
 
-The Tooltip component can display a caret pointing towards the content using the `caret` prop.
+The Tooltip component allows you to toggle the caret on and off using the `caret` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -77,8 +124,12 @@ The Tooltip component can display a caret pointing towards the content using the
 export const TooltipCaretGroup = () => {
   return (
     <div className="flex items-center gap-8 flex-wrap">
-      <Tooltip caret={true} content="This is a tooltip with caret">Hover me</Tooltip>
-      <Tooltip caret={false} content="This is a tooltip without caret">Hover me</Tooltip>
+      <Tooltip caret={true} content="This is a tooltip with caret">
+        <Button className="w-28">With caret</Button>
+      </Tooltip>
+      <Tooltip caret={false} content="This is a tooltip without caret">
+        <Button className="w-28">Without caret</Button>
+      </Tooltip>
     </div>
   );
 };
@@ -88,24 +139,35 @@ export const TooltipCaretGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
+const App = () => {
+  return (
     <div className="flex items-center gap-8 flex-wrap">
-      <Tooltip caret={true} content="This is a tooltip with caret">Hover me</Tooltip>
-      <Tooltip caret={false} content="This is a tooltip without caret">Hover me</Tooltip>
+      <Tooltip caret={true} content="This is a tooltip with caret">
+        <Button className="w-28">With caret</Button>
+      </Tooltip>
+      <Tooltip caret={false} content="This is a tooltip without caret">
+        <Button className="w-28">Without caret</Button>
+      </Tooltip>
     </div>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
 
 ### Close Button
 
-The Tooltip component can display a close button using the `showCloseButton` prop.
+The Tooltip component can display a close button using the `closeButton` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
 <Tabs.Tab>
 export const TooltipCloseButtonGroup = () => {
   return (
-    <Tooltip showCloseButton content="This is a tooltip">Hover me</Tooltip>
+    <Tooltip closeButton content="This is a tooltip">
+      <Button className="w-28">Close button</Button>
+    </Tooltip>
   );
 };
 
@@ -114,7 +176,14 @@ export const TooltipCloseButtonGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip showCloseButton content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip closeButton content="This is a tooltip">
+      <Button className="w-28">Close button</Button>
+    </Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -128,7 +197,9 @@ The Tooltip component can be made responsive using the `responsive` prop.
 <Tabs.Tab>
 export const TooltipResponsiveGroup = () => {
   return (
-    <Tooltip responsive content="This is a tooltip">Hover me</Tooltip>
+    <Tooltip responsive content="This is a tooltip">
+      <Button className="w-28">Responsive</Button>
+    </Tooltip>
   );
 };
 
@@ -137,7 +208,14 @@ export const TooltipResponsiveGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip responsive content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip responsive content="This is a tooltip">
+      <Button className="w-28">Responsive</Button>
+    </Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -151,7 +229,9 @@ The Tooltip component can have a maximum width using the `maxWidth` prop.
 <Tabs.Tab>
 export const TooltipMaxWidthGroup = () => {
   return (
-    <Tooltip maxWidth="250px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+    <Tooltip maxWidth="150px" content="This is a very very very very big tooltip">
+      <Button className="w-28">Hover me</Button>
+    </Tooltip>
   );
 };
 
@@ -160,12 +240,19 @@ export const TooltipMaxWidthGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip maxWidth="250px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip maxWidth="150px" content="This is a very very very very big tooltip">
+      <Button className="w-28">Hover me</Button>
+    </Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
 
-### Sizes
+### Size
 
 The Tooltip component comes with 2 different sizes that you can change it using the `size` prop. The primary and secondary buttons can be used only in large tooltips. The width of small tooltips change according to the text length.
 
@@ -175,8 +262,12 @@ The Tooltip component comes with 2 different sizes that you can change it using 
 export const TooltipSizeGroup = () => {
   return (
     <div className="flex items-end gap-3">
-        <Tooltip size="sm" content="Small Tooltip">Small</Tooltip>
-        <Tooltip size="lg" content="Large Tooltip">Large</Tooltip>
+        <Tooltip size="sm" content="Small Tooltip">
+          <Button className="w-20">Small</Button>
+        </Tooltip>
+        <Tooltip size="lg" content="Large Tooltip">
+          <Button className="w-24">Large</Button>
+        </Tooltip>
     </div>
   );
 };
@@ -186,11 +277,21 @@ export const TooltipSizeGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3">
-    <Tooltip size="sm" content="Small Tooltip">Small</Tooltip>
-    <Tooltip size="lg" content="Large Tooltip">Large</Tooltip>
-</div>
-  ```
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+        <Tooltip size="sm" content="Small Tooltip">
+          <Button className="w-20">Small</Button>
+        </Tooltip>
+        <Tooltip size="lg" content="Large Tooltip">
+          <Button className="w-24">Large</Button>
+        </Tooltip>
+    </div>
+  )
+};
+export default App;
+```
+
   </Tabs.Tab>
 </Tabs>
 
@@ -203,7 +304,9 @@ The Tooltip component can display a primary button inside it using the `primaryB
 <Tabs.Tab>
 export const TooltipPrimaryButtonGroup = () => {
   return (
-    <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">Hover me</Tooltip>
+    <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">
+      <Button className="w-28">Primary</Button>
+    </Tooltip>
   );
 };
 
@@ -212,7 +315,14 @@ export const TooltipPrimaryButtonGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">
+      <Button className="w-28">Primary</Button>
+    </Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -226,7 +336,9 @@ The Tooltip component can display a secondary button inside it using the `second
 <Tabs.Tab>
 export const TooltipSecondaryButtonGroup = () => {
   return (
-    <Tooltip size="lg" secondaryButton={<button>Button</button>} content="This is a tooltip">Hover me</Tooltip>
+    <Tooltip size="lg" secondaryButton={<button>Secondary</button>} content="This is a tooltip">
+      <Button className="w-28">Secondary </Button>
+    </Tooltip>
   );
 };
 
@@ -235,11 +347,17 @@ export const TooltipSecondaryButtonGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip size="lg" secondaryButton={<button>Learn more</button>} content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip size="lg" secondaryButton={<button>Secondary</button>} content="This is a tooltip">
+      <Button className="w-28">Secondary </Button>
+    </Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
-
 
 ### API Reference
 
