@@ -3,7 +3,7 @@ import { Tabs } from "nextra/components";
 
 # Tooltip
 
-### Positions
+### Position
 
 The Tooltip component can be positioned in various ways using the `position` prop.
 
@@ -16,10 +16,10 @@ export const TooltipPositionGroup = () => {
       <Tooltip position="top" content="Top Tooltip">Top</Tooltip>
       <Tooltip position="topLeft" content="Top Left Tooltip">Top Left</Tooltip> 
       <Tooltip position="topRight" content="Top Right Tooltip">Top Right</Tooltip>
-      <Tooltip position="left" content="Left Tooltip">Left</Tooltip>
       <Tooltip position="bottom" content="Bottom Tooltip">Bottom</Tooltip>
       <Tooltip position="bottomLeft" content="Bottom Left Tooltip">Bottom Left</Tooltip>
       <Tooltip position="bottomRight" content="Bottom Right Tooltip">Bottom Right</Tooltip>
+      <Tooltip position="left" content="Left Tooltip">Left</Tooltip>
       <Tooltip position="right" content="Right Tooltip">Right</Tooltip>
     </div>
   );
@@ -30,6 +30,8 @@ export const TooltipPositionGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
+const App = () => {
+  return (
     <div className="flex items-center gap-8 flex-wrap">
       <Tooltip position="top" content="Top Tooltip">Top</Tooltip>
       <Tooltip position="topLeft" content="Top Left Tooltip">Top Left</Tooltip> 
@@ -40,6 +42,9 @@ export const TooltipPositionGroup = () => {
       <Tooltip position="bottomRight" content="Bottom Right Tooltip">Bottom Right</Tooltip>
       <Tooltip position="right" content="Right Tooltip">Right</Tooltip>
     </div>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -62,14 +67,22 @@ export const TooltipContentGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <div className="flex items-center gap-8 flex-wrap">
+      <Tooltip content="This is a tooltip">Hover me</Tooltip>
+    </div>
+  )
+};
+export default App;
 ```
+
 </Tabs.Tab>
 </Tabs>
 
 ### Caret
 
-The Tooltip component can display a caret pointing towards the content using the `caret` prop.
+The Tooltip component allows you to toggle the caret on and off using the `caret` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -88,10 +101,15 @@ export const TooltipCaretGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
+const App = () => {
+  return (
     <div className="flex items-center gap-8 flex-wrap">
       <Tooltip caret={true} content="This is a tooltip with caret">Hover me</Tooltip>
       <Tooltip caret={false} content="This is a tooltip without caret">Hover me</Tooltip>
     </div>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -105,7 +123,7 @@ The Tooltip component can display a close button using the `showCloseButton` pro
 <Tabs.Tab>
 export const TooltipCloseButtonGroup = () => {
   return (
-    <Tooltip showCloseButton content="This is a tooltip">Hover me</Tooltip>
+    <Tooltip closeButton content="This is a tooltip">Hover me</Tooltip>
   );
 };
 
@@ -114,7 +132,12 @@ export const TooltipCloseButtonGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip showCloseButton content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip closeButton content="This is a tooltip">Hover me</Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -137,7 +160,12 @@ export const TooltipResponsiveGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip responsive content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip responsive content="This is a tooltip">Hover me</Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -151,7 +179,7 @@ The Tooltip component can have a maximum width using the `maxWidth` prop.
 <Tabs.Tab>
 export const TooltipMaxWidthGroup = () => {
   return (
-    <Tooltip maxWidth="250px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+    <Tooltip maxWidth="150px" content="This is a very very very very big tooltip">Hover me</Tooltip>
   );
 };
 
@@ -160,12 +188,17 @@ export const TooltipMaxWidthGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip maxWidth="250px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip maxWidth="150px" content="This is a very very very very big tooltip">Hover me</Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
 
-### Sizes
+### Size
 
 The Tooltip component comes with 2 different sizes that you can change it using the `size` prop. The primary and secondary buttons can be used only in large tooltips. The width of small tooltips change according to the text length.
 
@@ -186,11 +219,17 @@ export const TooltipSizeGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-end gap-3">
-    <Tooltip size="sm" content="Small Tooltip">Small</Tooltip>
-    <Tooltip size="lg" content="Large Tooltip">Large</Tooltip>
-</div>
-  ```
+const App = () => {
+  return (
+    <div className="flex items-end gap-3">
+      <Tooltip size="sm" content="Small Tooltip">Small</Tooltip>
+      <Tooltip size="lg" content="Large Tooltip">Large</Tooltip>
+    </div>
+  )
+};
+export default App;
+```
+
   </Tabs.Tab>
 </Tabs>
 
@@ -212,7 +251,12 @@ export const TooltipPrimaryButtonGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">Hover me</Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
@@ -235,11 +279,15 @@ export const TooltipSecondaryButtonGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-<Tooltip size="lg" secondaryButton={<button>Learn more</button>} content="This is a tooltip">Hover me</Tooltip>
+const App = () => {
+  return (
+    <Tooltip size="lg" secondaryButton={<button>Learn more</button>} content="This is a tooltip">Hover me</Tooltip>
+  )
+};
+export default App;
 ```
 </Tabs.Tab>
 </Tabs>
-
 
 ### API Reference
 
