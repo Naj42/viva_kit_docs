@@ -1,5 +1,5 @@
-import { Tooltip } from "@vivakits/react-components";
-import { Tabs, Button } from "nextra/components";
+import { Tooltip, Button } from "@vivakits/react-components";
+import { Tabs } from "nextra/components";
 
 # Tooltip
 
@@ -14,28 +14,28 @@ export const TooltipPositionGroup = () => {
   return (
     <div className="flex items-center gap-8 flex-wrap">
       <Tooltip position="top" content="Top Tooltip">
-        <Button className="w-28" color>Top</Button>
+        <Button className="w-24" size="md" variant="light">Top</Button>
       </Tooltip>
       <Tooltip position="topLeft" content="Top Left Tooltip">
-        <Button className="w-28">Top Left</Button>
+        <Button className="w-28" size="md" variant="light">Top Left</Button>
       </Tooltip> 
       <Tooltip position="topRight" content="Top Right Tooltip">
-        <Button className="w-28">Top Right</Button>
+        <Button className="w-28" size="md" variant="light">Top Right</Button>
       </Tooltip>
       <Tooltip position="bottom" content="Bottom Tooltip">
-        <Button className="w-28">Bottomt</Button>
+        <Button className="w-28" size="md" variant="light">Bottomt</Button>
       </Tooltip>
       <Tooltip position="bottomLeft" content="Bottom Left Tooltip">
-        <Button className="w-28">Bottomt Left</Button>
+        <Button className="w-32" size="md" variant="light">Bottomt Left</Button>
       </Tooltip>
       <Tooltip position="bottomRight" content="Bottom Right Tooltip">
-        <Button className="w-28">Bottom Right</Button>
+        <Button className="w-32" size="md" variant="light">Bottom Right</Button>
       </Tooltip>
       <Tooltip position="left" content="Left Tooltip">
-        <Button className="w-28">Left</Button>
+        <Button className="w-24" size="md" variant="light">Left</Button>
       </Tooltip>
       <Tooltip position="right" content="Right Tooltip">
-        <Button className="w-28">Right</Button>
+        <Button className="w-24" size="md" variant="light">Right</Button>
       </Tooltip>
     </div>
   );
@@ -48,30 +48,30 @@ export const TooltipPositionGroup = () => {
 ```jsx copy
 const App = () => {
   return (
-    <div className="flex items-center gap-8 flex-wrap">
+     <div className="flex items-center gap-8 flex-wrap">
       <Tooltip position="top" content="Top Tooltip">
-        <Button className="w-28" color>Top</Button>
+        <Button className="w-24" size="md" variant="light">Top</Button>
       </Tooltip>
       <Tooltip position="topLeft" content="Top Left Tooltip">
-        <Button className="w-28">Top Left</Button>
+        <Button className="w-28" size="md" variant="light">Top Left</Button>
       </Tooltip> 
       <Tooltip position="topRight" content="Top Right Tooltip">
-        <Button className="w-28">Top Right</Button>
+        <Button className="w-28" size="md" variant="light">Top Right</Button>
       </Tooltip>
       <Tooltip position="bottom" content="Bottom Tooltip">
-        <Button className="w-28">Bottomt</Button>
+        <Button className="w-28" size="md" variant="light">Bottomt</Button>
       </Tooltip>
       <Tooltip position="bottomLeft" content="Bottom Left Tooltip">
-        <Button className="w-28">Bottomt Left</Button>
+        <Button className="w-32" size="md" variant="light">Bottomt Left</Button>
       </Tooltip>
       <Tooltip position="bottomRight" content="Bottom Right Tooltip">
-        <Button className="w-28">Bottom Right</Button>
+        <Button className="w-32" size="md" variant="light">Bottom Right</Button>
       </Tooltip>
       <Tooltip position="left" content="Left Tooltip">
-        <Button className="w-28">Left</Button>
+        <Button className="w-24" size="md" variant="light">Left</Button>
       </Tooltip>
       <Tooltip position="right" content="Right Tooltip">
-        <Button className="w-28">Right</Button>
+        <Button className="w-24" size="md" variant="light">Right</Button>
       </Tooltip>
     </div>
   )
@@ -91,7 +91,7 @@ The Tooltip component can display any content passed to it using the `content` p
 export const TooltipContentGroup = () => {
   return (
     <Tooltip content="This is a tooltip">
-      <Button className="w-28">Hover me</Button>
+      <Button className="w-28" size="md" variant="light">Hover me</Button>
     </Tooltip>
   );
 };
@@ -104,7 +104,7 @@ export const TooltipContentGroup = () => {
 const App = () => {
   return (
     <Tooltip content="This is a tooltip">
-      <Button className="w-28">Hover me</Button>
+      <Button className="w-28" size="md" variant="light">Hover me</Button>
     </Tooltip>
   )
 };
@@ -125,10 +125,10 @@ export const TooltipCaretGroup = () => {
   return (
     <div className="flex items-center gap-8 flex-wrap">
       <Tooltip caret={true} content="This is a tooltip with caret">
-        <Button className="w-28">With caret</Button>
+        <Button className="w-28" size="md" variant="light">With caret</Button>
       </Tooltip>
       <Tooltip caret={false} content="This is a tooltip without caret">
-        <Button className="w-28">Without caret</Button>
+        <Button className="w-32" size="md" variant="light">Without caret</Button>
       </Tooltip>
     </div>
   );
@@ -143,10 +143,10 @@ const App = () => {
   return (
     <div className="flex items-center gap-8 flex-wrap">
       <Tooltip caret={true} content="This is a tooltip with caret">
-        <Button className="w-28">With caret</Button>
+        <Button className="w-28" size="md" variant="light">With caret</Button>
       </Tooltip>
       <Tooltip caret={false} content="This is a tooltip without caret">
-        <Button className="w-28">Without caret</Button>
+        <Button className="w-32" size="md" variant="light">Without caret</Button>
       </Tooltip>
     </div>
   )
@@ -166,7 +166,7 @@ The Tooltip component can display a close button using the `closeButton` prop.
 export const TooltipCloseButtonGroup = () => {
   return (
     <Tooltip closeButton content="This is a tooltip">
-      <Button className="w-28">Close button</Button>
+      <Button className="w-28" size="md" variant="light">Close</Button>
     </Tooltip>
   );
 };
@@ -179,7 +179,7 @@ export const TooltipCloseButtonGroup = () => {
 const App = () => {
   return (
     <Tooltip closeButton content="This is a tooltip">
-      <Button className="w-28">Close button</Button>
+      <Button className="w-28" size="md" variant="light">Close</Button>
     </Tooltip>
   )
 };
@@ -198,7 +198,7 @@ The Tooltip component can be made responsive using the `responsive` prop.
 export const TooltipResponsiveGroup = () => {
   return (
     <Tooltip responsive content="This is a tooltip">
-      <Button className="w-28">Responsive</Button>
+      <Button className="w-28" size="md" variant="light">Responsive</Button>
     </Tooltip>
   );
 };
@@ -211,7 +211,7 @@ export const TooltipResponsiveGroup = () => {
 const App = () => {
   return (
     <Tooltip responsive content="This is a tooltip">
-      <Button className="w-28">Responsive</Button>
+      <Button className="w-28" size="md" variant="light">Responsive</Button>
     </Tooltip>
   )
 };
@@ -230,7 +230,7 @@ The Tooltip component can have a maximum width using the `maxWidth` prop.
 export const TooltipMaxWidthGroup = () => {
   return (
     <Tooltip maxWidth="150px" content="This is a very very very very big tooltip">
-      <Button className="w-28">Hover me</Button>
+      <Button className="w-28" size="md" variant="light">Hover me</Button>
     </Tooltip>
   );
 };
@@ -243,7 +243,7 @@ export const TooltipMaxWidthGroup = () => {
 const App = () => {
   return (
     <Tooltip maxWidth="150px" content="This is a very very very very big tooltip">
-      <Button className="w-28">Hover me</Button>
+      <Button className="w-28" size="md" variant="light">Hover me</Button>
     </Tooltip>
   )
 };
@@ -263,10 +263,10 @@ export const TooltipSizeGroup = () => {
   return (
     <div className="flex items-end gap-3">
         <Tooltip size="sm" content="Small Tooltip">
-          <Button className="w-20">Small</Button>
+          <Button className="w-20" size="md" variant="light">Small</Button>
         </Tooltip>
         <Tooltip size="lg" content="Large Tooltip">
-          <Button className="w-24">Large</Button>
+          <Button className="w-24" size="md" variant="light">Large</Button>
         </Tooltip>
     </div>
   );
@@ -281,10 +281,10 @@ const App = () => {
   return (
     <div className="flex items-end gap-3">
         <Tooltip size="sm" content="Small Tooltip">
-          <Button className="w-20">Small</Button>
+          <Button className="w-20" size="md" variant="light">Small</Button>
         </Tooltip>
         <Tooltip size="lg" content="Large Tooltip">
-          <Button className="w-24">Large</Button>
+          <Button className="w-24" size="md" variant="light">Large</Button>
         </Tooltip>
     </div>
   )
@@ -305,7 +305,7 @@ The Tooltip component can display a primary button inside it using the `primaryB
 export const TooltipPrimaryButtonGroup = () => {
   return (
     <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">
-      <Button className="w-28">Primary</Button>
+      <Button className="w-28" size="md" variant="light">Primary</Button>
     </Tooltip>
   );
 };
@@ -318,7 +318,7 @@ export const TooltipPrimaryButtonGroup = () => {
 const App = () => {
   return (
     <Tooltip primaryButton={<button>Primary</button>} content="This is a tooltip">
-      <Button className="w-28">Primary</Button>
+      <Button className="w-28" size="md" variant="light">Primary</Button>
     </Tooltip>
   )
 };
@@ -337,7 +337,7 @@ The Tooltip component can display a secondary button inside it using the `second
 export const TooltipSecondaryButtonGroup = () => {
   return (
     <Tooltip size="lg" secondaryButton={<button>Secondary</button>} content="This is a tooltip">
-      <Button className="w-28">Secondary </Button>
+      <Button className="w-28" size="md" variant="light">Secondary </Button>
     </Tooltip>
   );
 };
@@ -350,7 +350,7 @@ export const TooltipSecondaryButtonGroup = () => {
 const App = () => {
   return (
     <Tooltip size="lg" secondaryButton={<button>Secondary</button>} content="This is a tooltip">
-      <Button className="w-28">Secondary </Button>
+      <Button className="w-28" size="md" variant="light">Secondary </Button>
     </Tooltip>
   )
 };
