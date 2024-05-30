@@ -19,27 +19,41 @@ The  `VKOtpInput`  component is used to get the OTP from the user.
     </Tabs.Tab>   
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
 
-### Sizes
+### Size
 The size of the OTP Input can be updated using `size` prop. The default size is `md`. The available sizes are `sm`, `md`, `lg`, `xl`. The examples below show the input with `sm` and `xl` sizes.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
-       <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+       <div className="flex items-center flex-wrap justify-around py-8">
             <VKOtpInput size="sm" />
             <VKOtpInput size="xl" />
         </div>
     </Tabs.Tab>   
     <Tabs.Tab>
         ```jsx copy
-       <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-            <VKOtpInput size="sm" />
-            <VKOtpInput size="xl" />
-        </div>
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <div className="flex items-center flex-wrap justify-around py-8">
+                    <VKOtpInput size="sm" />
+                    <VKOtpInput size="xl" />
+                </div>
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -58,12 +72,19 @@ The shape of the OTP Input component can be customized using the rounded prop. T
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-            <VKOtpInput />  
-            <VKOtpInput rounded="xs" />       
-            <VKOtpInput rounded="lg" />   
-            <VKOtpInput rounded="full" />
-        </div>
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+                    <VKOtpInput />  
+                    <VKOtpInput rounded="xs" />       
+                    <VKOtpInput rounded="lg" />   
+                    <VKOtpInput rounded="full" />
+                </div>
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -78,7 +99,14 @@ The OTP Input component can display an error state using the `hasError` prop. Th
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-      <VKOtpInput hasError errorMessage="Custom error message" />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput hasError errorMessage="Custom error message" />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -92,7 +120,14 @@ The OTP Input value can be submitted using the `onSubmit` prop. The example belo
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-    <VKOtpInput onSubmit={(value) => alert(value)} />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput onSubmit={(value) => alert(value)} />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -106,7 +141,14 @@ The submit button can be customized using the `renderSubmitButton` prop. The exa
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
+        import React from 'react';
+        import {VKOtpInput, Button} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -121,7 +163,14 @@ The reset button can be added using the `renderResetButton` prop. The example be
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
+        import React from 'react';
+        import {VKOtpInput, Button} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -135,7 +184,14 @@ You can adjust the length of the OTP Input using the `length` prop. The default 
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput length={4} />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput length={4} />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -149,7 +205,14 @@ The group size of the OTP Input can be changed using the `groupSize` prop. By de
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput groupSize={2} />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput groupSize={2} />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -164,7 +227,14 @@ The separator between groups can be changed using the `separator` prop. The defa
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput separator="." groupSize={3} />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput separator="." groupSize={3} />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -181,10 +251,17 @@ You can mask the OTP Input value using the `maskedIcon` prop. The default masked
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-         <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-        <VKOtpInput isMasked />
-        <VKOtpInput isMasked maskedIcon="🔒" />
-       </div>
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <div className="flex items-center flex-wrap justify-around py-8">
+                    <VKOtpInput isMasked />
+                    <VKOtpInput isMasked maskedIcon="🔒" />
+                </div>
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -198,7 +275,14 @@ You can allow characters in the OTP Input using the `allowChar` prop. The defaul
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput allowChar />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput allowChar />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -212,7 +296,14 @@ You can make the OTP Input required using the `required` prop. The default value
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput required />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput required />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
@@ -226,7 +317,14 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
-        <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
+        import React from 'react';
+        import {VKOtpInput} from "@vivakits/react-components";
+
+        const App = ()=> {
+            return(
+                <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
+            )
+        }
         ```
     </Tabs.Tab>
 </Tabs>
