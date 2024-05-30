@@ -1,15 +1,36 @@
 {
-  "index": "Installation",
-  "customization": "Customization",
-  "components": "Components",
-  "about": {
-    "title": "About",
-    "type": "page"
+  "index":{
+    "title": "Home",
+    "display": "hidden",
+    "theme":{
+      "layout":"full",
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false
+    }
   },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://vivasoftltd.com/contact/",
-    "newWindow": true
+  "docs":{
+    "title": "Get Started"
+  },
+  "components":{
+    "title":"Components"
+  },
+  "support":{
+    "title":"Support",
+    "href": "#"
+  },
+  "discover":{
+    "title": "Discover"
+  },
+  "alldocs":{
+    "title":"Docs",
+    "type":"page",
+    "href": "/docs/installation"
+  },
+  "example":{
+    "title": "Example",
+    "type": "page"
   }
 }
