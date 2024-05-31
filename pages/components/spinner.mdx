@@ -38,11 +38,11 @@ import React from 'react';
 import { Spinner } from "@vivakits/react-components";
 
 const App = () => {
-return (
-<div className="flex justify-center items-center gap-3 flex-wrap">
-<Spinner />
-</div>
-)
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+      <Spinner />
+    </div>
+  )
 };
 
 export default App;
@@ -81,18 +81,18 @@ import React from 'react';
 import { Spinner } from "@vivakits/react-components";
 
 const App = () => {
-return (
-<div className="flex justify-center items-center gap-3 flex-wrap">
-<Spinner size="lg" color="primary" />
-<Spinner size="lg" color="secondary" />
-<Spinner size="lg" color="accent" />
-<Spinner size="lg" color="danger" />
-<Spinner size="lg" color="success" />
-<Spinner size="lg" color="warning" />
-<Spinner size="lg" color="dark" />
-<Spinner size="lg" color="light" />
-</div>
-)
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+      <Spinner size="lg" color="primary" />
+      <Spinner size="lg" color="secondary" />
+      <Spinner size="lg" color="accent" />
+      <Spinner size="lg" color="danger" />
+      <Spinner size="lg" color="success" />
+      <Spinner size="lg" color="warning" />
+      <Spinner size="lg" color="dark" />
+      <Spinner size="lg" color="light" />
+    </div>
+  )
 };
 
 export default App;
@@ -127,14 +127,14 @@ import React from 'react';
 import { Spinner } from "@vivakits/react-components";
 
 const App = () => {
-return (
-<div className="flex justify-center items-center gap-3 flex-wrap">
-<Spinner size="sm" />
-<Spinner size="md" />
-<Spinner size="lg" />
-<Spinner size="xl" />
-</div>
-)
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+      <Spinner size="sm" />
+      <Spinner size="md" />
+      <Spinner size="lg" />
+      <Spinner size="xl" />
+    </div>
+  )
 };
 
 export default App;
@@ -168,18 +168,18 @@ import React from 'react';
 import { Button, Spinner } from "@vivakits/react-components";
 
 const App = () => {
-return (
-<div className="flex justify-center items-center gap-3 flex-wrap">
-<Button size="md" variant="outline">
-<Spinner size="sm" className="mr-2" />
-Loading...
-</Button>
-<Button size="md" variant="solid">
-<Spinner size="sm" color="light" className="mr-2" />
-Loading...
-</Button>
-</div>
-)
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+      <Button size="md" variant="outline">
+        <Spinner size="sm" className="mr-2" />
+        Loading...
+      </Button>
+      <Button size="md" variant="solid">
+        <Spinner size="sm" color="light" className="mr-2" />
+        Loading...
+      </Button>
+    </div>
+  )
 };
 
 export default App;
@@ -198,10 +198,9 @@ const [dataTableDataSource, setDataTableDataSource] = useState([
 ...rawDataTableData,
 ]);
 
-return (
-
-<div className="flex justify-center items-center gap-3 flex-wrap">
-  <AsyncDatatable
+ return (
+  <div className="flex justify-center items-center gap-3 flex-wrap">
+   <AsyncDatatable
     columnDefinitions={dataTableColumns}
     dataSource={dataTableDataSource}
     isLoading={true}
@@ -210,9 +209,10 @@ return (
         <Spinner />
       </div>
     }
-  />
-</div>
-); };
+   />
+  </div>
+ )
+};
 
 <TableSpinnerBasic />
 </Tabs.Tab>
@@ -223,25 +223,25 @@ import React from 'react';
 import { AsyncDatatable, Spinner } from "@vivakits/react-components";
 
 const App = () => {
-const dataTableColumns = [...dataTableColumnSample ]
-const [dataTableDataSource, setDataTableDataSource] = useState([
-...rawDataTableData,
-]);
+  const dataTableColumns = [...dataTableColumnSample ]
+  const [dataTableDataSource, setDataTableDataSource] = useState([
+  ...rawDataTableData,
+  ]);
 
-return (
-<div className="flex justify-center items-center gap-3 flex-wrap">
-<AsyncDatatable
-columnDefinitions={dataTableColumns}
-dataSource={dataTableDataSource}
-isLoading={true}
-customLoadingComponent={
-<div className="flex justify-center items-center gap-3 flex-wrap">
-<Spinner />
-</div>
-}
-/>
-</div>
-)
+  return (
+    <div className="flex justify-center items-center gap-3 flex-wrap">
+      <AsyncDatatable
+        columnDefinitions={dataTableColumns}
+        dataSource={dataTableDataSource}
+        isLoading={true}
+        customLoadingComponent={
+          <div className="flex justify-center items-center gap-3 flex-wrap">
+            <Spinner />
+          </div>
+        }
+      />
+    </div>
+  )
 };
 
 export default App;
