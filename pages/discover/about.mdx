@@ -1,3 +1,138 @@
-# About
+### About Vivakit
+Vivakits, a versatile and powerful UI component library meticulously crafted with Tailwind CSS integration. Designed to accelerate your development workflow and enhance the user experience, Vivakits brings a collection of reusable and customizable components that seamlessly integrate into your React and Nextjs projects.
 
-This is the about page! This page is shown on the navbar.
+
+### Our Goal
+Our component library aims to streamline web development by providing a comprehensive collection of reusable UI components. Our goal is to enhance developer productivity, promote consistency in design, and ensure accessibility and performance across different platforms and devices.
+
+### Meet the Team
+import Image from "next/image";
+import { VKAvatar } from "@vivakits/react-components";
+
+export const Members = ()=>{
+    const allMembers = [
+        {
+            image: "https://image.crisp.chat/avatar/website/fa4feb51-977d-4cf4-bb7e-f044237b00bd/240/?1710230889894&quot",
+            name: "Vivasoft Limited",
+            designation: "Founder"
+        },
+        {
+            image: "",
+            name: "Safwan Alamgir",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Imrul Hasan",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Md. Ashiqul Islam Rajib",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Rafi",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Jabear Hossain Pranto",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Maruf Hossain",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Mahmudul Hasan",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Noor-A-Jannat Naj",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Yusuf Hasan",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Nishat Tafannum",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "RK Shawon",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Tasnim Hasan",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Sunny Khan",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Samin Yasar",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Mazharul Maruf",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Proshanto Lal",
+            designation: ""
+        },
+        {
+            image: "",
+            name: "Md. Estiak Ahmed ",
+            designation: ""
+        }
+        
+    ]
+    return(
+        <div className="bg-slate-50 p-10 rounded-lg my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+            {
+                allMembers.map((member, index)=>(
+                    <div key={index} className="flex flex-col gap-2 justify-start items-center">
+                        <div className="flex justify-center items-center">
+                        {
+                            member.image?
+                            <VKAvatar
+                                variant="image"
+                                size="xl"
+                                src={member?.image}
+                            />: 
+                            <VKAvatar variant="text" size="xl" color="light" textValue={member?.name} />
+                        }    
+                        </div>
+                        <h1 className="text-lg font-semibold text-center">{member?.name}</h1>
+                        <p className="text-base text-center">{member?.designation}</p>
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
+
+<Members/>
+
+
+
+
+
+
+
