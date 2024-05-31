@@ -4,10 +4,8 @@
     "display": "hidden",
     "theme":{
       "layout":"full",
-      "breadcrumb": false,
       "footer": true,
       "sidebar": false,
-      "toc": false,
       "pagination": false
     }
   },
@@ -31,6 +29,13 @@
   },
   "example":{
     "title": "Example",
-    "type": "page"
+    "type": "page",
+    "theme":{
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
+    }
   }
 }
