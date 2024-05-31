@@ -1,11 +1,11 @@
-# About Vivakit
+### About Vivakit
 Vivakits, a versatile and powerful UI component library meticulously crafted with Tailwind CSS integration. Designed to accelerate your development workflow and enhance the user experience, Vivakits brings a collection of reusable and customizable components that seamlessly integrate into your React and Nextjs projects.
 
 
-# Our Goal
+### Our Goal
 Our component library aims to streamline web development by providing a comprehensive collection of reusable UI components. Our goal is to enhance developer productivity, promote consistency in design, and ensure accessibility and performance across different platforms and devices.
 
-# Meet the Team
+### Meet the Team
 import Image from "next/image";
 import { VKAvatar } from "@vivakits/react-components";
 
@@ -114,7 +114,7 @@ export const Members = ()=>{
                             <VKAvatar
                                 variant="image"
                                 size="xl"
-                                src={member.image}
+                                src={member?.image}
                             />: 
                             <VKAvatar variant="text" size="xl" color="light" textValue={member?.name} />
                         }    
