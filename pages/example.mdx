@@ -2,7 +2,6 @@ import { Tabs } from "nextra/components";
 import Image from "next/image";
 import {LoginForm} from "./allexamples.tsx";
 
-
 import {
   Modal,
   ModalBody,
@@ -14,25 +13,27 @@ import {
 
 # Layout Example
 
-<div className="mt-10 grid grid-cols-2 gap-5">
+<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
 <Modal varient="screen-size">
-<div className="flex flex-col items-start gap-2">
-    <LoginForm/>
-    <ModalTrigger>
-        <div className="flex items-center gap-2 cursor-pointer transition-all duration-200 hover:translate-x-2">
-            <h1>Login Form</h1>
-            <Image src="/right-arrow.svg" width={25} height={25} alt="Vivakits" />
-        </div>
-    </ModalTrigger>
-</div>
-<ModalContent className="w-[90%] h-full">
-<ModalHeader className="px-4">Basic Login</ModalHeader>
-<ModalBody className="p-4">
-<Tabs items={['Preview', 'Code']}>
-<Tabs.Tab>
-    <LoginForm/>
-</Tabs.Tab>
-<Tabs.Tab>
+    <div className="flex flex-col items-start gap-2 p-2 rounded-lg bg-slate-100">
+        <LoginForm/>
+        <ModalTrigger>
+            <div className="my-4 flex items-center gap-2 cursor-pointer transition-all duration-200 hover:translate-x-2">
+                <h1>Login Form</h1>
+                <Image src="/right-arrow.svg" width={25} height={25} alt="Vivakits" />
+            </div>
+        </ModalTrigger>
+    </div>
+    <ModalContent className="w-[90%] h-full">
+        <ModalHeader className="px-4">Basic Login</ModalHeader>
+            <ModalBody className="p-4">
+                <Tabs items={['Preview', 'Code']}>
+                    <Tabs.Tab>
+                        <div className="w-1/2 mx-auto">
+                            <LoginForm/>
+                        </div>
+                    </Tabs.Tab>
+                    <Tabs.Tab>
 ```jsx copy
 import { Input, Button, Checkbox } from "@vivakits/react-components";
 
@@ -43,17 +44,15 @@ const LoginForm = ()=>{
             <Input size="sm" label="Password" type="password" />
             <Button size="md" rounded="md" className="w-fit mx-auto">Login</Button>
             <Checkbox size="md">Remember Password</Checkbox>
-            <a href="#" className="">Forgot your password?</a>
-            <p className="m-0">click <a href="#">here</a> to reset your password.</p>
+            <a href="#" className="text-blue-800">Forgot your password?</a>
+            <p className="m-0">click <a href="#" className="text-blue-800">here</a> to reset your password.</p>
         </div>
     )
 }
 ```
-</Tabs.Tab>
-</Tabs>
-</ModalBody>
-</ModalContent>
-</Modal>
-
-
+                    </Tabs.Tab>
+                </Tabs>
+            </ModalBody>
+        </ModalContent>
+    </Modal>
 </div>
