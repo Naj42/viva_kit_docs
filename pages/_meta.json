@@ -31,11 +31,11 @@
     "title": "Example",
     "type": "page",
     "theme":{
-      "breadcrumb": true,
+      "breadcrumb": false,
       "footer": true,
-      "sidebar": true,
+      "sidebar": false,
       "toc": true,
-      "pagination": true
+      "pagination": false
     }
   }
 }
