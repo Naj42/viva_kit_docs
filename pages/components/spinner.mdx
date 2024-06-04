@@ -198,10 +198,9 @@ const [dataTableDataSource, setDataTableDataSource] = useState([
 ...rawDataTableData,
 ]);
 
-return (
-
-<div className="flex justify-center items-center gap-3 flex-wrap">
-  <AsyncDatatable
+ return (
+  <div className="flex justify-center items-center gap-3 flex-wrap">
+   <AsyncDatatable
     columnDefinitions={dataTableColumns}
     dataSource={dataTableDataSource}
     isLoading={true}
@@ -210,9 +209,10 @@ return (
         <Spinner />
       </div>
     }
-  />
-</div>
-); };
+   />
+  </div>
+ )
+};
 
 <TableSpinnerBasic />
 </Tabs.Tab>
@@ -296,5 +296,5 @@ export default App;
     </tr>
 
   </tbody>
-</table>}
-```
+</table>
+}

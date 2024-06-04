@@ -3,14 +3,20 @@ import { Tabs } from "nextra/components";
 
 # Skeleton
 
-### Variants
+### Import
+
+```jsx copy
+import { Skeleton } from "@vivakits/react-components";
+```
+
+### Variant
 
 The Skeleton component comes with 3 different variants that you can change it using the `variant` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
-export const SkeletonVarientGroup = () => {
+export const SkeletonVariantGroup = () => {
   return (
     <div className="flex items-center gap-3">
         <Skeleton variant="circular" width={40} height={40} />
@@ -20,23 +26,74 @@ export const SkeletonVarientGroup = () => {
   );
 };
 
-<SkeletonVarientGroup />
+  <SkeletonVariantGroup />
   </Tabs.Tab>
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-center gap-3">
-  <Skeleton variant="circular" width="40px" height="40px" />
-  <Skeleton variant="rectangular" height="40px" />
-  <Skeleton variant="text" height="40px" />
-</div>
-  ```
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton variant="circular" width="40px" height="40px" />
+      <Skeleton variant="rectangular" height="40px" />
+      <Skeleton variant="text" height="40px" />
+    </div>
+  )
+};
+
+export default App;
+```
+  </Tabs.Tab>
+</Tabs>
+
+### Size
+
+The Skeleton component comes with different sizes that you can change using the `size` prop.
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const SkeletonSizeGroup = () => {
+  return (
+    <div className="flex items-center gap-3">
+        <Skeleton size="sm" />
+        <Skeleton size="md" />
+        <Skeleton size="lg" />
+        <Skeleton size="xl" />
+    </div>
+  );
+};
+
+<SkeletonSizeGroup />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+        <Skeleton size="sm" />
+        <Skeleton size="md" />
+        <Skeleton size="lg" />
+        <Skeleton size="xl" />
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
 ### Width
 
-It has `width` prop, you can the width of it using the prop.
+The Skeleton component includes a `width` prop, allowing you to adjust its width as needed.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -56,19 +113,27 @@ export const SkeletonWidthGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-center gap-3">
-  <Skeleton width={80} />
-  <Skeleton width={140} />
-  <Skeleton width={200} />
-</div>
-  ```
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton width={80} />
+      <Skeleton width={140} />
+      <Skeleton width={200} />
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
-
 ### Height
 
-You can use the `height` prop to change the height of Skeleton.
+The Skeleton component includes a `height` prop, allowing you to adjust its height as needed.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -77,8 +142,8 @@ export const SkeletonHeightGroup = () => {
   return (
     <div className="flex items-center gap-3">
       <Skeleton height={20} />
-      <Skeleton height={30}/>
-      <Skeleton height={40}/>
+      <Skeleton height={30} />
+      <Skeleton height={40} />
     </div>
   );
 };
@@ -88,12 +153,21 @@ export const SkeletonHeightGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-center gap-3">
-  <Skeleton height={20} />
-  <Skeleton height={30}/>
-  <Skeleton height={40}/>
-</div>
-  ```
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton height={20} />
+      <Skeleton height={30} />
+      <Skeleton height={40} />
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -108,7 +182,7 @@ export const SkeletonRadiousGroup = () => {
   return (
     <div className="flex items-center gap-3">
       <Skeleton rounded="6px" height={40} />
-      <Skeleton rounded="12px"  height={40} />
+      <Skeleton rounded="12px" height={40} />
       <Skeleton rounded="20px" height={40} />
       <Skeleton rounded="40px" width={40} height={40} />
     </div>
@@ -120,18 +194,27 @@ export const SkeletonRadiousGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-center gap-3">
-  <Skeleton rounded="6px" height={40} />
-  <Skeleton rounded="12px"  height={40} />
-  <Skeleton rounded="20px" height={40} />
-  <Skeleton rounded="40px" width={40} height={40} />
-</div>
-  ```
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton rounded="6px" height={40} />
+      <Skeleton rounded="12px" height={40} />
+      <Skeleton rounded="20px" height={40} />
+      <Skeleton rounded="40px" width={40} height={40} />
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
+### Group of Skeletons
 
-### Group of Skeleton
 You can use props named `numOfRows` and `numOfColumns` to generate multiple rows or columns of Skeleton.
 
 <Tabs items={['Preview', 'Code']}>
@@ -140,10 +223,10 @@ You can use props named `numOfRows` and `numOfColumns` to generate multiple rows
 export const SkeletonRowColumnGroup = () => {
   return (
     <div className="flex items-center gap-5">
-      <Skeleton numOfColumns={2}/>
-      <Skeleton numOfRows={2}/>
-      <Skeleton numOfColumns={2} numOfRows={2}/>
-      <Skeleton numOfColumns={2} numOfRows={3}/>
+      <Skeleton numOfColumns={2} />
+      <Skeleton numOfRows={2} />
+      <Skeleton numOfColumns={2} numOfRows={2} />
+      <Skeleton numOfColumns={2} numOfRows={3} />
     </div>
   );
 };
@@ -153,20 +236,28 @@ export const SkeletonRowColumnGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="flex items-center gap-3">
-  <Skeleton numOfColumns={2} />
-  <Skeleton numOfRows={2} />
-  <Skeleton numOfColumns={2} numOfRows={2} />
-  <Skeleton numOfColumns={2} numOfRows={3} />
-</div>
-  ```
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex items-center gap-3">
+      <Skeleton numOfColumns={2} />
+      <Skeleton numOfRows={2} />
+      <Skeleton numOfColumns={2} numOfRows={2} />
+      <Skeleton numOfColumns={2} numOfRows={3} />
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
-
-
 ### Card
-Sample Card implementation using different varients of Skeleton components.
+
+Sample Card implementation using different variants of Skeleton components.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -177,15 +268,15 @@ export const SkeletonCard = () => {
        <div className="w-full flex gap-6">
           <Skeleton variant="circular" width={60} height={60} />
           <div className="flex flex-col justify-center gap-1.5">
-            <Skeleton variant="text" width={170}/>
-            <Skeleton variant="text" width={250}/>
+            <Skeleton variant="text" width={170} />
+            <Skeleton variant="text" width={250} />
           </div>
        </div>
        <Skeleton width={400} height={140} />
        <div className="flex flex-col justify-center gap-1.5">
-          <Skeleton variant="text" width={250}/>
-          <Skeleton variant="text" width={400}/>
-          <Skeleton variant="text" width={190}/>
+          <Skeleton variant="text" width={250} />
+          <Skeleton variant="text" width={400} />
+          <Skeleton variant="text" width={190} />
         </div>
         <Skeleton variant="text" width={400} height={30} />
     </div>
@@ -197,29 +288,38 @@ export const SkeletonCard = () => {
 
   <Tabs.Tab>
 ```jsx copy
-  <div className="w-[440px] flex items-start flex-col mb-4 gap-4">
-    <div className="w-full flex gap-10">
-      <Skeleton variant="circular" width={60} height={60} />
-      <div className="flex flex-col justify-center gap-1.5">
-        <Skeleton variant="text" width={170}/>
-        <Skeleton variant="text" width={250}/>
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="w-[440px] flex items-start flex-col mb-4 gap-4">
+      <div className="w-full flex gap-10">
+        <Skeleton variant="circular" width={60} height={60} />
+        <div className="flex flex-col justify-center gap-1.5">
+          <Skeleton variant="text" width={170} />
+          <Skeleton variant="text" width={250} />
+        </div>
       </div>
+      <Skeleton width={400} height={140} />
+      <div className="flex flex-col justify-center gap-1.5">
+        <Skeleton variant="text" width={250} />
+        <Skeleton variant="text" width={400} />
+        <Skeleton variant="text" width={190} />
+      </div>
+      <Skeleton variant="text" width={400} height={30} />
     </div>
-    <Skeleton width={400} height={140} />
-    <div className="flex flex-col justify-center gap-1.5">
-      <Skeleton variant="text" width={250}/>
-      <Skeleton variant="text" width={400}/>
-      <Skeleton variant="text" width={190}/>
-    </div>
-    <Skeleton variant="text" width={400} height={30} />
-  </div>
-  ```
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
-
 ### List
-Sample List implementation using different varients of Skeleton components.
+
+Sample List implementation using different variants of Skeleton components.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -274,53 +374,62 @@ export const SkeletonList = () => {
 
   <Tabs.Tab>
 ```jsx copy
-  <div className="w-[440px] mx-auto p-4 border rounded-md">
-      <ul className="flex flex-col gap-2 m-0 p-0 list-none">
-          <li>
-              <div className="flex justify-between">     
-                  <Skeleton variant="circular" width={60} height={60} />
-                  <div className="flex flex-col justify-start gap-2">
-                      <Skeleton width={340} />
-                      <Skeleton width={250} />
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div className="flex justify-between">     
-                  <Skeleton variant="circular" width={60} height={60} />
-                  <div className="flex flex-col justify-start gap-2">
-                      <Skeleton width={340} />
-                      <Skeleton width={250} />
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div className="flex justify-between">     
-                  <Skeleton variant="circular" width={60} height={60} />
-                  <div className="flex flex-col justify-start gap-2">
-                      <Skeleton width={340} />
-                      <Skeleton width={250} />
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div className="flex justify-between">     
-                  <Skeleton variant="circular" width={60} height={60} />
-                  <div className="flex flex-col justify-start gap-2">
-                      <Skeleton width={340} />
-                      <Skeleton width={250} />
-                  </div>
-              </div>
-          </li>
-      </ul>
-  </div>
-  ```
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="w-[440px] mx-auto p-4 border rounded-md">
+        <ul className="flex flex-col gap-2 m-0 p-0 list-none">
+            <li>
+                <div className="flex justify-between">     
+                    <Skeleton variant="circular" width={60} height={60} />
+                    <div className="flex flex-col justify-start gap-2">
+                        <Skeleton width={340} />
+                        <Skeleton width={250} />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div className="flex justify-between">     
+                    <Skeleton variant="circular" width={60} height={60} />
+                    <div className="flex flex-col justify-start gap-2">
+                        <Skeleton width={340} />
+                        <Skeleton width={250} />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div className="flex justify-between">     
+                    <Skeleton variant="circular" width={60} height={60} />
+                    <div className="flex flex-col justify-start gap-2">
+                        <Skeleton width={340} />
+                        <Skeleton width={250} />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div className="flex justify-between">     
+                    <Skeleton variant="circular" width={60} height={60} />
+                    <div className="flex flex-col justify-start gap-2">
+                        <Skeleton width={340} />
+                        <Skeleton width={250} />
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
-    
 
 ### Table
-Sample Table implementation using different varients of Skeleton components.
+
+Sample Table implementation using different variants of Skeleton components.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -343,7 +452,7 @@ export const SkeletonTable = () => {
           <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
             {[...Array(5)].map((_, colIndex) => (
               <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-                <Skeleton variant="text" height={20} rounded="6px"/>
+                <Skeleton variant="text" height={20} rounded="6px" />
               </td>
             ))}
           </tr>
@@ -358,35 +467,44 @@ export const SkeletonTable = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<table className="w-fit p-5 rounded-md border mx-auto">
-  <thead>
-    <tr style={{ borderTop: '0px' }}>
-      {tableHeaders.map((header, index) => (
-        <th className='border-none font-bold' key={index}>
-          {header}
-        </th>
-      ))}
-    </tr>
-  </thead>
-  <tbody>
-    {[...Array(10)].map((_, rowIndex) => (
-      <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
-        {[...Array(5)].map((_, colIndex) => (
-          <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-            <Skeleton variant="text" height={20} rounded="6px"/>
-          </td>
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <table className="w-fit p-5 rounded-md border mx-auto">
+      <thead>
+        <tr style={{ borderTop: '0px' }}>
+          {tableHeaders.map((header, index) => (
+            <th className='border-none font-bold' key={index}>
+              {header}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {[...Array(10)].map((_, rowIndex) => (
+          <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
+            {[...Array(5)].map((_, colIndex) => (
+              <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
+                <Skeleton variant="text" height={20} rounded="6px" />
+              </td>
+            ))}
+          </tr>
         ))}
-      </tr>
-    ))}
-  </tbody>
-</table>
-  ```
+      </tbody>
+    </table>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
 
-
 ### Paginated Table
-Sample Table skeleton with pagination implementation using different varients of Skeleton components.
+
+Sample Table skeleton with pagination implementation using different variants of Skeleton components.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -410,7 +528,7 @@ export const SkeletonTableWithPagination = () => {
             <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
               {[...Array(5)].map((_, colIndex) => (
                 <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-                  <Skeleton variant="text" height={20} rounded="6px"/>
+                  <Skeleton variant="text" height={20} rounded="6px" />
                 </td>
               ))}
             </tr>
@@ -430,34 +548,118 @@ export const SkeletonTableWithPagination = () => {
 
   <Tabs.Tab>
 ```jsx copy
-<div className="w-fit p-5 rounded-md border mx-auto">
-  <table>
-    <thead>
-      <tr style={{ borderTop: '0px' }}>
-        {tableHeaders.map((header, index) => (
-          <th className='border-none font-bold' key={index}>
-            {header}
-          </th>
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-      {[...Array(10)].map((_, rowIndex) => (
-        <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
-          {[...Array(5)].map((_, colIndex) => (
-            <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-              <Skeleton variant="text" height={20} rounded="6px"/>
-            </td>
+import React from 'react';
+import { Skeleton } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="w-fit p-5 rounded-md border mx-auto">
+      <table>
+        <thead>
+          <tr style={{ borderTop: '0px' }}>
+            {tableHeaders.map((header, index) => (
+              <th className='border-none font-bold' key={index}>
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {[...Array(10)].map((_, rowIndex) => (
+            <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
+              {[...Array(5)].map((_, colIndex) => (
+                <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
+                  <Skeleton variant="text" height={20} rounded="6px" />
+                </td>
+              ))}
+            </tr>
           ))}
-        </tr>
-      ))}
-    </tbody>
-  </table>
-  <div className='flex justify-between mt-4' >
-    <Skeleton variant="text" width={100} rounded="6px"/>
-    <Skeleton variant="text" width={300} rounded="6px"/>
-  </div>
-</div>
-  ```
+        </tbody>
+      </table>
+      <div className='flex justify-between mt-4' >
+        <Skeleton variant="text" width={100} rounded="6px" />
+        <Skeleton variant="text" width={300} rounded="6px" />
+      </div>
+    </div>
+  )
+};
+
+export default App;
+```
   </Tabs.Tab>
 </Tabs>
+
+### API Reference
+
+{<table>
+
+  <thead>
+    <tr>
+      <th className="w-[10%]" align="left">Attribute</th>
+      <th className="w-[50%]" align="left">Type</th>
+      <th className="w-[30%]" align="left">Description</th>
+      <th className="w-[10%]" align="left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>variant</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">circular</span>  
+        <span className="badge">rectangular</span> 
+        <span className="badge">text</span> 
+      </td>
+      <td>Changes skeleton appreance</td>
+      <td><span className="badge">rectangular</span></td>
+    </tr>
+
+    <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">sm</span>
+        <span className="badge">md</span>
+        <span className="badge">lg</span>
+        <span className="badge">xl</span>
+      </td>
+      <td>Changes skeleton size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+
+    <tr>
+      <td>height</td>
+      <td>number</td>
+      <td>Changes height of the skeleton</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>width</td>
+      <td>number</td>
+      <td>Changes width of the skeleton</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>rounded</td>
+      <td>string</td>
+      <td>Changes the border radius of skeleton</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>numOfRows</td>
+      <td>number</td>
+      <td>Specifies the number of rows to generate for the skeleton component</td>
+      <td> - </td>
+    </tr>
+
+    <tr>
+      <td>numOfColumns</td>
+      <td>number</td>
+      <td>Specifies the number of columns to generate for the skeleton component</td>
+      <td> - </td>
+    </tr>
+
+  </tbody>
+</table>
+}
