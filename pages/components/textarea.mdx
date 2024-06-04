@@ -1,6 +1,5 @@
-import { Textarea } from "@vivakits/react-components";
+import { Textarea, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
-import { FaSearch, FaEdit } from "react-icons/fa";
 
 # Textarea
 
@@ -13,10 +12,14 @@ The Textarea component comes with 2 different variants that you can change it us
   <Tabs.Tab>
 export const TextareaVariantGroup = () => {
   return (
-    <div className="flex items-center gap-3">
-        <Textarea label="Outlined:" variant="outline"  placeholder="Enter text"/>
-        <Textarea label="Solid:" variant="solid"  placeholder="Enter text" className="!bg-gray-200" />        
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea label="Outlined:" variant="outline" placeholder="Enter text" />
+        <Textarea label="Solid:" variant="solid" placeholder="Enter text" className="!bg-gray-200" /> 
+    </VKGroup>
   );
 };
 
@@ -26,19 +29,19 @@ export const TextareaVariantGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Textarea } from "@vivakits/react-components";
+import { Textarea, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Textarea label="Outlined Textarea variant" variant="outline" />
-      <Textarea
-        label="Solid Textarea variant"
-        variant="solid"
-        className="!bg-gray-300"
-      />
-    </div>
-  )
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea label="Outlined:" variant="outline" placeholder="Enter text"/>
+        <Textarea label="Solid:" variant="solid" placeholder="Enter text" className="!bg-gray-200" /> 
+    </VKGroup>
+  );
 };
 
 export default App;
@@ -84,7 +87,7 @@ const App = () => {
       <Textarea size="xl" label="Extra Large" />
       <Textarea size="2xl" label="Double Extra Large" />
     </div>
-  )
+  );
 };
 
 export default App;
@@ -101,14 +104,18 @@ The Textarea component comes with 6 different colors that you can change it usin
 <Tabs.Tab>
 export const TextareaColorGroup = () => {
   return (
-  <div className="flex items-end gap-3 flex-wrap">
-      <Textarea variant="outline" label="Primary" color="primary" />
-      <Textarea variant="outline" label="Secondary" color="secondary" />
-      <Textarea variant="outline" label="Success" color="success" />
-      <Textarea variant="outline" label="Warning" color="warning" />
-      <Textarea variant="outline" label="Danger" color="danger" />
-      <Textarea variant="outline" label="Light" color="light" />
-  </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea variant="outline" label="Primary" color="primary" />
+        <Textarea variant="outline" label="Secondary" color="secondary" />
+        <Textarea variant="outline" label="Success" color="success" />
+        <Textarea variant="outline" label="Warning" color="warning" />
+        <Textarea variant="outline" label="Danger" color="danger" />
+        <Textarea variant="outline" label="Light" color="light" />
+    </VKGroup>
   );
 };
 
@@ -122,15 +129,19 @@ import { Textarea } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-end gap-3 flex-wrap">
-      <Textarea variant="outline" label="Primary" color="primary" />
-      <Textarea variant="outline" label="Secondary" color="secondary" />
-      <Textarea variant="outline" label="Success" color="success" />
-      <Textarea variant="outline" label="Warning" color="warning" />
-      <Textarea variant="outline" label="Danger" color="danger" />
-      <Textarea variant="outline" label="Light" color="light" />
-    </div>
-  )
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea variant="outline" label="Primary" color="primary" />
+        <Textarea variant="outline" label="Secondary" color="secondary" />
+        <Textarea variant="outline" label="Success" color="success" />
+        <Textarea variant="outline" label="Warning" color="warning" />
+        <Textarea variant="outline" label="Danger" color="danger" />
+        <Textarea variant="outline" label="Light" color="light" />
+    </VKGroup>
+  );
 };
 
 export default App;
@@ -180,45 +191,7 @@ const App = () => {
       <Textarea rounded="xl" label="Extra Large" />
       <Textarea rounded="full" label="Full" />
     </div>
-  )
-};
-
-export default App;
-```
-</Tabs.Tab>
-</Tabs>
-
-### Icon
-
-An icon can be append or prepend using `icon` prop. The position of the icon can be specified by the `iconPosition` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const TextareaIconGroup = () => {
-  return (
-    <div className="flex items-end gap-3">
-      <Textarea icon={<FaSearch />} placeholder="Search" />
-      <Textarea iconPosition="end" icon={<FaSearch />} placeholder="Search" />
-    </div>
   );
-};
-
-<TextareaIconGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-import React from 'react';
-import { Textarea } from "@vivakits/react-components";
-
-const App = () => {
-  return (
-    <div className="flex items-end gap-3">
-      <Textarea icon={<FaSearch />} placeholder="Search" />
-      <Textarea iconPosition="end" icon={<FaSearch />} placeholder="Search" />
-    </div>
-  )
 };
 
 export default App;
@@ -236,8 +209,12 @@ Conditional error handling for Textarea can be done via `hasError` props. Error 
 export const TextareaErrorGroup = () => {
   return (
     <div className="flex items-end gap-3">
-      <Textarea icon={<FaEdit />} placeholder="Error variant" hasError={true} />
-      <Textarea icon={<FaEdit />} placeholder="Error variant" hasError={true} errorMessage="Custom error message" />
+      <Textarea placeholder="Error variant" hasError={true} />
+      <Textarea
+        placeholder="Error variant"
+        hasError={true}
+        errorMessage="Custom error message"
+      />
     </div>
   );
 };
@@ -253,15 +230,14 @@ import { Textarea } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex items-end gap-3">
-      <Textarea icon={<FaEdit />} placeholder="Error variant" hasError={true} />
+      <Textarea placeholder="Error variant" hasError={true} />
       <Textarea
-        icon={<FaEdit />}
         placeholder="Error variant"
         hasError={true}
         errorMessage="Custom error message"
       />
     </div>
-  )
+  );
 };
 
 export default App;
@@ -278,11 +254,15 @@ The Textarea component offers various configuration options to handle different 
 <Tabs.Tab>
 export const TextareaExamples = () => {
   return (
-    <div className="flex items-end gap-3">
-      <Textarea placeholder="Disabled textarea" disabled  />
-      <Textarea placeholder="Max length: 5" maxlength="5" />
-      <Textarea placeholder="Non-resizable" className="resize-none" />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea placeholder="Disabled textarea" disabled  />
+        <Textarea placeholder="Max length: 5" maxlength="5" />
+        <Textarea placeholder="Non-resizable" className="resize-none" />
+    </VKGroup>
   );
 };
 
@@ -296,12 +276,16 @@ import { Textarea } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-end gap-3">
-      <Textarea placeholder="Disabled textarea" disabled />
-      <Textarea placeholder="Max length: 5" maxlength="5" />
-      <Textarea placeholder="Non-resizable" className="resize-none" />
-    </div>
-  )
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea placeholder="Disabled textarea" disabled  />
+        <Textarea placeholder="Max length: 5" maxlength="5" />
+        <Textarea placeholder="Non-resizable" className="resize-none" />
+    </VKGroup>
+  );
 };
 
 export default App;
@@ -368,21 +352,6 @@ export default App;
       </td>
       <td>Changes the border radius of Textarea</td>
       <td><span className="badge">primary</span></td>
-    </tr>
-    <tr>
-      <td>icon</td>
-      <td>ReactNode</td>
-      <td>Append or prepend an icon inside the Textarea box</td>
-      <td> - </td>
-    </tr>
-     <tr>
-      <td>iconPosition</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
-        <span className="badge">start</span>  
-        <span className="badge">end</span>   
-      </td>
-      <td>Determine the position of the icon</td>
-      <td><span className="badge"> start </span></td>
     </tr>
      <tr>
       <td>placeholder</td>
