@@ -20,8 +20,8 @@ export const LoginForm2 = ()=>{
             <Input size="sm" label="Password" type="password" placeholder="********"/>
             <Button size="md" rounded="md" color="dark" varient="solid" className="w-fit">Sign In</Button>
             <Checkbox size="md" rounded="full"><span className="ml-2">Remember Password</span></Checkbox>
-            <a href="#" className="text-blue-800">Forgot your password?</a>
-            <p className="m-0">click <a href="#" className="text-blue-800">here</a> to reset your password.</p>
+            <a href="#" className="text-slate-800 font-medium text-center">Forgot your password?</a>
+            <p className="m-0 text-center">click <a href="#" className="text-slate-800 font-medium">here</a> to reset your password.</p>
         </div>
     )
 }
