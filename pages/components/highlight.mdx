@@ -1,4 +1,4 @@
-import { VKHighlight } from "@vivakits/react-components";
+import { VKHighlight, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { useState } from "react";
 
@@ -95,7 +95,7 @@ Enhance user experience by highlighting selections with seven different backgrou
 <Tabs.Tab>
 export const DifferntVarientsBG= () => {
   return (
-    <div className="flex flex-col gap-2">
+    <VKGroup orientation="vartical" border="none" color="none" className="flex-col gap-2">
         <VKHighlight highlightText="primary background" background="primary">
             Highlight selection with primary background color
         </VKHighlight>
@@ -117,7 +117,7 @@ export const DifferntVarientsBG= () => {
         <VKHighlight highlightText="light background" background="light">
             Highlight selection with light background color
         </VKHighlight>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -126,11 +126,11 @@ export const DifferntVarientsBG= () => {
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import {VKHighlight} from "@vivakits/react-components";
+import {VKHighlight,VKGroup} from "@vivakits/react-components";
 
 const App = ()=> {
   return(
-    <div className="flex flex-col gap-2">
+    <VKGroup orientation="vartical" border="none" color="none" className="flex-col gap-2">
       <VKHighlight highlightText="spotlight" background="primary">
           Highlight selection with primary background color
       </VKHighlight>
@@ -152,7 +152,7 @@ const App = ()=> {
       <VKHighlight highlightText="spotlight" background="light">
           Highlight selection with light background color
       </VKHighlight>
-    </div>
+    </VKGroup>
   )
 }
 
@@ -161,9 +161,9 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Size
+### Rounded
 
-You can cahnge the size of rounded corner radius using `rounded` prop.  
+You can cahnge the corner radius using `rounded` prop.  
 
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
@@ -175,7 +175,10 @@ export const VarientsRadius= () => {
       </VKHighlight> 
       <VKHighlight highlightText="extra small" rounded="xs">
           You can change the corner radius to extra small for your selection
-      </VKHighlight>      
+      </VKHighlight>     
+      <VKHighlight highlightText="small" rounded="sm">
+          You can change the corner radius to small for your selection
+      </VKHighlight>     
       <VKHighlight highlightText="medium" rounded="md">
           You can change the corner radius to  medium for your selection
       </VKHighlight>      
@@ -204,6 +207,9 @@ const App = ()=> {
       </VKHighlight> 
       <VKHighlight highlightText="extra small" rounded="xs">
           You can change the corner radius to extra small for your selection
+      </VKHighlight>
+      <VKHighlight highlightText="small" rounded="sm">
+          You can change the corner radius to small for your selection
       </VKHighlight>      
       <VKHighlight highlightText="medium" rounded="md">
           You can change the corner radius to  medium for your selection
@@ -231,14 +237,14 @@ You can make more cutomization to meet your design, using `style` or `className`
 <Tabs.Tab>
 export const AddingStyles= () => {
   return (
-    <div className="flex flex-col gap-2">
+    <VKGroup orientation="vartical" border="none" color="none" className="flex-col gap-2">
         <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
             Customize selection using style
         </VKHighlight>
-        <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-xl">
+        <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black">
             Customize selection using className
         </VKHighlight>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -251,14 +257,14 @@ import {VKHighlight} from "@vivakits/react-components";
 
 const App = ()=> {
   return(
-    <div className="flex flex-col gap-2">
+    <VKGroup orientation="vartical" border="none" color="none" className="flex-col gap-2">
       <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
           Customize selection using style
       </VKHighlight>
-      <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-3xl">
+      <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black">
           Customize selection using className 
       </VKHighlight>
-    </div>
+    </VKGroup>
   )
 }
 
