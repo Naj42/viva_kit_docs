@@ -1,4 +1,4 @@
-import { Input } from "@vivakits/react-components";
+import { Input, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { FaSearch, FaExclamation } from "react-icons/fa";
 
@@ -20,6 +20,8 @@ The Input component comes with 4 different sizes that you can change using the `
 export const InputSizeGroup = () => {
   return (
     <div className="flex items-end gap-3">
+    <VKGroup orientation="horizontal" color="light">
+    </VKGroup>
         <Input size="sm" label="Small" />
         <Input size="md" label="Medium" />
         <Input size="lg" label="Large" />
@@ -60,14 +62,14 @@ The Input component comes with 6 different colors that you can change it using t
 <Tabs.Tab>
 export const InputColorGroup = () => {
   return (
-  <div className="flex items-end gap-3 flex-wrap">
-      <Input variant="outline" label="Primary" color="primary" />
-      <Input variant="outline" label="Secondary" color="secondary" />
-      <Input variant="outline" label="Success" color="success" />
-      <Input variant="outline" label="Warning" color="warning" />
-      <Input variant="outline" label="Danger" color="danger" />
-      <Input variant="outline" label="Light" color="light" />
-  </div>
+  <VKGroup orientation="vertical" color="none" border="none">
+    <Input variant="outline" label="Primary" color="primary" />
+    <Input variant="outline" label="Secondary" color="secondary" />
+    <Input variant="outline" label="Success" color="success" />
+    <Input variant="outline" label="Warning" color="warning" />
+    <Input variant="outline" label="Danger" color="danger" />
+    <Input variant="outline" label="Light" color="light" />
+  </VKGroup>
   );
 };
 
@@ -76,20 +78,20 @@ export const InputColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { Input } from "@vivakits/react-components";
+import { Input, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-end gap-3 flex-wrap">
+    <VKGroup orientation="vertical" color="none" border="none">
         <Input variant="outline" label="Primary" color="primary" />
         <Input variant="outline" label="Secondary" color="secondary" />
         <Input variant="outline" label="Success" color="success" />
         <Input variant="outline" label="Warning" color="warning" />
         <Input variant="outline" label="Danger" color="danger" />
         <Input variant="outline" label="Light" color="light" />
-    </div>
-  );
-};
+    </VKGroup>
+  )
+}
 
 export default App;
 ```
@@ -155,10 +157,10 @@ An icon can be appended or prepended using `icon` prop. The position of the icon
 <Tabs.Tab>
 export const InputIconGroup = () => {
   return (
-    <div className="flex items-end gap-3">
+    <VKGroup orientation="horizontal" border="none" color="none" className="gap-2 flex-nowrap overflow-visible">
       <Input icon={<FaSearch />} placeholder="Search" />
       <Input iconPosition="end" icon={<FaSearch />} placeholder="Search" />
-    </div>
+    </VKGroup>
   );
 };
 
@@ -167,17 +169,17 @@ export const InputIconGroup = () => {
 
 <Tabs.Tab>
   ```jsx copy
-import { Input } from "@vivakits/react-components";
+import { Input, VKGroup } from "@vivakits/react-components";
 import { FaSearch } from "react-icons/fa";
 
 const App = () => {
     return (
-      <div className="flex items-end gap-3">
+      <VKGroup orientation="horizontal" border="none" color="none" className="gap-2 flex-nowrap overflow-visible">
         <Input icon={<FaSearch />} placeholder="Search" />
         <Input iconPosition="end" icon={<FaSearch />} placeholder="Search" />
-      </div>
-    );
-};
+      </VKGroup>
+    )
+}
 
 export default App;
   ```
@@ -194,29 +196,29 @@ Conditional error handling for input can be done via `hasError` prop. Error mess
 <Tabs.Tab>
 export const InputErrorGroup = () => {
   return (
-    <div className="flex items-end gap-3">
+    <VKGroup orientation="horizontal" border="none" color="none" className="gap-2 flex-nowrap overflow-visible">
       <Input icon={<FaExclamation />} placeholder="Default Error" hasError={true} />
       <Input icon={<FaExclamation />} placeholder="Custom Error" hasError={true} errorMessage="Custom error message" />
-    </div>
-  );
-};
+    </VKGroup>
+  )
+}
 
 <InputErrorGroup />
 </Tabs.Tab>
 
 <Tabs.Tab>
   ```jsx copy
-import { Input } from "@vivakits/react-components";
+import { Input, VKGroup } from "@vivakits/react-components";
 import { FaExclamation } from "react-icons/fa";
 
 const App = () => {
-  return (
-    <div className="flex items-end gap-3">
-      <Input icon={<FaExclamation />} placeholder="Default Error" hasError={true} />
-      <Input icon={<FaExclamation />} placeholder="Custom Error" hasError={true} errorMessage="Custom error message" />
-    </div>
-  );
-};
+    return (
+      <VKGroup orientation="horizontal" border="none" color="none" className="gap-2 flex-nowrap overflow-visible">
+        <Input icon={<FaExclamation />} placeholder="Default Error" hasError={true} />
+        <Input icon={<FaExclamation />} placeholder="Custom Error" hasError={true} errorMessage="Custom error message" />
+      </VKGroup>
+    )
+}
 
 export default App;
   ```
