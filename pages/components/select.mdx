@@ -1,21 +1,21 @@
-import { Select, VKGroup, Checkbox } from "@vivakits/react-components";
+import { Select, VKGroup, Checkbox, Styles } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { useState } from 'react';
 
 # Select
-{ /* options?: SelectOptionProps[] | [];
+{/* options?: SelectOptionProps[] | [];
  
 
 
-  asyncLoading?: boolean;
+ asyncLoading?: boolean;
 
-  styles?: Styles;
-  isAsyncSearchable?: boolean;
+ styles?: Styles;
+ isAsyncSearchable?: boolean;
 
-  showValueNode?: boolean;
-  loadOptions?: () => Promise<SelectOptionProps[]>;
-  addOptionAsync?: (newOptions: any) => any;
-  isCreatable?: boolean; */}
+ showValueNode?: boolean;
+ loadOptions?: () => Promise<SelectOptionProps[]>;
+ addOptionAsync?: (newOptions: any) => any;
+ isCreatable?: boolean; */}
 
 ### Import 
   ```jsx
@@ -587,23 +587,23 @@ export const SelectShowCancelButtonGroup = () => {
   ]);
 
   return (
-   <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-    <Select
-      options={options}
-      onChange={(option) => setSingleSelect(option)}
-      value={singleSelect}
-      label="Single Select"
-      showCancel
-    />
-     <Select
-      options={options}
-      onChange={(option) => setMultipleSelect(option)}
-      value={multipleSelect}
-      label="Multiple Select"
-      isMultiple
-      showCancel
-    />
-   </div>
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <Select
+        options={options}
+        onChange={(option) => setSingleSelect(option)}
+        value={singleSelect}
+        label="Single Select"
+        showCancel
+      />
+      <Select
+        options={options}
+        onChange={(option) => setMultipleSelect(option)}
+        value={multipleSelect}
+        label="Multiple Select"
+        isMultiple
+        showCancel
+      />
+    </div>
   );
 };
 
@@ -957,24 +957,24 @@ export const SelectMultipleGroup = () => {
   ]);
 
   return (
-   <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-    <Select 
-        options={options} 
-        onChange={(option) => setHideOptions(option)} 
-        value={hideOptions} 
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <Select
+        options={options}
+        onChange={(option) => setHideOptions(option)}
+        value={hideOptions}
         label="Selected options hidden"
         isMultiple
         showCancel
-      /> 
-    <Select 
-        options={options} 
-        onChange={(option) => setShowOptions(option)} 
-        value={showOptions} 
+      />
+      <Select
+        options={options}
+        onChange={(option) => setShowOptions(option)}
+        value={showOptions}
         label="Selected options shown"
         isMultiple
         showSelectedOptions
-      /> 
-   </div>
+      />
+    </div>
   );
 };
 
@@ -1098,24 +1098,24 @@ export const SelectSearchableGroup = () => {
   ]);
 
   return (
-  <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-   <Select 
-        options={options} 
-        onChange={(option) => setValue(option)} 
-        value={value} 
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <Select
+        options={options}
+        onChange={(option) => setValue(option)}
+        value={value}
         label="Single Select"
         isSearchable
       />
-     <Select 
-        options={options} 
-        onChange={(option) => setMultipleValue(option)} 
-        value={multipleValue} 
+      <Select
+        options={options}
+        onChange={(option) => setMultipleValue(option)}
+        value={multipleValue}
         label="Multiple Select"
         isSearchable
         isMultiple
-      /> 
-  
-  </div>
+      />
+
+    </div>
   );
 };
 
@@ -1222,25 +1222,25 @@ export const SelectCheckedIconGroup = () => {
   ]);
 
   return (
-   <div className= "flex items-center gap-16 flex-wrap justify-around py-8">
-    <Select
-      options={options}
-      onChange={(option) => setSingleSelect(option)}
-      value={singleSelect}
-      optionsWithCheck
-     checkedIcon={<span>💯</span>}
-    />
-    <Select
-      options={options}
-      onChange={(option) => setMultipleSelect(option)}
-      value={multipleSelect}
-      isMultiple
-      showSelectedOptions
-      optionsWithCheck
-      showCancel
-      removeValueIcon={<span>✗</span>}
-    />
-   </div>
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <Select
+        options={options}
+        onChange={(option) => setSingleSelect(option)}
+        value={singleSelect}
+        optionsWithCheck
+        checkedIcon={<span>💯</span>}
+      />
+      <Select
+        options={options}
+        onChange={(option) => setMultipleSelect(option)}
+        value={multipleSelect}
+        isMultiple
+        showSelectedOptions
+        optionsWithCheck
+        showCancel
+        removeValueIcon={<span>✗</span>}
+      />
+    </div>
   );
 };
 
@@ -1288,6 +1288,96 @@ export const SelectCheckedIconGroup = () => {
 </Tabs.Tab>
 </Tabs>
 
+### Create Options
+`isCreatable` determines whether the select component permits us to create new options. When a new option is created by us, the `createOptionByAPI` callback function is triggered. This function takes the newly created option as a parameter and can be utilized for additional actions, such as sending the new option to an API or logging it.
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+
+export const SelectCreateOptionGroup = () => {
+  const [singleSelect, setSingleSelect] = useState();
+  const [multipleSelect, setMultipleSelect] = useState([]);
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <Select
+        options={options}
+        onChange={(option) => setSingleSelect(option)}
+        value={singleSelect}
+        label="Single Select"
+        isSearchable
+        isCreatable
+        createOptionByAPI={(newOption) => console.log(newOption)}
+      />
+      <Select
+        options={options}
+        onChange={(option) => setMultipleSelect(option)}
+        value={multipleSelect}
+        label="Multiple Select"
+        isMultiple
+        isSearchable
+        isCreatable
+        createOptionByAPI={(newOption) => console.log(newOption)}
+      />
+    </div>
+  );
+};
+
+<SelectCreateOptionGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+export const SelectCreateOptionGroup = () => {
+  const [singleSelect, setSingleSelect] = useState();
+  const [multipleSelect, setMultipleSelect] = useState([]);
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  return (
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+      <Select
+        options={options}
+        onChange={(option) => setSingleSelect(option)}
+        value={singleSelect}
+        label="Single Select"
+        isSearchable
+        isCreatable
+        createOptionByAPI={(newOption) => console.log(newOption)}
+      />
+      <Select
+        options={options}
+        onChange={(option) => setMultipleSelect(option)}
+        value={multipleSelect}
+        label="Multiple Select"
+        isMultiple
+        isSearchable
+        isCreatable
+        createOptionByAPI={(newOption) => console.log(newOption)}
+      />
+    </div>
+  );
+};
+```
+</Tabs.Tab>
+
+</Tabs>
+
+
+
+
+
+
 ### Customization
 We can customize the options using the `node` property in the options array. And if we want to show the node in the selected value, we can use the `showValueNode` prop. 
 
@@ -1296,32 +1386,32 @@ We can customize the options using the `node` property in the options array. And
 
 export const SelectCustomizationGroup = () => {
 
-const [customSelect1, setCustomSelect1] = useState();
-const [customSelect2, setCustomSelect2] = useState();
+  const [customSelect1, setCustomSelect1] = useState();
+  const [customSelect2, setCustomSelect2] = useState();
 
   const [options, setOptions] = useState([
-    { label: 'Blue', value: 'Blue', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-blue-900"/><div>Blue</div></div>) },
-    { label: 'White', value: 'White', node :(<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-white border"/><div>White</div></div>) },
-    { label: 'Black', value: 'Black', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-black"/><div>Black</div></div>) },
-    { label: 'Orange', value: 'Orange', node : (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-orange-600"/><div>Orange</div></div>) }
+    { label: 'Blue', value: 'Blue', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-blue-900" /><div>Blue</div></div>) },
+    { label: 'White', value: 'White', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-white border" /><div>White</div></div>) },
+    { label: 'Black', value: 'Black', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-black" /><div>Black</div></div>) },
+    { label: 'Orange', value: 'Orange', node: (<div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-orange-600" /><div>Orange</div></div>) }
   ]);
 
 
 
   return (
-   <div className="flex items-center gap-16 flex-wrap justify-around py-8 ">
-    <Select
-      options={options}
-      onChange={(option) => setCustomSelect1(option)}
-      value={customSelect1}
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8 ">
+      <Select
+        options={options}
+        onChange={(option) => setCustomSelect1(option)}
+        value={customSelect1}
 
-    />
-    <Select
-      options={options}
-      onChange={(option) => setCustomSelect2(option)}
-      value={customSelect2}
-      showValueNode
-    />
+      />
+      <Select
+        options={options}
+        onChange={(option) => setCustomSelect2(option)}
+        value={customSelect2}
+        showValueNode
+      />
     </div>
   );
 };
@@ -1367,6 +1457,88 @@ const [customSelect2, setCustomSelect2] = useState();
 ```
 </Tabs.Tab>
 </Tabs>
+
+### Customization with Utility Classes
+We can customize our select component by passing an object of utility classes.
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+export const SelectForCustomizedStyle = () => {
+  const [value, setValue] = useState();
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  const style = {
+
+    wrapper: "",
+    error: "text-red-500",
+    menu: "bg-black",
+    options: "text-white hover:text-black",
+    value: "bg-black text-white",
+    input: "",
+    valueImage: "",
+    removeIcon: "text-red-500",
+    checkIcon: "text-white",
+    selectedOption: "bg-blue-500",
+    hoveredOption: "p-3",
+
+  }
+  return (
+    <Select
+      options={options}
+      onChange={(option) => setValue(option)}
+      value={value}
+      isMultiple
+      styles={style}
+      optionsWithCheck
+      showSelectedOptions
+    />
+  );
+};
+
+<SelectForCustomizedStyle />
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+export const SelectForCustomizedStyle = () => {
+  const [value, setValue] = useState();
+  const [options, setOptions] = useState([]);
+
+  const style : Styles = {
+    wrapper: "",
+    error: "text-red-500",
+    menu: "bg-black",
+    options: "text-white hover:text-black",
+    value: "bg-black text-white",
+    input: "",
+    valueImage: "",
+    removeIcon: "text-red-500",
+    checkIcon: "text-white",
+    selectedOption: "bg-blue-500",
+    hoveredOption: "p-3",
+  }
+
+  return (
+    <Select
+      options={options}
+      onChange={(option) => setValue(option)}
+      value={value}
+      styles={style}
+      optionsWithCheck
+      showSelectedOptions
+    />
+  );
+};
+```
+</Tabs.Tab>
+</Tabs>
+
+
 
 
 
