@@ -73,55 +73,47 @@ import { VKGroup, Button } from "@vivakits/react-components";
 ```
 
 ```jsx copy
-// Horizontal Group
-
 const App = () => {
   return (
-    <div className="flex flex-col items-start gap-6">
-      <VKGroup
-        orientation="horizontal"
-        childrenProps={{
-          variant: "outline",
-          className: "border-0",
-        }}
-        size="md"
-        rounded="sm"
-      >
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-      </VKGroup>
-    </div>
-  );
-};
+    <VKGroup
+      orientation="horizontal"
+      childrenProps={{
+        variant: "outline",
+        className: "border-0",
+      }}
+      size="md"
+      rounded="sm"
+    >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+      <Button>Button 4</Button>
+    </VKGroup>
+  )
+}
 
 export default App;
 ```
 
 ```jsx copy
-// Vertical Group
-
 const App = () => {
   return (
-    <div className="flex flex-col items-start gap-6">
-      <VKGroup
-        orientation="vertical"
-        childrenProps={{
-          variant: "outline",
-          className: "border-0",
-        }}
-        size="md"
-        rounded="sm"
-      >
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-      </VKGroup>
-    </div>
-  );
-};
+    <VKGroup
+      orientation="vertical"
+      childrenProps={{
+        variant: "outline",
+        className: "border-0",
+      }}
+      size="md"
+      rounded="sm"
+    >
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+      <Button>Button 4</Button>
+    </VKGroup>
+  )
+}
 
 export default App;
 ```
@@ -176,7 +168,6 @@ import { VKGroup, Button } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex flex-wrap gap-3">
-      {/* primary */}
       <VKGroup
         separatorColor="primary"
         childrenProps={{
@@ -191,7 +182,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* secondary */}
       <VKGroup
         separatorColor="secondary"
         childrenProps={{
@@ -206,7 +196,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* success */}
       <VKGroup
         separatorColor="success"
         childrenProps={{
@@ -221,7 +210,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* warning */}
       <VKGroup
         separatorColor="warning"
         childrenProps={{
@@ -236,7 +224,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* danger */}
       <VKGroup
         separatorColor="danger"
         childrenProps={{
@@ -251,7 +238,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* dark */}
       <VKGroup
         separatorColor="dark"
         childrenProps={{
@@ -266,7 +252,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* light */}
       <VKGroup
         separatorColor="light"
         childrenProps={{
@@ -281,8 +266,8 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
     </div>
-  );
-};
+  )
+}
 
 export default App;
 ```
@@ -344,7 +329,6 @@ import { VKGroup, VKTitle } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex items-end gap-3">
-      {/* primary */}
       <VKGroup
         color="primary"
         childrenProps={{
@@ -356,8 +340,7 @@ const App = () => {
         <VKTitle color="light">Text 2</VKTitle>
         <VKTitle color="light">Text 3</VKTitle>
       </VKGroup>
-
-      {/* secondary */}
+      
       <VKGroup
         color="secondary"
         childrenProps={{
@@ -370,7 +353,6 @@ const App = () => {
         <VKTitle color="light">Text 3</VKTitle>
       </VKGroup>
 
-      {/* success */}
       <VKGroup
         color="success"
         childrenProps={{
@@ -383,7 +365,6 @@ const App = () => {
         <VKTitle color="light">Text 3</VKTitle>
       </VKGroup>
 
-      {/* warning */}
       <VKGroup
         color="warning"
         childrenProps={{
@@ -395,8 +376,7 @@ const App = () => {
         <VKTitle color="light">Text 2</VKTitle>
         <VKTitle color="light">Text 3</VKTitle>
       </VKGroup>
-
-      {/* danger */}
+     
       <VKGroup
         color="danger"
         childrenProps={{
@@ -408,8 +388,7 @@ const App = () => {
         <VKTitle color="light">Text 2</VKTitle>
         <VKTitle color="light">Text 3</VKTitle>
       </VKGroup>
-
-      {/* dark */}
+      
       <VKGroup
         color="dark"
         childrenProps={{
@@ -422,7 +401,6 @@ const App = () => {
         <VKTitle color="dark">Text 3</VKTitle>
       </VKGroup>
 
-      {/* light */}
       <VKGroup
         color="light"
         childrenProps={{
@@ -435,8 +413,8 @@ const App = () => {
         <VKTitle color="dark">Text 3</VKTitle>
       </VKGroup>
     </div>
-  );
-};
+  )
+}
 
 export default App;
 ```
@@ -491,7 +469,6 @@ import { VKGroup, Button } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex items-end gap-3">
-      {/* none */}
       <VKGroup
         border="none"
         childrenProps={{
@@ -506,7 +483,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* xs */}
       <VKGroup
         border="xs"
         childrenProps={{
@@ -521,7 +497,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* sm */}
       <VKGroup
         border="sm"
         childrenProps={{
@@ -536,7 +511,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* md */}
       <VKGroup
         border="md"
         childrenProps={{
@@ -551,7 +525,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* lg */}
       <VKGroup
         border="lg"
         childrenProps={{
@@ -566,7 +539,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* xl */}
       <VKGroup
         border="xl"
         childrenProps={{
@@ -581,7 +553,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* 2xl */}
       <VKGroup
         border="2xl"
         childrenProps={{
@@ -596,8 +567,8 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
     </div>
-  );
-};
+  )
+}
 
 export default App;
 ```
@@ -652,7 +623,6 @@ import { VKGroup, Button } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex flex-wrap gap-3">
-      {/* default */}
       <VKGroup
         borderColor="default"
         childrenProps={{
@@ -666,8 +636,7 @@ const App = () => {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
       </VKGroup>
-
-      {/* primary */}
+      
       <VKGroup
         borderColor="primary"
         childrenProps={{
@@ -682,7 +651,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* secondary */}
       <VKGroup
         borderColor="secondary"
         childrenProps={{
@@ -696,8 +664,7 @@ const App = () => {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
       </VKGroup>
-
-      {/* success */}
+      
       <VKGroup
         borderColor="success"
         childrenProps={{
@@ -711,8 +678,7 @@ const App = () => {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
       </VKGroup>
-
-      {/* warning */}
+      
       <VKGroup
         borderColor="warning"
         childrenProps={{
@@ -727,7 +693,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* danger */}
       <VKGroup
         borderColor="danger"
         childrenProps={{
@@ -742,7 +707,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* dark */}
       <VKGroup
         borderColor="dark"
         childrenProps={{
@@ -756,8 +720,7 @@ const App = () => {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
       </VKGroup>
-
-      {/* light */}
+      
       <VKGroup
         borderColor="light"
         childrenProps={{
@@ -772,8 +735,8 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
     </div>
-  );
-};
+  )
+}
 
 export default App;
 ```
@@ -827,7 +790,6 @@ import { VKGroup, Button } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex items-end gap-3">
-      {/* default */}
       <VKGroup
         size="default"
         childrenProps={{
@@ -841,7 +803,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* xs */}
       <VKGroup
         size="xs"
         childrenProps={{
@@ -855,7 +816,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* sm */}
       <VKGroup
         size="sm"
         childrenProps={{
@@ -869,7 +829,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* md */}
       <VKGroup
         size="md"
         childrenProps={{
@@ -883,7 +842,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* lg */}
       <VKGroup
         size="lg"
         childrenProps={{
@@ -897,7 +855,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* xl */}
       <VKGroup
         size="xl"
         childrenProps={{
@@ -911,7 +868,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* 2xl */}
       <VKGroup
         size="2xl"
         childrenProps={{
@@ -925,8 +881,8 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
     </div>
-  );
-};
+  )
+}
 
 export default App;
 ```
@@ -980,7 +936,6 @@ import { VKGroup, Button } from "@vivakits/react-components";
 const App = () => {
   return (
     <div className="flex items-end gap-3">
-      {/* none */}
       <VKGroup
         size="md"
         rounded="none"
@@ -994,7 +949,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* xs */}
       <VKGroup
         size="md"
         rounded="xs"
@@ -1008,7 +962,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* sm */}
       <VKGroup
         size="md"
         rounded="sm"
@@ -1022,7 +975,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* md */}
       <VKGroup
         size="md"
         rounded="md"
@@ -1036,7 +988,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* lg */}
       <VKGroup
         size="md"
         rounded="lg"
@@ -1050,7 +1001,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* xl */}
       <VKGroup
         size="md"
         rounded="xl"
@@ -1064,7 +1014,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* 2xl */}
       <VKGroup
         size="md"
         rounded="2xl"
@@ -1078,7 +1027,6 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
 
-      {/* full */}
       <VKGroup
         size="md"
         rounded="full"
@@ -1092,8 +1040,8 @@ const App = () => {
         <Button>Button 3</Button>
       </VKGroup>
     </div>
-  );
-};
+  )
+}
 
 export default App;
 ```
