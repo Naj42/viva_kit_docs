@@ -36,7 +36,6 @@ export const DefaultSpinner = () => {
 ```jsx copy
 import React from 'react';
 import { Spinner } from "@vivakits/react-components";
-
 const App = () => {
   return (
     <div className="flex justify-center items-center gap-3 flex-wrap">
@@ -60,14 +59,14 @@ The Spinner component comes with different colors that you can change it using t
 export const SpinnerColorGroup = () => {
   return (
     <div className="flex justify-center items-center gap-3 flex-wrap">
-        <Spinner size="lg" color="primary"/>
-        <Spinner size="lg" color="secondary"/>
-        <Spinner size="lg" color="accent"/>
-        <Spinner size="lg" color="danger"/>
-        <Spinner size="lg" color="success"/>
-        <Spinner size="lg" color="warning"/>
-        <Spinner size="lg" color="dark"/>
-        <Spinner size="lg" color="light"/>
+      <Spinner size="lg" color="primary" />
+      <Spinner size="lg" color="secondary" />
+      <Spinner size="lg" color="accent" />
+      <Spinner size="lg" color="danger" />
+      <Spinner size="lg" color="success" />
+      <Spinner size="lg" color="warning" />
+      <Spinner size="lg" color="dark" />
+      <Spinner size="lg" color="light" />
     </div>
   );
 };
@@ -79,7 +78,6 @@ export const SpinnerColorGroup = () => {
 ```jsx copy
 import React from 'react';
 import { Spinner } from "@vivakits/react-components";
-
 const App = () => {
   return (
     <div className="flex justify-center items-center gap-3 flex-wrap">
@@ -125,7 +123,6 @@ export const SpinnerSizeGroup = () => {
 ```jsx copy
 import React from 'react';
 import { Spinner } from "@vivakits/react-components";
-
 const App = () => {
   return (
     <div className="flex justify-center items-center gap-3 flex-wrap">
@@ -166,7 +163,6 @@ export const ButtonSpinnerGroup = () => {
 ```jsx copy
 import React from 'react';
 import { Button, Spinner } from "@vivakits/react-components";
-
 const App = () => {
   return (
     <div className="flex justify-center items-center gap-3 flex-wrap">
@@ -198,9 +194,10 @@ const [dataTableDataSource, setDataTableDataSource] = useState([
 ...rawDataTableData,
 ]);
 
- return (
-  <div className="flex justify-center items-center gap-3 flex-wrap">
-   <AsyncDatatable
+return (
+
+<div className="flex justify-center items-center gap-3 flex-wrap">
+  <AsyncDatatable
     columnDefinitions={dataTableColumns}
     dataSource={dataTableDataSource}
     isLoading={true}
@@ -209,10 +206,9 @@ const [dataTableDataSource, setDataTableDataSource] = useState([
         <Spinner />
       </div>
     }
-   />
-  </div>
- );
-};
+  />
+</div>
+); };
 
 <TableSpinnerBasic />
 </Tabs.Tab>
@@ -221,7 +217,6 @@ const [dataTableDataSource, setDataTableDataSource] = useState([
 ```jsx copy
 import React from 'react';
 import { AsyncDatatable, Spinner } from "@vivakits/react-components";
-
 const App = () => {
   const dataTableColumns = [...dataTableColumnSample ]
   const [dataTableDataSource, setDataTableDataSource] = useState([
@@ -279,7 +274,7 @@ export default App;
      <tr>
       <td>className</td>
       <td>CSS</td>
-      <td>Additional CSS class(es) to apply to the chip component</td>
+      <td>Additional CSS class(es) to apply to the spinner component</td>
       <td> - </td>
     </tr>
 
