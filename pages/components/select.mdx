@@ -3,20 +3,6 @@ import { Tabs } from "nextra/components";
 import { useState } from 'react';
 
 # Select
-{/* options?: SelectOptionProps[] | [];
- 
-
-
- asyncLoading?: boolean;
-
- styles?: Styles;
- isAsyncSearchable?: boolean;
-
- showValueNode?: boolean;
- loadOptions?: () => Promise<SelectOptionProps[]>;
- addOptionAsync?: (newOptions: any) => any;
- isCreatable?: boolean; */}
-
 ### Import 
   ```jsx
   import { Select } from "@vivakits/react-components";
@@ -1537,6 +1523,219 @@ export const SelectForCustomizedStyle = () => {
 ```
 </Tabs.Tab>
 </Tabs>
+
+
+### API Reference
+
+{<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>options</td>
+      <td>Array of options to be displayed in the dropdown</td>
+      <td>Option[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>Selected value</td>
+      <td>Option | Option[]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>onChange</td>
+      <td>Callback function to be called when the value changes</td>
+      <td>(option: Option | Option[]) =&gt; void</td>
+      <td></td>
+    </tr>
+     <tr>
+      <td>vairant</td>
+      <td>
+        <span className="badge">solid</span>  
+        <span className="badge">outline</span> 
+      </td>
+      <td>Changes select appreance</td>
+      <td><span className="badge">solid</span></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">sm</span>  
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span> 
+      </td>
+      <td>Changes select size</td>
+      <td><span className="badge">md</span></td>
+    </tr>
+      <tr>
+      <td>rounded</td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span>  
+        <span className="badge">none</span>   
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">md</span>  
+        <span className="badge">lg</span>
+        <span className="badge">fulll</span>
+      </td>
+      <td>Changes the border radius of select</td>
+      <td><span className="badge">primary</span></td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>Label for the select component</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+    <td>labelPosition</td>
+    <td>
+      <span className="badge">start</span>  
+      <span className="badge">end</span>
+      <span className="badge">horizontal</span>
+    </td>
+    <td>Changes the position of the label</td>
+    <td><span className="badge">top</span></td>
+  </tr>
+  <tr>
+    <td>labelClassName</td>
+    <td>Custom utility classes for label</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+    <tr>
+      <td>isRequired</td>
+      <td>Designates the select component as required</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>showCancel</td>
+      <td>Displays a cancel button to clear the selection</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>showDivider</td>
+      <td>Displays a divider in the dropdown</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+
+    <tr>
+      <td>placeholder</td>
+      <td>Placeholder text</td>
+      <td>string</td>
+      <td>Select</td>
+    </tr>
+    <tr>
+      <td>hasError</td>
+      <td>Indicates an error state</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>errorMessage</td>
+      <td>Error message to display</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>isLoading</td>
+      <td>Indicates a loading state</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>menuPlacement</td>
+      <td>Placement of the dropdown menu</td>
+      <td>'top' | 'bottom'</td>
+      <td>'bottom'</td>
+    </tr>
+    <tr>
+      <td>menuMaxHeight</td>
+      <td>Maximum height of the dropdown menu</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>isMultiple</td>
+      <td>Designates the select component as multiselect</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>isScrollable</td>
+      <td>Designates the select component as scrollable</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>isSearchable</td>
+      <td>Designates the select component as searchable</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>noOptionsMessage</td>
+      <td>Message to display when no options are available</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>optionsWithCheck</td>
+      <td>Displays a checked icon next to selected options</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>checkedIcon</td>
+      <td>Custom icon for selected options</td>
+      <td>ReactNode</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>removeValueIcon</td>
+      <td>Custom icon for removing selected values</td>
+      <td>ReactNode</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>showSelectedOptions</td>
+      <td>Reveals selected options in the multiselect state</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+    <td>IsCreatable</td>
+    <td>Designates the select component as creatable</td>
+    <td>boolean</td>
+    <td>false</td>
+  </tr>
+    <tr>
+      <td>createOptionByAPI</td>
+      <td>Callback function to be called when a new option is created</td>
+      <td>(newOption: Option) =&gt; void</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>styles</td>
+      <td>Custom utility classes for styling</td>
+      <td>Styles</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>}
+
+
 
 
 
