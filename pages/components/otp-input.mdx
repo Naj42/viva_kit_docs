@@ -27,6 +27,8 @@ The  `VKOtpInput`  component is used to get the OTP from the user.
                 <VKOtpInput />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -54,6 +56,8 @@ The size of the OTP Input can be updated using `size` prop. The default size is 
                 </div>
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -85,6 +89,8 @@ The shape of the OTP Input component can be customized using the rounded prop. T
                 </div>
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -107,6 +113,8 @@ The OTP Input component can display an error state using the `hasError` prop. Th
                 <VKOtpInput hasError errorMessage="Custom error message" />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -128,6 +136,8 @@ The OTP Input value can be submitted using the `onSubmit` prop. The example belo
                 <VKOtpInput onSubmit={(value) => alert(value)} />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -149,6 +159,8 @@ The submit button can be customized using the `renderSubmitButton` prop. The exa
                 <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -171,6 +183,8 @@ The reset button can be added using the `renderResetButton` prop. The example be
                 <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -192,6 +206,8 @@ You can adjust the length of the OTP Input using the `length` prop. The default 
                 <VKOtpInput length={4} />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -213,6 +229,8 @@ The group size of the OTP Input can be changed using the `groupSize` prop. By de
                 <VKOtpInput groupSize={2} />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -235,6 +253,8 @@ The separator between groups can be changed using the `separator` prop. The defa
                 <VKOtpInput separator="." groupSize={3} />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -262,6 +282,8 @@ You can mask the OTP Input value using the `maskedIcon` prop. The default masked
                 </div>
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -283,6 +305,8 @@ You can allow characters in the OTP Input using the `allowChar` prop. The defaul
                 <VKOtpInput allowChar />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -304,6 +328,8 @@ You can make the OTP Input required using the `required` prop. The default value
                 <VKOtpInput required />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
@@ -325,6 +351,8 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
                 <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
             )
         }
+
+        export default App;
         ```
     </Tabs.Tab>
 </Tabs>
