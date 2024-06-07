@@ -4,8 +4,11 @@ import { Tabs } from "nextra/components";
 
 # OTP Input
 
-## Import 
-    
+An OTP (One-Time Password) Input Component is a user interface element designed to enhance the security and user experience during authentication processes. It is commonly used in various applications, such as banking, e-commerce, and other online services, to verify a user's identity
+
+### Import 
+
+ To utilize the OTP input component, import it from `@vivakits/react-components`.
     ```jsx
     import { VKOtpInput } from "@vivakits/react-components";
     ```
@@ -14,52 +17,58 @@ import { Tabs } from "nextra/components";
 The  `VKOtpInput`  component is used to get the OTP from the user. 
 
 <Tabs items={['Preview', 'Code']}>
-    <Tabs.Tab>
-        <VKOtpInput />
-    </Tabs.Tab>   
-    <Tabs.Tab>
-        ```jsx copy
-        import React from 'react';
-        import {VKOtpInput} from "@vivakits/react-components";
+<Tabs.Tab>
+    <VKOtpInput />
+</Tabs.Tab>   
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKOtpInput} from "@vivakits/react-components";
 
-        const App = ()=> {
-            return(
-                <VKOtpInput />
-            )
-        }
+const App = ()=> {
+    return <VKOtpInput />
+}
 
-        export default App;
-        ```
-    </Tabs.Tab>
+export default App;
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Size
-The size of the OTP Input can be updated using `size` prop. The default size is `md`. The available sizes are `sm`, `md`, `lg`, `xl`. The examples below show the input with `sm` and `xl` sizes.
+The size of the OTP Input can be handled using `size` prop. The available sizes are `default` `xs` `sm` `md` `lg` `xl` and `2xl`.  The default size is `md`
 
 <Tabs items={['Preview', 'Code']}>
-    <Tabs.Tab>
-       <div className="flex items-center flex-wrap justify-around py-8">
-            <VKOtpInput size="sm" />
-            <VKOtpInput size="xl" />
-        </div>
-    </Tabs.Tab>   
-    <Tabs.Tab>
-        ```jsx copy
-        import React from 'react';
-        import {VKOtpInput} from "@vivakits/react-components";
+<Tabs.Tab>
+    <div className="flex items-center flex-wrap justify-around py-8">
+         {/* <VKOtpInput size="xs" /> */}
+        <VKOtpInput size="sm" />
+        <VKOtpInput size="md" />
+        <VKOtpInput size="lg" />
+        <VKOtpInput size="xl" />
+        {/* <VKOtpInput size="2xl" /> */}
+    </div>
+</Tabs.Tab>   
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKOtpInput} from "@vivakits/react-components";
 
-        const App = ()=> {
-            return(
-                <div className="flex items-center flex-wrap justify-around py-8">
-                    <VKOtpInput size="sm" />
-                    <VKOtpInput size="xl" />
-                </div>
-            )
-        }
+const App = ()=> {
+  return(
+    <div className="flex items-center flex-wrap justify-around py-8">
+        <VKOtpInput size="xs" />
+        <VKOtpInput size="sm" />
+        <VKOtpInput size="md" />
+        <VKOtpInput size="lg" />
+        <VKOtpInput size="xl" />
+        <VKOtpInput size="2xl" />
+    </div>
+  );
+};
 
-        export default App;
-        ```
-    </Tabs.Tab>
+export default App;
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Rounded
