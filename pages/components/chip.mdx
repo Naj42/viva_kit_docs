@@ -64,12 +64,12 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <>
+    <div className="flex gap-2">
       <VKChip label="Outlined" variant="outlined" />
       <VKChip label="Filled" variant="filled" />
-    </>
-  ); 
-};
+    </div>
+  )
+}
 
 export default App;
 ```
@@ -111,7 +111,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <>
+    <div className="flex gap-3">
       <VKChip
           label="Open"
           variant="filled"
@@ -120,10 +120,10 @@ const App = () => {
           label="Hidden"
           open={false}
           variant="filled"
-        />
-      </>
-  );
-};
+      />
+    </div>
+  )
+}
 
 export default App;
 ```
@@ -186,7 +186,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <>
+    <div className="flex gap-2">
       <VKChip
         size="xs"
         label="Extra small"
@@ -217,9 +217,9 @@ const App = () => {
         label="Extra extra large"
         variant="filled"
       />
-    </>
-  ); 
-};
+    </div>
+  ) 
+}
 
 export default App;
 ```
@@ -282,7 +282,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <>
+    <div className="flex gap-2">
       <VKChip
           fontSize="xs"
           label="Extra small"
@@ -313,7 +313,7 @@ const App = () => {
           label="Extra extra large"
           variant="filled"
         />
-    </>
+    </div>
   )
 }
   
@@ -387,7 +387,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <>
+    <div className="flex gap-2 flex-wrap">
       <VKChip
             color="primary"
             label="Primary"
@@ -423,9 +423,9 @@ const App = () => {
             label="Light"
             variant="filled"
           />
-      </>
-  );
-};
+    </div>
+  )
+}
 
 export default App;
 ```
@@ -464,7 +464,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <>
+    <div className="flex gap-2">
       <VKChip
           state="selected"
           label="Selected"
@@ -480,9 +480,9 @@ const App = () => {
           label="Disabled"
           variant="filled"
         />
-    </>
-  );
-};
+    </div>
+  )
+}
 
 export default App;
 ```
@@ -524,12 +524,12 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
    return (
-    <>
+    <div className="flex gap-2">
       <VKChip rounded={true} label="Rounded" variant="filled" />
       <VKChip rounded={false} label="Square" variant="filled" />
-    </>
-   );
-};
+    </div>
+   )
+}
 
 export default App;
   ```
@@ -587,7 +587,7 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
    return (
-      <>
+      <div className="flex gap-2">
         <VKChip
           leftIcon={<NameIcon />}
           label="Left icon"
@@ -598,9 +598,9 @@ const App = () => {
           label="Right icon"
           variant="filled"
         />
-      </>
-    );
-};
+      </div>
+    )
+}
 
 const NameIcon = () => {
   return (
@@ -769,59 +769,58 @@ import { VKChip, VKAvatar } from "@vivakits/react-components";
 
 const App = () => {
     return (
-        <div className="flex items-center gap-3">
-          <VKChip
-            rounded={true}
-            label="Basic"
-            variant="outlined"
-            color="dark"
-            fontSize="sm"
-          />
-          <VKChip
-            rounded={true}
-            label="User"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            leftIcon={<NameIcon />}
-          />
-          <VKChip
-            rounded={true}
-            label="Close"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            rightIcon={<CloseIcon />}
-          />
-          <VKChip
-            rounded={true}
-            label="Avatar"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            leftIcon={
-              <VKAvatar
-                variant="image"
-                color="secondary"
-                src="https://i.pinimg.com/originals/1f/db/96/1fdb96e98f5fabacf6a7c509916333a3.png"
-                alt="person with camera"
-                withBorder
-                className="h-6 w-6"
-              />
-            }
-          />
-          <VKChip
-            rounded={true}
-            label="Right Arrow"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            rightIcon={<ArrowRightIcon />}
-          />
-        </div>
-    );
-};
-
+      <div className="flex items-center gap-3">
+        <VKChip
+          rounded={true}
+          label="Basic"
+          variant="outlined"
+          color="dark"
+          fontSize="sm"
+        />
+        <VKChip
+          rounded={true}
+          label="User"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          leftIcon={<NameIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Close"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          rightIcon={<CloseIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Avatar"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          leftIcon={
+            <VKAvatar
+              variant="image"
+              color="secondary"
+              src="https://i.pinimg.com/originals/1f/db/96/1fdb96e98f5fabacf6a7c509916333a3.png"
+              alt="person with camera"
+              withBorder
+              className="h-6 w-6"
+            />
+          }
+        />
+        <VKChip
+          rounded={true}
+          label="Right Arrow"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          rightIcon={<ArrowRightIcon />}
+        />
+      </div>
+    )
+}
 
 const NameIcon = () => {
     return (
@@ -892,55 +891,54 @@ import { VKChip } from "@vivakits/react-components";
 
 const App = () => {
     return (
-        <div className="flex items-center gap-3">
-          <VKChip
-            rounded={true}
-            label="Up arrow"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            rightIcon={<UpArrowIcon />}
-          />
-          <VKChip
-            rounded={true}
-            label="Search"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            rightIcon={<SearchIcon />}
-          />
-          <VKChip
-            rounded={true}
-            label="Clickable"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            onClick={() => alert("You clicked on the chip")}
-          />
+      <div className="flex items-center gap-3">
+        <VKChip
+          rounded={true}
+          label="Up arrow"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          rightIcon={<UpArrowIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Search"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          rightIcon={<SearchIcon />}
+        />
+        <VKChip
+          rounded={true}
+          label="Clickable"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          onClick={() => alert("You clicked on the chip")}
+        />
 
-          <VKChip
-            rounded={true}
-            label="Increase"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            leftIcon={<SortUpIcon />}
-            onLeftIconClick={() => alert("You clicked on increase icon")}
-          />
+        <VKChip
+          rounded={true}
+          label="Increase"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          leftIcon={<SortUpIcon />}
+          onLeftIconClick={() => alert("You clicked on increase icon")}
+        />
 
-          <VKChip
-            rounded={true}
-            label="Decrease"
-            variant="filled"
-            color="light"
-            fontSize="sm"
-            rightIcon={<SortDownIcon />}
-            onRightIconClick={() => alert("You clicked on decrease icon")}
-          />
-        </div>
-  
-    );
-};
+        <VKChip
+          rounded={true}
+          label="Decrease"
+          variant="filled"
+          color="light"
+          fontSize="sm"
+          rightIcon={<SortDownIcon />}
+          onRightIconClick={() => alert("You clicked on decrease icon")}
+        />
+      </div>
+    )
+}
 
 const UpArrowIcon = () => {
     return (
