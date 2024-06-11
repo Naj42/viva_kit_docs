@@ -26,7 +26,7 @@ import React from 'react';
 import {VKOtpInput} from "@vivakits/react-components";
 
 const App = ()=> {
-    return <VKOtpInput />
+  return <VKOtpInput />
 }
 
 export default App;
@@ -39,13 +39,17 @@ The `size` prop defines the size of the input fields, affecting their height, wi
 
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
-    <div className="flex items-center flex-wrap justify-around py-8">
-         {/* <VKOtpInput size="xs" /> */}
+    <div className="grid grid-cols-2 gap-4 py-8">
+         <VKOtpInput size="xs" />
         <VKOtpInput size="sm" />
         <VKOtpInput size="md" />
         <VKOtpInput size="lg" />
+      
+    </div>
+    <div className="flex items-start flex-wrap justify-start pb-8">
+         
         <VKOtpInput size="xl" />
-        {/* <VKOtpInput size="2xl" /> */}
+        <VKOtpInput size="2xl" />
     </div>
 </Tabs.Tab>   
 <Tabs.Tab>
@@ -55,13 +59,15 @@ import {VKOtpInput} from "@vivakits/react-components";
 
 const App = ()=> {
   return(
-    <div className="flex items-center flex-wrap justify-around py-8">
-        <VKOtpInput size="xs" />
-        <VKOtpInput size="sm" />
-        <VKOtpInput size="md" />
-        <VKOtpInput size="lg" />
-        <VKOtpInput size="xl" />
-        <VKOtpInput size="2xl" />
+    <div className="grid grid-cols-2 gap-4 py-8">
+      <VKOtpInput size="xs" />
+      <VKOtpInput size="sm" />
+      <VKOtpInput size="md" />
+      <VKOtpInput size="lg" />
+    </div>
+    <div className="flex items-start flex-wrap justify-start pb-8">  
+      <VKOtpInput size="xl" />
+      <VKOtpInput size="2xl" />
     </div>
   );
 };
@@ -72,11 +78,11 @@ export default App;
 </Tabs>
 
 ### Rounded
-The `rounded` prop controls the border-radius of the input fields, allowing for different levels of rounded corners. Options range from `none` (no rounded corners) to `full` (completely rounded corners), with several intermediate options like `xs` `sm` `lg` and `xl` for finer control.
+The `rounded` prop controls the border-radius of the input fields, allowing for different levels of rounded corners. Options range from `none` (no rounded corners) to `full` (completely rounded corners), with several intermediate options like `xs` `sm` `md` `lg` and `xl` for finer control.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
-        <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+        <div className="flex items-center gap-8 flex-wrap justify-around py-8">
             <VKOtpInput />
             <VKOtpInput rounded="default" />   
             <VKOtpInput rounded="xs" /> 
@@ -93,18 +99,18 @@ The `rounded` prop controls the border-radius of the input fields, allowing for 
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-                    <VKOtpInput />
-                    <VKOtpInput rounded="default" />   
-                    <VKOtpInput rounded="xs" /> 
-                    <VKOtpInput rounded="sm" /> 
-                    <VKOtpInput rounded="md" />       
-                    <VKOtpInput rounded="lg" /> 
-                    <VKOtpInput rounded="xl" />   
-                    <VKOtpInput rounded="full" />
-                </div>
-            );
+          return(
+            <div className="flex items-center gap-8 flex-wrap justify-around py-8">
+              <VKOtpInput />
+              <VKOtpInput rounded="default" />   
+              <VKOtpInput rounded="xs" /> 
+              <VKOtpInput rounded="sm" /> 
+              <VKOtpInput rounded="md" />       
+              <VKOtpInput rounded="lg" /> 
+              <VKOtpInput rounded="xl" />   
+              <VKOtpInput rounded="full" />
+            </div>
+          );
         };
 
         export default App;
@@ -126,7 +132,7 @@ The OTP Input component can display an error state using the `hasError` prop. Th
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput hasError errorMessage="Custom error message" />
+          return <VKOtpInput hasError errorMessage="Custom error message" />
         };
 
         export default App;
@@ -147,7 +153,7 @@ The `onSubmit` prop is a callback function that is triggered when the user submi
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput onSubmit={(value) => alert(value)} />
+          return <VKOtpInput onSubmit={(value) => alert(value)} />
         };
 
         export default App;
@@ -168,9 +174,13 @@ The `renderSubmitButton` prop allows a  custom render function for the submit bu
         import {VKOtpInput, Button} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
-            );
+          return(
+            <VKOtpInput 
+              renderSubmitButton={(value, callback) => 
+                <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>
+                  Submit
+                </Button>} />
+          );
         };
 
         export default App;
@@ -192,9 +202,13 @@ The `renderResetButton` prop allows a custom render function for the reset butto
         import {VKOtpInput, Button} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
-            );
+          return(
+            <VKOtpInput 
+              renderResetButton={(callback) => 
+                <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>
+                  Reset
+                </Button>} />
+          );
         };
 
         export default App;
@@ -202,12 +216,12 @@ The `renderResetButton` prop allows a custom render function for the reset butto
     </Tabs.Tab>
 </Tabs>
 
-### Length 
+### Input Length 
 The `inputLength` prop specifies the total number of input fields required for the OTP. For instance, if `inputLength` is set to 6, six separate input fields will be displayed, allowing the user to enter a six-digit OTP.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
-        <VKOtpInput length={4} />
+        <VKOtpInput inputLength={4} />
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
@@ -215,7 +229,7 @@ The `inputLength` prop specifies the total number of input fields required for t
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput length={4} />
+          return <VKOtpInput inputLength={4} />
         };
 
         export default App;
@@ -224,7 +238,7 @@ The `inputLength` prop specifies the total number of input fields required for t
 </Tabs>
 
 ### Group Size
-The `groupSize` prop specifies how many input fields should be grouped together before a separator is inserted. For example, if `groupSize` is 3 and length is 6, the OTP input will be grouped into two sets of three input fields, with a separator between the two groups. By default, the group size is the same as the length of the OTP Input. In the example below, the OTP Input is shown with a group size of `2`.
+The `groupSize` prop specifies how many input fields should be grouped together before a separator is inserted. For example, if `groupSize` is 3 and `inputLength` is 6, the OTP input will be grouped into two sets of three input fields, with a separator between the two groups. By default, the group size is the same as the `inputLength` of the OTP Input. In the example below, the OTP Input is shown with a group size of `2`.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -236,7 +250,7 @@ The `groupSize` prop specifies how many input fields should be grouped together 
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput groupSize={2} />
+          return <VKOtpInput groupSize={2} />
         };
 
         export default App;
@@ -246,11 +260,11 @@ The `groupSize` prop specifies how many input fields should be grouped together 
 
 ### Separator
 
- The `separator` prop defines the separator to be displayed between groups of input fields. This can be a simple string (e.g., a hyphen `-`) or a React node for more complex separators, such as icons or styled dividers. The default separator is `-`. The example below demonstrates an OTP Input with a separator of `.`.
+ The `separator` prop defines the separator to be displayed between groups of input fields. This can be a simple string (e.g., a hyphen `-`) or a React node for more complex separators, such as icons or styled dividers. The example below demonstrates an OTP Input with a separator of `.`.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
-        <VKOtpInput separator="." groupSize={3} />
+        <VKOtpInput separator="."  groupSize={3} />
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
@@ -258,7 +272,7 @@ The `groupSize` prop specifies how many input fields should be grouped together 
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput separator="." groupSize={3} />
+          return <VKOtpInput separator="." groupSize={3} />
         };
 
         export default App;
@@ -267,32 +281,30 @@ The `groupSize` prop specifies how many input fields should be grouped together 
 </Tabs>
 
 ### Masked Icon
-The `maskedIcon` prop defines the character used to mask the input when `isMasked` is `true`. For example, if maskedIcon is `*`, each character typed by the user will be displayed as an asterisk (*). This is useful for hiding sensitive information such as passwords or OTPs. The default masked icon is `*`. The example below shows an OTP Input with a masked icon of 🔒.
+The `maskedIcon` prop defines the character used to mask the input when `isMasked` is `true`. For example, if maskedIcon is `*`, each character typed by the user will be displayed as an asterisk (*). This is useful for hiding sensitive information such as passwords or OTPs. The default masked icon is `*`. 
 
 <Tabs items={['Preview', 'Code']}>
-    <Tabs.Tab>
-       <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-        <VKOtpInput isMasked />
-        <VKOtpInput isMasked maskedIcon="🔒" />
-       </div>
-    </Tabs.Tab>
-    <Tabs.Tab>
-        ```jsx copy
-        import React from 'react';
-        import {VKOtpInput} from "@vivakits/react-components";
+<Tabs.Tab>
+    <div className="flex items-center gap-16 flex-wrap justify-around py-8">
+    <VKOtpInput isMasked maskedIcon="#"/>
+    </div>
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKOtpInput} from "@vivakits/react-components";
 
-        const App = ()=> {
-            return(
-                <div className="flex items-center flex-wrap justify-around py-8">
-                    <VKOtpInput isMasked />
-                    <VKOtpInput isMasked maskedIcon="🔒" />
-                </div>
-            );
-        };
+const App = ()=> {
+  return(
+    <div className="flex items-center flex-wrap justify-around py-8">
+      <VKOtpInput isMasked maskedIcon="#"/>
+    </div>
+  );
+};
 
-        export default App;
-        ```
-    </Tabs.Tab>
+export default App;
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Allow Charcter
@@ -308,7 +320,7 @@ The`allowChar` prop determines whether the input fields should accept alphabetic
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput allowChar />
+          return <VKOtpInput allowChar />
         };
 
         export default App;
@@ -321,7 +333,7 @@ The `required` prop marks the OTP input fields as required for form submission. 
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
-        <VKOtpInput required />
+        <VKOtpInput required={true} />
     </Tabs.Tab>
     <Tabs.Tab>
         ```jsx copy
@@ -329,7 +341,7 @@ The `required` prop marks the OTP input fields as required for form submission. 
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput required />
+          return <VKOtpInput required={true} />
         };
 
         export default App;
@@ -350,13 +362,52 @@ Additional custom class names to apply to the input fields by `className` prop a
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
+          return <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
         };
 
         export default App;
         ```
     </Tabs.Tab>
 </Tabs>
+
+### Example
+Below are the examples of OTP input component in used
+
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+    <div className="flex items-center flex-wrap justify-around py-8">
+    <VKOtpInput isMasked maskedIcon="🔒" />
+    <VKOtpInput inputLength={4} groupSize={2} separator="-"/>
+    <VKOtpInput className="border-0 border-b-2 border-b-gray-700 rounded-none" inputLength={4} groupSize={1} renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>
+          Submit
+        </Button>}/>
+    </div>
+    
+</Tabs.Tab>
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKOtpInput} from "@vivakits/react-components";
+
+const App = ()=> {
+  return(
+    <div className="flex items-center flex-wrap justify-around py-8">
+      <VKOtpInput isMasked maskedIcon="🔒" />
+      <VKOtpInput inputLength={4} groupSize={2} separator="-"/>
+      <VKOtpInput className="border-0 border-b-2 border-b-gray-700 rounded-none" inputLength={4} groupSize={1} renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>
+          Submit
+        </Button>}/>
+    </div>
+  );
+};
+
+export default App;
+```
+    </Tabs.Tab>
+</Tabs>
+
+
+
 
 ### API Reference
 
@@ -417,19 +468,19 @@ Additional custom class names to apply to the input fields by `className` prop a
     </tr>
      <tr>
         <td>onSubmit</td>
-        <td>(value: string | number) =&gt; void</td>
+        <td>function</td>
         <td>Submit the OTP input value</td>
         <td>-</td>
     </tr>
      <tr>
         <td>renderSubmitButton</td>
-        <td>(value: string, callback: (value: string) =&gt; void) =&gt; ReactNode</td>
+        <td>function</td>
         <td>Custom submit button for the OTP input</td>
         <td>-</td>
     </tr>
       <tr>
         <td>renderResetButton</td>
-        <td>(callback: () =&gt; void) =&gt; ReactNode</td>
+        <td>function</td>
         <td>Custom reset button for the OTP input</td>
         <td>-</td>
     </tr>
@@ -451,7 +502,7 @@ Additional custom class names to apply to the input fields by `className` prop a
         <td>separator</td>
         <td>string | ReactNode</td>
         <td>Separator between groups</td>
-        <td><span className="badge">-</span></td>
+        <td>-</td>
     </tr>
       <tr>
         <td>isMasked</td>
