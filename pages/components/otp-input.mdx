@@ -4,8 +4,11 @@ import { Tabs } from "nextra/components";
 
 # OTP Input
 
-## Import 
-    
+An OTP (One-Time Password) Input Component is a user interface element designed to enhance the security and user experience during authentication processes. It is commonly used in various applications, such as banking, e-commerce, and other online services, to verify a user's identity
+
+### Import 
+
+ To utilize the OTP input component, import it from `@vivakits/react-components`.
     ```jsx
     import { VKOtpInput } from "@vivakits/react-components";
     ```
@@ -14,63 +17,73 @@ import { Tabs } from "nextra/components";
 The  `VKOtpInput`  component is used to get the OTP from the user. 
 
 <Tabs items={['Preview', 'Code']}>
-    <Tabs.Tab>
-        <VKOtpInput />
-    </Tabs.Tab>   
-    <Tabs.Tab>
-        ```jsx copy
-        import React from 'react';
-        import {VKOtpInput} from "@vivakits/react-components";
+<Tabs.Tab>
+    <VKOtpInput />
+</Tabs.Tab>   
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKOtpInput} from "@vivakits/react-components";
 
-        const App = ()=> {
-            return(
-                <VKOtpInput />
-            )
-        }
+const App = ()=> {
+    return <VKOtpInput />
+}
 
-        export default App;
-        ```
-    </Tabs.Tab>
+export default App;
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Size
-The size of the OTP Input can be updated using `size` prop. The default size is `md`. The available sizes are `sm`, `md`, `lg`, `xl`. The examples below show the input with `sm` and `xl` sizes.
+The `size` prop defines the size of the input fields, affecting their height, width, and text size. This prop allows customization to fit different design requirements, ranging from small `xs` to extra-large `2xl` input fields. The available sizes are `default` `xs` `sm` `md` `lg` `xl` and `2xl`.  The default size is `md`.
 
 <Tabs items={['Preview', 'Code']}>
-    <Tabs.Tab>
-       <div className="flex items-center flex-wrap justify-around py-8">
-            <VKOtpInput size="sm" />
-            <VKOtpInput size="xl" />
-        </div>
-    </Tabs.Tab>   
-    <Tabs.Tab>
-        ```jsx copy
-        import React from 'react';
-        import {VKOtpInput} from "@vivakits/react-components";
+<Tabs.Tab>
+    <div className="flex items-center flex-wrap justify-around py-8">
+         {/* <VKOtpInput size="xs" /> */}
+        <VKOtpInput size="sm" />
+        <VKOtpInput size="md" />
+        <VKOtpInput size="lg" />
+        <VKOtpInput size="xl" />
+        {/* <VKOtpInput size="2xl" /> */}
+    </div>
+</Tabs.Tab>   
+<Tabs.Tab>
+```jsx copy
+import React from 'react';
+import {VKOtpInput} from "@vivakits/react-components";
 
-        const App = ()=> {
-            return(
-                <div className="flex items-center flex-wrap justify-around py-8">
-                    <VKOtpInput size="sm" />
-                    <VKOtpInput size="xl" />
-                </div>
-            )
-        }
+const App = ()=> {
+  return(
+    <div className="flex items-center flex-wrap justify-around py-8">
+        <VKOtpInput size="xs" />
+        <VKOtpInput size="sm" />
+        <VKOtpInput size="md" />
+        <VKOtpInput size="lg" />
+        <VKOtpInput size="xl" />
+        <VKOtpInput size="2xl" />
+    </div>
+  );
+};
 
-        export default App;
-        ```
-    </Tabs.Tab>
+export default App;
+```
+</Tabs.Tab>
 </Tabs>
 
 ### Rounded
-The shape of the OTP Input component can be customized using the rounded prop. The possible shapes include `none`,`default`, `xs`, `sm`, `md`, `lg`, `xl`, and `full`. The examples below display the OTP Input with the shapes `none`, `xs`, `lg`, and `full` respectively.
+The `rounded` prop controls the border-radius of the input fields, allowing for different levels of rounded corners. Options range from `none` (no rounded corners) to `full` (completely rounded corners), with several intermediate options like `xs` `sm` `lg` and `xl` for finer control.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
         <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-            <VKOtpInput />  
-            <VKOtpInput rounded="xs" />       
-            <VKOtpInput rounded="lg" />   
+            <VKOtpInput />
+            <VKOtpInput rounded="default" />   
+            <VKOtpInput rounded="xs" /> 
+            <VKOtpInput rounded="sm" /> 
+            <VKOtpInput rounded="md" />       
+            <VKOtpInput rounded="lg" /> 
+            <VKOtpInput rounded="xl" />   
             <VKOtpInput rounded="full" />
         </div>
     </Tabs.Tab>
@@ -82,13 +95,17 @@ The shape of the OTP Input component can be customized using the rounded prop. T
         const App = ()=> {
             return(
                 <div className="flex items-center gap-16 flex-wrap justify-around py-8">
-                    <VKOtpInput />  
-                    <VKOtpInput rounded="xs" />       
-                    <VKOtpInput rounded="lg" />   
+                    <VKOtpInput />
+                    <VKOtpInput rounded="default" />   
+                    <VKOtpInput rounded="xs" /> 
+                    <VKOtpInput rounded="sm" /> 
+                    <VKOtpInput rounded="md" />       
+                    <VKOtpInput rounded="lg" /> 
+                    <VKOtpInput rounded="xl" />   
                     <VKOtpInput rounded="full" />
                 </div>
-            )
-        }
+            );
+        };
 
         export default App;
         ```
@@ -109,10 +126,8 @@ The OTP Input component can display an error state using the `hasError` prop. Th
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput hasError errorMessage="Custom error message" />
-            )
-        }
+            return <VKOtpInput hasError errorMessage="Custom error message" />
+        };
 
         export default App;
         ```
@@ -120,7 +135,7 @@ The OTP Input component can display an error state using the `hasError` prop. Th
 </Tabs>
 
 ### Submit 
-The OTP Input value can be submitted using the `onSubmit` prop. The example below includes a enter button for this purpose.
+The `onSubmit` prop is a callback function that is triggered when the user submits the OTP input. The function receives the concatenated value of all input fields as a single string or number, allowing the parent component to handle the OTP verification or other actions upon submission. The example below includes a enter button for this purpose.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -132,10 +147,8 @@ The OTP Input value can be submitted using the `onSubmit` prop. The example belo
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput onSubmit={(value) => alert(value)} />
-            )
-        }
+            return <VKOtpInput onSubmit={(value) => alert(value)} />
+        };
 
         export default App;
         ```
@@ -143,7 +156,7 @@ The OTP Input value can be submitted using the `onSubmit` prop. The example belo
 </Tabs>
 
 ### Custom Submit Button
-The submit button can be customized using the `renderSubmitButton` prop. The example below shows the OTP Input with a custom submit button.
+The `renderSubmitButton` prop allows a  custom render function for the submit button. This function receives the current OTP value and a callback function for handling the submission. It returns a React node, allowing the parent component to provide a customized submit button. The example below shows the OTP Input with a custom submit button.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -157,8 +170,8 @@ The submit button can be customized using the `renderSubmitButton` prop. The exa
         const App = ()=> {
             return(
                 <VKOtpInput renderSubmitButton={(value, callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback(value)}>Submit</Button>} />
-            )
-        }
+            );
+        };
 
         export default App;
         ```
@@ -167,7 +180,7 @@ The submit button can be customized using the `renderSubmitButton` prop. The exa
 
 
 ### Custom Reset Button
-The reset button can be added using the `renderResetButton` prop. The example below shows the OTP Input with a custom reset button.
+The `renderResetButton` prop allows a custom render function for the reset button. This function receives a callback function that resets the OTP input fields when invoked. It returns a React node, allowing the parent component to provide a customized reset button, such as one with specific styling or additional functionality. The example below shows the OTP Input with a custom reset button.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -181,8 +194,8 @@ The reset button can be added using the `renderResetButton` prop. The example be
         const App = ()=> {
             return(
                 <VKOtpInput renderResetButton={(callback) => <Button rounded="md" size="md" variant="solid" className="!bg-primary !text-primary-foreground" onClick={() => callback()}>Reset</Button>} />
-            )
-        }
+            );
+        };
 
         export default App;
         ```
@@ -190,7 +203,7 @@ The reset button can be added using the `renderResetButton` prop. The example be
 </Tabs>
 
 ### Length 
-You can adjust the length of the OTP Input using the `length` prop. The default length is `6`. The example below illustrates an OTP Input with a length of `4`.
+The `inputLength` prop specifies the total number of input fields required for the OTP. For instance, if `inputLength` is set to 6, six separate input fields will be displayed, allowing the user to enter a six-digit OTP.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -202,10 +215,8 @@ You can adjust the length of the OTP Input using the `length` prop. The default 
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput length={4} />
-            )
-        }
+            return <VKOtpInput length={4} />
+        };
 
         export default App;
         ```
@@ -213,7 +224,7 @@ You can adjust the length of the OTP Input using the `length` prop. The default 
 </Tabs>
 
 ### Group Size
-The group size of the OTP Input can be changed using the `groupSize` prop. By default, the group size is the same as the length of the OTP Input. In the example below, the OTP Input is shown with a group size of `2`.
+The `groupSize` prop specifies how many input fields should be grouped together before a separator is inserted. For example, if `groupSize` is 3 and length is 6, the OTP input will be grouped into two sets of three input fields, with a separator between the two groups. By default, the group size is the same as the length of the OTP Input. In the example below, the OTP Input is shown with a group size of `2`.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -225,10 +236,8 @@ The group size of the OTP Input can be changed using the `groupSize` prop. By de
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput groupSize={2} />
-            )
-        }
+            return <VKOtpInput groupSize={2} />
+        };
 
         export default App;
         ```
@@ -237,7 +246,7 @@ The group size of the OTP Input can be changed using the `groupSize` prop. By de
 
 ### Separator
 
-The separator between groups can be changed using the `separator` prop. The default separator is `-`. The example below demonstrates an OTP Input with a separator of `.`.
+ The `separator` prop defines the separator to be displayed between groups of input fields. This can be a simple string (e.g., a hyphen `-`) or a React node for more complex separators, such as icons or styled dividers. The default separator is `-`. The example below demonstrates an OTP Input with a separator of `.`.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -249,10 +258,8 @@ The separator between groups can be changed using the `separator` prop. The defa
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput separator="." groupSize={3} />
-            )
-        }
+            return <VKOtpInput separator="." groupSize={3} />
+        };
 
         export default App;
         ```
@@ -260,7 +267,7 @@ The separator between groups can be changed using the `separator` prop. The defa
 </Tabs>
 
 ### Masked Icon
-You can mask the OTP Input value using the `maskedIcon` prop. The default masked icon is `*`. The example below shows an OTP Input with a masked icon of 🔒.
+The `maskedIcon` prop defines the character used to mask the input when `isMasked` is `true`. For example, if maskedIcon is `*`, each character typed by the user will be displayed as an asterisk (*). This is useful for hiding sensitive information such as passwords or OTPs. The default masked icon is `*`. The example below shows an OTP Input with a masked icon of 🔒.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -280,8 +287,8 @@ You can mask the OTP Input value using the `maskedIcon` prop. The default masked
                     <VKOtpInput isMasked />
                     <VKOtpInput isMasked maskedIcon="🔒" />
                 </div>
-            )
-        }
+            );
+        };
 
         export default App;
         ```
@@ -289,7 +296,7 @@ You can mask the OTP Input value using the `maskedIcon` prop. The default masked
 </Tabs>
 
 ### Allow Charcter
-You can allow characters in the OTP Input using the `allowChar` prop. The default value is `false`. The example below shows an OTP Input with characters allowed.
+The`allowChar` prop determines whether the input fields should accept alphabetic characters in addition to numeric digits. If `true`, users can input both letters and numbers. If `false`, only numeric input is allowed, ensuring that the OTP consists of digits only. By default the value is set to `false`.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -301,10 +308,8 @@ You can allow characters in the OTP Input using the `allowChar` prop. The defaul
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput allowChar />
-            )
-        }
+            return <VKOtpInput allowChar />
+        };
 
         export default App;
         ```
@@ -312,7 +317,7 @@ You can allow characters in the OTP Input using the `allowChar` prop. The defaul
 </Tabs>
 
 ### Required
-You can make the OTP Input required using the `required` prop. The default value is `false`. The example below shows a required OTP Input.
+The `required` prop marks the OTP input fields as required for form submission. If `true`, the form cannot be submitted until all OTP fields are filled, ensuring that the user provides a complete OTP. By default the behavious is set to `false`.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -324,10 +329,8 @@ You can make the OTP Input required using the `required` prop. The default value
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput required />
-            )
-        }
+            return <VKOtpInput required />
+        };
 
         export default App;
         ```
@@ -335,7 +338,7 @@ You can make the OTP Input required using the `required` prop. The default value
 </Tabs>
 
 ### Custom Class
-You can customize the OTP Input using the `wrapperClass` and `className` prop. The example below shows an OTP Input with a custom class.
+Additional custom class names to apply to the input fields by `className` prop and to the wrapper element of the entire component by `wrapperClass` for styling purposes. This allows for further customization of the input fields and the outer container of the OTP input component beyond the predefined styles.
 
 <Tabs items={['Preview', 'Code']}>
     <Tabs.Tab>
@@ -347,10 +350,8 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
         import {VKOtpInput} from "@vivakits/react-components";
 
         const App = ()=> {
-            return(
-                <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
-            )
-        }
+            return <VKOtpInput wrapperClass="bg-gray-200 p-4" className="text-primary" />
+        };
 
         export default App;
         ```
@@ -372,11 +373,14 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
     <tbody>
      <tr>
       <td>size</td>
-      <td>
+      <td className="flex flex-wrap gap-y-2 border-none">
+        <span className="badge">default</span> 
+        <span className="badge">xs</span>  
         <span className="badge">sm</span>  
         <span className="badge">md</span> 
         <span className="badge">lg</span> 
         <span className="badge">xl</span> 
+        <span className="badge">2xl</span>
       </td>
       <td>Changes otp input size</td>
       <td><span className="badge">md</span></td>
@@ -390,7 +394,7 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
         <span className="badge">sm</span>  
         <span className="badge">md</span>  
         <span className="badge">lg</span>
-        <span className="badge">fulll</span>
+        <span className="badge">full</span>
       </td>
       <td>Changes the border radius of input</td>
       <td><span className="badge">default</span></td>
@@ -401,7 +405,7 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
         boolean
       </td>
       <td>Shows error</td>
-      <td> false </td>
+      <td> <span className="badge">false</span> </td>
     </tr>
  <tr>
       <td>errorMessage</td>
@@ -432,47 +436,47 @@ You can customize the OTP Input using the `wrapperClass` and `className` prop. T
 
     
     <tr>
-        <td>length</td>
+        <td>inputLength</td>
         <td>number</td>
         <td>Length of the OTP input</td>
-        <td>6</td>
+        <td><span className="badge">6</span></td>
     </tr>
       <tr>
         <td>groupSize</td>
         <td>number</td>
         <td>Group size of the OTP input</td>
-        <td>length</td>
+        <td><span className="badge">inputLength</span></td>
     </tr>
      <tr>
         <td>separator</td>
         <td>string | ReactNode</td>
         <td>Separator between groups</td>
-        <td>-</td>
+        <td><span className="badge">-</span></td>
     </tr>
       <tr>
         <td>isMasked</td>
         <td>boolean</td>
         <td>Mask the OTP input</td>
-        <td>false</td>
+        <td><span className="badge">false</span></td>
     </tr>
     <tr>
         <td>maskedIcon</td>
         <td>string</td>
         <td>Icon to mask the OTP input</td>
-        <td>*</td>
+        <td><span className="badge">*</span></td>
     </tr>
    
     <tr>
         <td>allowChar</td>
         <td>boolean</td>
         <td>Allow characters in the OTP input</td>
-        <td>false</td>
+        <td><span className="badge">false</span></td>
     </tr>
     <tr>
         <td>required</td>
         <td>boolean</td>
         <td>Make the OTP input required</td>
-        <td>false</td>
+        <td><span className="badge">false</span></td>
     </tr>
 
     <tr>
