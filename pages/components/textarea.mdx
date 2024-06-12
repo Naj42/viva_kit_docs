@@ -3,6 +3,12 @@ import { Tabs } from "nextra/components";
 
 # Textarea
 
+### Import
+
+```jsx copy
+import { Textarea } from "@vivakits/react-components";
+```
+
 ### Variant
 
 The Textarea component comes with 2 different variants that you can change it using the `variant` prop.
@@ -38,7 +44,7 @@ const App = () => {
       border="none"
       noSeparator
       childrenProps={{ wrapperClassName: "mr-3" }} >
-        <Textarea label="Outlined:" variant="outline" placeholder="Enter text"/>
+        <Textarea label="Outlined:" variant="outline" placeholder="Enter text" />
         <Textarea label="Solid:" variant="solid" placeholder="Enter text" className="!bg-gray-200" /> 
     </VKGroup>
   );
@@ -58,14 +64,18 @@ The Textarea component comes with 6 different sizes that you can change it using
 <Tabs.Tab>
 export const TextareaSizeGroup = () => {
   return (
-    <div className="flex items-end gap-3">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
         <Textarea size="xs" label="Extra Small" />
         <Textarea size="sm" label="Small" />
         <Textarea size="md" label="Medium" />
         <Textarea size="lg" label="Large" />
         <Textarea size="xl" label="Extra Large" />
         <Textarea size="2xl" label="Double Extra Large" />
-    </div>
+    </VKGroup>
   );
 };
 
@@ -75,18 +85,22 @@ export const TextareaSizeGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Textarea } from "@vivakits/react-components";
+import { Textarea, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-end gap-3">
-      <Textarea size="xs" label="Extra Small" />
-      <Textarea size="sm" label="Small" />
-      <Textarea size="md" label="Medium" />
-      <Textarea size="lg" label="Large" />
-      <Textarea size="xl" label="Extra Large" />
-      <Textarea size="2xl" label="Double Extra Large" />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ wrapperClassName: "mr-3" }} >
+        <Textarea size="xs" label="Extra Small" />
+        <Textarea size="sm" label="Small" />
+        <Textarea size="md" label="Medium" />
+        <Textarea size="lg" label="Large" />
+        <Textarea size="xl" label="Extra Large" />
+        <Textarea size="2xl" label="Double Extra Large" />
+    </VKGroup>
   );
 };
 
@@ -125,7 +139,7 @@ export const TextareaColorGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Textarea } from "@vivakits/react-components";
+import { Textarea, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
@@ -272,7 +286,7 @@ export const TextareaExamples = () => {
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Textarea } from "@vivakits/react-components";
+import { Textarea, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
@@ -371,7 +385,7 @@ export default App;
     </tr>
     <tr>
       <td>labelPosition</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
+      <td>
         <span className="badge">start</span>  
         <span className="badge">end</span>
         <span className="badge">horizontal</span>   

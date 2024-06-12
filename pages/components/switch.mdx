@@ -34,6 +34,7 @@ export const SwitchBasicGroup = () => {
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -49,7 +50,7 @@ export default App;
 
 ### Variant
 
-The Switch component can be styled in different ways using the `variant` prop. The Switch component comes with 3 different variants: `default`, `android`, and `iOS`.The variant will be `default` if the `variant` prop is not provided.
+The Switch component offers multiple styling options through the `variant` prop. It comes with three built-in variants: `default`, `android`, and `iOS`. If you don't specify a variant, the switch will use the `default` style.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -89,6 +90,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   const [isIOSSwitchChecked, setIOSSwitchChecked] = useState(false);
@@ -118,11 +120,11 @@ The Switch component comes with `color` property to change the color of the swit
 
 export const SwitchColorGroup = () => {
 
-const [isPrimarySwitchChecked, setPrimarySwitchChecked] = useState(false);
-const [isSecondarySwitchChecked, setSecondarySwitchChecked] = useState(false);
-const [isSuccessSwitchChecked, setSuccessSwitchChecked] = useState(false);
-const [isWarningSwitchChecked, setWarningSwitchChecked] = useState(false);
-const [isDangerSwitchChecked, setDangerSwitchChecked] = useState(false);
+const [isPrimarySwitchChecked, setPrimarySwitchChecked] = useState(true);
+const [isSecondarySwitchChecked, setSecondarySwitchChecked] = useState(true);
+const [isSuccessSwitchChecked, setSuccessSwitchChecked] = useState(true);
+const [isWarningSwitchChecked, setWarningSwitchChecked] = useState(true);
+const [isDangerSwitchChecked, setDangerSwitchChecked] = useState(true);
 
 return (
 
@@ -162,12 +164,13 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
-  const [isPrimarySwitchChecked, setPrimarySwitchChecked] = useState(false);
-  const [isSecondarySwitchChecked, setSecondarySwitchChecked] = useState(false);
-  const [isSuccessSwitchChecked, setSuccessSwitchChecked] = useState(false);
-  const [isWarningSwitchChecked, setWarningSwitchChecked] = useState(false);
-  const [isDangerSwitchChecked, setDangerSwitchChecked] = useState(false);
+  const [isPrimarySwitchChecked, setPrimarySwitchChecked] = useState(true);
+  const [isSecondarySwitchChecked, setSecondarySwitchChecked] = useState(true);
+  const [isSuccessSwitchChecked, setSuccessSwitchChecked] = useState(true);
+  const [isWarningSwitchChecked, setWarningSwitchChecked] = useState(true);
+  const [isDangerSwitchChecked, setDangerSwitchChecked] = useState(true);
   
   return(
     <div className="flex items-center flex-wrap justify-around py-8">
@@ -204,6 +207,11 @@ return (
 
 <div className="flex items-center flex-wrap justify-around py-8">
   <VKSwitch
+    size="xs"
+    isChecked={isSMSwitchChecked}
+    onToggle={() => setSMSwitchChecked(!isSMSwitchChecked)}
+  />
+  <VKSwitch
     size="sm"
     isChecked={isSMSwitchChecked}
     onToggle={() => setSMSwitchChecked(!isSMSwitchChecked)}
@@ -218,6 +226,11 @@ return (
     isChecked={isLGSwitchChecked}
     onToggle={() => setLGSwitchChecked(!isLGSwitchChecked)}
   />
+  <VKSwitch
+    size="xl"
+    isChecked={isLGSwitchChecked}
+    onToggle={() => setLGSwitchChecked(!isLGSwitchChecked)}
+  />
 </div>
 ); };
 
@@ -228,6 +241,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSMSwitchChecked, setSMSwitchChecked] = useState(false);
   const [isMDSwitchChecked, setMDSwitchChecked] = useState(false);
@@ -235,9 +249,31 @@ const App = ()=> {
   
   return(
     <div className="flex items-center flex-wrap justify-around py-8">
-      <VKSwitch size="sm" isChecked={isSMSwitchChecked} onToggle={() => setSMSwitchChecked(!isSMSwitchChecked)} />
-      <VKSwitch size="md" isChecked={isMDSwitchChecked} onToggle={() => setMDSwitchChecked(!isMDSwitchChecked)} />
-      <VKSwitch size="lg" isChecked={isLGSwitchChecked} onToggle={() => setLGSwitchChecked(!isLGSwitchChecked)} />
+      <VKSwitch
+        size="xs"
+        isChecked={isSMSwitchChecked}
+        onToggle={() => setSMSwitchChecked(!isSMSwitchChecked)}
+      />
+      <VKSwitch
+        size="sm"
+        isChecked={isSMSwitchChecked}
+        onToggle={() => setSMSwitchChecked(!isSMSwitchChecked)}
+      />
+      <VKSwitch
+        size="md"
+        isChecked={isMDSwitchChecked}
+        onToggle={() => setMDSwitchChecked(!isMDSwitchChecked)}
+      />
+      <VKSwitch
+        size="lg"
+        isChecked={isLGSwitchChecked}
+        onToggle={() => setLGSwitchChecked(!isLGSwitchChecked)}
+      />
+      <VKSwitch
+        size="xl"
+        isChecked={isLGSwitchChecked}
+        onToggle={() => setLGSwitchChecked(!isLGSwitchChecked)}
+      />
     </div>
   );
 };
@@ -331,19 +367,36 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
   return(
     <div className="flex items-center flex-wrap justify-around py-8">
-      <VKSwitch label="Left" labelPlacement="left"  isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
-      <VKSwitch label="Right" labelPlacement="right" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)} />
-      <VKSwitch label="Top" labelPlacement="top" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
-      <VKSwitch label="Bottom" labelPlacement="bottom" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
-      <VKSwitch label="Top Start" labelPlacement="left" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
-      <VKSwitch label="Top End" labelPlacement="right" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
-      <VKSwitch label="Bottom Start" labelPlacement="top" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
-      <VKSwitch label="Bottom End" labelPlacement="bottom" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+      <VKSwitch
+        label="Left"
+        labelPlacement="left"
+        isChecked={isLeftSwitchChecked}
+        onToggle={() => setLeftSwitchChecked(!isLeftSwitchChecked)}
+      />
+      <VKSwitch
+        label="Top"
+        labelPlacement="top"
+        isChecked={isTopSwitchChecked}
+        onToggle={() => setTopSwitchChecked(!isTopSwitchChecked)}
+      />
+      <VKSwitch
+        label="Top End"
+        labelPlacement="topEnd"
+        isChecked={isTopEndSwitchChecked}
+        onToggle={() => setTopEndSwitchChecked(!isTopEndSwitchChecked)}
+      />
+      <VKSwitch
+        label="Bottom Start"
+        labelPlacement="bottomStart"
+        isChecked={isBottomStartSwitchChecked}
+        onToggle={() => setBottomEndSwitchChecked(!isBottomStartSwitchChecked)}
+      />
     </div>
   );
 };
@@ -381,6 +434,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -415,6 +469,7 @@ export const SwitchDefaultCheckedGroup = () => {
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -462,6 +517,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -501,6 +557,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -541,6 +598,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -581,6 +639,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -635,6 +694,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -710,6 +770,7 @@ export const SwitchInnerLabelGroup = () => {
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isIconSwitchChecked, setIconSwitchChecked] = useState(false);
   const [isLabelSwitchChecked, setLabelSwitchChecked] = useState(false);
@@ -778,6 +839,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
@@ -791,9 +853,9 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Handle ClassName
+### Switch ClassName
 
-The `handleClassName` prop is used to specify the class name for the switch handle.
+The `switchClassName` prop is used to specify the class name for the switch handle.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -804,7 +866,7 @@ export const SwitchHandleClassNameGroup = () => {
 return (
 
 <VKSwitch
-  handleClassName="bg-purple-800"
+  switchClassName="bg-purple-800"
   bodyClassName="bg-gray-100"
   isChecked={isSwitchChecked}
   onToggle={() => setSwitchChecked(!isSwitchChecked)}
@@ -818,11 +880,12 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
   
   return (
-    <VKSwitch handleClassName="bg-purple-800" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
+    <VKSwitch switchClassName="bg-purple-800" isChecked={isSwitchChecked} onToggle={() => setSwitchChecked(!isSwitchChecked)}/>
   );
 };
 
@@ -833,7 +896,7 @@ export default App;
 
 ### Custom Switch
 
-The Switch component can be customized using the `bodyClassName`, `handleClassName`, `onIcon`, `offIcon`, `onInnerLabel`, and `offInnerLabel` props.
+The Switch component can be customized using the `bodyClassName`, `switchClassName`, `onIcon`, `offIcon`, `onInnerLabel`, and `offInnerLabel` props.
 
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
@@ -849,7 +912,7 @@ return (
     onToggle={() => setThinSwitchChecked(!isThinSwitchChecked)}
     labelClassName="text-black text-bold my-5"
     bodyClassName="h-1 aspect-[20/1]"
-    handleClassName="h-8 w-8 rounded-sm"
+    switchClassName="h-8 w-8 rounded-sm"
     offIcon={
       <img
         width="20"
@@ -871,7 +934,7 @@ return (
     isChecked={isSquareSwitchChecked}
     onToggle={() => setSquareSwitchChecked(!isSquareSwitchChecked)}
     bodyClassName="h-6 rounded-sm"
-    handleClassName="h-6 w-6 rounded-sm "
+    switchClassName="h-6 w-6 rounded-sm "
   />
 </div>
 );};
@@ -883,6 +946,7 @@ return (
 ```jsx copy
 import React from 'react';
 import {VKSwitch} from "@vivakits/react-components";
+
 const App = ()=> {
   const [isThinSwitchChecked, setThinSwitchChecked] = useState(false);
   const [isSquareSwitchChecked, setSquareSwitchChecked] = useState(false);
@@ -893,7 +957,7 @@ const App = ()=> {
         isChecked={isThinSwitchChecked}
         onToggle={() => setThinSwitchChecked(!isThinSwitchChecked)}
         bodyClassName="h-1 aspect-[20/1]"
-        handleClassName="h-8 w-8 rounded-sm"
+        switchClassName="h-8 w-8 rounded-sm"
         offIcon={
           <img
             width="20"
@@ -915,7 +979,7 @@ const App = ()=> {
         isChecked={isSquareSwitchChecked}
         onToggle={() => setSquareSwitchChecked(!isSquareSwitchChecked)}
         bodyClassName="h-6 rounded-sm"
-        handleClassName="h-6 w-6 rounded-sm"
+        switchClassName="h-6 w-6 rounded-sm"
       />
     </div>
   );
@@ -1073,7 +1137,7 @@ export default App;
           <td> - </td>
         </tr>
         <tr>
-          <td>handleClassName</td>
+          <td>switchClassName</td>
           <td>string</td>
           <td>Classname for the switch handle</td>
           <td> - </td>

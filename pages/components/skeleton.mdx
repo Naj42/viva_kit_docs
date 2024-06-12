@@ -18,12 +18,16 @@ The Skeleton component comes with 3 different variants that you can change it us
   <Tabs.Tab>
 export const SkeletonVariantGroup = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex items-center gap-3" >
         <Skeleton variant="circular" width={40} height={40} />
         <Skeleton variant="rectangular" height={40} />
         <Skeleton variant="text" height={40} />
-    </div>
-  );
+    </VKGroup>
+);
 };
 
   <SkeletonVariantGroup />
@@ -32,15 +36,19 @@ export const SkeletonVariantGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Skeleton } from "@vivakits/react-components";
+import { Skeleton, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Skeleton variant="circular" width="40px" height="40px" />
-      <Skeleton variant="rectangular" height="40px" />
-      <Skeleton variant="text" height="40px" />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex items-center gap-3" >
+        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton variant="rectangular" height={40} />
+        <Skeleton variant="text" height={40} />
+    </VKGroup>
   )
 };
 
@@ -58,13 +66,18 @@ The Skeleton component comes with different sizes that you can change using the 
 <Tabs.Tab>
 export const SkeletonSizeGroup = () => {
   return (
-    <div className="flex items-center gap-3">
-		<Skeleton size="xs" />
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      orientation="vertical"
+      className="flex gap-3" >
+        <Skeleton size="xs" />
         <Skeleton size="sm" />
         <Skeleton size="md" />
         <Skeleton size="lg" />
         <Skeleton size="xl" />
-    </div>
+    </VKGroup>
   );
 };
 
@@ -74,17 +87,22 @@ export const SkeletonSizeGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Skeleton } from "@vivakits/react-components";
+import { Skeleton, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
-		<Skeleton size="xs" />
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      orientation="vertical"
+      className="flex gap-3" >
+        <Skeleton size="xs" />
         <Skeleton size="sm" />
         <Skeleton size="md" />
         <Skeleton size="lg" />
         <Skeleton size="xl" />
-    </div>
+    </VKGroup>
   )
 };
 
@@ -102,11 +120,15 @@ The Skeleton component includes a `width` prop, allowing you to adjust its width
   <Tabs.Tab>
 export const SkeletonWidthGroup = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Skeleton width={80} />
-      <Skeleton width={140} />
-      <Skeleton width={200} />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex gap-3" >
+        <Skeleton width={80} />
+        <Skeleton width={140} />
+        <Skeleton width={200} />
+    </VKGroup>
   );
 };
 
@@ -116,15 +138,19 @@ export const SkeletonWidthGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Skeleton } from "@vivakits/react-components";
+import { Skeleton, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Skeleton width={80} />
-      <Skeleton width={140} />
-      <Skeleton width={200} />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex gap-3" >
+        <Skeleton width={80} />
+        <Skeleton width={140} />
+        <Skeleton width={200} />
+    </VKGroup>
   )
 };
 
@@ -142,11 +168,15 @@ The Skeleton component includes a `height` prop, allowing you to adjust its heig
   <Tabs.Tab>
 export const SkeletonHeightGroup = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Skeleton height={20} />
-      <Skeleton height={30} />
-      <Skeleton height={40} />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex gap-3" >
+        <Skeleton height={20} />
+        <Skeleton height={30} />
+        <Skeleton height={40} />
+    </VKGroup>
   );
 };
 
@@ -156,15 +186,19 @@ export const SkeletonHeightGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Skeleton } from "@vivakits/react-components";
+import { Skeleton, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Skeleton height={20} />
-      <Skeleton height={30} />
-      <Skeleton height={40} />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex gap-3" >
+        <Skeleton height={20} />
+        <Skeleton height={30} />
+        <Skeleton height={40} />
+    </VKGroup>
   )
 };
 
@@ -224,12 +258,17 @@ You can use props named `numOfRows` and `numOfColumns` to generate multiple rows
   <Tabs.Tab>
 export const SkeletonRowColumnGroup = () => {
   return (
-    <div className="flex items-center gap-5">
-      <Skeleton numOfColumns={2} />
-      <Skeleton numOfRows={2} />
-      <Skeleton numOfColumns={2} numOfRows={2} />
-      <Skeleton numOfColumns={2} numOfRows={3} />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      orientation="vertical"
+      className="flex gap-3" >
+        <Skeleton numOfRows={2} />
+        <Skeleton numOfColumns={2} />
+        <Skeleton numOfColumns={2} numOfRows={2} />
+        <Skeleton numOfColumns={2} numOfRows={3} />
+    </VKGroup>
   );
 };
 
@@ -239,16 +278,21 @@ export const SkeletonRowColumnGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Skeleton } from "@vivakits/react-components";
+import { Skeleton, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
-      <Skeleton numOfColumns={2} />
-      <Skeleton numOfRows={2} />
-      <Skeleton numOfColumns={2} numOfRows={2} />
-      <Skeleton numOfColumns={2} numOfRows={3} />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      orientation="vertical"
+      className="flex gap-3" >
+        <Skeleton numOfRows={2} />
+        <Skeleton numOfColumns={2} />
+        <Skeleton numOfColumns={2} numOfRows={2} />
+        <Skeleton numOfColumns={2} numOfRows={3} />
+    </VKGroup>
   )
 };
 
@@ -281,6 +325,7 @@ export const SkeletonCard = () => {
           <Skeleton variant="text" width={190} />
         </div>
         <Skeleton variant="text" width={400} height={30} />
+ 
     </div>
   );
 };
@@ -454,7 +499,7 @@ export const SkeletonTable = () => {
           <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
             {[...Array(5)].map((_, colIndex) => (
               <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-                <Skeleton variant="text" height={20} rounded="6px" />
+                <Skeleton variant="text" height={20} width={120} rounded="6px" />
               </td>
             ))}
           </tr>
@@ -489,7 +534,7 @@ const App = () => {
           <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
             {[...Array(5)].map((_, colIndex) => (
               <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-                <Skeleton variant="text" height={20} rounded="6px" />
+                <Skeleton variant="text" height={20} width={120} rounded="6px" />
               </td>
             ))}
           </tr>
@@ -530,7 +575,7 @@ export const SkeletonTableWithPagination = () => {
             <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
               {[...Array(5)].map((_, colIndex) => (
                 <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-                  <Skeleton variant="text" height={20} rounded="6px" />
+                  <Skeleton variant="text" height={20} width={120} rounded="6px" />
                 </td>
               ))}
             </tr>
@@ -571,7 +616,7 @@ const App = () => {
             <tr style={{backgroundColor: 'white'}} key={rowIndex} className=''>
               {[...Array(5)].map((_, colIndex) => (
                 <td className='border-none bg-none' key={`${rowIndex}-${colIndex}`}>
-                  <Skeleton variant="text" height={20} rounded="6px" />
+                  <Skeleton variant="text" height={20} width={120} rounded="6px" />
                 </td>
               ))}
             </tr>

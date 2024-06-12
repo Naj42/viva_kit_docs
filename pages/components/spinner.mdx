@@ -3,6 +3,7 @@ import {
   Button,
   AsyncDatatable,
   Select,
+  VKGroup,
 } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { useEffect, useState } from "react";
@@ -36,9 +37,10 @@ export const DefaultSpinner = () => {
 ```jsx copy
 import React from 'react';
 import { Spinner } from "@vivakits/react-components";
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
+    <div className="flex justify-center items-center gap-3">
       <Spinner />
     </div>
   );
@@ -58,7 +60,12 @@ The Spinner component comes with different colors that you can change it using t
 <Tabs.Tab>
 export const SpinnerColorGroup = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap"
+  >
       <Spinner size="lg" color="primary" />
       <Spinner size="lg" color="secondary" />
       <Spinner size="lg" color="accent" />
@@ -67,7 +74,7 @@ export const SpinnerColorGroup = () => {
       <Spinner size="lg" color="warning" />
       <Spinner size="lg" color="dark" />
       <Spinner size="lg" color="light" />
-    </div>
+    </VKGroup>
   );
 };
 
@@ -77,10 +84,16 @@ export const SpinnerColorGroup = () => {
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Spinner } from "@vivakits/react-components";
+import { Spinner, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap"
+  >
       <Spinner size="lg" color="primary" />
       <Spinner size="lg" color="secondary" />
       <Spinner size="lg" color="accent" />
@@ -89,7 +102,7 @@ const App = () => {
       <Spinner size="lg" color="warning" />
       <Spinner size="lg" color="dark" />
       <Spinner size="lg" color="light" />
-    </div>
+    </VKGroup>
   );
 };
 
@@ -107,12 +120,18 @@ The Spinner component comes with different size that you can change it using the
 <Tabs.Tab>
 export const SpinnerSizeGroup = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap"
+  >
         <Spinner size="sm" />
         <Spinner size="md" />
         <Spinner size="lg"/>
         <Spinner size="xl"/>
-    </div>
+        <Spinner size="2xl"/>
+    </VKGroup>
   );
 };
 
@@ -122,15 +141,21 @@ export const SpinnerSizeGroup = () => {
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Spinner } from "@vivakits/react-components";
+import { Spinner, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
-      <Spinner size="sm" />
-      <Spinner size="md" />
-      <Spinner size="lg" />
-      <Spinner size="xl" />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap" >
+        <Spinner size="sm" />
+        <Spinner size="md" />
+        <Spinner size="lg"/>
+        <Spinner size="xl"/>
+        <Spinner size="2xl"/>
+    </VKGroup>
   );
 };
 
@@ -149,10 +174,14 @@ Use spinners within buttons to provide visual feedback when an action is in prog
 <Tabs.Tab>
 export const ButtonSpinnerGroup = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
-      <Button size="md" variant="outline"><Spinner size="sm" className="mr-2"/>Loading...</Button>
-      <Button size="md" variant="solid"><Spinner size="sm" color="light" className="mr-2"/>Loading...</Button>
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+        <Button size="md" variant="outline"><Spinner size="sm" className="mr-2"/>Loading...</Button>
+        <Button size="md" variant="solid"><Spinner size="sm" color="light" className="mr-2"/>Loading...</Button>
+    </VKGroup>
   );
 };
 
@@ -162,19 +191,18 @@ export const ButtonSpinnerGroup = () => {
 <Tabs.Tab>
 ```jsx copy
 import React from 'react';
-import { Button, Spinner } from "@vivakits/react-components";
+import { Button, Spinner, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-3 flex-wrap">
-      <Button size="md" variant="outline">
-        <Spinner size="sm" className="mr-2" />
-        Loading...
-      </Button>
-      <Button size="md" variant="solid">
-        <Spinner size="sm" color="light" className="mr-2" />
-        Loading...
-      </Button>
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+        <Button size="md" variant="outline"><Spinner size="sm" className="mr-2"/>Loading...</Button>
+        <Button size="md" variant="solid"><Spinner size="sm" color="light" className="mr-2"/>Loading...</Button>
+    </VKGroup>
   );
 };
 
@@ -217,6 +245,7 @@ return (
 ```jsx copy
 import React from 'react';
 import { AsyncDatatable, Spinner } from "@vivakits/react-components";
+
 const App = () => {
   const dataTableColumns = [...dataTableColumnSample ]
   const [dataTableDataSource, setDataTableDataSource] = useState([
@@ -285,6 +314,7 @@ export default App;
         <span className="badge">md</span>
         <span className="badge">lg</span>
         <span className="badge">xl</span>
+        <span className="badge">2xl</span>
       </td>
       <td>Changes spinner size</td>
       <td><span className="badge">md</span></td>

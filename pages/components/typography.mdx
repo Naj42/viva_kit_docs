@@ -1,4 +1,4 @@
-import { VKTitle, VKGroup } from "@vivakits/react-components";
+import { VKTypography, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
 # Typography
@@ -6,7 +6,7 @@ import { Tabs } from "nextra/components";
 ### Import
 
 ```jsx copy
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 ```
 
 ### Variant
@@ -18,19 +18,19 @@ The Typography component comes with 7 different variants that you can change usi
   <Tabs.Tab>
 export const TypographyVariantGroup = () => {
 return (
-  <VKGroup
-    color="none"
-    border="none"
-    noSeparator
-    childrenProps={{ className: "mr-6" }} >
-      <VKTitle variant="h1">h1</VKTitle>
-      <VKTitle variant="h2">h2</VKTitle>
-      <VKTitle variant="h3">h3</VKTitle>
-      <VKTitle variant="h4">h4</VKTitle>
-      <VKTitle variant="h5">h5</VKTitle>
-      <VKTitle variant="h6">h6</VKTitle>
-      <VKTitle variant="paragraph">paragraph</VKTitle>
-  </VKGroup>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      childrenProps={{ className: "mr-6" }}>
+      <VKTypography variant="h1">h1</VKTypography>
+      <VKTypography variant="h2">h2</VKTypography>
+      <VKTypography variant="h3">h3</VKTypography>
+      <VKTypography variant="h4">h4</VKTypography>
+      <VKTypography variant="h5">h5</VKTypography>
+      <VKTypography variant="h6">h6</VKTypography>
+      <VKTypography variant="paragraph">paragraph</VKTypography>
+    </VKGroup>
 ); };
 
     <TypographyVariantGroup />
@@ -39,21 +39,22 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle, VKGroup } from "@vivakits/react-components";
+import { VKTypography, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
     <VKGroup
       color="none"
       border="none"
       noSeparator
-      childrenProps={{ className: "mr-6" }} >
-        <VKTitle variant="h1">h1</VKTitle>
-        <VKTitle variant="h2">h2</VKTitle>
-        <VKTitle variant="h3">h3</VKTitle>
-        <VKTitle variant="h4">h4</VKTitle>
-        <VKTitle variant="h5">h5</VKTitle>
-        <VKTitle variant="h6">h6</VKTitle>
-        <VKTitle variant="paragraph">paragraph</VKTitle>
+      childrenProps={{ className: "mr-6" }}>
+        <VKTypography variant="h1">h1</VKTypography>
+        <VKTypography variant="h2">h2</VKTypography>
+        <VKTypography variant="h3">h3</VKTypography>
+        <VKTypography variant="h4">h4</VKTypography>
+        <VKTypography variant="h5">h5</VKTypography>
+        <VKTypography variant="h6">h6</VKTypography>
+        <VKTypography variant="paragraph">paragraph</VKTypography>
     </VKGroup>
   );
 };
@@ -77,15 +78,15 @@ export const TypographyColorGroup = () => {
       border="none"
       orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-        <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTitle>
+      childrenProps={{ className: "mb-1" }}>
+        <VKTypography color="default">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="success">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="warning">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="dark">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTypography>
     </VKGroup>
   );
 };
@@ -97,7 +98,8 @@ export const TypographyColorGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 
-import { VKTitle, VKGroup } from "@vivakits/react-components";
+import { VKTypography, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
     <VKGroup
@@ -105,16 +107,16 @@ const App = () => {
       border="none"
       orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-        <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTitle>
-      </VKGroup>
+      childrenProps={{ className: "mb-1" }}>
+        <VKTypography color="default">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="success">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="warning">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="dark">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTypography>
+    </VKGroup>
   );
 };
 
@@ -136,16 +138,17 @@ export const TypographySizeGroup = () => {
     <VKGroup
       color="none"
       border="none"
-      orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-        <VKTitle size="xs">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="sm">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="base">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="md">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="lg">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="xl">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="2xl">The quick brown fox jumps over the lazy dog.</VKTitle>
+      orientation="vertical"
+      childrenProps={{ className: "mr-6 flex flex-col" }}
+     >
+        <VKTypography size="xs">Actions speak louder than words.</VKTypography>
+        <VKTypography size="sm">Actions speak louder than words.</VKTypography>
+        <VKTypography size="base">Actions speak louder than words.</VKTypography>
+        <VKTypography size="md">Actions speak louder than words.</VKTypography>
+        <VKTypography size="lg">Actions speak louder than words.</VKTypography>
+        <VKTypography size="xl">Actions speak louder than words.</VKTypography>
+        <VKTypography size="2xl">Actions speak louder than words.</VKTypography>
     </VKGroup>
   );
 };
@@ -157,22 +160,23 @@ export const TypographySizeGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 
-import { VKTitle, VKGroup } from "@vivakits/react-components";
+import { VKTypography, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
     <VKGroup
       color="none"
       border="none"
-      orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-        <VKTitle size="xs">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="sm">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="base">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="md">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="lg">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="xl">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle size="2xl">The quick brown fox jumps over the lazy dog.</VKTitle>
+      orientation="vertical"
+      childrenProps={{ className: "mr-6 flex flex-col" }}>
+        <VKTypography size="xs">Actions speak louder than words.</VKTypography>
+        <VKTypography size="sm">Actions speak louder than words.</VKTypography>
+        <VKTypography size="base">Actions speak louder than words.</VKTypography>
+        <VKTypography size="md">Actions speak louder than words.</VKTypography>
+        <VKTypography size="lg">Actions speak louder than words.</VKTypography>
+        <VKTypography size="xl">Actions speak louder than words.</VKTypography>
+        <VKTypography size="2xl">Actions speak louder than words.</VKTypography>
     </VKGroup>
   );
 };
@@ -185,7 +189,7 @@ export default App;
 
 ### Decoration
 
-The Typography component comes with 4 different decorations and 8 decoration colors that you can change using the `decoration` and `decorationColor` prop.
+The Typography component comes with different decorations and decoration colors that you can change using the `decoration` and `decorationColor` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -197,11 +201,11 @@ export const TypographyDecorationGroup = () => {
       border="none"
       orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-        <VKTitle decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="none">The quick brown fox jumps over the lazy dog.</VKTitle>
+      childrenProps={{ className: "mb-6" }}>
+        <VKTypography decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="none">The quick brown fox jumps over the lazy dog.</VKTypography>
     </VKGroup>
   );
 };
@@ -212,7 +216,8 @@ export const TypographyDecorationGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle, VKGroup } from "@vivakits/react-components";
+import { VKTypography, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
     <VKGroup
@@ -220,11 +225,11 @@ const App = () => {
       border="none"
       orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-        <VKTitle decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="none">The quick brown fox jumps over the lazy dog.</VKTitle>
+      childrenProps={{ className: "mb-6" }}>
+        <VKTypography decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="none">The quick brown fox jumps over the lazy dog.</VKTypography>
     </VKGroup>
   );
  };
@@ -237,7 +242,7 @@ export default App;
 
 ### Spacing and Breaks
 
-The Typography component comes with 5 word breaks and 6 word spacings that you can change using the `wordBreak` and `wordSpacing` prop.
+The Typography component comes with word breaks and word spacings that you can change using the `wordBreak` and `wordSpacing` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
@@ -245,35 +250,41 @@ The Typography component comes with 5 word breaks and 6 word spacings that you c
 export const TypographyBreakSpacingGroup = () => {
 return (
   <VKGroup
-      color="none"
-      border="none"
-      orientation="vertical"
-      noSeparator
-      childrenProps={{ className: "mb-6" }} >
-    <VKTitle wordBreak="default">
+    color="none"
+    border="none"
+    noSeparator
+    orientation="vertical"
+    childrenProps={{ className: "mr-6 flex flex-col" }}>
+    <VKTypography size="lg">Word Break</VKTypography>
+
+    <VKTypography wordBreak="default">
       The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-    </VKTitle>
-    <VKTitle wordBreak="all">
+    </VKTypography>
+    <VKTypography wordBreak="all">
       The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-    </VKTitle>
-    <VKTitle wordBreak="words">
+    </VKTypography>
+    <VKTypography wordBreak="words">
       The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-    </VKTitle>
-    <VKTitle wordSpacing="tighter" variant="h4">
+    </VKTypography>
+
+    <VKTypography size="lg">Word Spacing</VKTypography>
+
+    <VKTypography wordSpacing="tighter" variant="h4">
       The quick brown fox jumps over the lazy dog.
-    </VKTitle>
-    <VKTitle wordSpacing="tight" variant="h3">
+    </VKTypography>
+    <VKTypography wordSpacing="tight" variant="h3">
       The quick brown fox jumps over the lazy dog.
-    </VKTitle>
-    <VKTitle wordSpacing="normal" variant="h5">
+    </VKTypography>
+    <VKTypography wordSpacing="normal" variant="h5">
       The quick brown fox jumps over the lazy dog.
-    </VKTitle>
-    <VKTitle wordSpacing="wider" variant="h6">
+    </VKTypography>
+    <VKTypography wordSpacing="wider" variant="h6">
       The quick brown fox jumps over the lazy dog.
-    </VKTitle>
-    <VKTitle wordSpacing="widest" variant="h4">
+    </VKTypography>
+    <VKTypography wordSpacing="widest" variant="h4">
       The quick brown fox jumps over the lazy dog.
-    </VKTitle>
+    </VKTypography>
+
   </VKGroup>
 ); };
 
@@ -282,41 +293,48 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle, VKGroup } from "@vivakits/react-components";
+import { VKTypography, VKGroup } from "@vivakits/react-components";
+
 const App = () => {
   return (
     <VKGroup
       color="none"
       border="none"
-      orientation="vertical"
       noSeparator
-      childrenProps={{ className: "mb-6" }} >
-      <VKTitle wordBreak="default">
-        The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-      </VKTitle>
-      <VKTitle wordBreak="all">
-        The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-      </VKTitle>
-      <VKTitle wordBreak="words">
-        The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-      </VKTitle>
-      <VKTitle wordSpacing="tighter" variant="h4">
-        The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="tight" variant="h3">
-        The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="normal" variant="h5">
-        The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="wider" variant="h6">
-        The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="widest" variant="h4">
-        The quick brown fox jumps over the lazy dog.
-      </VKTitle>
+      orientation="vertical"
+      childrenProps={{ className: "mr-6 flex flex-col" }}>
+
+      <VKTypography size="lg">Word Break</VKTypography>
+
+        <VKTypography wordBreak="default">
+          The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+        </VKTypography>
+        <VKTypography wordBreak="all">
+          The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+        </VKTypography>
+        <VKTypography wordBreak="words">
+          The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
+        </VKTypography>
+
+      <VKTypography size="lg">Word Spacing</VKTypography>
+
+        <VKTypography wordSpacing="tighter" variant="h4">
+          The quick brown fox jumps over the lazy dog.
+        </VKTypography>
+        <VKTypography wordSpacing="tight" variant="h3">
+          The quick brown fox jumps over the lazy dog.
+        </VKTypography>
+        <VKTypography wordSpacing="normal" variant="h5">
+          The quick brown fox jumps over the lazy dog.
+        </VKTypography>
+        <VKTypography wordSpacing="wider" variant="h6">
+          The quick brown fox jumps over the lazy dog.
+        </VKTypography>
+        <VKTypography wordSpacing="widest" variant="h4">
+          The quick brown fox jumps over the lazy dog.
+        </VKTypography>
     </VKGroup>
-  );
+	);
 };
 
 export default App;
@@ -366,9 +384,23 @@ export default App;
       <td>Changes typography color</td>
       <td><span className="badge">default</span></td>
     </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <span className="badge">xs</span>  
+        <span className="badge">sm</span>  
+        <span className="badge">base</span> 
+        <span className="badge">md</span> 
+        <span className="badge">lg</span> 
+        <span className="badge">xl</span>
+        <span className="badge">2xl</span>
+      </td>
+      <td>Changes Text size</td>
+      <td>-</td>
+    </tr>
      <tr>
       <td>decoration</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
+      <td>
         <span className="badge">none</span>
         <span className="badge">underline</span>
         <span className="badge">overline</span>
@@ -411,13 +443,13 @@ export default App;
     </tr>
      <tr>
       <td>fontFamily</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
+      <td>
         <span className="badge">sansSerif</span>
          <span className="badge">serif</span>
         <span className="badge">mono</span>
       </td>
       <td>Changes font family on typography text</td>
-      <td><span className="badge">-</span></td>
+      <td>-</td>
     </tr>
      <tr>
       <td>overflow</td>
