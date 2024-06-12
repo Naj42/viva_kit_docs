@@ -1,4 +1,4 @@
-import { VKHighlight } from "@vivakits/react-components";
+import { VKHighlight, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { useState } from "react";
 
@@ -161,9 +161,9 @@ export default App;
 </Tabs.Tab>
 </Tabs>
 
-### Size
+### Border Radius
 
-You can cahnge the size of rounded corner radius using `rounded` prop.  
+You can cahnge the corner radius using `rounded` prop.  
 
 <Tabs items={['Preview', 'Code']}>
 <Tabs.Tab>
@@ -175,7 +175,10 @@ export const VarientsRadius= () => {
       </VKHighlight> 
       <VKHighlight highlightText="extra small" rounded="xs">
           You can change the corner radius to extra small for your selection
-      </VKHighlight>      
+      </VKHighlight>     
+      <VKHighlight highlightText="small" rounded="sm">
+          You can change the corner radius to small for your selection
+      </VKHighlight>     
       <VKHighlight highlightText="medium" rounded="md">
           You can change the corner radius to  medium for your selection
       </VKHighlight>      
@@ -204,6 +207,9 @@ const App = ()=> {
       </VKHighlight> 
       <VKHighlight highlightText="extra small" rounded="xs">
           You can change the corner radius to extra small for your selection
+      </VKHighlight>
+      <VKHighlight highlightText="small" rounded="sm">
+          You can change the corner radius to small for your selection
       </VKHighlight>      
       <VKHighlight highlightText="medium" rounded="md">
           You can change the corner radius to  medium for your selection
@@ -235,7 +241,7 @@ export const AddingStyles= () => {
         <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
             Customize selection using style
         </VKHighlight>
-        <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-xl">
+        <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black">
             Customize selection using className
         </VKHighlight>
     </div>
@@ -255,7 +261,7 @@ const App = ()=> {
       <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
           Customize selection using style
       </VKHighlight>
-      <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black rounded-3xl">
+      <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black">
           Customize selection using className 
       </VKHighlight>
     </div>
