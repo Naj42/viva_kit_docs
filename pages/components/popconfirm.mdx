@@ -3,6 +3,12 @@ import { Tabs } from "nextra/components";
 
 # Popconfirm
 
+### Import
+
+```jsx copy
+import { Popconfirm } from "@vivakits/react-components";
+```
+
 ### Title
 
 The Popconfirm component can display any title passed to it using the `title` prop.
@@ -12,27 +18,27 @@ The Popconfirm component can display any title passed to it using the `title` pr
 <Tabs.Tab>
 export const PopconfirmTitleGroup = () => {
   return (
-      <Popconfirm
-        title="This is a popconfirm"
-        yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            Yes
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            No
-          </button>
-        }
-      >
-        <Button>Click me</Button>
-      </Popconfirm>
+    <Popconfirm
+      title="This is a popconfirm"
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "30%" }}
+        >
+          No
+        </button>
+      }
+    >
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
   );
 };
 
@@ -46,7 +52,6 @@ import { Popconfirm, Button } from "@vivakits/react-components";
 
 const App = () => {
 return (
-
 <Popconfirm
   title="This is a popconfirm"
   yesButton={
@@ -66,7 +71,9 @@ return (
     </button>
   }
 >
-  <Button>Click me</Button>
+  <Button className="w-28" size="md" variant="light">
+    Click me
+  </Button>
 </Popconfirm>
 ) };
 
@@ -84,28 +91,28 @@ The Popconfirm component can display optional description passed to it using the
 <Tabs.Tab>
 export const PopconfirmDescriptionGroup = () => {
   return (
-      <Popconfirm
-        title="This is the title"
-        description="This is the description"
-        yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            Yes
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            No
-          </button>
-        }
-      >
-        <Button>Click me</Button>
-      </Popconfirm>
+    <Popconfirm
+      title="This is a popconfirm"
+      description="This is the description"
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "30%" }}
+        >
+          No
+        </button>
+      }
+    >
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
   );
 };
 
@@ -118,32 +125,29 @@ import React from 'react';
 import { Popconfirm, Button } from "@vivakits/react-components";
 
 const App = () => {
-return (
-
-<div className="flex space-x-1">
-  <Popconfirm
-    title="This is the title"
-    description="This is the description"
-    yesButton={
-      <button
-        className="bg-white text-black rounded-lg p-1"
-        style={{ minWidth: "30%" }}
-      >
-        Yes
-      </button>
-    }
-    noButton={
-      <button
-        className="border border-white rounded-lg p-1 w-1/3"
-        style={{ minWidth: "30%" }}
-      >
-        No
-      </button>
-    }
-  >
-    <Button>Click me</Button>
-  </Popconfirm>
-</div>
+  return (
+    <Popconfirm
+      title="This is a popconfirm"
+      description="This is the description"
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "30%" }}
+        >
+          No
+        </button>
+      }
+    >
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
 ) };
 
 export default App;
@@ -161,34 +165,34 @@ The default icon can be customised using the `icon` prop.
 <Tabs.Tab>
 export const PopconfirmIconGroup = () => {
   return (
-   <Popconfirm
-   title="This is the title"
-    description="This is the description"
-              icon={
-                <img
-                  src="https://img.icons8.com/nolan/48/information.png"
-                  alt="information"
-                />
-              }
-              yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            Yes
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            No
-          </button>
-        }
-            >
-              <Button>Click me</Button>
-            </Popconfirm>
+    <Popconfirm
+      title="This is a popconfirm"
+      description="This is the description"
+      icon={
+        <img
+          src="https://img.icons8.com/nolan/48/information.png"
+          alt="information"
+        />
+      }
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "30%" }}
+        >
+          No
+        </button>
+      }
+    >
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
   );
 };
 
@@ -202,35 +206,34 @@ import { Popconfirm, Button } from "@vivakits/react-components";
 
 const App = () => {
 return (
-
 <Popconfirm
-  title="This is the title"
-  description="This is the description"
-  icon={
-    <img
-      src="https://img.icons8.com/nolan/48/information.png"
-      alt="information"
-    />
-  }
-  yesButton={
-    <button
-      className="bg-white text-black rounded-lg p-1"
-      style={{ minWidth: "30%" }}
+      title="This is a popconfirm"
+      description="This is the description"
+      icon={
+        <img
+          src="https://img.icons8.com/nolan/48/information.png"
+          alt="information"
+        />
+      }
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "30%" }}
+        >
+          No
+        </button>
+      }
     >
-      Yes
-    </button>
-  }
-  noButton={
-    <button
-      className="border border-white rounded-lg p-1 w-1/3"
-      style={{ minWidth: "30%" }}
-    >
-      No
-    </button>
-  }
->
-  <Button>Click me</Button>
-</Popconfirm>
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
 ) };
 
 export default App;
@@ -248,28 +251,30 @@ The action buttons can be adjusted accordingly using `yesButton` and `noButton` 
 <Tabs.Tab>
 export const PopconfirmButtonGroup = () => {
   return (
-      <Popconfirm
-        title="This is the title"
-    description="This is the description"
-        yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }
-      >
-        <Button>Click me</Button>
-      </Popconfirm>
+    <Popconfirm
+      title="This is a popconfirm"
+      description="This is the description"
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+          onClick={() => alert("Yes")}
+        >
+          Ok
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "40%" }}
+          onClick={() => alert("No")}
+        >
+          Cancel
+        </button>
+      }
+    >
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
   );
 };
 
@@ -283,29 +288,30 @@ import { Popconfirm, Button } from "@vivakits/react-components";
 
 const App = () => {
 return (
-
-<Popconfirm
-  title="This is the title"
-  description="This is the description"
-  yesButton={
-    <button
-      className="bg-white text-black rounded-lg p-1"
-      style={{ minWidth: "30%" }}
+    <Popconfirm
+      title="This is a popconfirm"
+      description="This is the description"
+      yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+          onClick={() => alert("Yes")}
+        >
+          Ok
+        </button>
+      }
+      noButton={
+        <button
+          className="border border-white rounded-lg p-1 w-1/3"
+          style={{ minWidth: "40%" }}
+          onClick={() => alert("No")}
+        >
+          Cancel
+        </button>
+      }
     >
-      OK
-    </button>
-  }
-  noButton={
-    <button
-      className="border border-white rounded-lg p-1 w-1/3"
-      style={{ minWidth: "30%" }}
-    >
-      Cancel
-    </button>
-  }
->
-  <Button>Click me</Button>
-</Popconfirm>
+      <Button className="w-28" size="md" variant="light">Click me</Button>
+    </Popconfirm>
 ) };
 
 export default App;
@@ -326,156 +332,156 @@ export const PopconfirmPositionGroup = () => {
     <div className="flex justify-center mt-2">
       <div className="w-full">
         <div className="flex justify-center space-x-1">
-          <Popconfirm position="topLeft" title="Top Left Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+          <Popconfirm responsive={false} position="topLeft" title="Top Left Popconfirm" yesButton={
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-28" size="md" variant="light">Top Left</Button>
           </Popconfirm>
-          <Popconfirm position="top" title="Top Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+          <Popconfirm responsive={false} position="top" title="Top Popconfirm" yesButton={
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-24" size="md" variant="light">Top</Button>
           </Popconfirm>
-          <Popconfirm position="topRight" title="Top Right Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+          <Popconfirm responsive={false} position="topRight" title="Top Right Popconfirm" yesButton={
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-28" size="md" variant="light">Top Right</Button>
           </Popconfirm>
         </div>
         <div className="flex justify-between items-center h-72">
           <div className="w-20">
-            <Popconfirm position="left" title="Left Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <Popconfirm responsive={false} position="left" title="Left Popconfirm" yesButton={
+              <button
+                className="bg-white text-black rounded-lg p-1"
+                style={{ minWidth: "30%" }}
+              >
+                Yes
+              </button>
+            }
+              noButton={
+                <button
+                  className="border border-white rounded-lg p-1 w-1/3"
+                  style={{ minWidth: "30%" }}
+                >
+                  No
+                </button>
+              }>
               <Button className="w-24" size="md" variant="light">Left</Button>
             </Popconfirm>
           </div>
           <div className="w-20 text-end">
-            <Popconfirm position="right" title="Right Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <Popconfirm responsive={false} position="right" title="Right Popconfirm" yesButton={
+              <button
+                className="bg-white text-black rounded-lg p-1"
+                style={{ minWidth: "30%" }}
+              >
+                Yes
+              </button>
+            }
+              noButton={
+                <button
+                  className="border border-white rounded-lg p-1 w-1/3"
+                  style={{ minWidth: "30%" }}
+                >
+                  No
+                </button>
+              }>
               <Button className="w-24" size="md" variant="light">Right</Button>
             </Popconfirm>
           </div>
         </div>
         <div className="flex justify-center space-x-1">
-          <Popconfirm position="bottomLeft" title="Bottom Left Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+          <Popconfirm responsive={false} position="bottomLeft" title="Bottom Left Popconfirm" yesButton={
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-32" size="md" variant="light">Bottomt Left</Button>
           </Popconfirm>
-          <Popconfirm position="bottom" title="Bottom Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+          <Popconfirm responsive={false} position="bottom" title="Bottom Popconfirm" yesButton={
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-28" size="md" variant="light">Bottom</Button>
           </Popconfirm>
-          <Popconfirm position="bottomRight" title="Bottom Right Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+          <Popconfirm responsive={false} position="bottomRight" title="Bottom Right Popconfirm" yesButton={
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-32" size="md" variant="light">Bottom Right</Button>
           </Popconfirm>
         </div>
@@ -506,7 +512,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -514,7 +520,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -530,7 +536,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -538,7 +544,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -554,7 +560,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -562,7 +568,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -581,7 +587,7 @@ return (
               className="bg-white text-black rounded-lg p-1"
               style={{ minWidth: "30%" }}
             >
-              OK
+              Yes
             </button>
           }
           noButton={
@@ -589,7 +595,7 @@ return (
               className="border border-white rounded-lg p-1 w-1/3"
               style={{ minWidth: "30%" }}
             >
-              Cancel
+              No
             </button>
           }
         >
@@ -607,7 +613,7 @@ return (
               className="bg-white text-black rounded-lg p-1"
               style={{ minWidth: "30%" }}
             >
-              OK
+              Yes
             </button>
           }
           noButton={
@@ -615,7 +621,7 @@ return (
               className="border border-white rounded-lg p-1 w-1/3"
               style={{ minWidth: "30%" }}
             >
-              Cancel
+              No
             </button>
           }
         >
@@ -634,7 +640,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -642,7 +648,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -658,7 +664,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -666,7 +672,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -682,7 +688,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -690,7 +696,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -722,155 +728,155 @@ export const PopconfirmResponsiveGroup = () => {
       <div className="w-full">
         <div className="flex justify-center space-x-1">
           <Popconfirm responsive position="topLeft" title="Top Left Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-28" size="md" variant="light">Top Left</Button>
           </Popconfirm>
           <Popconfirm responsive position="top" title="Top Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-24" size="md" variant="light">Top</Button>
           </Popconfirm>
           <Popconfirm responsive position="topRight" title="Top Right Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-28" size="md" variant="light">Top Right</Button>
           </Popconfirm>
         </div>
         <div className="flex justify-between items-center h-72">
           <div className="w-20">
             <Popconfirm responsive position="left" title="Left Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+              <button
+                className="bg-white text-black rounded-lg p-1"
+                style={{ minWidth: "30%" }}
+              >
+                Yes
+              </button>
+            }
+              noButton={
+                <button
+                  className="border border-white rounded-lg p-1 w-1/3"
+                  style={{ minWidth: "30%" }}
+                >
+                  No
+                </button>
+              }>
               <Button className="w-24" size="md" variant="light">Left</Button>
             </Popconfirm>
           </div>
           <div className="w-20 text-end">
             <Popconfirm responsive position="right" title="Right Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+              <button
+                className="bg-white text-black rounded-lg p-1"
+                style={{ minWidth: "30%" }}
+              >
+                Yes
+              </button>
+            }
+              noButton={
+                <button
+                  className="border border-white rounded-lg p-1 w-1/3"
+                  style={{ minWidth: "30%" }}
+                >
+                  No
+                </button>
+              }>
               <Button className="w-24" size="md" variant="light">Right</Button>
             </Popconfirm>
           </div>
         </div>
         <div className="flex justify-center space-x-1">
           <Popconfirm responsive position="bottomLeft" title="Bottom Left Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-32" size="md" variant="light">Bottomt Left</Button>
           </Popconfirm>
           <Popconfirm responsive position="bottom" title="Bottom Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-28" size="md" variant="light">Bottom</Button>
           </Popconfirm>
           <Popconfirm responsive position="bottomRight" title="Bottom Right Popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
-        noButton={
-          <button
-            className="border border-white rounded-lg p-1 w-1/3"
-            style={{ minWidth: "30%" }}
-          >
-            Cancel
-          </button>
-        }>
+            <button
+              className="bg-white text-black rounded-lg p-1"
+              style={{ minWidth: "30%" }}
+            >
+              Yes
+            </button>
+          }
+            noButton={
+              <button
+                className="border border-white rounded-lg p-1 w-1/3"
+                style={{ minWidth: "30%" }}
+              >
+                No
+              </button>
+            }>
             <Button className="w-32" size="md" variant="light">Bottom Right</Button>
           </Popconfirm>
         </div>
@@ -902,7 +908,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -910,7 +916,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -927,7 +933,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -935,7 +941,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -952,7 +958,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -960,7 +966,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -980,7 +986,7 @@ return (
               className="bg-white text-black rounded-lg p-1"
               style={{ minWidth: "30%" }}
             >
-              OK
+              Yes
             </button>
           }
           noButton={
@@ -988,7 +994,7 @@ return (
               className="border border-white rounded-lg p-1 w-1/3"
               style={{ minWidth: "30%" }}
             >
-              Cancel
+              No
             </button>
           }
         >
@@ -1007,7 +1013,7 @@ return (
               className="bg-white text-black rounded-lg p-1"
               style={{ minWidth: "30%" }}
             >
-              OK
+              Yes
             </button>
           }
           noButton={
@@ -1015,7 +1021,7 @@ return (
               className="border border-white rounded-lg p-1 w-1/3"
               style={{ minWidth: "30%" }}
             >
-              Cancel
+              No
             </button>
           }
         >
@@ -1035,7 +1041,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -1043,7 +1049,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -1060,7 +1066,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -1068,7 +1074,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -1085,7 +1091,7 @@ return (
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -1093,7 +1099,7 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }
       >
@@ -1121,38 +1127,38 @@ The Popconfirm component allows you to toggle the caret on and off using the `ca
 export const PopconfirmCaretGroup = () => {
   return (
     <div className="flex space-x-1">
-      <Popconfirm caret={true} title="This is a popconfirm with caret" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
+      <Popconfirm responsive={false} caret={true} title="This is a popconfirm with caret" yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
         noButton={
           <button
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }>
         <Button className="w-28" size="md" variant="light">With caret</Button>
       </Popconfirm>
-      <Popconfirm caret={false} title="This is a popconfirm without caret" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
+      <Popconfirm responsive={false} caret={false} title="This is a popconfirm without caret" yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
         noButton={
           <button
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }>
         <Button className="w-32" size="md" variant="light">Without caret</Button>
@@ -1174,12 +1180,12 @@ return (
 
 <div className="flex items-center gap-8 flex-wrap">
     <div className="flex space-x-1">
-      <Popconfirm caret={true} title="This is a popconfirm with caret" yesButton={
+      <Popconfirm responsive={false} caret={true} title="This is a popconfirm with caret" yesButton={
           <button
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -1187,17 +1193,17 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }>
         <Button className="w-28" size="md" variant="light">With caret</Button>
       </Popconfirm>
-      <Popconfirm caret={false} title="This is a popconfirm without caret" yesButton={
+      <Popconfirm responsive={false} caret={false} title="This is a popconfirm without caret" yesButton={
           <button
             className="bg-white text-black rounded-lg p-1"
             style={{ minWidth: "30%" }}
           >
-            OK
+            Yes
           </button>
         }
         noButton={
@@ -1205,85 +1211,12 @@ return (
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }>
         <Button className="w-32" size="md" variant="light">Without caret</Button>
       </Popconfirm>
     </div>
-) };
-
-export default App;
-```
-</Tabs.Tab>
-</Tabs>
-
-### Close Button
-
-The Popconfirm component can display a close button using the `closeButton` prop.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const PopconfirmCloseButtonGroup = () => {
-  return (
-    <Popconfirm closeButton title="This is a popconfirm" className="bg-white text-black text-xl" caretColor="#FFFFFF"  yesButton={
-      <button
-        className="bg-white text-black rounded-lg p-1"
-        style={{ minWidth: "30%" }}
-      >
-        OK
-      </button>
-      }
-      noButton={
-        <button
-          className="border border-white rounded-lg p-1 w-1/3"
-          style={{ minWidth: "30%" }}
-        >
-          Cancel
-        </button>
-      }>
-      <Button className="w-28" size="md" variant="light">Close</Button>
-    </Popconfirm>
-  );
-};
-
-<PopconfirmCloseButtonGroup />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-import React from 'react';
-import { Popconfirm, Button } from "@vivakits/react-components";
-
-const App = () => {
-return (
-<Popconfirm
-  closeButton
-  title="This is a popconfirm"
-  className="bg-white text-black text-xl"
-  caretColor="#FFFFFF"
-  yesButton={
-    <button
-      className="bg-white text-black rounded-lg p-1"
-      style={{ minWidth: "30%" }}
-    >
-      OK
-    </button>
-  }
-  noButton={
-    <button
-      className="border border-white rounded-lg p-1 w-1/3"
-      style={{ minWidth: "30%" }}
-    >
-      Cancel
-    </button>
-  }
->
-  <Button className="w-28" size="md" variant="light">
-    Close
-  </Button>
-</Popconfirm>
 ) };
 
 export default App;
@@ -1301,38 +1234,38 @@ The Popconfirm component can have a maximum width using the `maxWidth` prop. The
 export const PopconfirmMaxWidthGroup = () => {
   return (
     <div className="flex space-x-1">
-      <Popconfirm title="This is a very very very very big popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
+      <Popconfirm responsive={false} title="This is a very very very very big popconfirm" yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
         noButton={
           <button
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }>
         <Button className="w-28" size="md" variant="light">No fixed width</Button>
       </Popconfirm>
-      <Popconfirm maxWidth="150px" title="This is a very very very very big popconfirm" yesButton={
-          <button
-            className="bg-white text-black rounded-lg p-1"
-            style={{ minWidth: "30%" }}
-          >
-            OK
-          </button>
-        }
+      <Popconfirm responsive={false} maxWidth="150px" title="This is a very very very very big popconfirm" yesButton={
+        <button
+          className="bg-white text-black rounded-lg p-1"
+          style={{ minWidth: "30%" }}
+        >
+          Yes
+        </button>
+      }
         noButton={
           <button
             className="border border-white rounded-lg p-1 w-1/3"
             style={{ minWidth: "30%" }}
           >
-            Cancel
+            No
           </button>
         }>
         <Button className="w-28" size="md" variant="light">Fixed width to 150px</Button>
@@ -1351,6 +1284,7 @@ import { Popconfirm, Button } from "@vivakits/react-components";
 
 const App = () => {
 return (
+
 <div className="flex space-x-1">
   <Popconfirm
     title="This is a very very very very big popconfirm"
@@ -1359,7 +1293,7 @@ return (
         className="bg-white text-black rounded-lg p-1"
         style={{ minWidth: "30%" }}
       >
-        OK
+        Yes
       </button>
     }
     noButton={
@@ -1367,7 +1301,7 @@ return (
         className="border border-white rounded-lg p-1 w-1/3"
         style={{ minWidth: "30%" }}
       >
-        Cancel
+        No
       </button>
     }
   >
@@ -1383,7 +1317,7 @@ return (
         className="bg-white text-black rounded-lg p-1"
         style={{ minWidth: "30%" }}
       >
-        OK
+        Yes
       </button>
     }
     noButton={
@@ -1391,7 +1325,7 @@ return (
         className="border border-white rounded-lg p-1 w-1/3"
         style={{ minWidth: "30%" }}
       >
-        Cancel
+        No
       </button>
     }
   >
@@ -1423,18 +1357,18 @@ export const PopconfirmClassGroup = () => {
         <button
           className="bg-purple-700 rounded-lg p-1 w-1/3"
           style={{ minWidth: "30%" }}
-          onClick={() => alert("You clicked on the OK button")}
+          onClick={() => alert("You clicked on the Yes button")}
         >
-          OK
+          Yes
         </button>
       }
       noButton={
         <button
           className="border border-purple-700 rounded-lg p-1 w-1/3"
           style={{ minWidth: "30%" }}
-          onClick={() => alert("You clicked on the Cancel button")}
+          onClick={() => alert("You clicked on the No button")}
         >
-          Cancel
+          No
         </button>
       }
       icon={
@@ -1446,7 +1380,7 @@ export const PopconfirmClassGroup = () => {
       title="Delete this item?"
       description="Are you sure you want to delete this item?"
     >
-      <Button>Click me</Button>
+      <Button className="w-28" size="md" variant="light">Click me</Button>
     </Popconfirm>
   );
 };
@@ -1461,25 +1395,25 @@ import { Popconfirm, Button } from "@vivakits/react-components";
 
 const App = () => {
 return (
+
 <Popconfirm
-  position="bottomRight"
   bodyClassName="border border-purple-700 text-white"
   yesButton={
     <button
       className="bg-purple-700 rounded-lg p-1 w-1/3"
       style={{ minWidth: "30%" }}
-      onClick={() => alert("You clicked on the OK button")}
+      onClick={() => alert("You clicked on the Yes button")}
     >
-      OK
+      Yes
     </button>
   }
   noButton={
     <button
       className="border border-purple-700 rounded-lg p-1 w-1/3"
       style={{ minWidth: "30%" }}
-      onClick={() => alert("You clicked on the Cancel button")}
+      onClick={() => alert("You clicked on the No button")}
     >
-      Cancel
+      No
     </button>
   }
   icon={
@@ -1491,7 +1425,9 @@ return (
   title="Delete this item?"
   description="Are you sure you want to delete this item?"
 >
-  <Button>Click me</Button>
+  <Button className="w-28" size="md" variant="light">
+    Click me
+  </Button>
 </Popconfirm>
 ) };
 
@@ -1575,7 +1511,7 @@ export default App;
       <td>responsive</td>
       <td>boolean</td>
       <td>Whether the popconfirm is responsive</td>
-      <td>false</td>
+      <td>true</td>
     </tr>
     <tr>
       <td>caret</td>
@@ -1583,12 +1519,6 @@ export default App;
       <td>Whether to show the caret</td>
       <td>true</td>
     </tr>
-    <tr>
-      <td>closeButton</td>
-      <td>boolean</td>
-      <td>Whether to show the close button</td>
-      <td>false</td>
-    </tr> 
     <tr>
       <td>maxWidth</td>
       <td>string</td>
