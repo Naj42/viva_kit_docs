@@ -1360,7 +1360,113 @@ export const SelectCreateOptionGroup = () => {
 </Tabs>
 
 
+### Disabled Option
+`isDisabled` determines whether the select component is interactable.
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
 
+export const SelectDisabledGroup = () => {
+  const [value, setValue] = useState();
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+  return (
+      <Select
+      options={options}
+      onChange={(option) => setValue(option)}
+      value={value}
+      isDisabled
+    />
+  );
+};
+
+<SelectDisabledGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+export const SelectDisabledGroup = () => {
+  const [value, setValue] = useState();
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+  return (
+      <Select
+      options={options}
+      onChange={(option) => setValue(option)}
+      value={value}
+      isDisabled
+    />
+  );
+};
+
+<SelectDisabledGroup />
+```
+</Tabs.Tab>
+
+</Tabs>
+
+### Dropdown Indicator
+`dropdownIndicator` lets us customize the dropdown indicator icon.
+<Tabs items={['Preview', 'Code']}>
+<Tabs.Tab>
+
+export const SelectDropdownIndicatorGroup = () => {
+  const [value, setValue] = useState();
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  return (
+    <Select
+      options={options}
+      onChange={(option) => setValue(option)}
+      value={value}
+      dropdownIndicator={<span>🔽</span>}
+    />
+  );
+};
+
+<SelectDropdownIndicatorGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+export const SelectDropdownIndicatorGroup = () => {
+  const [value, setValue] = useState();
+  const [options, setOptions] = useState([
+    { label: 'Blue', value: 'Blue' },
+    { label: 'White', value: 'White' },
+    { label: 'Black', value: 'Black' },
+    { label: 'Orange', value: 'Orange' }
+  ]);
+
+  return (
+    <Select
+      options={options}
+      onChange={(option) => setValue(option)}
+      value={value}
+      dropdownIndicator={<span>🔽</span>}
+    />
+  );
+};
+
+<SelectDropdownIndicatorGroup />
+```
+</Tabs.Tab>
+
+</Tabs>
 
 
 
@@ -1719,6 +1825,18 @@ export const SelectForCustomizedStyle = () => {
     <td>Designates the select component as creatable</td>
     <td>boolean</td>
     <td>false</td>
+  </tr>
+  <tr>
+    <td>IsDisabled</td>
+    <td>Disables the select component</td>
+    <td>boolean</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>DropdownIndicator</td>
+    <td>Custom icon for dropdown</td>
+    <td>ReactNode</td>
+    <td></td>
   </tr>
     <tr>
       <td>createOptionByAPI</td>
