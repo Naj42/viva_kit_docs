@@ -1,12 +1,12 @@
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
-# Title
+# Typography
 
 ### Import
 
 ```jsx copy
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 ```
 
 ### Variant
@@ -21,13 +21,13 @@ export const TitleVariantGroup = () => {
 return (
 
 <div className="flex justify-center items-center gap-6">
-  <VKTitle variant="h1">h1</VKTitle>
-  <VKTitle variant="h2">h2</VKTitle>
-  <VKTitle variant="h3">h3</VKTitle>
-  <VKTitle variant="h4">h4</VKTitle>
-  <VKTitle variant="h5">h5</VKTitle>
-  <VKTitle variant="h6">h6</VKTitle>
-  <VKTitle variant="paragraph">paragraph</VKTitle>
+  <VKTypography variant="h1">h1</VKTypography>
+  <VKTypography variant="h2">h2</VKTypography>
+  <VKTypography variant="h3">h3</VKTypography>
+  <VKTypography variant="h4">h4</VKTypography>
+  <VKTypography variant="h5">h5</VKTypography>
+  <VKTypography variant="h6">h6</VKTypography>
+  <VKTypography variant="paragraph">paragraph</VKTypography>
 </div>
 ); };
 
@@ -37,18 +37,18 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 
 const App = () => {
   return (
     <div className="flex justify-center items-center gap-6">
-      <VKTitle variant="h1">h1</VKTitle>
-      <VKTitle variant="h2">h2</VKTitle>
-      <VKTitle variant="h3">h3</VKTitle>
-      <VKTitle variant="h4">h4</VKTitle>
-      <VKTitle variant="h5">h5</VKTitle>
-      <VKTitle variant="h6">h6</VKTitle>
-      <VKTitle variant="paragraph">paragraph</VKTitle>
+      <VKTypography variant="h1">h1</VKTypography>
+      <VKTypography variant="h2">h2</VKTypography>
+      <VKTypography variant="h3">h3</VKTypography>
+      <VKTypography variant="h4">h4</VKTypography>
+      <VKTypography variant="h5">h5</VKTypography>
+      <VKTypography variant="h6">h6</VKTypography>
+      <VKTypography variant="paragraph">paragraph</VKTypography>
     </div>
   )
 };
@@ -68,14 +68,14 @@ The Title component comes with 8 different colors that you can change using the 
 export const TitleColorGroup = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-        <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTypography color="default">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="success">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="warning">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="dark">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTypography>
     </div>
   );
 };
@@ -87,19 +87,19 @@ export const TitleColorGroup = () => {
   <Tabs.Tab>
 ```jsx copy
 
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 
 const App = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-        <VKTitle color="default">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="success">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="warning">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="dark">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTypography color="default">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="success">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="warning">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="dark">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography color="light" className="bg-gray-500">The quick brown fox jumps over the lazy dog.</VKTypography>
     </div>
   );
 };
@@ -120,10 +120,10 @@ The Title component comes with 4 different decorations and 8 decoration colors t
 export const TitleDecorationGroup = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-        <VKTitle decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTitle>
-        <VKTitle decoration="none">The quick brown fox jumps over the lazy dog.</VKTitle>
+        <VKTypography decoration="underline" decorationColor="primary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="lineThrough" decorationColor="danger">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="overline" decorationColor="secondary">The quick brown fox jumps over the lazy dog.</VKTypography>
+        <VKTypography decoration="none">The quick brown fox jumps over the lazy dog.</VKTypography>
     </div>
   );
 };
@@ -134,23 +134,23 @@ export const TitleDecorationGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 
 const App = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-      <VKTitle decoration="underline" decorationColor="primary">
+      <VKTypography decoration="underline" decorationColor="primary">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle decoration="lineThrough" decorationColor="danger">
+      </VKTypography>
+      <VKTypography decoration="lineThrough" decorationColor="danger">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle decoration="overline" decorationColor="secondary">
+      </VKTypography>
+      <VKTypography decoration="overline" decorationColor="secondary">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle decoration="none">
+      </VKTypography>
+      <VKTypography decoration="none">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
+      </VKTypography>
     </div>
   )
  };
@@ -173,36 +173,36 @@ The Title component comes with 10 different font sizes that you can change using
 export const TitleFontWeightGroup = () => {
 return (
 <div className="flex flex-col justify-center items-center gap-3">
-  <VKTitle weight="default">
+  <VKTypography weight="default">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="100">
+  </VKTypography>
+  <VKTypography weight="100">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="200">
+  </VKTypography>
+  <VKTypography weight="200">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="300">
+  </VKTypography>
+  <VKTypography weight="300">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="400">
+  </VKTypography>
+  <VKTypography weight="400">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="500">
+  </VKTypography>
+  <VKTypography weight="500">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="600">
+  </VKTypography>
+  <VKTypography weight="600">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="700">
+  </VKTypography>
+  <VKTypography weight="700">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="800">
+  </VKTypography>
+  <VKTypography weight="800">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle weight="900">
+  </VKTypography>
+  <VKTypography weight="900">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
+  </VKTypography>
 </div>
 ); };
 
@@ -212,41 +212,41 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 
 const App = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-      <VKTitle weight="default">
+      <VKTypography weight="default">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="100">
+      </VKTypography>
+      <VKTypography weight="100">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="200">
+      </VKTypography>
+      <VKTypography weight="200">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="300">
+      </VKTypography>
+      <VKTypography weight="300">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="400">
+      </VKTypography>
+      <VKTypography weight="400">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="500">
+      </VKTypography>
+      <VKTypography weight="500">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="600">
+      </VKTypography>
+      <VKTypography weight="600">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="700">
+      </VKTypography>
+      <VKTypography weight="700">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="800">
+      </VKTypography>
+      <VKTypography weight="800">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle weight="900">
+      </VKTypography>
+      <VKTypography weight="900">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
+      </VKTypography>
     </div>
   )
 };
@@ -264,30 +264,30 @@ The Title component comes with 5 word breaks and 6 word spacings that you can ch
 export const TitleBreakSpacingGroup = () => {
 return (
 <div className="flex flex-col justify-center items-center gap-3">
-  <VKTitle wordBreak="default">
+  <VKTypography wordBreak="default">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-  </VKTitle>
-  <VKTitle wordBreak="all">
+  </VKTypography>
+  <VKTypography wordBreak="all">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-  </VKTitle>
-  <VKTitle wordBreak="words">
+  </VKTypography>
+  <VKTypography wordBreak="words">
     The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-  </VKTitle>
-  <VKTitle wordSpacing="tighter" variant="h4">
+  </VKTypography>
+  <VKTypography wordSpacing="tighter" variant="h4">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle wordSpacing="tight" variant="h3">
+  </VKTypography>
+  <VKTypography wordSpacing="tight" variant="h3">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-   <VKTitle wordSpacing="normal" variant="h5">
+  </VKTypography>
+   <VKTypography wordSpacing="normal" variant="h5">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-   <VKTitle wordSpacing="wider" variant="h6">
+  </VKTypography>
+   <VKTypography wordSpacing="wider" variant="h6">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
-  <VKTitle wordSpacing="widest" variant="h4">
+  </VKTypography>
+  <VKTypography wordSpacing="widest" variant="h4">
     The quick brown fox jumps over the lazy dog.
-  </VKTitle>
+  </VKTypography>
 </div>
 ); };
 
@@ -297,35 +297,35 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKTitle } from "@vivakits/react-components";
+import { VKTypography } from "@vivakits/react-components";
 
 const App = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-      <VKTitle wordBreak="default">
+      <VKTypography wordBreak="default">
         The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-      </VKTitle>
-      <VKTitle wordBreak="all">
+      </VKTypography>
+      <VKTypography wordBreak="all">
         The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-      </VKTitle>
-      <VKTitle wordBreak="words">
+      </VKTypography>
+      <VKTypography wordBreak="words">
         The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.
-      </VKTitle>
-      <VKTitle wordSpacing="tighter" variant="h4">
+      </VKTypography>
+      <VKTypography wordSpacing="tighter" variant="h4">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="tight" variant="h3">
+      </VKTypography>
+      <VKTypography wordSpacing="tight" variant="h3">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="normal" variant="h5">
+      </VKTypography>
+      <VKTypography wordSpacing="normal" variant="h5">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="wider" variant="h6">
+      </VKTypography>
+      <VKTypography wordSpacing="wider" variant="h6">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
-      <VKTitle wordSpacing="widest" variant="h4">
+      </VKTypography>
+      <VKTypography wordSpacing="widest" variant="h4">
         The quick brown fox jumps over the lazy dog.
-      </VKTitle>
+      </VKTypography>
     </div>
   )
 };
