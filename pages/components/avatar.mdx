@@ -1,4 +1,4 @@
-import { VKAvatar } from "@vivakits/react-components";
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
 # Avatar
@@ -20,15 +20,20 @@ export const AvatarVariantGroup = () => {
 
 return (
 
-<div className="flex justify-center items-center gap-6">
-  <VKAvatar
-    variant="image"
-    size="md"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar variant="text" size="md" textValue="Viva Kit" />
-  <VKAvatar size="md" />
-</div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar variant="text" size="md" textValue="Viva Kit" />
+        <VKAvatar size="md" />
+    </VKGroup>
+
 ) };
 
     <AvatarVariantGroup />
@@ -37,11 +42,15 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
         <VKAvatar
           variant="image"
           size="md"
@@ -49,13 +58,12 @@ const App = () => {
         />
         <VKAvatar variant="text" size="md" textValue="Viva Kit" />
         <VKAvatar size="md" />
-    </div>
+    </VKGroup>
   );
 };
 
 export default App;
-
-````
+```
 </Tabs.Tab>
 </Tabs>
 
@@ -70,26 +78,31 @@ export const AvatarShapeGroup = () => {
 
 return (
 
-<div className="flex justify-center items-center gap-6">
-    <VKAvatar
-      variant="image"
-      size="md"
-      src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape="rounded"
-    />
-    <VKAvatar
-      variant="image"
-      size="md"
-      src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape="curved"
-    />
-    <VKAvatar
-      variant="image"
-      size="md"
-      src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-      shape="square"
-    />
-</div>
+<VKGroup
+  color="none"
+  border="none"
+  noSeparator
+  className="flex justify-center items-center gap-6 flex-wrap"
+>
+  <VKAvatar
+    variant="image"
+    size="md"
+    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+    shape="rounded"
+  />
+  <VKAvatar
+    variant="image"
+    size="md"
+    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+    shape="curved"
+  />
+  <VKAvatar
+    variant="image"
+    size="md"
+    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+    shape="square"
+  />
+</VKGroup>
 ); };
 
     <AvatarShapeGroup />
@@ -98,11 +111,15 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
         <VKAvatar
           variant="image"
           size="md"
@@ -121,13 +138,12 @@ const App = () => {
           src="https://i.pravatar.cc/150?u=a04258114e29026302d"
           shape="square"
         />
-    </div>
+    </VKGroup>
   ); 
 };
 
 export default App;
-
-````
+```
 
 </Tabs.Tab>
 </Tabs>
@@ -143,51 +159,11 @@ export const AvatarSizeGroup = () => {
 
 return (
 
-<div className="flex justify-center items-center gap-6">
-  <VKAvatar
-    variant="image"
-    size="xs"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="sm"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="md"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="lg"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="xl"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-  <VKAvatar
-    variant="image"
-    size="2xl"
-    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-  />
-</div>
-); };
-
-    <AvatarSizeGroup />
-
-</Tabs.Tab>
-
-  <Tabs.Tab>
-```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
-
-const App = () => {
-  return (
-    <div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
         <VKAvatar
           variant="image"
           size="xs"
@@ -218,13 +194,61 @@ const App = () => {
           size="2xl"
           src="https://i.pravatar.cc/150?u=a04258114e29026302d"
         />
-    </div>
+    </VKGroup>
+
+); };
+
+    <AvatarSizeGroup />
+
+</Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+        <VKAvatar
+          variant="image"
+          size="xs"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="sm"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="md"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="lg"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="xl"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+        <VKAvatar
+          variant="image"
+          size="2xl"
+          src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+        />
+    </VKGroup>
   ); 
 };
 
 export const App;
-
-````
+```
 </Tabs.Tab>
 </Tabs>
 
@@ -239,16 +263,21 @@ export const AvatarColorGroup = () => {
 
 return (
 
-<div className="flex justify-center items-center gap-6">
-    <VKAvatar size="md" color="primary" />
-    <VKAvatar size="md" color="secondary" />
-    <VKAvatar size="md" color="success" />
-    <VKAvatar size="md" color="danger" />
-    <VKAvatar size="md" color="warning" />
-    <VKAvatar size="md" color="dark" />
-    <VKAvatar size="md" color="light" />
-    <VKAvatar size="md" color="default" />
-</div>
+<VKGroup
+  color="none"
+  border="none"
+  noSeparator
+  className="flex justify-center items-center gap-6 flex-wrap"
+>
+  <VKAvatar size="md" color="primary" />
+  <VKAvatar size="md" color="secondary" />
+  <VKAvatar size="md" color="success" />
+  <VKAvatar size="md" color="danger" />
+  <VKAvatar size="md" color="warning" />
+  <VKAvatar size="md" color="dark" />
+  <VKAvatar size="md" color="light" />
+  <VKAvatar size="md" color="default" />
+</VKGroup>
 ); };
 
     <AvatarColorGroup />
@@ -257,11 +286,15 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
         <VKAvatar size="md" color="primary" />
         <VKAvatar size="md" color="secondary" />
         <VKAvatar size="md" color="success" />
@@ -270,13 +303,12 @@ const App = () => {
         <VKAvatar size="md" color="dark" />
         <VKAvatar size="md" color="light" />
         <VKAvatar size="md" color="default" />
-    </div>
+    </VKGroup>
   ); 
 };
 
 export default App;
-
-````
+```
 
 </Tabs.Tab>
 </Tabs>
@@ -292,14 +324,19 @@ export const AvatarFontSizeGroup = () => {
   
 return (
 
-<div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+
   <VKAvatar color="light" fontSize="xs" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="sm" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="md" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
   <VKAvatar color="light" fontSize="2xl" textValue="Samin Yasar" />
-</div>
+</VKGroup>
 ); };
 
     <AvatarFontSizeGroup />
@@ -308,18 +345,22 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
         <VKAvatar color="light" fontSize="xs" textValue="Samin Yasar" />
         <VKAvatar color="light" fontSize="sm" textValue="Samin Yasar" />
         <VKAvatar color="light" fontSize="md" textValue="Samin Yasar" />
         <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
         <VKAvatar color="light" fontSize="xl" textValue="Samin Yasar" />
         <VKAvatar color="light" fontSize="2xl" textValue="Samin Yasar" />
-    </div>
+    </VKGroup>
   ); 
 };
 
@@ -339,7 +380,12 @@ export const AvatarBorderColorGroup = () => {
 
 return (
 
-<div className="flex justify-center items-center gap-6">
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+
   <VKAvatar size="md" color="light" withBorder borderColor="primary" />
   <VKAvatar size="md" color="light" withBorder borderColor="secondary" />
   <VKAvatar size="md" color="light" withBorder borderColor="success" />
@@ -347,7 +393,7 @@ return (
   <VKAvatar size="md" color="light" withBorder borderColor="warning" />
   <VKAvatar size="md" color="light" withBorder borderColor="dark" />
   <VKAvatar size="md" color="light" withBorder borderColor="light" />
-</div>
+</VKGroup>
 ); };
 
     <AvatarBorderColorGroup />
@@ -356,19 +402,23 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKAvatar } from "@vivakits/react-components";
+import { VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center gap-6">
-      <VKAvatar size="md" color="light" withBorder borderColor="primary" />
-      <VKAvatar size="md" color="light" withBorder borderColor="secondary" />
-      <VKAvatar size="md" color="light" withBorder borderColor="success" />
-      <VKAvatar size="md" color="light" withBorder borderColor="danger" />
-      <VKAvatar size="md" color="light" withBorder borderColor="warning" />
-      <VKAvatar size="md" color="light" withBorder borderColor="dark" />
-      <VKAvatar size="md" color="light" withBorder borderColor="light" />
-    </div>
+    <VKGroup
+      color="none"
+      border="none"
+      noSeparator
+      className="flex justify-center items-center gap-6 flex-wrap">
+        <VKAvatar size="md" color="light" withBorder borderColor="primary" />
+        <VKAvatar size="md" color="light" withBorder borderColor="secondary" />
+        <VKAvatar size="md" color="light" withBorder borderColor="success" />
+        <VKAvatar size="md" color="light" withBorder borderColor="danger" />
+        <VKAvatar size="md" color="light" withBorder borderColor="warning" />
+        <VKAvatar size="md" color="light" withBorder borderColor="dark" />
+        <VKAvatar size="md" color="light" withBorder borderColor="light" />
+    </VKGroup>
   ); 
 };
 
@@ -401,7 +451,7 @@ export default App;
     </tr>
     <tr>
       <td>shape</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
+      <td>
         <span className="badge">rounded</span>   
         <span className="badge">curved</span>  
         <span className="badge">square</span>  
@@ -467,7 +517,7 @@ export default App;
     </tr>
      <tr>
       <td>fontFamily</td>
-      <td className="flex flex-wrap gap-y-2 border-none">
+      <td>
         <span className="badge">default</span>   
         <span className="badge">sansSerif</span>   
          <span className="badge">serif</span>  
