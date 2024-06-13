@@ -45,22 +45,34 @@ import { Dropdown, DropdownTrigger, DropdownItem } from "@vivakits/react-compone
 
 ### Dropdown Trigger
 
-Dropdown trigger is a wrapper around the element which triggers the dropdown as the name suggests. Inside this, main dropdown contents resides.
+Dropdown trigger is a wrapper around the element which triggers the dropdown as the name suggests. Inside this, main dropdown contents resides. You can handle the way of trigger dropdown using `action` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
 export const DropdownTriggerComp = () => {
   return (
+    <div className="flex items-center gap-3">
       <Dropdown>
-          <DropdownTrigger>
-            <Button rounded="md" size="md" color="primary">Dropdown Trigger</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-            <DropdownItem value="Edit">Edit</DropdownItem>
-            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <DropdownTrigger action="click">
+          <Button rounded="md" size="md" color="primary">Trigger on click</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+      
+      <Dropdown>
+        <DropdownTrigger action="hover">
+          <Button rounded="md" size="md" color="secondary">Trigger on hover</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
 
 );
 };
@@ -80,18 +92,29 @@ import {
 
 const App = () => {
   return (
+    <div className="flex items-center gap-3">
       <Dropdown>
-          <DropdownTrigger>
-              <Button rounded="md" size="md" color="secondary">Dropdown Trigger</Button>
+        <DropdownTrigger action="click">
+          <Button rounded="md" size="md" color="primary">Trigger on click</Button>
           </DropdownTrigger>
           <DropdownMenu>
-              <DropdownItem value="Edit">Edit</DropdownItem>
-              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
         </DropdownMenu>
       </Dropdown>
-   )
+      
+      <Dropdown>
+        <DropdownTrigger action="hover">
+          <Button rounded="md" size="md" color="secondary">Trigger on hover</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
+  )
 }
-
 export default App;
 ```
   </Tabs.Tab>
