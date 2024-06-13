@@ -25,6 +25,81 @@ To utilize the Modal component, import it from `@vivakits/react-components`.
 import { Modal } from "@vivakits/react-components";
 ```
 
+### Modal Component Structure
+
+The `Modal` component is a composite component that serves as a container for various subcomponents which together form a functional modal dialog. `ModalTrigger` subcomponent is responsible for triggering the modal to open. It can be a button or any other interactive element that, when activated, opens the modal dialog. `ModalContent` subcomponent acts as a container for the content of the modal. It houses the `ModalHeader` `ModalBody` and `ModalFooter` subcomponents. Below is the structure
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ModalStructure = () => {
+  return (
+    <div className="flex justify-center items-center gap-3">
+        <Modal>
+          <ModalTrigger>
+             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Modal Trigger</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[600px]">
+            <ModalHeader className="px-4">Modal Header</ModalHeader>
+            <ModalBody className="p-4">
+              <p className="text-gray-500">
+                Modal content.....
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="outline" onClick={() => {}} className="px-3 py-1.5">Cancel</Button>
+              <Button className="px-3 py-1.5">
+                Save
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+    </div>
+
+);
+};
+
+<ModalStructure />
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+```jsx copy
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalTrigger,
+} from "@vivakits/react-components";
+```
+  ```jsx copy
+        <Modal>
+          <ModalTrigger>
+            <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Modal Trigger</Button>
+          </ModalTrigger>
+          <ModalContent className="w-[600px]">
+            <ModalHeader className="px-4">Modal Header</ModalHeader>
+            <ModalBody className="p-4">
+              <p className="text-gray-500">
+                Modal content.....
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="outline" onClick={() => {}} className="px-3 py-1.5">Cancel</Button>
+              <Button className="px-3 py-1.5">
+                Save
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+  ```
+  </Tabs.Tab>
+</Tabs>
+
+
+
+
 ### Variant
 
 The `variant` prop specifies the variant of the modal, allowing for two different functionalities, `default` variant and `screen-size` variant. 
@@ -80,7 +155,7 @@ import {
   ```jsx copy
         <Modal>
           <ModalTrigger>
-             <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
+            <Button variant="solid" rounded="md" className="px-3 py-2" color="primary">Open Modal</Button>
           </ModalTrigger>
           <ModalContent className="w-[600px]">
             <ModalHeader className="px-4">Modal Header</ModalHeader>
