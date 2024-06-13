@@ -31,7 +31,7 @@ import { SVGAttributes } from "react";
 function NameIcon(props: SVGAttributes<SVGElement>) {
   return (
     <svg
-      width="14"
+      width="16"
       height="16"
       viewBox="0 0 15 17"
       fill="none"
@@ -530,8 +530,8 @@ function DeleteIcon(props: React.SVGAttributes<SVGElement>) {
 function SettingIcon(props: React.SVGAttributes<SVGElement>) {
   return (
     <svg
-      width="28"
-      height="28"
+      width="16"
+      height="16"
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -579,8 +579,8 @@ function TeamIcon(props: React.SVGAttributes<SVGElement>) {
 function SupportIcon(props: React.SVGAttributes<SVGElement>) {
   return (
     <svg
-      width="28"
-      height="28"
+      width="16"
+      height="16"
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -600,8 +600,8 @@ function SupportIcon(props: React.SVGAttributes<SVGElement>) {
 function LogoutIcon(props: React.SVGAttributes<SVGElement>) {
   return (
     <svg
-      width="28"
-      height="28"
+      width="16"
+      height="16"
       viewBox="0 0 14 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

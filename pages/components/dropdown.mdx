@@ -38,29 +38,41 @@ To utilize the Chip component, import it from `@vivakits/react-components`.
 
   <Tabs.Tab>
 ```jsx copy
-import { VKChip } from "@vivakits/react-components";
+import { Dropdown, DropdownTrigger, DropdownItem } from "@vivakits/react-components";
 ```
    </Tabs.Tab>
    </Tabs>
 
 ### Dropdown Trigger
 
-Dropdown trigger is a wrapper around the element which triggers the dropdown as the name suggests. Inside this, main dropdown contents resides.
+Dropdown trigger is a wrapper around the element which triggers the dropdown as the name suggests. Inside this, main dropdown contents resides. You can handle the way of trigger dropdown using `action` prop.
 
 <Tabs items={['Preview', 'Code']}>
 
   <Tabs.Tab>
 export const DropdownTriggerComp = () => {
   return (
+    <div className="flex items-center gap-3">
       <Dropdown>
-          <DropdownTrigger>
-            <Button rounded="md" size="md" color="primary">Dropdown Trigger</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-            <DropdownItem value="Edit">Edit</DropdownItem>
-            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <DropdownTrigger action="click">
+          <Button rounded="md" size="md" color="primary">Trigger on click</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+      
+      <Dropdown>
+        <DropdownTrigger action="hover">
+          <Button rounded="md" size="md" color="secondary">Trigger on hover</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
 
 );
 };
@@ -80,18 +92,29 @@ import {
 
 const App = () => {
   return (
+    <div className="flex items-center gap-3">
       <Dropdown>
-          <DropdownTrigger>
-              <Button rounded="md" size="md" color="secondary">Dropdown Trigger</Button>
+        <DropdownTrigger action="click">
+          <Button rounded="md" size="md" color="primary">Trigger on click</Button>
           </DropdownTrigger>
           <DropdownMenu>
-              <DropdownItem value="Edit">Edit</DropdownItem>
-              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
         </DropdownMenu>
       </Dropdown>
-   );
-};
-
+      
+      <Dropdown>
+        <DropdownTrigger action="hover">
+          <Button rounded="md" size="md" color="secondary">Trigger on hover</Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+          <DropdownItem value="Edit">Edit</DropdownItem>
+          <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
+  )
+}
 export default App;
 ```
   </Tabs.Tab>
@@ -113,7 +136,7 @@ export const DropdownMenuComp = () => {
     <div className="flex items-center gap-3">
       <Dropdown>
           <DropdownTrigger>
-            <Button rounded="md" size="md" color="warning">Dropdown Left</Button>
+            <Button rounded="md" size="md" color="primary">Dropdown Left</Button>
             </DropdownTrigger>
             <DropdownMenu align="start">
             <DropdownItem value="Start">Start</DropdownItem>
@@ -124,7 +147,7 @@ export const DropdownMenuComp = () => {
 
        <Dropdown>
           <DropdownTrigger>
-            <Button rounded="md" size="md" color="warning">Dropdown Center</Button>
+            <Button rounded="md" size="md" color="secondary">Dropdown Center</Button>
             </DropdownTrigger>
             <DropdownMenu align="center">
             <DropdownItem value="Start">Start</DropdownItem>
@@ -166,7 +189,7 @@ const App = () => {
       <div className="flex items-center gap-3">
           <Dropdown>
               <DropdownTrigger>
-                  <Button rounded="md" size="md" color="warning">Dropdown Left</Button>
+                  <Button rounded="md" size="md" color="primary">Dropdown Left</Button>
               </DropdownTrigger>
               <DropdownMenu align="start">
                   <DropdownItem value="Start">Start</DropdownItem>
@@ -177,7 +200,7 @@ const App = () => {
 
         <Dropdown>
               <DropdownTrigger>
-                  <Button rounded="md" size="md" color="warning">Dropdown Center</Button>
+                  <Button rounded="md" size="md" color="secondary">Dropdown Center</Button>
               </DropdownTrigger>
               <DropdownMenu align="center">
                   <DropdownItem value="Start">Start</DropdownItem>
@@ -197,8 +220,8 @@ const App = () => {
               </DropdownMenu>
           </Dropdown>
       </div>
-    );
-};
+    )
+}
 
 export default App;
 ```
@@ -245,17 +268,17 @@ import {
 
 const App = () => {
     return (
-        <Dropdown>
-            <DropdownTrigger>
-                <Button rounded="md" size="md" color="secondary">Dropdown Trigger</Button>
-            </DropdownTrigger>
-            <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
-                <DropdownItem value="Edit">Edit</DropdownItem>
-                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-    );
-};
+      <Dropdown>
+          <DropdownTrigger>
+              <Button rounded="md" size="md" color="secondary">Dropdown Trigger</Button>
+          </DropdownTrigger>
+          <DropdownMenu onSelect={() => alert("DropdownMenu onSelect functioning")}>
+              <DropdownItem value="Edit">Edit</DropdownItem>
+              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    )
+}
         
 export default App;
 ```
@@ -306,20 +329,20 @@ import {
 
 const App = () => {
     return (
-          <Dropdown>
-            <DropdownTrigger>
-                <Button rounded="md" size="md" color="primary">Dropdown Action</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-                <DropdownItem value="Edit">Edit</DropdownItem>
-                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-                <DropdownItem value="Archive">Archive</DropdownItem>
-                <DropdownItem value="Move">Move</DropdownItem>
-                <DropdownItem value="Delete" disabled>Delete</DropdownItem>
-           </DropdownMenu>
-         </Dropdown>
-    );
-};
+      <Dropdown>
+        <DropdownTrigger>
+            <Button rounded="md" size="md" color="primary">Dropdown Action</Button>
+        </DropdownTrigger>
+        <DropdownMenu>
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+            <DropdownItem value="Archive">Archive</DropdownItem>
+            <DropdownItem value="Move">Move</DropdownItem>
+            <DropdownItem value="Delete" disabled>Delete</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    )
+}
 
 export default App;
 ```
@@ -367,20 +390,20 @@ import {
 
 const App = () => {
     return (
-        <Dropdown>
-          <DropdownTrigger>
-                <Button rounded="md" size="md" color="dark">Dropdown onClick</Button>
-          </DropdownTrigger>
-          <DropdownMenu>
-              <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
-              <DropdownItem value="Duplicate" onClick={() => alert("Clicked on Duplicate")}>Duplicate</DropdownItem>
-              <DropdownItem value="Archive" onClick={() => alert("Clicked on Archive")}>Archive</DropdownItem>
-              <DropdownItem value="Move" onClick={() => alert("Clicked on Move")}>Move</DropdownItem>
-              <DropdownItem value="Delete" disabled onClick={() => alert("Clicked on Delete")}>Delete</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-    );
-};
+      <Dropdown>
+        <DropdownTrigger>
+              <Button rounded="md" size="md" color="dark">Dropdown onClick</Button>
+        </DropdownTrigger>
+        <DropdownMenu>
+            <DropdownItem value="Edit" onClick={() => alert("Clicked on Edit")}>Edit</DropdownItem>
+            <DropdownItem value="Duplicate" onClick={() => alert("Clicked on Duplicate")}>Duplicate</DropdownItem>
+            <DropdownItem value="Archive" onClick={() => alert("Clicked on Archive")}>Archive</DropdownItem>
+            <DropdownItem value="Move" onClick={() => alert("Clicked on Move")}>Move</DropdownItem>
+            <DropdownItem value="Delete" disabled onClick={() => alert("Clicked on Delete")}>Delete</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    )
+}
 
 export default App;
 ```
@@ -428,20 +451,20 @@ import {
 
 const App = () => {
     return (
-          <Dropdown>
-            <DropdownTrigger>
-                <Button rounded="md" size="md" color="primary">Dropdown onSelect</Button>
-            </DropdownTrigger>
-            <DropdownMenu>
-                <DropdownItem value="Edit" onSelect={() => alert("Selected Edit")}>Edit</DropdownItem>
-                <DropdownItem value="Duplicate" onSelect={() => alert("Selected Duplicate")}>Duplicate</DropdownItem>
-                <DropdownItem value="Archive" onSelect={() => alert("Selected Archive")}>Archive</DropdownItem>
-                <DropdownItem value="Move" onSelect={() => alert("Selected Move")}>Move</DropdownItem>
-                <DropdownItem value="Delete" disabled onSelect={() => alert("Selected Delete")}>Delete</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-    );
-};
+      <Dropdown>
+        <DropdownTrigger>
+            <Button rounded="md" size="md" color="primary">Dropdown onSelect</Button>
+        </DropdownTrigger>
+        <DropdownMenu>
+            <DropdownItem value="Edit" onSelect={() => alert("Selected Edit")}>Edit</DropdownItem>
+            <DropdownItem value="Duplicate" onSelect={() => alert("Selected Duplicate")}>Duplicate</DropdownItem>
+            <DropdownItem value="Archive" onSelect={() => alert("Selected Archive")}>Archive</DropdownItem>
+            <DropdownItem value="Move" onSelect={() => alert("Selected Move")}>Move</DropdownItem>
+            <DropdownItem value="Delete" disabled onSelect={() => alert("Selected Delete")}>Delete</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    )
+}
  
 export default App; 
 ```
@@ -488,17 +511,17 @@ import {
 
 const App = () => {
     return (
-        <Dropdown>
-          <DropdownTrigger>
-                <Button rounded="md" size="md" color="dark">Dropdown Value</Button>
-          </DropdownTrigger>
-          <DropdownMenu align="start">
-              <DropdownItem value="Edit">Edit</DropdownItem>
-              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-    );
-};
+      <Dropdown>
+        <DropdownTrigger>
+              <Button rounded="md" size="md" color="dark">Dropdown Value</Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start">
+            <DropdownItem value="Edit">Edit</DropdownItem>
+            <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    )
+}
 
 export default App; 
 ```
@@ -589,21 +612,21 @@ import {
 
 const App = () => {
     return (
-        <Dropdown>
-          <DropdownTrigger>
-             <Button rounded="md" size="md" color="light">Divided items</Button>
-          </DropdownTrigger>
-           <DropdownMenu align="end">
-                <DropdownItem value="Edit">Edit</DropdownItem>
-                <DropdownItem value="Duplicate">Duplicate</DropdownItem>
-                <hr />
-                <DropdownItem value="Archive">Archive</DropdownItem>
-                
-                <DropdownItem value="Duplicate">Delete</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    );
-};
+      <Dropdown>
+        <DropdownTrigger>
+            <Button rounded="md" size="md" color="light">Divided items</Button>
+        </DropdownTrigger>
+          <DropdownMenu align="end">
+              <DropdownItem value="Edit">Edit</DropdownItem>
+              <DropdownItem value="Duplicate">Duplicate</DropdownItem>
+              <hr />
+              <DropdownItem value="Archive">Archive</DropdownItem>
+              
+              <DropdownItem value="Duplicate">Delete</DropdownItem>
+          </DropdownMenu>
+      </Dropdown>
+    )
+}
 
 export default App;
 ```
@@ -618,20 +641,20 @@ import {
 } from "@vivakits/react-components";
 
 const App = () => {
-    return (
-        <Dropdown >
-          <DropdownTrigger>
-              <Button rounded="md" size="md" color="light">With Icon </Button>
-          </DropdownTrigger>
-          <DropdownMenu align="start" className='w-[150px]'>
-              <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon /> Edit</div></DropdownItem>
-              <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon /> Duplicate</div></DropdownItem>
-              <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon /> Archive</div></DropdownItem>
-              <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon /> Delete</div></DropdownItem>
-          </DropdownMenu>
-      </Dropdown>
-    );
-};
+  return (
+    <Dropdown >
+      <DropdownTrigger>
+          <Button rounded="md" size="md" color="light">With Icon </Button>
+      </DropdownTrigger>
+      <DropdownMenu align="start" className='w-[150px]'>
+          <DropdownItem value="Edit"><div className='flex items-center justify-between'><EditIcon /> Edit</div></DropdownItem>
+          <DropdownItem value="Duplicate"><div className='flex items-center justify-between'><DuplicateIcon /> Duplicate</div></DropdownItem>
+          <DropdownItem value="Archive"><div className='flex items-center justify-between'><ArchiveIcon /> Archive</div></DropdownItem>
+          <DropdownItem value="Delete"><div className='flex items-center justify-between'><DeleteIcon /> Delete</div></DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  )
+}
 
 const EditIcon = () => {
   return (
@@ -772,35 +795,35 @@ import {
 
 const App = () => {
     return (
-        <Dropdown>
-          <DropdownTrigger>
-              <Button rounded="md" size="md" color="light"><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
-          </DropdownTrigger>
-          <DropdownMenu align="start" className='w-[200px]'>
-            <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
-              <VKAvatar
-                  variant="image"
-                  color="secondary"
-                  src="https://cdn.oneesports.gg/cdn-data/2024/02/Anime_Luffy_smiling.jpg"
-                  alt="person with camera"
-                  withBorder
-                  className="h-10 w-10"
-          />
-          <div className="flex flex-col justify-center ml-2 gap-1">
-              <span className="font-semibold">Monkey D Luffy</span>
-              <span>strawhat@vivasoftltd.com</span>
-          </div>
-          </div>
-          <hr/>
-          </DropdownItem>
-              <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon /> Profile</div></DropdownItem>
-              <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon /> Setting</div></DropdownItem>
-              <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon /> Support</div></DropdownItem>
-              <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon /> Logout</div></DropdownItem>
-          </DropdownMenu>
-      </Dropdown>
-    );
-};
+      <Dropdown>
+        <DropdownTrigger>
+            <Button rounded="md" size="md" color="light"><div className="flex items-center justify-between w-16">Avatar <ExpandIcon/></div> </Button>
+        </DropdownTrigger>
+        <DropdownMenu align="start" className='w-[200px]'>
+          <DropdownItem value="Avatar"><div className='flex items-center justify-start mb-2'>
+            <VKAvatar
+                variant="image"
+                color="secondary"
+                src="https://cdn.oneesports.gg/cdn-data/2024/02/Anime_Luffy_smiling.jpg"
+                alt="person with camera"
+                withBorder
+                className="h-10 w-10"
+        />
+        <div className="flex flex-col justify-center ml-2 gap-1">
+            <span className="font-semibold">Monkey D Luffy</span>
+            <span>strawhat@vivasoftltd.com</span>
+        </div>
+        </div>
+        <hr/>
+        </DropdownItem>
+            <DropdownItem value="Profile"><div className='flex items-center justify-start gap-2'><NameIcon /> Profile</div></DropdownItem>
+            <DropdownItem value="Setting"><div className='flex items-center justify-start gap-2'><SettingIcon /> Setting</div></DropdownItem>
+            <DropdownItem value="Support"><div className='flex items-center justify-start gap-2'><SupportIcon /> Support</div></DropdownItem>
+            <DropdownItem value="Logout"><div className='flex items-center justify-start gap-2'><LogoutIcon /> Logout</div></DropdownItem>
+        </DropdownMenu>
+    </Dropdown>
+  )
+}
 
 const NameIcon = () => {
   return (
