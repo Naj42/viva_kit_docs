@@ -1,4 +1,4 @@
-import { VKBadge, VKAvatar, Button } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, Button, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import {
   CameraIcon,
@@ -26,12 +26,12 @@ The `variant` prop determines the overall style and appearance of the badge. The
 export const BadgeVariantGroup = () => {
   return (
     
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
     <VKBadge variant="circular"> 
      <VKAvatar color="light" />
      </VKBadge>
     <VKBadge variant="square" ><div className="h-14 w-20 border border-black"/></VKBadge>
-    </div>
+    </VKGroup>
 
 );
 };
@@ -41,18 +41,18 @@ export const BadgeVariantGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-   <div className="flex items-center gap-3">
+   <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
     <VKBadge variant="circular">
       <VKAvatar color="light" />
     </VKBadge>
     <VKBadge variant="square">
       <div className="h-14 w-20 border border-black"/>
     </VKBadge>
-   </div>
+   </VKGroup>
   );
 };
 
@@ -72,14 +72,14 @@ The `size` prop controls the size of the badge. It accepts 6 predefined sizes su
 export const BadgeSizeGroup = () => {
   return (
     
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
     <VKBadge size="xs" variant="circular"><VKAvatar color="light" /></VKBadge>
     <VKBadge size="sm" variant="circular"><VKAvatar color="light" /></VKBadge>
     <VKBadge size="md" variant="circular"><VKAvatar color="light" /></VKBadge>
     <VKBadge size="lg" variant="circular"><VKAvatar color="light" /></VKBadge>
     <VKBadge size="xl" variant="circular"><VKAvatar color="light" /></VKBadge>
     <VKBadge size="2xl" variant="circular"><VKAvatar color="light" /></VKBadge>
-    </div>
+    </VKGroup>
 
 );
 };
@@ -90,11 +90,11 @@ export const BadgeSizeGroup = () => {
    <Tabs.Tab>
 ```jsx copy
 
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge size="xs" variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
@@ -113,7 +113,7 @@ const App = () => {
       <VKBadge size="2xl"  variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
-    </div>
+    </VKGroup>
   );
 };
     
@@ -132,24 +132,16 @@ The `color` prop sets the background color of the badge. There are 7 predefined 
   <Tabs.Tab>
 export const BadgeColorGroup = () => {
   return (
-
-    <div className="flex items-center gap-3">
-    <VKBadge color="primary" variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge color="secondary" variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge color="success" variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge color="danger" variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge color="warning" variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge color="dark" variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge color="light" variant="circular"><VKAvatar color="light" /></VKBadge>
-    </div>
-
-);
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge color="primary" variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge color="secondary" variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge color="success" variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge color="danger" variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge color="warning" variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge color="dark" variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge color="light" variant="circular"><VKAvatar color="light" /></VKBadge>
+    </VKGroup>
+  );
 };
 
 <BadgeColorGroup />
@@ -157,11 +149,11 @@ export const BadgeColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge color="primary" variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
@@ -183,7 +175,7 @@ const App = () => {
       <VKBadge color="light" variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -202,10 +194,10 @@ Determines whether the badge has a border. When `withBorder` is set to `true`, t
   <Tabs.Tab>
 export const BadgeWithBorder = () => {
   return (
-    <div className="flex items-center gap-3">
-    <VKBadge borderColor="danger" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-    <VKBadge borderColor="danger" withBorder={false} variant="circular"><VKAvatar color="light" /></VKBadge>
-    </div>
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge borderColor="danger" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="danger" withBorder={false} variant="circular"><VKAvatar color="light" /></VKBadge>
+    </VKGroup>
 );
 };
 
@@ -214,18 +206,18 @@ export const BadgeWithBorder = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-   <div className="flex items-center gap-3">
+   <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge borderColor="danger" withBorder variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
       <VKBadge borderColor="danger" withBorder={false} variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
-   </div>
+   </VKGroup>
   );
 };
 
@@ -245,24 +237,16 @@ export default App;
   <Tabs.Tab>
 export const BadgeBorderColorGroup = () => {
   return (
-
-    <div className="flex items-center gap-3">
-    <VKBadge borderColor="primary" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge borderColor="secondary" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge borderColor="success" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge borderColor="danger" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge borderColor="warning" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge borderColor="dark" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge borderColor="light" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
-    </div>
-
-);
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge borderColor="primary" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="secondary" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="success" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="danger" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="warning" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="dark" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+      <VKBadge borderColor="light" withBorder variant="circular"><VKAvatar color="light" /></VKBadge>
+    </VKGroup>
+  );
 };
 
 <BadgeBorderColorGroup />
@@ -270,11 +254,11 @@ export const BadgeBorderColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge borderColor="primary" withBorder variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
@@ -296,7 +280,7 @@ const App = () => {
       <VKBadge borderColor="light" withBorder variant="circular">
         <VKAvatar color="light" />
       </VKBadge>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -314,17 +298,13 @@ The `placement` pecifies the position of the badge relative to its container ele
 
   <Tabs.Tab>
 export const BadgePlacement = () => {
-  return (
-    
-    <div className="flex items-center gap-3">
-    <VKBadge placement="topRight" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge placement="bottomRight" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge placement="topLeft" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge placement="bottomLeft" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
-    </div>
+  return (    
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge placement="topRight" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
+      <VKBadge placement="bottomRight" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
+      <VKBadge placement="topLeft" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
+      <VKBadge placement="bottomLeft" variant="circular" color="danger"><VKAvatar color="light" /></VKBadge>
+    </VKGroup>
 
 );
 };
@@ -334,11 +314,11 @@ export const BadgePlacement = () => {
 
    <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge placement="topRight" variant="circular" color="danger">
         <VKAvatar color="light" />
       </VKBadge>
@@ -351,7 +331,7 @@ const App = () => {
       <VKBadge placement="bottomLeft" variant="circular" color="danger">
         <VKAvatar color="light" />
       </VKBadge>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -369,13 +349,13 @@ export default App;
   <Tabs.Tab>
 export const BadgeInvisible = () => {
   return (
-    <div className="flex items-center gap-3">
-    <VKBadge variant="circular" invisible> 
-      <VKAvatar color="light" /></VKBadge>
-    <VKBadge variant="circular"> 
-      <VKAvatar color="light" /></VKBadge>
-    </div>
-);
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge variant="circular" invisible> 
+        <VKAvatar color="light" /></VKBadge>
+      <VKBadge variant="circular"> 
+        <VKAvatar color="light" /></VKBadge>
+    </VKGroup>
+  );
 };
 
 <BadgeInvisible />
@@ -383,18 +363,18 @@ export const BadgeInvisible = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-   <div className="flex items-center gap-3">
+   <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
     <VKBadge variant="circular" invisible>
       <VKAvatar color="light" />
     </VKBadge>
     <VKBadge variant="circular">
       <VKAvatar color="light" />
     </VKBadge>
-   </div>
+   </VKGroup>
   );
 };
 
@@ -413,10 +393,10 @@ The content to be displayed inside the badge. The `content` prop can include tex
   <Tabs.Tab>
 export const BadgeContent = () => {
   return (
-    <div className="flex items-center gap-3">
-    <VKBadge variant="circular" content="9" size="lg"><VKAvatar color="light" /></VKBadge>
-    <VKBadge variant="circular" content={<CameraIcon />} size="lg"><VKAvatar color="light" /></VKBadge>
-    </div>
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge variant="circular" content="9" size="lg"><VKAvatar color="light" /></VKBadge>
+      <VKBadge variant="circular" content={<CameraIcon />} size="lg"><VKAvatar color="light" /></VKBadge>
+    </VKGroup>
 );
 };
 
@@ -425,18 +405,18 @@ export const BadgeContent = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge variant="circular" content="9" size="lg">
         <VKAvatar color="light" />
       </VKBadge>
       <VKBadge variant="circular" content={<CameraIcon />} size="lg">
         <VKAvatar color="light" />
       </VKBadge>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -474,25 +454,24 @@ Here are some examples of how Badge component can be used with the different pro
 export const BadgeExample = () => {
 
 return (
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
+      <VKBadge placement="topRight" variant="circular" content="9" color="secondary" size="lg"><VKAvatar color="light" /></VKBadge>
 
-    <div className="flex items-center gap-3">
-    <VKBadge placement="topRight" variant="circular" content="9" color="secondary" size="lg"><VKAvatar color="light" /></VKBadge>
+      <VKBadge placement="bottomRight" variant="circular" content={<CameraIcon />} size="lg"><VKAvatar color="light" /></VKBadge>
 
-    <VKBadge placement="bottomRight" variant="circular" content={<CameraIcon />} size="lg"><VKAvatar color="light" /></VKBadge>
-
-    <VKBadge placement="bottomRight" variant="circular" size="lg">
-      <VKAvatar
-        variant="image"
-        color="secondary"
-        src="https://i.pinimg.com/originals/1f/db/96/1fdb96e98f5fabacf6a7c509916333a3.png"
-        alt="person with camera"
-        withBorder
-        className=""
-      />
-    </VKBadge>
-     <VKBadge size="lg" placement="topRight" variant="circular" content="100" color="danger" ><ChatIcon /></VKBadge>
-     <VKBadge size="lg" placement="bottomRight" variant="circular" content="5" color="secondary"><CartIcon /></VKBadge>
-    </div>
+      <VKBadge placement="bottomRight" variant="circular" size="lg">
+        <VKAvatar
+          variant="image"
+          color="secondary"
+          src="https://i.pinimg.com/originals/1f/db/96/1fdb96e98f5fabacf6a7c509916333a3.png"
+          alt="person with camera"
+          withBorder
+          className=""
+        />
+      </VKBadge>
+       <VKBadge size="lg" placement="topRight" variant="circular" content="100" color="danger" ><ChatIcon /></VKBadge>
+       <VKBadge size="lg" placement="bottomRight" variant="circular" content="5" color="secondary"><CartIcon /></VKBadge>
+    </VKGroup>
 
 );
 };
@@ -502,11 +481,11 @@ return (
 
   <Tabs.Tab>
 ```jsx copy
-import { VKBadge, VKAvatar } from "@vivakits/react-components";
+import { VKBadge, VKAvatar, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex items-center gap-3">
+    <VKGroup color="none" border="none" noSeparator className="overflow-visible gap-2 flex justify-center items-center">
       <VKBadge placement="topRight" variant="circular" content="9" color="secondary" size="lg">
         <VKAvatar color="light" />
       </VKBadge>
@@ -529,7 +508,7 @@ const App = () => {
       <VKBadge size="lg" placement="bottomRight" variant="circular" content="5" color="secondary">
         <CartIcon />
       </VKBadge>                            
-    </div>
+    </VKGroup>
   );
 };
 
