@@ -95,7 +95,7 @@ Enhance user experience by highlighting selections with seven different backgrou
 <Tabs.Tab>
 export const DifferntVarientsBG= () => {
   return (
-    <div className="flex flex-col gap-2">
+    <VKGroup color="none" noSeparator border="none" orientation="vertical" className="gap-3">
         <VKHighlight highlightText="primary background" background="primary">
             Highlight selection with primary background color
         </VKHighlight>
@@ -117,7 +117,7 @@ export const DifferntVarientsBG= () => {
         <VKHighlight highlightText="light background" background="light">
             Highlight selection with light background color
         </VKHighlight>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -130,7 +130,7 @@ import {VKHighlight} from "@vivakits/react-components";
 
 const App = ()=> {
   return(
-    <div className="flex flex-col gap-2">
+    <VKGroup color="none" noSeparator border="none" orientation="vertical" className="gap-3">
       <VKHighlight highlightText="spotlight" background="primary">
           Highlight selection with primary background color
       </VKHighlight>
@@ -152,7 +152,7 @@ const App = ()=> {
       <VKHighlight highlightText="spotlight" background="light">
           Highlight selection with light background color
       </VKHighlight>
-    </div>
+    </VKGroup>
   )
 }
 
@@ -237,14 +237,14 @@ You can make more cutomization to meet your design, using `style` or `className`
 <Tabs.Tab>
 export const AddingStyles= () => {
   return (
-    <div className="flex flex-col gap-2">
+    <VKGroup color="none" noSeparator border="none" orientation="vertical" className="gap-3">
         <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
             Customize selection using style
         </VKHighlight>
         <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black">
             Customize selection using className
         </VKHighlight>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -257,14 +257,14 @@ import {VKHighlight} from "@vivakits/react-components";
 
 const App = ()=> {
   return(
-    <div className="flex flex-col gap-2">
+    <VKGroup color="none" noSeparator border="none" orientation="vertical" className="gap-3">
       <VKHighlight highlightText="style" style={{background:"pink", color: "black", padding:"5px"}}>
           Customize selection using style
       </VKHighlight>
       <VKHighlight highlightText="className" className="px-3 py-1 bg-yellow-100 text-black">
           Customize selection using className 
       </VKHighlight>
-    </div>
+    </VKGroup>
   )
 }
 
