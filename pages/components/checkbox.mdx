@@ -1,4 +1,4 @@
-import { Checkbox } from "@vivakits/react-components";
+import { Checkbox, VKGroup } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
 # Checkbox
@@ -18,11 +18,11 @@ The Checkbox component comes with 3 different sizes that you can change it using
 <Tabs.Tab>
 export const CheckboxSizeGroup = () => {
   return (
-    <div className="flex gap-3">
+    <VKGroup border="none" color="none" noSeparator className="gap-3">
         <Checkbox size="sm">Small</Checkbox>
         <Checkbox size="md">Medium</Checkbox>
         <Checkbox size="lg">Large</Checkbox>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -31,15 +31,15 @@ export const CheckboxSizeGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { Checkbox } from "@vivakits/react-components";
+import { Checkbox, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex gap-3">
+    <VKGroup border="none" color="none" noSeparator className="gap-3">
         <Checkbox size="sm">Small</Checkbox>
         <Checkbox size="md">Medium</Checkbox>
         <Checkbox size="lg">Large</Checkbox>
-    </div>
+    </VKGroup>
   )
 }
 
@@ -57,7 +57,7 @@ The Checkbox component comes with 7 different colors that you can change it usin
 <Tabs.Tab>
 export const CheckboxColorGroup = () => {
   return (
-    <div className="flex gap-3 flex-wrap">
+    <VKGroup border="none" color="none" noSeparator className="gap-3">
         <Checkbox color="primary">Primary</Checkbox>
         <Checkbox color="secondary">Secondary</Checkbox>
         <Checkbox color="success">Success</Checkbox>
@@ -65,7 +65,7 @@ export const CheckboxColorGroup = () => {
         <Checkbox color="danger">Danger</Checkbox>
         <Checkbox color="dark">Dark</Checkbox>
         <Checkbox color="accent">Accent</Checkbox>
-    </div>
+    </VKGroup>
   );
 };
 
@@ -74,11 +74,11 @@ export const CheckboxColorGroup = () => {
 
   <Tabs.Tab>
 ```jsx copy
-import { Checkbox } from "@vivakits/react-components";
+import { Checkbox, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
   return (
-    <div className="flex gap-3 flex-wrap">
+    <VKGroup border="none" color="none" noSeparator className="gap-3">
         <Checkbox color="primary">Primary</Checkbox>
         <Checkbox color="secondary">Secondary</Checkbox>
         <Checkbox color="success">Success</Checkbox>
@@ -86,7 +86,7 @@ const App = () => {
         <Checkbox color="danger">Danger</Checkbox>
         <Checkbox color="dark">Dark</Checkbox>
         <Checkbox color="accent">Accent</Checkbox>
-    </div>
+    </VKGroup>
   )
 }
 
@@ -120,7 +120,9 @@ export const CheckboxRoundedGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
- const App = () => {
+import { Checkbox } from "@vivakits/react-components";
+
+const App = () => {
   return (
     <div className="flex gap-3">
         <Checkbox rounded="none">None</Checkbox>
