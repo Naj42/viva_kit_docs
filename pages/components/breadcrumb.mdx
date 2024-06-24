@@ -22,19 +22,11 @@ import {
 
 Breadcrumb is a navigation aid which helps user to understand current location in the website hierarchy.
 
+### Import
 
-### import
-
-To utilize the Breadcrumb component, import it from `@vivakits/react-components`.
-
-<Tabs items={[]}>
-
-  <Tabs.Tab>
 ```jsx copy
 import { VKBreadCrumbs } from "@vivakits/react-components";
 ```
-   </Tabs.Tab>
-   </Tabs>
 
 ### Seperator
 
@@ -44,42 +36,34 @@ The `seperator` prop is an icon component or simply an icon to be displayed betw
 
   <Tabs.Tab>
 export const BreadcrumbSeperator = () => {
-
-  const VKBreadCrumbs = dynamic(() =>
-  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+	  const VKBreadCrumbs = dynamic(() =>
+	  import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
 );
 
-    const breadcrumbOptions = [
-    {
-      title: "Home",
-      href: "#",
-    },
-    {
-      title: "About",
-      href: "#",
-     
-    },
-    {
-      title: "Contact",
-      href: "#",
-    },
-    {
-      title: "Profile",
-      href: "#",
-    },
-  ];
+    const breadcrumbOptions = [{
+		  title: "Home",
+		  href: "#",
+		},
+		{
+		  title: "About",
+		  href: "#",
 
+		},
+		{
+		  title: "Contact",
+		  href: "#",
+		},
+		{
+		  title: "Profile",
+		  href: "#",
+		}];
+		
 return (
 
-    <div className="">
-       <VKBreadCrumbs
-          separator={<ForwardSlashIcon />}
-          options={breadcrumbOptions}
-        />
-    </div>
-
-);
-};
+<div className="">
+  <VKBreadCrumbs separator={<ForwardSlashIcon />} options={breadcrumbOptions} />
+</div>
+); };
 
 <BreadcrumbSeperator />
   </Tabs.Tab>
@@ -89,38 +73,33 @@ return (
 import dynamic from "next/dynamic";
 
 const App = () => {
+	const VKBreadCrumbs = dynamic(() =>
+		import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+	);
+	
+	const breadcrumbOptions = [
+		{
+			title: "Home",
+			href: "#",
+		},
+		{
+			title: "About",
+			href: "#",
+		},
+		{
+			title: "Contact",
+			href: "#",
+		},
+		{
+			title: "Profile",
+			href: "#",
+		 }
+	];
 
-const VKBreadCrumbs = dynamic(() =>
-import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
-);
-
-const breadcrumbOptions = [
-  {
-    title: "Home",
-    href: "#",
-  },
-  {
-    title: "About",
-    href: "#",
-    
-  },
-  {
-    title: "Contact",
-    href: "#",
-  },
-  {
-    title: "Profile",
-    href: "#",
-  },
-];
-
-  return (
-    <VKBreadCrumbs
-      separator={<ForwardSlashIcon />}
-      options={breadcrumbOptions} 
-    />
-  );
-}; 
+	return (
+		<VKBreadCrumbs separator={<ForwardSlashIcon />} options={breadcrumbOptions} />
+	);
+};
 
 export default App;
 ```
@@ -157,16 +136,13 @@ export const BreadcrumbOptions = () => {
       href: "#",
     },
 ];
-
 return (
-
     <div className="">
        <VKBreadCrumbs
           separator=">"
           options={breadcrumbOptions}
         />
     </div>
-
 );
 };
 
@@ -178,30 +154,28 @@ return (
 import dynamic from "next/dynamic";
 
 const App = () => {
-
-const VKBreadCrumbs = dynamic(() =>
-import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
-);
-
-const breadcrumbOptions = [
-  {
-    title: "Home",
-    href: "#",
-  },
-  {
-    title: "About",
-    href: "#",
-    
-  },
-  {
-    title: "Contact",
-    href: "#",
-  },
-  {
-    title: "Profile",
-    href: "#",
-  },
-];
+	const VKBreadCrumbs = dynamic(() =>
+		import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+	);
+	
+	const breadcrumbOptions = [
+		{
+			title: "Home",
+			href: "#",
+		},
+		{
+			title: "About",
+			href: "#",
+		},
+		{
+			title: "Contact",
+			href: "#",
+		},
+		{
+			title: "Profile",
+			href: "#",
+		 }
+	];
 
   return (
     <VKBreadCrumbs
@@ -209,7 +183,7 @@ const breadcrumbOptions = [
       options={breadcrumbOptions} 
     />
   );
-};  
+};
 
 export default App;
 ```
@@ -246,9 +220,7 @@ const breadcrumbOptions = [
     href: "#",
   },
 ];
-
 return (
-
     <div className="">
        <VKBreadCrumbs
           separator=">"
@@ -256,7 +228,6 @@ return (
           wrapperClass="bg-gray-200 rounded-sm p-3"
         />
     </div>
-
 );
 };
 
@@ -268,30 +239,28 @@ return (
 import dynamic from "next/dynamic";
 
 const App = () => {
-
-const VKBreadCrumbs = dynamic(() =>
-import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
-);
-
-const breadcrumbOptions = [
-  {
-    title: "Home",
-    href: "#",
-  },
-  {
-    title: "About",
-    href: "#",
-    
-  },
-  {
-    title: "Contact",
-    href: "#",
-  },
-  {
-    title: "Profile",
-    href: "#",
-  },
-];
+	const VKBreadCrumbs = dynamic(() =>
+		import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+	);
+	
+	const breadcrumbOptions = [
+		{
+			title: "Home",
+			href: "#",
+		},
+		{
+			title: "About",
+			href: "#",
+		},
+		{
+			title: "Contact",
+			href: "#",
+		},
+		{
+			title: "Profile",
+			href: "#",
+		 }
+	];
 
   return (
     <VKBreadCrumbs
@@ -300,7 +269,7 @@ const breadcrumbOptions = [
       wrapperClass="bg-gray-200 rounded-sm p-3"
     />
   );
-};  
+};
 
 export default App;
 ```
@@ -326,7 +295,6 @@ export const BreadcrumbStyle = () => {
   {
     title: "About",
     href: "#",
-    
   },
   {
     title: "Contact",
@@ -337,10 +305,8 @@ export const BreadcrumbStyle = () => {
     href: "#",
   },
 ];
-
 return (
-
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 text-white">
        <VKBreadCrumbs
           separator=">"
           options={breadcrumbOptions}
@@ -353,7 +319,6 @@ return (
         }}
         />
     </div>
-
 );
 };
 
@@ -364,45 +329,45 @@ return (
 ```jsx copy
 import dynamic from "next/dynamic";
 
-export const BreadcrumbStyle = () => {
-
-const VKBreadCrumbs = dynamic(() =>
-import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
-);
-
-const breadcrumbOptions = [
-    {
-      title: "Home",
-      href: "#",
-    },
-    {
-      title: "About",
-      href: "#",
-     
-    },
-    {
-      title: "Contact",
-      href: "#",
-    },
-    {
-      title: "Profile",
-      href: "#",
-    },
-  ];
-
-  return (
-    <VKBreadCrumbs
-        separator=">"
-        options={breadcrumbOptions}
-          style={{
-            bg: "bg-[#f5f5dc]",
-            wrapper: "rounded-md p-10 shadow-lg",
-            item: "inline-flex items-center text-black",
-            link: "text-blue-500",
-            href: ""
-        }}
-    />
-  );
+export const App = () => {
+	const VKBreadCrumbs = dynamic(() =>
+		import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+	);
+	
+	const breadcrumbOptions = [
+		{
+			title: "Home",
+			href: "#",
+		},
+		{
+			title: "About",
+			href: "#",
+		},
+		{
+			title: "Contact",
+			href: "#",
+		},
+		{
+			title: "Profile",
+			href: "#",
+		 }
+	];
+  
+	  return (
+		<div className="flex items-center gap-3 text-white">
+		   <VKBreadCrumbs
+			  separator=">"
+			  options={breadcrumbOptions}
+			   style={{
+				  bg: "bg-[#987070]",
+				  wrapper: "rounded-md p-10 shadow-lg",
+				  item: "inline-flex items-center italic",
+				  link: "text-white",
+				  href: ""
+				}}
+			/>
+		</div>
+	 );
 };  
 ```
   </Tabs.Tab>
@@ -427,7 +392,6 @@ export const BreadcrumbUnderline = () => {
   {
     title: "About",
     href: "#",
-    
   },
   {
     title: "Contact",
@@ -469,48 +433,47 @@ return (
 import dynamic from "next/dynamic";
 
 const App = () => {
+	const VKBreadCrumbs = dynamic(() =>
+		import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
+	);
+	
+	const breadcrumbOptions = [
+		{
+			title: "Home",
+			href: "#",
+		},
+		{
+			title: "About",
+			href: "#",
+		},
+		{
+			title: "Contact",
+			href: "#",
+		},
+		{
+			title: "Profile",
+			href: "#",
+		 }
+	];
 
-const VKBreadCrumbs = dynamic(() =>
-import('@vivakits/react-components').then(module => module.VKBreadCrumbs)
-);
-const breadcrumbOptions = [
-  {
-    title: "Home",
-    href: "#",
-  },
-  {
-    title: "About",
-    href: "#",
-    
-  },
-  {
-    title: "Contact",
-    href: "#",
-  },
-  {
-    title: "Profile",
-    href: "#",
-  },
-];
+	return (
+		<div className="flex items-center gap-3">
+			<VKBreadCrumbs
+			  separator={<ForwardSlashIcon />}
+			  options={breadcrumbOptions}
+			  wrapperClass="bg-gray-200 rounded-sm p-3"
+			  underline
+			/>
 
-  return (
-    <div className="flex items-center gap-3">
-        <VKBreadCrumbs
-          separator={<ForwardSlashIcon />}
-          options={breadcrumbOptions}
-          wrapperClass="bg-gray-200 rounded-sm p-3"
-          underline
-        />
-
-        <VKBreadCrumbs
-          separator={<ForwardSlashIcon />}
-          options={breadcrumbOptions}
-          wrapperClass="bg-gray-200 rounded-sm p-3"
-          underline={false}
-        />
-    </div>
-  );
-};  
+			<VKBreadCrumbs
+			  separator={<ForwardSlashIcon />}
+			  options={breadcrumbOptions}
+			  wrapperClass="bg-gray-200 rounded-sm p-3"
+			  underline={false}
+			/>
+		</div>
+	);
+};
 
 export default App;
 ```
@@ -538,7 +501,7 @@ export default App;
     </tr>
     <tr>
       <td>options</td>
-      <td>any</td>
+      <td>array items</td>
       <td>Specifies the breadcrumb items and their properties</td>
       <td> - </td>
     </tr>

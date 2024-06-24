@@ -2,7 +2,7 @@ import { VKGroup, Button, VKActionIcon } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 import { SearchIcon } from "../../components/assets/icons.tsx";
 
-# Action Icon
+# ActionIcon
 
 ### Import
 
@@ -45,7 +45,7 @@ const App = () => {
   };
 
 export default App;
-  ```
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -59,13 +59,102 @@ The ActionIcon component comes with 7 different sizes that you can change using 
 export const ActionIconSizeGroup = () => {
   return (
     <div className="flex justify-center items-center gap-3">
-        <VKActionIcon icon={<SearchIcon />} size="default" rounded="md"/>
-        <VKActionIcon icon={<SearchIcon />} size="xs"  rounded="md"/>
-        <VKActionIcon icon={<SearchIcon />} size="sm" rounded="md"/>
-        <VKActionIcon icon={<SearchIcon />} size="md" rounded="md"/>
-        <VKActionIcon icon={<SearchIcon />} size="lg"  rounded="md"/>
-        <VKActionIcon icon={<SearchIcon />} size="xl" rounded="md"/>
-        <VKActionIcon icon={<SearchIcon />} size="2xl" rounded="md"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={14}
+            height={14}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+        size="xs"  rounded="md"/>
+        <VKActionIcon icon={
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={16}
+            height={16}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+         size="sm" rounded="md"/>
+        <VKActionIcon icon={
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={20}
+            height={20}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+        size="md" rounded="md"/>
+        <VKActionIcon icon={
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+         size="lg"  rounded="md"/>
+        <VKActionIcon icon={
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={32}
+            height={32}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+         size="xl" rounded="md"/>
+        <VKActionIcon icon={
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={40}
+            height={40}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+        size="2xl" rounded="md"/>
     </div>
   );
 };
@@ -80,19 +169,108 @@ import { VKActionIcon } from "@vivakits/react-components";
 const App = () => {
     return (
       <div className="flex justify-center items-center gap-3">
-          <VKActionIcon icon={<SearchIcon />} size="default"/>
-          <VKActionIcon icon={<SearchIcon />} size="xs"/>
-          <VKActionIcon icon={<SearchIcon />} size="sm"/>
-          <VKActionIcon icon={<SearchIcon />} size="md"/>
-          <VKActionIcon icon={<SearchIcon />} size="lg"/>
-          <VKActionIcon icon={<SearchIcon />} size="xl"/>
-          <VKActionIcon icon={<SearchIcon />} size="2xl"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={14}
+            height={14}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+        size="xs"  rounded="md"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={16}
+            height={16}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+         size="sm" rounded="md"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={20}
+            height={20}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+        size="md" rounded="md"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+         size="lg"  rounded="md"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={32}
+            height={32}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+         size="xl" rounded="md"/>
+        <VKActionIcon icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={36}
+            height={36}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+          </svg>
+        }
+        size="2xl" rounded="md"/>
       </div>
     ); 
   };
 
 export default App;
-  ```
+```
   </Tabs.Tab>
 </Tabs>
 
@@ -180,8 +358,7 @@ const App = () => {
   };
 
 export default App;
-
-````
+```
 </Tabs.Tab>
 </Tabs>
 
@@ -226,7 +403,48 @@ const App = () => {
 };
 
 export default App;
-````
+```
+
+</Tabs.Tab>
+
+</Tabs>
+
+### Gradient
+
+The gradient color of the ActionIcon component can be changed using `gradient` prop
+
+<Tabs items={['Preview', 'Code']}>
+
+<Tabs.Tab>
+export const ActionIcongGradientGroup = () => {
+return (
+  <div className="flex justify-center items-end gap-3">
+      <VKActionIcon gradient={{ from: "red", to: "yellow", deg: 50 }} />
+      <VKActionIcon gradient={{ from: "rgba(0, 222, 30, 1)", to: "rgba(10, 0, 191, 1)", deg: 100 }} />
+      <VKActionIcon gradient={{ from: "#fff", to: "#000", deg: 150 }} />
+  </div>
+);
+};
+
+<ActionIcongGradientGroup />
+</Tabs.Tab>
+
+<Tabs.Tab>
+```jsx copy
+import { VKActionIcon } from "@vivakits/react-components";
+
+const App = () => {
+  return (
+    <div className="flex justify-center items-end gap-3">
+        <VKActionIcon gradient={{ from: "red", to: "yellow", deg: 50 }} />
+        <VKActionIcon gradient={{ from: "rgba(0, 222, 30, 1)", to: "rgba(10, 0, 191, 1)", deg: 100 }} />
+        <VKActionIcon gradient={{ from: "#fff", to: "#000", deg: 150 }} />
+    </div>
+  );
+};
+
+export default App;
+```
 
 </Tabs.Tab>
 

@@ -2,6 +2,7 @@ import {
   VKNotifications,
   useVKNotifications,
   Button,
+  VKGroup
 } from "@vivakits/react-components";
 import { Tabs } from "nextra/components";
 
@@ -14,10 +15,7 @@ The Notification component is a versatile and customizable UI element designed t
 To utilize the Notification prop, import it from `@vivakits/react-components`
 
 ```jsx copy
-import {
-  VKNotifications,
-  useVKNotifications,
-} from "@vivakits/react-components";
+import { VKNotifications, useVKNotifications } from "@vivakits/react-components";
 ```
 
 ### Variant
@@ -29,77 +27,76 @@ The `variant` prop specifies the variant of the notification, which can dictate 
 <Tabs.Tab>
 export const NotificationsVariantGroup = () => {
     const { notify } = useVKNotifications();
-  return (
-    <>
-        <VKNotifications />
-        <div className="flex items-center gap-3">
-            <Button
-                size="md"
-                rounded="lg"
-               onClick={() => {
-                    notify({
-                     variant: "default",
-                        title: "Default",
-                        description: "Default Notification",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Default
-            </Button>
+    return (
+        <>
+            <VKNotifications />
+            <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            variant: "default",
+                            title: "Default",
+                            description: "Default Notification",
+                            autoClose: true,
+                            duration: 3000
+                        });
+                    }}
+                >
+                    Default
+                </Button>
 
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "success",
-                        title: "Success",
-                        description: "Success Notification",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Success
-            </Button>
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            variant: "success",
+                            title: "Success",
+                            description: "Success Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Success
+                </Button>
 
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "warning",
-                        title: "Warning",
-                        description: "Warning Notification",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Warning
-            </Button>
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            variant: "warning",
+                            title: "Warning",
+                            description: "Warning Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Warning
+                </Button>
 
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        variant: "error",
-                        title: "Error",
-                        description: "Error Notification",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Error
-            </Button>
-        </div>
-    </>
-
-);
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            variant: "error",
+                            title: "Error",
+                            description: "Error Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Error
+                </Button>
+            </VKGroup>
+        </>
+    );
 };
 
 <NotificationsVariantGroup />
@@ -107,81 +104,84 @@ export const NotificationsVariantGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+import { VKNotifications, useVKNotifications, Button, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
-  const { notify } = useVKNotifications();
-
+    const { notify } = useVKNotifications();
     return (
-      <>
-        <VKNotifications />
-          <div className="flex items-center gap-3">
-            <Button
-              size="md"
-              rounded="lg"
-              onClick={() => {
-                notify({
-                  variant: "default",
+        <>
+            <VKNotifications />
+            <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                    variant: "default",
                     title: "Default",
                     description: "Default Notification",
                     autoClose: true,
-                    duration: 3000
-                });
-              }}
-            >
-              Default
-            </Button>
-            <Button
-              size="md"
-              rounded="lg"
-              onClick={() => {
-                notify({
+                    duration: 3000,
+                    });
+                }}
+                >
+                Default
+                </Button>
+
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
                     variant: "success",
                     title: "Success",
                     description: "Success Notification",
                     autoClose: true,
                     duration: 3000,
-                });
-              }}
-            >
-              Success
-            </Button>
-            <Button
-              size="md"
-              rounded="lg"
-              onClick={() => {
-                notify({
+                    });
+                }}
+                >
+                Success
+                </Button>
+
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
                     variant: "warning",
                     title: "Warning",
                     description: "Warning Notification",
                     autoClose: true,
                     duration: 3000,
-                });
-              }}
-            >
-              Warning
-            </Button>
-            <Button
-              size="md"
-              rounded="lg"
-              onClick={() => {
-                notify({
+                    });
+                }}
+                >
+                Warning
+                </Button>
+
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
                     variant: "error",
                     title: "Error",
                     description: "Error Notification",
                     autoClose: true,
                     duration: 3000,
-                });
-              }}
-            >
-              Error
-          </Button>
-      </div>
-    </>
-  );
+                    });
+                }}
+                >
+                Error
+                </Button>
+            </VKGroup>
+        </>
+    );
 };
 
 export default App;
+
 ```
 </Tabs.Tab>
 </Tabs>
@@ -198,7 +198,7 @@ export const NotificationsColorGroup = () => {
   return (
     <>
         <VKNotifications />
-        <div className="flex flex-wrap items-center gap-3">
+        <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
             <Button
                 size="md"
                 rounded="lg"
@@ -333,7 +333,7 @@ export const NotificationsColorGroup = () => {
             >
                 Light
             </Button>
-        </div>
+        </VKGroup>
     </>
 
 );
@@ -344,155 +344,162 @@ export const NotificationsColorGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+import { VKNotifications, useVKNotifications, Button, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
-  const { notify } = useVKNotifications();
+    const { notify } = useVKNotifications();
+    return (
+        <>
+            <VKNotifications />
+            <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    onClick={() => {
+                        notify({
+                            color: "default",
+                            title: "Default",
+                            description: "Default Notification",
+                            autoClose: true,
+                            duration: 3000
+                        });
+                    }}
+                >
+                    Default
+                </Button>
 
-  return (
-    <>
-      <VKNotifications />
-        <div className="flex flex-wrap items-center gap-3">
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            onClick={() => {
-              notify({
-                  color: "default",
-                  title: "Default",
-                  description: "Default Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Default
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            onClick={() => {
-              notify({
-                  color: "primary",
-                  title: "Primary",
-                  description: "Primary Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Primary
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            color="secondary"
-            onClick={() => {
-              notify({
-                  color: "secondary",
-                  title: "Secondary",
-                  description: "Secondary Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Secondary
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            color="success"
-            onClick={() => {
-              notify({
-                  color: "success",
-                  title: "Success",
-                  description: "Success Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Success
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            color="danger"
-            onClick={() => {
-              notify({
-                  color: "danger",
-                  title: "Danger",
-                  description: "Danger Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Danger
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            color="warning"
-            onClick={() => {
-              notify({
-                  color: "warning",
-                  title: "Warning",
-                  description: "Warning Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Warning
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            color="dark"
-            onClick={() => {
-              notify({
-                  color: "dark",
-                  title: "Dark",
-                  description: "Dark Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Dark
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            variant="outline"
-            color="light"
-            onClick={() => {
-              notify({
-                  color: "light",
-                  title: "Light",
-                  description: "Light Notification",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Light
-          </Button>
-      </div>
-    </>
-  );
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    onClick={() => {
+                        notify({
+                            color: "primary",
+                            title: "Primary",
+                            description: "Primary Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Primary
+                </Button>
+
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    color="secondary"
+                    onClick={() => {
+                        notify({
+                            color: "secondary",
+                            title: "Secondary",
+                            description: "Secondary Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Secondary
+                </Button>
+
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    color="success"
+                    onClick={() => {
+                        notify({
+                            color: "success",
+                            title: "Success",
+                            description: "Success Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Success
+                </Button>
+
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    color="danger"
+                    onClick={() => {
+                        notify({
+                            color: "danger",
+                            title: "Danger",
+                            description: "Danger Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Danger
+                </Button>
+
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    color="warning"
+                    onClick={() => {
+                        notify({
+                            color: "warning",
+                            title: "Warning",
+                            description: "Warning Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Warning
+                </Button>
+
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    color="dark"
+                    onClick={() => {
+                        notify({
+                            color: "dark",
+                            title: "Dark",
+                            description: "Dark Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Dark
+                </Button>
+
+                <Button
+                    size="md"
+                    rounded="lg"
+                    variant="outline"
+                    color="light"
+                    onClick={() => {
+                        notify({
+                            color: "light",
+                            title: "Light",
+                            description: "Light Notification",
+                            autoClose: true,
+                            duration: 3000,
+                        });
+                    }}
+                >
+                    Light
+                </Button>
+            </VKGroup>
+        </>
+    );
 };
 
 export default App;
+
 ```
 
 </Tabs.Tab>
@@ -510,7 +517,7 @@ export const NotificationsSizeGroup = () => {
   return (
     <>
         <VKNotifications />
-        <div className="flex items-center gap-3">
+        <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
             <Button
                 size="md"
                 rounded="lg"
@@ -603,7 +610,6 @@ export const NotificationsSizeGroup = () => {
             </Button>
         </div>
     </>
-
 );
 };
 
@@ -612,110 +618,84 @@ export const NotificationsSizeGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+import { VKNotifications, useVKNotifications, Button, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
-  const { notify } = useVKNotifications();
-  return (
-    <>
-      <VKNotifications />
-        <div className="flex items-center gap-3">
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  size: "xs",
-                  title: "Extra small",
-                  description: "Extra small Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Extra small
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  size: "sm",
-                  title: "Small",
-                  description: "Small Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Small
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  size: "md",
-                  title: "Medium",
-                  description: "Medium Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Medium
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  size: "lg",
-                  title: "Large",
-                  description: "Large Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Large
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  size: "xl",
-                  title: "Extra large",
-                  description: "Extra large Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Extra large
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  size: "2xl",
-                  title: "Double extra large",
-                  description: "Double extra large Notification",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Double extra large
-        </Button>
-      </div>
-    </>
-  );
+    const { notify } = useVKNotifications();
+    return (
+        <>
+            <VKNotifications />
+            <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                    size: "default",
+                    title: "Default",
+                    description: "Default Notification",
+                    autoClose: true,
+                    duration: 3000,
+                    });
+                }}
+                >
+                Default
+                </Button>
+
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                    size: "sm",
+                    title: "Small",
+                    description: "Small Notification",
+                    autoClose: true,
+                    duration: 3000,
+                    });
+                }}
+                >
+                Small
+                </Button>
+
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                    size: "md",
+                    title: "Medium",
+                    description: "Medium Notification",
+                    autoClose: true,
+                    duration: 3000,
+                    });
+                }}
+                >
+                Medium
+                </Button>
+
+                <Button
+                size="md"
+                rounded="lg"
+                onClick={() => {
+                    notify({
+                    size: "lg",
+                    title: "Large",
+                    description: "Large Notification",
+                    autoClose: true,
+                    duration: 3000,
+                    });
+                }}
+                >
+                Large
+                </Button>
+            </VKGroup>
+        </>
+    );
 };
 
 export default App;
+
 ```
 
 </Tabs.Tab>
@@ -735,7 +715,7 @@ export const NotificationsPlacementGroup = () => {
   return (
     <>
         <VKNotifications />
-        <div className="flex items-center gap-3">
+        <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
             <Button
                 size="md"
                 rounded="lg"
@@ -796,7 +776,7 @@ export const NotificationsPlacementGroup = () => {
             >
                 Bottom Right
             </Button>
-        </div>
+        </VKGroup>
     </>
 
 );
@@ -807,243 +787,80 @@ export const NotificationsPlacementGroup = () => {
 
 <Tabs.Tab>
 ```jsx copy
-import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
+import { VKNotifications, useVKNotifications, Button, VKGroup } from "@vivakits/react-components";
 
 const App = () => {
-  const { notify } = useVKNotifications();
-  return (
-    <>
-      <VKNotifications />
-        <div className="flex items-center gap-3">
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  title: "Top Left",
-                  description: "Top Left Notification",
-                  autoClose: true,
-                  duration: 3000,
-                  placement: "topLeft"
-              });
-            }}
-          >
-            Top Left
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  title: "Top Right",
-                  description: "Top Right Notification",
-                  autoClose: true,
-                  duration: 3000,
-                  placement: "topRight"
-              });
-            }}
-          >
-            Top Right
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  title: "Bottom Left",
-                  description: "Bottom Left Notification",
-                  autoClose: true,
-                  duration: 3000,
-                  placement: "bottomLeft"
-              });
-            }}
-          >
-            Bottom Left
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  title: "Bottom Right",
-                  description: "Bottom Right Notification",
-                  autoClose: true,
-                  duration: 3000,
-                  placement: "bottomRight"
-              });
-            }}
-          >
-            Bottom Right
-          </Button>
-      </div>
-    </>
-  );
-};
-
-export default App;
-```
-</Tabs.Tab>
-</Tabs>
-
-### Font family
-
-The `fontFamily` prop overrides the default font family for the notification text. This can ensure the notification matches the typography of the rest of the application that can be changed using the `variant` prop inside the `notify` function.
-
-<Tabs items={['Preview', 'Code']}>
-
-<Tabs.Tab>
-export const NotificationFontFamily = () => {
     const { notify } = useVKNotifications();
-  return (
-    <>
-        <VKNotifications />
-        <div className="flex items-center gap-3">
-            <Button
-                size="md"
-                rounded="lg"
-               onClick={() => {
-                    notify({
-                     fontFamily:"default",
-                        title: "Default",
-                        description: "Default font family",
-                        autoClose: true,
-                        duration: 3000
-                    });
-                }}
-            >
-                Default
-            </Button>
+    return (
+        <>
+            <VKNotifications />
+            <VKGroup  color="none" border="none" noSeparator rounded="none" className="gap-3" childrenProps={{className:"rounded-md"}}>
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            title: "Top Left",
+                            description: "Top Left Notification",
+                            autoClose: true,
+                            duration: 3000,
+                            placement: "topLeft"
+                        });
+                    }}
+                >
+                    Top Left
+                </Button>
+                
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            title: "Top Right",
+                            description: "Top Right Notification",
+                            autoClose: true,
+                            duration: 3000,
+                            placement: "topRight"
+                        });
+                    }}
+                >
+                    Top Right
+                </Button>
 
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        fontFamily:"mono",
-                        title: "Mono",
-                        description: "Mono font family",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Mono
-            </Button>
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            title: "Bottom Left",
+                            description: "Bottom Left Notification",
+                            autoClose: true,
+                            duration: 3000,
+                            placement: "bottomLeft"
+                        });
+                    }}
+                >
+                    Bottom Left
+                </Button>
 
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        fontFamily:"sansSerif",
-                        title: "Sans Serif",
-                        description: "Sans Serif font family",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Sans Serif
-            </Button>
-
-            <Button
-                size="md"
-                rounded="lg"
-                onClick={() => {
-                    notify({
-                        fontFamily:"serif",
-                        title: "Serif",
-                        description: "Sans Serif font family",
-                        autoClose: true,
-                        duration: 3000,
-                    });
-                }}
-            >
-                Serif
-            </Button>
-        </div>
-    </>
-
-);
-};
-
-<NotificationFontFamily />
-</Tabs.Tab>
-
-<Tabs.Tab>
-```jsx copy
-import { VKNotifications, useVKNotifications, Button } from "@vivakits/react-components";
-
-const App = () => {
-  const { notify } = useVKNotifications();
-
-  return (
-    <>
-      <VKNotifications />
-        <div className="flex items-center gap-3">
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                fontFamily:"default",
-                  title: "Default",
-                  description: "Default font family",
-                  autoClose: true,
-                  duration: 3000
-              });
-            }}
-          >
-            Default
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  fontFamily:"mono",
-                  title: "Mono",
-                  description: "Mono font family",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Mono
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  fontFamily:"sansSerif",
-                  title: "Sans Serif",
-                  description: "Sans Serif font family",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Sans Serif
-          </Button>
-          <Button
-            size="md"
-            rounded="lg"
-            onClick={() => {
-              notify({
-                  fontFamily:"serif",
-                  title: "Serif",
-                  description: "Sans Serif font family",
-                  autoClose: true,
-                  duration: 3000,
-              });
-            }}
-          >
-            Serif
-          </Button>
-      </div>
-    </>
-  );
+                <Button
+                    size="md"
+                    rounded="lg"
+                    onClick={() => {
+                        notify({
+                            title: "Bottom Right",
+                            description: "Bottom Right Notification",
+                            autoClose: true,
+                            duration: 3000,
+                            placement: "bottomRight"
+                        });
+                    }}
+                >
+                    Bottom Right
+                </Button>
+            </VKGroup>
+        </>
+    );
 };
 
 export default App;
